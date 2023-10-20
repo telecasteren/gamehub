@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gamehub website project">
+    <link rel="stylesheet" href="css/styles.css">
+     <title>Specific product</title>
+</head>
+    <body>
+        <script src="https://kit.fontawesome.com/0aba3e89b2.js" crossorigin="anonymous"></script>
+        <div class="topLine"><hr></div>
+    
+        <div class="container">
+            <div class="nav-bar">
+                <nav>
+                    <ul id="menuList">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="products.html">games</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                        <li><a href="profile.html">profile</a></li>
+                        <li><a class="rightNavElement" href="cart.html">your cart</a></li>
+                    </ul>
+                </nav>
+                <img src="images/menu-icon.png" class="menu-icon" alt="menu icon" onclick="togglemenu()">
+            </div>
+            <a href="index.html"><img src="images/GameHub top logo.svg" class="logo" alt="main logo"></a>
+
+    <main>
+            
+                <div class ="productIMG"><img src="images/specificProductTopIMG.svg" alt="Specific product cover image"/></div>
+                <div id="addToCartBox"></div>
+                <div id="title"><p>Forge Legend</p></div>
+                <div id="tagline"><p>Forge, build, fight and explore<br><br>$69</p></div>
+                <a href="checkout.html"><button class="addToCartBTN">ADD TO CART</button></a>
+           
+            
+           
+                <div id="productBox"></div>
+                <div class="productText"><p>“Much has changed in the Lands Between since the days of your<br>
+                banishment, Tarnished. Come and learn what awaits you on the path of grace.”
+                <br>
+                <br>
+                Action role-playing, third person perspective and a gameplay<br>focusing on story and exploration.
+                It features elements similar<br>to other games developed by GameForce Europe.</p>
+                </div>
+
+                <div class="ingameIMGs"><img src="images/in-game images.svg" alt="in-game images"/></div>
+                <div class="includesIcons"><img src="images/game includes symbols.svg" alt="Included content"/></div>
+          
+
+        <div class="seperationLine"><hr></div>
+
+    </main>
+
+    <footer>
+        <div class="footerRow">
+            <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by Gamehub</p>
+        </div>
+
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa-brands fa-facebook-f fa-lg" style="color: #1b203d;"></i></a></li>
+              <li><a class="instagram" href="#"><i class="fa-brands fa-instagram fa-lg" style="color: #1b203d;"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa-brands fa-linkedin-in fa-lg" style="color: #1b203d;"></i></a></li>
+              <li><a class="twitter-x" href="#"><i class="fa-brands fa-x-twitter fa-lg" style="color: #1b203d;"></i> </a></li>
+            </ul>
+    </footer>
+        <div class="bottomLine"><hr></div>
+
+
+        <script>
+            var menuList = document.getElementById("menuList");
+            menuList.style.maxHeight = "0px";
+
+            function togglemenu(){
+                if(menuList.style.maxHeight == "0px"){
+
+                    menuList.style.maxHeight = "200px";
+                }
+                else {
+                    menuList.style.maxHeight = "0px";
+                }
+            }
+        </script>
+
+    </body>
+</HTML>

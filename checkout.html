@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gamehub website project">
+    <link rel="stylesheet" href="css/styles.css">
+     <title>Checkout</title>
+</head>
+    <body>
+        <script src="https://kit.fontawesome.com/0aba3e89b2.js" crossorigin="anonymous"></script>
+        <div class="topLine"><hr></div>
+    
+        <div class="container">
+            <div class="nav-bar">
+                <nav>
+                    <ul id="menuList">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="products.html">games</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                        <li><a href="profile.html">profile</a></li>
+                        <li><a class="rightNavElement" href="cart.html">your cart</a></li>
+                    </ul> 
+                </nav>
+                <img src="images/menu-icon.png" class="menu-icon" alt="menu icon" onclick="togglemenu()">
+            </div>
+
+            <div class="arrowIcon"><a href="cart.html"><i class="fa-solid fa-arrow-left fa-2xl" style="color: #142fcc;"></i></a></div>
+
+
+            <div class="logoCheckout">
+                <a href="index.html"> <img src="images/GameHub top logo.svg" class="logo" alt="GameHub main logo"/></a>
+            </div>
+            <p class="userInfoMember">you are member nr: #666</p>
+            <p class="userInfoMail">wolly.winka@mail.com</p>
+            <p class="userInfoLogOut">log out</p>
+
+    <main>
+        <section class="checkoutPage">          <!--do something with the section, it fucks up alignment-->
+            <div class="checkoutDetails">
+                <div>
+                    <h2>checkout</h2>
+                    <a href="specificProduct.html"><img class="cart" src="images/forge legend cover.svg" alt="forge legend game cover"/></a>
+                    <b><p>Forge Legend: full game + digital soundtrack</p></b>
+                    <br>
+                </div>
+
+                <div class="checkoutLineTop"><hr></div>
+
+                <h3>summary</h3>
+                <br>
+                <p>subtotal</p>
+                <br>
+                    <b><p>delivery method</p></b>
+                    <label>pick-up at store: FREE</label>
+                    <input type="radio" id="pick-up" name="delivery" value="pick-up" class="radioBTN"/>
+                    <label>post-office: $6,90</label>
+                    <input type="radio" id="post-office" name="delivery" value="post-office" class="radioBTN"/>
+                    <label>home-delivery $9,90</label>
+                    <input type="radio" id="home-delivery" name="delivery" value="home-delivery" class="radioBTN"/>
+                    
+                    <br>
+                    <br>
+                    
+                    <b><label>promo-code:</label></b>
+                    <br>
+                    <input type="text" id="promoCode" name="promo-code" class="promo-code"/>
+                
+                    <b><p>TOTAL incl.mva (VAT)</p></b>
+            </div>
+                <br>
+
+            <div class="checkoutLineBottom"><hr></div>
+
+            <form action="purchase.php" method="POST" class="checkoutForm">
+                <b><p>delivery details</p></b>
+                <fieldset class="checkoutFields">
+                    <input type="text" name="firstname" placeholder="firstname *"/>                                 <!--pretend required attribute-->
+                    <input type="text" name="lastname" placeholder="lastname *"/>                                   <!--pretend required attribute-->
+                    <input type="email" name="email" placeholder="email *"/>                                        <!--pretend required attribute-->
+                    <input type="tel" name="phone" placeholder="phone"/>
+                    <input type="text" class="deliveryAddress" name="address" placeholder="delivery address *"/>    <!--pretend required attribute-->
+                    <input type="text" class="postalCode" name="postalcode" placeholder="postal code *"/>           <!--pretend required attribute-->
+                </fieldset>
+
+                <br>
+
+                <b><p>payment method</p></b>
+                <fieldset class="paymentFields">
+                    <select name="payment">
+                        <option value="option-one">Mastercard</option>
+                        <option value="option-two">Visa Debit</option>
+                        <option value="option-three">American Express</option>
+                    </select>
+                    <input type="date" name="date"/>                                  <!--required attribute-->
+                    <br>
+                    <input type="number" name="number" placeholder="cardnumber *"/>   <!--required attribute-->
+                    <input type="number" name="number" placeholder="cvc number *"/>   <!--required attribute-->
+                </fieldset>
+
+            </form>
+            <a href="checkout-success.html"><button id="checkoutBTN">PLACE ORDER</button></a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footerRow">
+            <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by Gamehub</p>
+        </div>
+
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa-brands fa-facebook-f fa-lg" style="color: #1b203d;"></i></a></li>
+              <li><a class="instagram" href="#"><i class="fa-brands fa-instagram fa-lg" style="color: #1b203d;"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa-brands fa-linkedin-in fa-lg" style="color: #1b203d;"></i></a></li>
+              <li><a class="twitter-x" href="#"><i class="fa-brands fa-x-twitter fa-lg" style="color: #1b203d;"></i> </a></li>
+            </ul>
+    </footer>
+        <div class="bottomLine"><hr></div>
+
+
+        <script>
+            var menuList = document.getElementById("menuList");
+            menuList.style.maxHeight = "0px";
+
+            function togglemenu(){
+                if(menuList.style.maxHeight == "0px"){
+
+                    menuList.style.maxHeight = "200px";
+                }
+                else {
+                    menuList.style.maxHeight = "0px";
+                }
+            }
+        </script>
+
+    </body>
+</HTML>
