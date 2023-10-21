@@ -22,7 +22,7 @@ white background:           rgba(254, 254, 255, 1)
 blue background box:        rgba(248, 248, 255, 1)
 light blue:                 rgba(20, 47, 204, 0.6)
 bright blue:                rgba(20, 47, 204, 0.95) / rgba(20, 47, 204, 1)
-orange:                     rgba(249, 114, 38, 0.8)
+orange:                     rgba(249, 114, 38, 0.8) / rgba(249, 114, 38, 0.6)
 ---------------------------------------------------*/
 
 
@@ -34,6 +34,7 @@ orange:                     rgba(249, 114, 38, 0.8)
     text-decoration: none;
     color: rgba(27, 32, 61, 1);
     font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
 }
 
 /*html {
@@ -64,6 +65,29 @@ h1{
     text-align: center;   
     color: rgba(249, 114, 38, 0.8);                            /* <---- only example pages --*/
 }
+
+.arrowIcon {
+    margin-top: 40px;
+    margin-left: 150px;
+}
+/*back to #top scroll START---------*/
+.scroll-container {
+    position: relative;
+    top: 20px;
+    left: 85%;
+    height: 100%;
+    z-index: 100;
+  }
+  .scroll-container::before {
+    display: none;
+    pointer-events: none;
+  }
+  .scroll-container a {
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  /*back to #top scroll END---------*/
 
 .topLine {
     padding: 10px;
@@ -257,8 +281,7 @@ nav ul li a:hover {
 
 
 
-/*Home START ----------------------------------*/
-/*rewrite this carousel??*/
+/*Home START ----------------------------------------------*/
 .homepageCarousel {
     margin-top: 70px;
     display: flex;
@@ -292,7 +315,6 @@ nav ul li a:hover {
     font-size: 20px;
     padding: 16px 30px;
     cursor: pointer;
-    transition: width 0.5s;
     z-index: 10;
   }
   @media screen and (max-width: 600px) {
@@ -312,6 +334,7 @@ nav ul li a:hover {
     display: block;
   }
   #getBTN:hover {
+    right: 40%;
     width: 300px;
     font-size: 22px;
     display: flex;
@@ -324,28 +347,139 @@ nav ul li a:hover {
     display: flex;
     padding: 1px;
   }
-
-  .product1-container {
+/*product captions---------------------*/
+  .col1Text-container {
+    position: absolute;
+    margin-top: 200px;
     padding: 0;
-    justify-content: center;
     z-index: 100;
   }
-  .product1-container h1 {
+
+  .col1Text-container h1 {
     font-size: larger;
     text-align: start;
     margin-bottom: 20px;
+    font-style: italic;
   }
 
-  .product1-container p {
+  .col1Text-container h1,
+  .col1Text-container p {
+    margin-left: 656px;
+    color: rgba(254, 254, 255, 1);
+  }
+
+  .col2Text-container { /*FIX ALIGNMENT ON THE H1 ELEMENT ----------------------------------------------------*/
+    position: absolute;
+    top: 1045px;
+  }
+
+  #col2-H1 {
+    font-size: larger;
+    text-align: start;
+    font-style: italic;
+    margin-top: 85px;
+    margin-left: 950px;
+  }
+
+  .col2Text-container p {
+    text-align: end;
+    margin-left: 1260px;
+  }
+
+  .col3Text-container {
+    position: absolute;
+    margin-left: 320px;
+    text-align: center;
+    top: 1680px;
+  }
+
+  #col3-H1 {
+    font-size: 30px;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  .col5Text-container {
+    position: absolute;
+    margin-top: 200px;
+  }
+
+  #col5-H1 {
+    font-size: larger;
+    text-align: start;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .col5Text-container h1,
+  .col5Text-container p {
+    margin-left: 656px;
+  }
+
+  .col6Text-container { /*FIX ALIGNMENT ON THE H1 ELEMENT ----------------------------------------------------*/
+    position: absolute;
+    top: 2285px;
+  }
+
+  #col6-H1 {
+    font-size: larger;
+    text-align: start;
+    font-style: italic;
+    margin-top: 85px;
+    margin-left: 950px;
+  }
+
+  .col6Text-container p {
+    text-align: end;
+    margin-left: 1260px;
+  }
+
+  .col7Text-container {
+    position: absolute;
+    margin-left: 320px;
+    text-align: center;
+    top: 2920px;
+  }
+
+  #col7-H1 {
+    font-size: 30px;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  .col1Text-container,
+  .col2Text-container,
+  .col3Text-container,
+  .col5Text-container,
+  .col6Text-container,
+  .col7Text-container {
+    z-index: 100;
+  }
+
+  .col1Text-container p,
+  .col2Text-container p,
+  .col3Text-container p,
+  .col5Text-container p,
+  .col6Text-container p,
+  .col7Text-container p {
     line-height: 1.5;
+    font-size: 18px;
+    color: rgba(254, 254, 255, 1);
   }
-  .product1-container h1,
-  .product1-container p {
-    margin-left: 665px;
-    /*color: rgba(254, 254, 255, 1);*/
+
+  #col1-H1,
+  #col2-H1,
+  #col3-H1,
+  #col5-H1,
+  #col6-H1,
+  #col7-H1,
+  .col2Text-container b,
+  .col6Text-container b {
+    color: rgba(254, 254, 255, 1);
   }
 
 
+/*product elements----------------------*/
   .col-1 {
     margin-bottom: none;
     padding: none;
@@ -382,6 +516,7 @@ nav ul li a:hover {
     z-index: 0;
     background-color: rgba(20, 47, 204, 0.95);
   }
+
   .col-3 {
     margin-top: 5px;
   }
@@ -451,10 +586,17 @@ nav ul li a:hover {
     margin-left: 12px;
     padding-top: 9%;
   }
-  /*------------------------------------------*/
+  /*---------------------------------------------------------*/
   
 
-  /*specific product START--------------------------*/
+  /*specific product START------------------------------------*/
+  #backArrow {
+    position: absolute;
+    z-index: 100;
+    top: 200px;
+    margin-left: 40px;
+}
+
   .productIMG {
     position: relative;
     width: 100%;
@@ -465,34 +607,34 @@ nav ul li a:hover {
 }
 
 #addToCartBox {
-    top: -480px;
-    left: 150px;
+    top: -420px;
+    left: 120px;
     padding: none;
     width: 500px;
     height: 400px;
     position: relative;
     border-radius: 10px;
-    background-color: rgba(20, 47, 204, 0.8);
+    background-color: rgba(20, 47, 204, 0.6);
 }
 
 #title, #title p  {
-    color: rgba(254, 254, 255, 1);
+    top: 50%;
+    left: 180px;
     text-align: center;
     position: absolute;
-    top: 40%;
-    left: 200px;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    font-size: 50px;
+    font-size: 48px;
     font-family: fantasy;
     padding-bottom: 20px;
+    color: rgba(254, 254, 255, 1);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     z-index: 2;
 }
 #tagline p, #price p {
     text-align: center;
     position: absolute;
-    top: 56%;
-    left: 400px;
+    top: 65%;
+    left: 360px;
     font-size: 20px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -500,22 +642,10 @@ nav ul li a:hover {
     z-index: 2;
 }
 
-#productBox {
-    background-color: rgba(20, 47, 204, 0.95);
-    position: absolute;
-    margin: none;
-    padding: none;
-    border: none;
-    width: 100%;
-    height: 600px;
-    top: 750px;
-    z-index: -1;
-}
-
 .addToCartBTN {
     position: absolute;
-    top: 70%;
-    left: 400px;
+    top: 78%;
+    left: 360px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color:  rgba(254, 254, 255, 1);
@@ -537,6 +667,18 @@ nav ul li a:hover {
     border: 2px solid rgba(249, 114, 38, 0.8);
   }
 
+  #productBox {
+    background-color: rgba(20, 47, 204, 0.95);
+    position: absolute;
+    margin: none;
+    padding: none;
+    border: none;
+    width: 100%;
+    height: 600px;
+    top: 750px;
+    z-index: -1;
+}
+
   .productText-container {
     position: absolute;
     top: 800px;
@@ -551,9 +693,8 @@ nav ul li a:hover {
 
   .productText p {
     color: rgba(254, 254, 255, 1);
-    line-height: 25px;
-    font-weight: 50;
-    font-size: 16px;
+    line-height: 1.5;
+    font-size: 18px;
   }
 
   .productTextIcons {
@@ -581,7 +722,7 @@ nav ul li a:hover {
   /*------------------------------------------*/
 
 
-/*products START --------------------------*/
+/*products START ---------------------------------------*/
 .productSlides {
     margin-top: 70px;
     margin-bottom: 30px;
@@ -726,6 +867,7 @@ input#searchGames:hover {
 
 #expandBTN {
     position: relative;
+    margin-top: 20px;
     margin-left: 455px;
     background-color: rgba(254, 254, 255, 1);
     border: none;
@@ -860,11 +1002,6 @@ section {
 
 
 /*Checkout START--------------------------*/
-.arrowIcon {
-    margin-top: 40px;
-    margin-left: 150px;
-}
-
 .logoCheckout {
    text-align: center;
     margin-top: 40px;
@@ -975,10 +1112,9 @@ input#promoCode:hover {
 }
 
 
-/*Cart START--------------------------*/
-
 /*Profile START--------------------------*/
 .logInForm {
     display: block;
     text-align: center;
  }
+ /*--------------------------*/
