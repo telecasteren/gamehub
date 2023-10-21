@@ -1,0 +1,163 @@
+
+/*---------------------------------------
+Productlist page styles
+---------------------------------------*/
+
+.productSlides {
+    margin-top: 70px;
+    margin-bottom: 30px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    
+}
+@media screen and (max-width: 900px) {
+    .productSlides {
+        margin-bottom: 10px;
+    }
+}
+
+.productSlides img {
+    max-width: 100vw;
+}
+
+.productSlides > div {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    height: 450px;
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+    justify-content: center;
+    align-items: center;
+    animation: scroll 10s linear infinite;
+}
+
+#searchGames {
+    width: 245px;
+    height: 40px;
+    border-radius: 8px;
+    margin-top: 50px;
+    border: solid rgba(20, 47, 204, 1);
+    background-color: rgba(254, 254, 255, 1);
+    transition: 0.5s;
+}
+#searchGames::placeholder {
+    text-align: center;
+}
+input#searchGames {
+    margin-left: 620px;
+}
+input#searchGames:hover {
+    margin-left: 598px;
+    width: 300px;
+    border: 1px solid rgba(249, 114, 38, 0.8);
+}
+  
+#gamingNav {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    transition: all 1s;
+}
+
+#product1-img,
+#product2-img,
+#product3-img,
+#product4-img,
+#product5-img,
+#product6-img,
+#product7-img,
+#product8-img,
+#product9-img,
+#product10-img,
+#product11-img,
+#product12-img,
+#product13-img,
+#product14-img,
+#product15-img,
+#product16-img {
+    display: inline-table;
+    margin-left: 135px;
+    margin-top: 50px;
+}
+
+#product1-img,
+#product2-img,
+#product3-img,
+#product5-img,
+#product6-img,
+#product7-img,
+#product9-img,
+#product10-img,
+#product11-img,
+#product13-img,
+#product14-img,
+#product15-img {
+    margin-right: 61px;
+}
+
+
+/*media screens for product-imgs*/
+@media screen and (max-width: 900px) {
+    #product1-img,
+    #product2-img,
+    #product3-img,
+    #product4-img,
+    #product5-img,
+    #product6-img,
+    #product7-img,
+    #product8-img,
+    #product9-img,
+    #product10-img,
+    #product11-img,
+    #product12-img,
+    #product13-img,
+    #product14-img,
+    #product15-img,
+    #product16-img {
+    padding: 10px;
+    margin: 0;
+}
+
+}
+#product1-img:hover,
+#product2-img:hover,
+#product3-img:hover,
+#product4-img:hover,
+#product5-img:hover,
+#product6-img:hover,
+#product7-img:hover,
+#product8-img:hover,
+#product9-img:hover,
+#product10-img:hover,
+#product11-img:hover,
+#product12-img:hover,
+#product13-img:hover,
+#product14-img:hover,
+#product15-img:hover,
+#product16-img:hover {
+    border-style: groove;                /*----DO SOMETHING NICE WITH HOVER ANIMATION FOR ALL PRODUCTS----*/
+    border: none;
+    padding: 0;
+}
+
+#expandBTN {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 700px;
+    background-color: rgba(254, 254, 255, 1);
+    border: none;
+    cursor: pointer;
+}
+/*media screens for expandBTNs*/
+@media screen and (max-width: 900px){
+    #expandBTN {
+        margin-left: 80%;
+    }
+}
+
+/*------------------------------------------*/

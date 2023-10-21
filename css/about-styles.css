@@ -1,0 +1,62 @@
+
+/*------------------------------
+About page styles
+------------------------------*/
+
+#aboutPageBackground {
+    position: absolute;
+    margin-top: 30px;
+    z-index: -1;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(248, 248, 255, 1);
+    border: none;
+}
+
+.aboutPageText {
+    margin-top: 100px;
+    margin-bottom: 110px;
+    text-align: center;
+    z-index: 2;
+}
+
+.buyBTN, .sellBTN {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    border-style: solid;
+    font-size: 20px;
+    padding: 16px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 3;
+    top: 90%;
+}
+
+.buyBTN:hover, .sellBTN:hover {
+    border: 1px solid rgba(249, 114, 38, 0.8);
+    width: 200px;
+}
+
+.buyBTN {
+    left: 20%;
+    background-color: rgba(20, 47, 204, 0.95);
+    border-color: rgba(20, 47, 204, 0.95);
+    color: rgba(254, 254, 255, 1);
+}
+
+.sellBTN {
+    left: 80%;
+    background-color:rgba(254, 254, 255, 1);
+    border-color: rgba(20, 47, 204, 1);
+    color: rgba(20, 47, 204, 0.95);
+}
+
+.aboutPageBackgroundIMGs {
+    position: relative;
+    top: 45px;
+    text-align: center;
+    z-index: 1;
+}
+
+/*------------------------------------------*/

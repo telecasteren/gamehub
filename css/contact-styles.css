@@ -1,0 +1,63 @@
+
+/*-------------------------------------------------
+Contact page styles
+--------------------------------------------------*/
+
+
+section {
+    margin-top: 50px;
+    margin-left: 250px;
+    margin-right: 250px;
+    justify-content: center;
+}
+.accountsBox,
+.communityBox,
+.discountsBox,
+.locationBox {
+    background-color: rgba(248, 248, 255, 1);
+    border: 1px solid rgba(20, 47, 204, 0.6);
+    border-radius: 10px;
+    display: inline-table;
+    width: 250px;
+    height: 200px;
+}
+
+#accountsText,
+#communityText,
+#discountsText,
+#locationText {
+    text-align: center;
+    margin-top: 60px;
+    color: rgba(20, 47, 204, 0.6);
+}
+
+.communityBox{
+    margin-left: 125px;
+}
+
+.discountsBox {
+    float: right;
+}
+.locationBox {
+    margin-top: 40px;
+    margin-left: 380px;
+}
+
+.locationIcon {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.inputFields, .messageText {
+    text-align: center;
+}
+
+.contactForm {
+    margin-top: 50px;
+}
+.sendBTN {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+/*----------------------------------------------*/

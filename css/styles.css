@@ -1,21 +1,13 @@
-/*----------------------
-In order:
-global styles
-top and bottom
-home
-specific product
-productlist
-about
-contact
-checkout
-checkout success
-cart            (only example of redirect)
-login           (only example of redirect)
+
+
+/*-----------------------------------------
+cart            (only example of redirect pages)
+profile         (only example of redirect pages)
 ------------------------------------------*/
 
-/*-- All media queries are set underneath it's parent css block --*/
+/*-- All media queries are set underneath it's parent css block in the correct stylesheet --*/
 
-/*---------------------------------------------
+/*------------------------------------------------------------------------------
 COLORS in use:
 dark blue(same as logo):    rgba(27, 32, 61, 1)
 white background:           rgba(254, 254, 255, 1)
@@ -23,10 +15,15 @@ blue background box:        rgba(248, 248, 255, 1)
 light blue:                 rgba(20, 47, 204, 0.6)
 bright blue:                rgba(20, 47, 204, 0.95) / rgba(20, 47, 204, 1)
 orange:                     rgba(249, 114, 38, 0.8) / rgba(249, 114, 38, 0.6)
----------------------------------------------------*/
+-------------------------------------------------------------------------------*/
 
 
-/*-- GLOBAL STYLES START --*/
+
+
+/*-------------------------------------------------
+GLOBAL STYLES
+-------------------------------------------------*/
+
 * {
     margin: 0;
     padding: 0;
@@ -37,12 +34,14 @@ orange:                     rgba(249, 114, 38, 0.8) / rgba(249, 114, 38, 0.6)
     scroll-behavior: smooth;
 }
 
-/*html {
-box-sizing: border-box;
+
+
+h1{
+    text-align: center;   
+    color: rgba(249, 114, 38, 0.8);                 /* <---- only example pages --*/
 }
-*, *::before, *::after {
-    box-sizing: inherit;
-} ------------------------------------------------------------------------------- Check out if this is interesting to use */
+
+
 
 /*--------------------------------------------------------
 Pagetitle for pages: About, Contact, Profile  */
@@ -61,16 +60,16 @@ Pagetitle for pages: About, Contact, Profile  */
 }
 /*-------------------------------------------------------*/
 
-h1{
-    text-align: center;   
-    color: rgba(249, 114, 38, 0.8);                            /* <---- only example pages --*/
-}
 
+/*Previous page arrow on checkout pages*/
 .arrowIcon {
     margin-top: 40px;
     margin-left: 150px;
 }
-/*back to #top scroll START---------*/
+/*-------------------------------------*/
+
+
+/*Back to #top scroll ---------*/
 .scroll-container {
     position: relative;
     top: 20px;
@@ -87,7 +86,11 @@ h1{
     cursor: pointer;
     font-size: 20px;
   }
-  /*back to #top scroll END---------*/
+  /*--------------END--------------*/
+
+
+
+/*Seperation lines*/
 
 .topLine {
     padding: 10px;
@@ -99,8 +102,11 @@ h1{
 .bottomLine {
     padding: 5px 10px 10px 10px;
 }
+/*--------END---------*/
 
-/*-- FORMS, FIELDSETS, INPUT-FIELDS--*/
+
+
+/*-- FORMS, FIELDSETS, INPUT-FIELDS -------------*/
 form ::placeholder {
     color: rgba(20, 47, 204, 0.6);
     text-align: center;
@@ -135,13 +141,13 @@ input[type=submit] {
     background-color: rgba(20, 47, 204, 1);
     color: rgba(254, 254, 255, 1);
   }
-
-/*-- GLOBAL STYLES END--*/
-
+  /*-------------------END---------------------*/
 
 
-/*-- TOP AND BOTTOM OF PAGES START--*/
-/*FOOTER START----------------------------*/
+
+/*----------------------------
+FOOTER START
+-----------------------------*/
 footer {
     display: flex;
     background-color: rgba(248, 248, 255, 1);
@@ -170,7 +176,9 @@ footer {
 .facebook, .instagram, .linkedin {
     padding-right: 40px;
 }
-/*FOOTER END----------------------------*/
+/*--------------END--------------*/
+
+
 
 .logo {
     margin-top: 15px;
@@ -205,6 +213,11 @@ footer {
         padding-right: 2%;
     }
 }
+
+
+/*--------------
+NAVIGATION BAR
+---------------*/
 
 .nav-bar {
     width: 100%;
@@ -277,844 +290,17 @@ nav ul li a:hover {
         margin-right: 60px;
     }
 }
-/*------------------------------------------*/
+/*----------------GLOBAL STYLES END------------------------*/
 
 
-
-/*Home START ----------------------------------------------*/
-.homepageCarousel {
-    margin-top: 70px;
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-}
-.homepageCarousel div {
-    display: flex;
-    flex-shrink: 0;
-    width: 100%;
-    height: 450px;
-    scroll-snap-align: start;
-    scroll-behavior: smooth;
-    justify-content: center;
-    align-items: center;
-    animation: scroll 10s linear infinite;
-}
-.homepageCarousel img {
-    max-width: 100vw;
-}
-
-   #getBTN {
-    background-color: rgba(20, 47, 204, 0.95);
-    border-color: rgba(20, 47, 204, 0.95);
-    color: rgba(254, 254, 255, 1);
-    border-style: solid;
-    border-radius: 20px;
-    position: absolute;
-    top: 475px;
-    right: 42%;
-    font-size: 20px;
-    padding: 16px 30px;
-    cursor: pointer;
-    z-index: 10;
-  }
-  @media screen and (max-width: 600px) {
-    #getBTN {
-    transform: translateX(-50%);
-    display: flex;
-    top: 400px;
-    left: 50%;
-    right: auto;
-    }
-  }
-  #getBTN img {
-    width: 30px;
-    display: none;
-  }
-  #getBTN:hover img {
-    display: block;
-  }
-  #getBTN:hover {
-    right: 40%;
-    width: 300px;
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-
-  .row1, .row2, .row3, .row4 {
-    display: flex;
-    padding: 1px;
-  }
-/*product captions---------------------*/
-  .col1Text-container {
-    position: absolute;
-    margin-top: 200px;
-    padding: 0;
-    z-index: 100;
-  }
-
-  .col1Text-container h1 {
-    font-size: larger;
-    text-align: start;
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-
-  .col1Text-container h1,
-  .col1Text-container p {
-    margin-left: 656px;
-    color: rgba(254, 254, 255, 1);
-  }
-
-  .col2Text-container { /*FIX ALIGNMENT ON THE H1 ELEMENT ----------------------------------------------------*/
-    position: absolute;
-    top: 1045px;
-  }
-
-  #col2-H1 {
-    font-size: larger;
-    text-align: start;
-    font-style: italic;
-    margin-top: 85px;
-    margin-left: 950px;
-  }
-
-  .col2Text-container p {
-    text-align: end;
-    margin-left: 1260px;
-  }
-
-  .col3Text-container {
-    position: absolute;
-    margin-left: 320px;
-    text-align: center;
-    top: 1680px;
-  }
-
-  #col3-H1 {
-    font-size: 30px;
-    font-style: italic;
-    margin-bottom: 20px;
-  }
-
-  .col5Text-container {
-    position: absolute;
-    margin-top: 200px;
-  }
-
-  #col5-H1 {
-    font-size: larger;
-    text-align: start;
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-
-  .col5Text-container h1,
-  .col5Text-container p {
-    margin-left: 656px;
-  }
-
-  .col6Text-container { /*FIX ALIGNMENT ON THE H1 ELEMENT ----------------------------------------------------*/
-    position: absolute;
-    top: 2285px;
-  }
-
-  #col6-H1 {
-    font-size: larger;
-    text-align: start;
-    font-style: italic;
-    margin-top: 85px;
-    margin-left: 950px;
-  }
-
-  .col6Text-container p {
-    text-align: end;
-    margin-left: 1260px;
-  }
-
-  .col7Text-container {
-    position: absolute;
-    margin-left: 320px;
-    text-align: center;
-    top: 2920px;
-  }
-
-  #col7-H1 {
-    font-size: 30px;
-    font-style: italic;
-    margin-bottom: 20px;
-  }
-
-  .col1Text-container,
-  .col2Text-container,
-  .col3Text-container,
-  .col5Text-container,
-  .col6Text-container,
-  .col7Text-container {
-    z-index: 100;
-  }
-
-  .col1Text-container p,
-  .col2Text-container p,
-  .col3Text-container p,
-  .col5Text-container p,
-  .col6Text-container p,
-  .col7Text-container p {
-    line-height: 1.5;
-    font-size: 18px;
-    color: rgba(254, 254, 255, 1);
-  }
-
-  #col1-H1,
-  #col2-H1,
-  #col3-H1,
-  #col5-H1,
-  #col6-H1,
-  #col7-H1,
-  .col2Text-container b,
-  .col6Text-container b {
-    color: rgba(254, 254, 255, 1);
-  }
-
-
-/*product elements----------------------*/
-  .col-1 {
-    margin-bottom: none;
-    padding: none;
-    z-index: 1;
-  }
-  .color-box1 {
-    width: 835px;
-    height: 550px;
-    position: absolute;
-    z-index: -1;
-    background: rgba(20, 47, 204, 0.95);
-  }
-  .col-1,
-  .color-box1,
-  .col-2,
-  .color-box2 {
-    margin-top: 20px;
-    border: none;
-  }
-  .col-2 {
-    position: absolute;
-    margin-left: 56%;
-    margin-bottom: 0;
-    padding: none;
-    z-index: 1;
-  }
-  .color-box2 {
-    position: absolute;
-    width: 662.5px;
-    height: 680px;
-    margin-left: 846px;
-    padding: none;
-    border: none;
-    z-index: 0;
-    background-color: rgba(20, 47, 204, 0.95);
-  }
-
-  .col-3 {
-    margin-top: 5px;
-  }
-  .color-box3 {
-    position: absolute;
-    margin-top: 8px;
-    padding: none;
-    border: none;
-    width: 835px;
-    height: 664px;
-    z-index: -1;
-    background-color: rgba(20, 47, 204, 0.95);
-  }
-  .col-4 {
-    margin-left: 12px;
-    padding-top: 9%;
-  }
-  .col-5 {
-    margin-top: 5px;
-    margin-bottom: none;
-    padding: none;
-    flex-basis: 40%;
-    z-index: 1;
-  }
-  .color-box4 {
-    margin-top: 5px;
-    width: 835px;
-    height: 550px;
-    position: absolute;
-    z-index: -1;
-    background: rgba(20, 47, 204, 0.95);
-  }
-  .col-6 {
-    position: relative;
-    margin-top: 5px;
-    margin-left: 212px;
-    margin-bottom: 0;
-    padding: none;
-    border: none;
-    z-index: 2;
-  }
-  .color-box5 {
-    position: absolute;
-    margin-top: 5px;
-    width: 660px;
-    height: 680px;
-    margin-left: 847px;
-    padding: none;
-    border: none;
-    z-index: 0;
-    background-color: rgba(20, 47, 204, 0.95);
-  }
-  .col-7 {
-    margin-top: 5px;
-  }
-  .color-box6 {
-    position: absolute;
-    margin-top: 8px;
-    padding: none;
-    border: none;
-    width: 835px;
-    height: 664px;
-    z-index: -1;
-    background-color: rgba(20, 47, 204, 0.95);
-  }
-  .col-8 {
-    margin-left: 12px;
-    padding-top: 9%;
-  }
-  /*---------------------------------------------------------*/
   
+/*--------------------
+Profile page styles
+---------------------*/
 
-  /*specific product START------------------------------------*/
-  #backArrow {
-    position: absolute;
-    z-index: 100;
-    top: 200px;
-    margin-left: 40px;
-}
-
-  .productIMG {
-    position: relative;
-    width: 100%;
-    top: 80px;
-    padding: none;
-    margin: 0;
-    z-index: 0;
-}
-
-#addToCartBox {
-    top: -420px;
-    left: 120px;
-    padding: none;
-    width: 500px;
-    height: 400px;
-    position: relative;
-    border-radius: 10px;
-    background-color: rgba(20, 47, 204, 0.6);
-}
-
-#title, #title p  {
-    top: 50%;
-    left: 180px;
-    text-align: center;
-    position: absolute;
-    font-size: 48px;
-    font-family: fantasy;
-    padding-bottom: 20px;
-    color: rgba(254, 254, 255, 1);
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    z-index: 2;
-}
-#tagline p, #price p {
-    text-align: center;
-    position: absolute;
-    top: 65%;
-    left: 360px;
-    font-size: 20px;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    color: rgba(254, 254, 255, 1);
-    z-index: 2;
-}
-
-.addToCartBTN {
-    position: absolute;
-    top: 78%;
-    left: 360px;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color:  rgba(254, 254, 255, 1);
-    border-color: rgba(20, 47, 204, 0.95);
-    color: rgba(20, 47, 204, 0.95);
-    border-style: solid;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 16px 30px;
-    border-radius: 24px;
-    cursor: pointer;
-    z-index: 3;
-    transition: width 0.3s;
-}
-.addToCartBTN:hover {
-    width: 220px;
-    font-size: 22px;
-    justify-content: center;
-    border: 2px solid rgba(249, 114, 38, 0.8);
-  }
-
-  #productBox {
-    background-color: rgba(20, 47, 204, 0.95);
-    position: absolute;
-    margin: none;
-    padding: none;
-    border: none;
-    width: 100%;
-    height: 600px;
-    top: 750px;
-    z-index: -1;
-}
-
-  .productText-container {
-    position: absolute;
-    top: 800px;
-  }
-
-  .productText {
-    float: left;
-    margin-right: 250px;
-    margin-left: 180px;
-    margin-top: 50px;
-  }
-
-  .productText p {
-    color: rgba(254, 254, 255, 1);
-    line-height: 1.5;
-    font-size: 18px;
-  }
-
-  .productTextIcons {
-    float: right;
-    margin-top: 70px;
-  }
-  
-  .ingameIMGs {
-    position: relative;
-    margin-left: 175px;
-  }
-
-  .gamingIcons {
-    position: relative;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    margin-left: 360px;
-  }
-
-  .seperationLine {
-    position: relative;
-    margin-left: 80px;
-    margin-right: 80px;
-  }
-  /*------------------------------------------*/
-
-
-/*products START ---------------------------------------*/
-.productSlides {
-    margin-top: 70px;
-    margin-bottom: 30px;
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    
-}
-@media screen and (max-width: 900px) {
-    .productSlides {
-        margin-bottom: 10px;
-    }
-}
-
-.productSlides img {
-    max-width: 100vw;
-}
-
-.productSlides > div {
-    display: flex;
-    flex-shrink: 0;
-    width: 100%;
-    height: 450px;
-    scroll-snap-align: start;
-    scroll-behavior: smooth;
-    justify-content: center;
-    align-items: center;
-    animation: scroll 10s linear infinite;
-}
-
-#searchGames {
-    width: 245px;
-    height: 40px;
-    border-radius: 8px;
-    margin-top: 10px;
-    border: solid rgba(20, 47, 204, 1);
-    background-color: rgba(254, 254, 255, 1);
-    transition: 0.5s;
-}
-#searchGames::placeholder {
-    text-align: center;
-}
-input#searchGames {
-    margin-left: 370px;
-}
-input#searchGames:hover {
-    margin-left: 340px;
-    width: 300px;
-    border: 1px solid rgba(249, 114, 38, 0.8);
-}
-  
-#gamingNav {
-    width: 100%;
-    z-index: 1;
-    position: relative;
-    text-align: center;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    transition: all 1s;
-}
-
-#product1-img,
-#product2-img,
-#product3-img,
-#product4-img,
-#product5-img,
-#product6-img,
-#product7-img,
-#product8-img,
-#product9-img,
-#product10-img,
-#product11-img,
-#product12-img,
-#product13-img,
-#product14-img,
-#product15-img,
-#product16-img {
-    display: inline-table;
-    margin-left: 35px;
-    margin-top: 50px;
-}
-
-#product1-img,
-#product2-img,
-#product3-img,
-#product5-img,
-#product6-img,
-#product7-img,
-#product9-img,
-#product10-img,
-#product11-img,
-#product13-img,
-#product14-img,
-#product15-img {
-    margin-right: 61px;
-}
-
-
-/*media screens for product-imgs*/
-@media screen and (max-width: 900px) {
-    #product1-img,
-    #product2-img,
-    #product3-img,
-    #product4-img,
-    #product5-img,
-    #product6-img,
-    #product7-img,
-    #product8-img,
-    #product9-img,
-    #product10-img,
-    #product11-img,
-    #product12-img,
-    #product13-img,
-    #product14-img,
-    #product15-img,
-    #product16-img {
-    padding: 10px;
-    margin: 0;
-}
-
-}
-#product1-img:hover,
-#product2-img:hover,
-#product3-img:hover,
-#product4-img:hover,
-#product5-img:hover,
-#product6-img:hover,
-#product7-img:hover,
-#product8-img:hover,
-#product9-img:hover,
-#product10-img:hover,
-#product11-img:hover,
-#product12-img:hover,
-#product13-img:hover,
-#product14-img:hover,
-#product15-img:hover,
-#product16-img:hover {
-    border-style: groove;
-    border: none;
-    padding: 0;
-}
-
-#expandBTN {
-    position: relative;
-    margin-top: 20px;
-    margin-left: 455px;
-    background-color: rgba(254, 254, 255, 1);
-    border: none;
-    cursor: pointer;
-}
-/*media screens for expandBTNs*/
-@media screen and (max-width: 900px){
-    #expandBTN {
-        margin-left: 80%;
-    }
-}
-/*------------------------------------------*/
-
-
-/*About START--------------------------*/
-#aboutPageBackground {
-    position: absolute;
-    margin-top: 30px;
-    z-index: -1;
-    width: 100%;
-    height: 400px;
-    background-color: rgba(248, 248, 255, 1);
-    border: none;
-}
-
-.aboutPageText {
-    margin-top: 100px;
-    margin-bottom: 110px;
-    text-align: center;
-    z-index: 2;
-}
-
-.JoinBTN {
-    text-decoration: underline;
-}
-
-.buyBTN, .sellBTN {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    border-style: solid;
-    font-size: 20px;
-    padding: 16px 30px;
-    border-radius: 20px;
-    cursor: pointer;
-    z-index: 3;
-    top: 90%;
-}
-
-.buyBTN:hover, .sellBTN:hover {
-    border: 1px solid rgba(249, 114, 38, 0.8);
-    width: 200px;
-}
-
-.buyBTN {
-    left: 20%;
-    background-color: rgba(20, 47, 204, 0.95);
-    border-color: rgba(20, 47, 204, 0.95);
-    color: rgba(254, 254, 255, 1);
-}
-
-.sellBTN {
-    left: 80%;
-    background-color:rgba(254, 254, 255, 1);
-    border-color: rgba(20, 47, 204, 1);
-    color: rgba(20, 47, 204, 0.95);
-}
-
-.aboutPageBackgroundIMGs {
-    position: relative;
-    top: 45px;
-    text-align: center;
-    z-index: 1;
-}
-/*------------------------------------------*/
-
-
-
-/*Contact TEST START--------------------------*/
-section {
-    margin-top: 50px;
-    margin-left: 250px;
-    margin-right: 250px;
-    justify-content: center;
-}
-.accountsBox,
-.communityBox,
-.discountsBox,
-.locationBox {
-    background-color: rgba(248, 248, 255, 1);
-    border: 1px solid rgba(20, 47, 204, 0.6);
-    border-radius: 10px;
-    display: inline-table;
-    width: 250px;
-    height: 200px;
-}
-
-#accountsText,
-#communityText,
-#discountsText,
-#locationText {
-    text-align: center;
-    margin-top: 60px;
-    color: rgba(20, 47, 204, 0.6);
-}
-
-.communityBox{
-    margin-left: 125px;
-}
-
-.discountsBox {
-    float: right;
-}
-.locationBox {
-    margin-top: 40px;
-    margin-left: 380px;
-
-}
-
-.inputFields, .messageText {
-    text-align: center;
-}
-
-.contactForm {
-    margin-top: 50px;
-}
-.sendBTN {
-    margin-top: 10px;
-    text-align: center;
-  }
-/*------------------------------------------*/
-
-
-/*Checkout START--------------------------*/
-.logoCheckout {
-   text-align: center;
-    margin-top: 40px;
-}
-.logoCheckout .logo {
-    width: 160px;
-    margin: 0 0 15px 0;
-}
-
-.userInfoMember,
-.userInfoMail,
-.userInfoLogOut {
-    margin-top: 5px;
-    text-align: center;
-    font-size: 14px;
-    color: rgba(20, 47, 204, 0.6);
-}
-.userInfoLogOut {
-    text-decoration: underline;
-}
-.checkoutLineTop,
-.checkoutLineBottom {
-    width: 750px;
-}
-.checkoutLineBottom {
-    margin-left: 50px;
-}
-
-.checkoutPage {
-    padding-top: 20px;
-    padding-bottom: 40px;
-    display: grid;
-    grid-template-columns: auto;
-    column-gap: 10px;
-    justify-content: center;
-    align-items: center;
-    transition: all 1s;
-}
-
-.checkoutDetails,
-.checkoutForm {
-    margin-left: 50px;
-}
-
-.checkoutForm {
-    margin-top: 20px;
-}
-
-.checkoutFields {
-    width: 40%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-#pick-up {
-    margin-top: 10px;
-}
-
-#pick-up, #post-office {
-    margin-right: 15px;
-}
-
-.promo-code {
-    width: 145px;
-    padding: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.checkoutFields input:hover,
-.paymentFields input:hover,
-.paymentFields select:hover,
-input#promoCode:hover {
-    border: 1px solid rgba(249, 114, 38, 0.8);
-}
-
-.paymentFields {
-    width: 40%;
-    grid-template-columns: repeat(2, 2fr);
-}
-
-#checkoutBTN {
-    margin-top: 10px;
-    margin-left: 650px;
-    width: 200px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid rgba(20, 47, 204, 0.6);
-    background-color: rgba(20, 47, 204, 1);
-    color: rgba(254, 254, 255, 1);
-    transition: 0.3s;
-}
-#checkoutBTN:hover {
-    width: 210px;
-    border-color: rgba(249, 114, 38, 0.8);
-}
-/*Checkout END --------------------------*/
-
-/*Checkout success START--------------------------*/
-.checkout-success {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.checkoutPage > h2 {
-    margin-top: 50px;
-}
-
-
-/*Profile START--------------------------*/
 .logInForm {
     display: block;
     text-align: center;
  }
- /*--------------------------*/
+
+ /*---------------END---------------*/

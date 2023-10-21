@@ -1,0 +1,117 @@
+
+/*-----------------------------------------
+Checkout- and checkout success page styles
+------------------------------------------*/
+
+
+/*Checkout page START----------*/
+.logoCheckout {
+    text-align: center;
+     margin-top: 40px;
+ }
+ .logoCheckout .logo {
+     width: 160px;
+     margin: 0 0 15px 0;
+ }
+ 
+ .userInfoMember,
+ .userInfoMail,
+ .userInfoLogOut {
+     margin-top: 5px;
+     text-align: center;
+     font-size: 14px;
+     color: rgba(20, 47, 204, 0.6);
+ }
+ .userInfoLogOut {
+     text-decoration: underline;
+ }
+ .checkoutLineTop,
+ .checkoutLineBottom {
+     width: 750px;
+ }
+ .checkoutLineBottom {
+     margin-left: 50px;
+ }
+ 
+ .checkoutPage {
+     padding-top: 20px;
+     padding-bottom: 40px;
+     display: grid;
+     grid-template-columns: auto;
+     column-gap: 10px;
+     justify-content: center;
+     align-items: center;
+     transition: all 1s;
+ }
+ 
+ .checkoutDetails,
+ .checkoutForm {
+     margin-left: 50px;
+ }
+ 
+ .checkoutForm {
+     margin-top: 20px;
+ }
+ 
+ .checkoutFields {
+     width: 40%;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+ }
+ 
+ #pick-up {
+     margin-top: 10px;
+ }
+ 
+ #pick-up, #post-office {
+     margin-right: 15px;
+ }
+ 
+ .promo-code {
+     width: 145px;
+     padding: 0;
+     margin-top: 10px;
+     margin-bottom: 10px;
+ }
+ 
+ .checkoutFields input:hover,
+ .paymentFields input:hover,
+ .paymentFields select:hover,
+ input#promoCode:hover {
+     border: 1px solid rgba(249, 114, 38, 0.8);
+ }
+ 
+ .paymentFields {
+     width: 40%;
+     grid-template-columns: repeat(2, 2fr);
+ }
+ 
+ #checkoutBTN {
+     margin-top: 10px;
+     margin-left: 650px;
+     width: 200px;
+     padding: 10px;
+     border-radius: 10px;
+     border: 1px solid rgba(20, 47, 204, 0.6);
+     background-color: rgba(20, 47, 204, 1);
+     color: rgba(254, 254, 255, 1);
+     transition: 0.3s;
+ }
+ #checkoutBTN:hover {
+     width: 210px;
+     border-color: rgba(249, 114, 38, 0.8);
+ }
+ /*Checkout page END --------------------------*/
+ 
+
+
+ /*Checkout success page--------------------------*/
+ .checkout-success {
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+ }
+ 
+ .checkoutPage > h2 {
+     margin-top: 50px;
+ }
