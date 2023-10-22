@@ -3,6 +3,7 @@
 specific product page styles
 ------------------------------------*/
 
+/*
 #backArrow {
     position: absolute;
     z-index: 100;
@@ -18,6 +19,7 @@ specific product page styles
     margin: 0;
     z-index: 0;
 }
+
 
 #addToCartBox {
     top: -420px;
@@ -80,6 +82,7 @@ specific product page styles
     border: 2px solid rgba(249, 114, 38, 0.8);
   }
 
+
   #productBox {
     background-color: rgba(20, 47, 204, 0.95);
     position: absolute;
@@ -118,6 +121,7 @@ specific product page styles
   .ingameIMGs {
     position: relative;
     margin-left: 175px;
+    width: 100%;
   }
 
   .gamingIcons {
@@ -127,9 +131,323 @@ specific product page styles
     margin-left: 360px;
   }
 
+  .mobileIcons img {
+    display: none;
+  }
+
   .seperationLine {
     position: relative;
     margin-left: 80px;
     margin-right: 80px;
   }
+  */
+
   /*------------------------------------------*/
+/*TEST*/
+
+#backArrow {
+  position: absolute;
+  z-index: 100;
+  top: 200px;
+  margin-left: 40px;
+}
+
+.productIMG {
+  position: relative;
+  width: 100%;
+  top: 80px;
+  padding: none;
+  margin: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#addToCartBox {
+  top: -420px;
+  left: 120px;
+  padding: none;
+  width: 500px;
+  height: 400px;
+  position: relative;
+  border-radius: 10px;
+  background-color: rgba(20, 47, 204, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#title, #title p, #tagline p {
+  text-align: center;
+  padding-bottom: 20px;
+  color: rgba(254, 254, 255, 1);
+}
+
+#title p {
+  font-size: 48px;
+  font-family: fantasy;
+}
+
+#title {
+  position: absolute;
+  top: 49%;
+  left: 24%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+#tagline p {
+    position: absolute;
+    top: 56%;
+    left: 240px;
+    font-size: 20px;
+}
+
+.addToCartBTN {
+  background-color:  rgba(254, 254, 255, 1);
+  border-color: rgba(20, 47, 204, 0.95);
+  color: rgba(20, 47, 204, 0.95);
+  border-style: solid;
+  border-radius: 24px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px 15px;
+  cursor: pointer;
+  text-align: center;
+
+  position: relative;
+  width: 180px;
+  top: -550px;
+  left: 280px;
+  transition: 0.5s;
+}
+
+.addToCartBTN:hover {
+  width: 190px;
+  font-size: 22px;
+  border: 2px solid rgba(249, 114, 38, 0.8);
+}
+
+#productBox1 {
+  background-color: rgba(20, 47, 204, 0.95);
+  position: absolute;
+  margin: none;
+  padding: none;
+  border: none;
+  width: 100%;
+  height: 600px;
+  top: 750px;
+  z-index: -1;
+}
+
+.productText-container {
+  position: absolute;
+  top: 800px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productText {
+  flex: 1;
+  margin-top: 20px;
+  margin-left: 160px;
+}
+
+.productText p {
+  color: rgba(254, 254, 255, 1);
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.productTextIcons {
+  margin-top: 60px;
+  margin-left: 100px;
+}
+
+.ingameIMGs {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-left: 160px;
+  top: -60px;
+  padding: 0;
+}
+
+.gamingIcons {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.seperationLine {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+/*-------------------------
+Hidden elements
+--------------------------*/
+.product-icons-mobile img,
+.prod-col2-img img,
+.incl-cont-icons-mobile img {
+  display: none;
+}
+ 
+
+  /*----------------------------
+  media screens min-width 350px
+  -----------------------------*/
+
+  @media screen and (min-width: 350px) {
+
+    #backArrow {
+      top: 155px;
+      margin-left: 10px;
+    }
+  
+    .productIMG img {
+      width: 100vw;
+      height: auto;
+      
+    }
+    .productIMG {
+      top: 20px;
+    }
+  
+    #addToCartBox {
+      top: -100px;
+      left: 95px;
+      width: 150px;
+      height: 100px;
+  }
+
+    #title, #title p  {
+      top: 32%;
+      left: 170px;
+      font-size: 16px;
+  }
+
+  #tagline, #tagline p {
+    display: none;
+}
+
+.addToCartBTN {
+  position: absolute;
+  top: 32%;
+  left: 120px;
+  padding: 4px 1px;
+  border-radius: 22px;
+  font-size: 10px;
+  width: 96px;
+  z-index: 20;
+}
+.addToCartBTN:hover {
+  left: 118px;
+  width: 100px;
+  font-size: 11px;
+  justify-content: center;
+  border: 1px solid rgba(249, 114, 38, 0.8);
+}
+
+#productBox1 {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 285px;
+}
+
+.product-icons-mobile img {
+  display: block;
+}
+
+.product-icons-mobile {
+  position: relative;
+  margin-left: 80px;
+  top: -70px;
+  z-index: 20;
+}
+
+.prod-col1-img {
+margin-left: 20px;
+}
+
+.productText-container {
+  top: 0;
+}
+
+.productText p {
+  position: absolute;
+  font-size: 8px;
+  color: rgba(27, 32, 61, 1);
+  z-index: 20;
+}
+
+.prod-col1-text {
+    margin-top: 430px;
+    text-align: end;
+    left: 178px;
+    width: 100%;
+}
+
+.prod-col2-text {
+    margin-top: 795px;
+    text-align: center;
+    left: 85px;
+    width: 100%;
+}
+
+p.prod-col2-text {
+  color: rgba(254, 254, 255, 1);
+}
+
+
+.prod-col2-img img {
+  display: block;
+  margin-top: 50px;
+  width: 100vw;
+  height: auto;
+}
+
+#productBox2 {
+  background-color: rgba(20, 47, 204, 0.95);
+  position: absolute;
+  margin: none;
+  padding: none;
+  border: none;
+  width: 100%;
+  height: 90px;
+  top: 843px;
+  z-index: -1;
+}
+
+.incl-cont-icons-mobile img {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin-top: 120px;
+    margin-left: 80px;
+}
+
+.seperationLine {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+
+/*-------------------
+Hidden elements
+--------------------*/
+.ingameIMGs,
+.ingameIMGs img,
+.gamingIcons img,
+.productTextIcons {
+  display: none;
+}
+
+}
+
+/*------------------END-------------------*/

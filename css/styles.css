@@ -10,7 +10,7 @@ profile         (only example of redirect pages)
 /*------------------------------------------------------------------------------
 COLORS in use:
 dark blue(same as logo):    rgba(27, 32, 61, 1)
-white background:           rgba(254, 254, 255, 1)
+white background/text:           rgba(254, 254, 255, 1)
 blue background box:        rgba(248, 248, 255, 1)
 light blue:                 rgba(20, 47, 204, 0.6)
 bright blue:                rgba(20, 47, 204, 0.95) / rgba(20, 47, 204, 1)
@@ -176,10 +176,45 @@ footer {
 .facebook, .instagram, .linkedin {
     padding-right: 40px;
 }
+
+/*----------------------------
+Media query FOOTER
+-----------------------------*/
+@media screen and (min-width: 350px) {
+
+    footer {
+        margin-top: 100px;
+        margin-bottom: 5px;
+        width: 100%;
+        height: 100px;
+    }
+    .footerRow {
+        position: relative;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+    .copyright-text {
+        font-size: 10px;
+    }
+    
+    .social-icons {
+        position: relative;
+        margin-right: 20px;
+        margin-top: 40px;
+    }
+    .facebook, .instagram, .linkedin {
+        padding-right: 15px;
+        width: 20px;
+        height: auto;
+    }
+
+}
 /*--------------END--------------*/
 
 
-
+/*----------------------------
+TOP of pages START
+-----------------------------*/
 .logo {
     margin-top: 15px;
     margin-left: 40px;
@@ -223,6 +258,7 @@ NAVIGATION BAR
     width: 100%;
     display: flex;
     align-items: center;
+    z-index: 500;
 }
 
 .menu-icon {
@@ -285,6 +321,7 @@ nav ul li a:hover {
         color: rgba(27, 32, 61, 1);
     }
 }
+
 @media screen and (min-width: 1480px){
     nav ul li .rightNavElement {
         margin-right: 60px;
