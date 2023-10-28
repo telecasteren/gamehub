@@ -73,8 +73,8 @@ Pagetitle for pages: About, Contact, Profile  */
 /*Back to #top scroll ---------*/
 .scroll-container {
     position: relative;
-    top: 20px;
-    left: 85%;
+    top: 140px;
+    left: 750px;
     height: 100%;
     z-index: 100;
   }
@@ -110,15 +110,16 @@ Pagetitle for pages: About, Contact, Profile  */
     }
 }
 
-
-
 .middleLine {
     margin-left: 80px;
     margin-right: 80px;
+    margin-bottom: 20px;
 }
 
 .bottomLine {
     padding: 5px 10px 10px 10px;
+    position: relative;
+    margin-top: 50px;
 }
 /*--------END---------*/
 
@@ -174,6 +175,8 @@ footer {
     width: 100%;
     height: 100px;
     justify-content: space-between;
+    position: relative;
+    top: 50px;
 }
 .footerRow {
     position: relative;
