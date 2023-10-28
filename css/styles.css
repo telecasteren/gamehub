@@ -32,6 +32,7 @@ GLOBAL STYLES
     color: rgba(27, 32, 61, 1);
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 
@@ -93,12 +94,29 @@ Pagetitle for pages: About, Contact, Profile  */
 /*Seperation lines*/
 
 .topLine {
+    width: auto;
     padding: 10px;
 }
+@media screen and (max-width: 770) {
+    .topLine {
+        padding: 10px;
+        width: 920px;
+    }
+}
+@media screen and (max-width: 430) {
+    .topLine {
+        padding: 10px;
+        width: 960px;
+    }
+}
+
+
+
 .middleLine {
     margin-left: 80px;
     margin-right: 80px;
 }
+
 .bottomLine {
     padding: 5px 10px 10px 10px;
 }
@@ -180,7 +198,7 @@ footer {
 /*----------------------------
 Media query FOOTER
 -----------------------------*/
-@media screen and (min-width: 350px) {
+@media screen and (max-width: 900px) {
 
     footer {
         margin-top: 100px;
@@ -194,7 +212,36 @@ Media query FOOTER
         margin-top: 40px;
     }
     .copyright-text {
-        font-size: 10px;
+        font-size: 12px;
+    }
+    
+    .social-icons {
+        position: relative;
+        margin-right: 20px;
+        margin-top: 40px;
+    }
+    .facebook, .instagram, .linkedin {
+        padding-right: 15px;
+        width: 20px;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+
+    footer {
+        margin-top: 800px;
+        margin-bottom: 5px;
+        position: sticky;
+    }
+    .footerRow {
+        position: relative;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+    .copyright-text {
+        font-size: 12px;
     }
     
     .social-icons {
@@ -265,11 +312,12 @@ NAVIGATION BAR
     width: 30px;
     cursor: pointer;
     display: none;
-    margin-right: 20px;
 }
 
 nav {
     flex: 1;
+    right: 30px;
+    position: relative;
     text-align: right;
     margin-top: 10px;
 }
@@ -288,9 +336,43 @@ nav ul li a {
 nav ul li a:hover {
     color: rgba(249, 114, 38, 1); /*darker orange?: rgba(204, 86, 20, 0.8);*/
 }
-@media screen and (max-width: 1000px){
+
+/*--- Media queries for NAVBAR, menu icon and dropdown list ----*/
+@media screen and (max-width: 430px) {
+
+    .menu-icon {
+        position: relative;
+        right: 40px;
+    }
+
+    #menuList {
+        position: absolute;
+        overflow: hidden;
+        transition: 0.5s;
+        right: -60px;
+        top: 12px;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .menu-icon {
+        position: relative;
+        right: 40px;
+    }
+
+    #menuList {
+        right: -60px;
+        top: 12px;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 1023px) {
     .menu-icon {
         display: block;
+        position: relative;
+        right: 40px;
     }
     nav ul {
         width: 100%;
@@ -322,11 +404,12 @@ nav ul li a:hover {
     }
 }
 
-@media screen and (min-width: 1480px){
+@media screen and (min-width: 1480px) {
     nav ul li .rightNavElement {
         margin-right: 60px;
     }
 }
+
 /*----------------GLOBAL STYLES END------------------------*/
 
 
