@@ -340,7 +340,9 @@ nav ul li a:hover {
     color: rgba(249, 114, 38, 1); /*darker orange?: rgba(204, 86, 20, 0.8);*/
 }
 
-/*--- Media queries for NAVBAR, menu icon and dropdown list ----*/
+/*------------
+ Media queries for NAVBAR, menu icon and dropdown list
+ -----------------------------------------------------*/
 @media screen and (max-width: 430px) {
 
     .menu-icon {
@@ -364,6 +366,15 @@ nav ul li a:hover {
         right: 40px;
     }
 
+    #menuList {
+        right: -60px;
+        top: 12px;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    
     #menuList {
         right: -60px;
         top: 12px;
@@ -400,6 +411,9 @@ nav ul li a:hover {
     #menuList {
         overflow: hidden;
         transition: 0.5s;
+        right: -60px;
+        top: 12px;
+        width: 100vw;
     }
     #current {
         font-weight: bolder;
