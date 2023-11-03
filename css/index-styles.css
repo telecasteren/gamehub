@@ -951,22 +951,210 @@ Max-width 430px
 
 @media screen and (max-width: 430px) {
 
+    .homepageCarousel div {
+      height: 300px;
+      width: 100vw;
+  }
 
-/*------------------------------------------CONTINIUE YOUR JOURNEY HERE FRIEND-------------------------*/
+    .homepageCarousel {
+      margin-top: 40px;
+  }
 
+    #getBTN {
+      top: 328px;
+      width: 200px;
+  }
 
-  
+  /*Images and caption boxes*/
+
+    .col-1 img {
+      width: 100vw;
+      margin-top: 5px;
+  }
+
+    .color-box1 {
+      width: 100vw;
+      height: 150px;
+      top: 320px;
+  }
+
+    .col-2 img {
+      top: 80px;
+  }
+
+    .color-box2 {
+      height: 170px;
+      top: 0;
+  }
+
+  .col-3 img {
+    top: -2px;
+  }
+
+  .color-box3 {
+    top: 240px;
+    height: 100px;
+    width: 100vw;
+    margin-left: 0;
+  }
+
+  .col-4 img {
+    top: 75px;
+  }
+
+  .col-5 img {
+    top: 0;
+    width: 100vw;
+    height: auto;
+  }
+
+  .color-box4 {
+    top: 770px;
+    height: 120px;
+  }
+
+  .col-6 img {
+    top: -15px;
+  }
+
+  .col-7 img {
+    top: 80px;
+  }
+
+  .color-box5 {
+    top: 645px;
+    height: 120px;
+  }
+
+  .col-8 img {
+    top: 165px;
+  }
+
+  .color-box6 {
+    height: 120px;
+    top: 765px;
+  }
+
+  /*--TEXT containers--*/
+
+  .text-container1 {
+    left: 0;
+    top: 0;
+  }
+
+  .text-container1 h1 {
+    position: relative;
+    top: 480px;
+    left: -150px;
+  }
+  .text-container1 p {
+      position: relative;
+      top: 405px;
+      font-size: 12px;
+      text-align: end;
+      left: 20px;
+  }
+
+    .text-container2 h1 {
+      top: 350px;
+      left: -45px;
+  }
+
+  .text-container2 p {
+    font-size: 12px;
+    top: 282px;
+    text-align: start;
+    margin-left: -10px;
+  }
+
+    .text-container3 h1 {
+      top: 210px;
+  }
+
+  .text-container3 p {
+    top: 145px;
+    left: 40px;
+    font-size: 14px;
+  }
+
+  .text-container5 h1 {
+    top: 350px;
+    left: 35px;
+  }
+
+  .text-container5 p {
+  font-size: 12px;
+  top: 282px;
+  text-align: start;
+  margin-left: 10px;
+  }
+
+  .text-container6 h1 {
+    top: 295px;
+    left: -70px;
+  }
+
+  .text-container6 p {
+    top: 230px;
+    left: 220px;
+  }
+
+  .text-container4 {
+    top: 1550px;
+    left: -200px;
+  }
+
+  .text-container4 h1 {
+    text-align: end;
+    left: 210px;
+    top: 140px;
+  }
+
+  .text-container4 p {
+    text-align: start;
+    font-size: 12px;
+    top: 75px;
+    left: 260px;
+  }
+
+  .scroll-container {
+    left: 160px;
+  }
+
+  /*--------------
+  HIDDEN ELEMENTS
+  ---------------*/
+  .middleLine {
+    display: none;
+  }
+
 }
-
-
-
-
 /*----------------------430px END--------------------*/
 
 
 /*--------------
 Max-width 390px
 -------------------------------*/
+
+@media screen and (max-width: 390px) {
+
+ /*------ START YOUR JOURNEY HERE FRIEND ------*/
+
+
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*--------------
 Max-width 345px
