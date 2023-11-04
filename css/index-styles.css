@@ -71,8 +71,8 @@ Regular DESKTOP sizes (+/- 1500px)
   }
 
 .home-container {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
+  display: grid;
   gap: 20px;
   max-width: 100%;
   height: auto;
@@ -965,6 +965,7 @@ Max-width 430px
       width: 200px;
   }
 
+  
   /*Images and caption boxes*/
 
     .col-1 img {
@@ -987,145 +988,99 @@ Max-width 430px
       top: 0;
   }
 
-  .col-3 img {
-    top: -2px;
+    .col-3 img {
+      top: -2px;
   }
 
-  .color-box3 {
-    top: 240px;
-    height: 100px;
-    width: 100vw;
-    margin-left: 0;
+    .color-box3 {
+      top: 240px;
+      height: 100px;
+      width: 100vw;
+      margin-left: 0;
   }
 
-  .col-4 img {
-    top: 75px;
+    .col-4 img {
+      top: 75px;
   }
 
-  .col-5 img {
-    top: 0;
-    width: 100vw;
-    height: auto;
+    .col-5 img {
+      top: 0;
+      width: 100vw;
+      height: auto;
   }
 
-  .color-box4 {
-    top: 770px;
-    height: 120px;
+    .color-box4 {
+      top: 430px;
+      height: 120px;
   }
 
-  .col-6 img {
-    top: -15px;
+    .col-6 img {
+      top: 85px;
   }
 
-  .col-7 img {
-    top: 80px;
+    .color-box5 {
+      top: 395px;
+      height: 120px;
   }
 
-  .color-box5 {
-    top: 645px;
-    height: 120px;
+    .col-7 img {
+      top: 178px;
   }
 
-  .col-8 img {
-    top: 165px;
+    .color-box6 {
+      height: 120px;
+      top: 400px;
   }
 
-  .color-box6 {
-    height: 120px;
-    top: 765px;
+    .col-8 img {
+      top: 255px;
   }
 
   /*--TEXT containers--*/
 
-  .text-container1 {
-    left: 0;
-    top: 0;
-  }
-
-  .text-container1 h1 {
-    position: relative;
-    top: 480px;
-    left: -150px;
-  }
-  .text-container1 p {
+    .text-container1 h1 {
+      top: 225px;
+      left: -140px;
       position: relative;
-      top: 405px;
-      font-size: 12px;
-      text-align: end;
-      left: 20px;
   }
 
     .text-container2 h1 {
-      top: 350px;
-      left: -45px;
-  }
-
-  .text-container2 p {
-    font-size: 12px;
-    top: 282px;
-    text-align: start;
-    margin-left: -10px;
+      top: 305px;
+      left: -130px;
   }
 
     .text-container3 h1 {
-      top: 210px;
+      top: 175px;
+      left: 30px;
   }
 
-  .text-container3 p {
-    top: 145px;
-    left: 40px;
-    font-size: 14px;
+    .text-container4 h1 {
+      top: 265px;
+      display: block;
+      left: 80px;
   }
 
-  .text-container5 h1 {
-    top: 350px;
-    left: 35px;
+    .text-container5 h1 {
+      top: 400px;
+      left: -35px;
   }
 
-  .text-container5 p {
-  font-size: 12px;
-  top: 282px;
-  text-align: start;
-  margin-left: 10px;
+    .text-container6 h1 {
+      top: 355px;
+      left: 30px;
   }
+  /*--------TEXT containers END-------*/
 
-  .text-container6 h1 {
-    top: 295px;
-    left: -70px;
-  }
-
-  .text-container6 p {
-    top: 230px;
-    left: 220px;
-  }
-
-  .text-container4 {
-    top: 1550px;
-    left: -200px;
-  }
-
-  .text-container4 h1 {
-    text-align: end;
-    left: 210px;
-    top: 140px;
-  }
-
-  .text-container4 p {
-    text-align: start;
-    font-size: 12px;
-    top: 75px;
-    left: 260px;
-  }
-
-  .scroll-container {
-    left: 160px;
+    .scroll-container {
+      left: 160px;
   }
 
   /*--------------
   HIDDEN ELEMENTS
   ---------------*/
-  .middleLine {
-    display: none;
+    .middleLine,
+    .home-container p {
+      display: none;
   }
 
 }
@@ -1138,24 +1093,209 @@ Max-width 390px
 
 @media screen and (max-width: 390px) {
 
- /*------ START YOUR JOURNEY HERE FRIEND ------*/
+      .homepageCarousel {
+        margin-top: 0;
+    }
+
+      #getBTN {
+        top: 285px;
+    }
+
+    /*Images and caption boxes*/
+  
+      .color-box1 {
+        height: 110px;
+    }
+
+      .col-2 img {
+        top: 82px;
+    }
+
+      .col-3 img {
+        top: -4px;
+    }
+
+      .color-box3 {
+        top: 200px;
+    }
+
+      .col-4 img {
+        top: 62px;
+    }
+
+      .col-5 img {
+        top: -16px;
+    }
+
+      .color-box4 {
+        top: 370px;
+    }
+
+      .col-6 img {
+        top: 68px;
+    }
+
+      .color-box5 {
+        top: 350px;
+    }
+
+      .col-7 img {
+        top: 170px;
+    }
+
+      .color-box6 {
+        height: 120px;
+        top: 365px;
+    }
+
+      .col-8 img {
+        top: 248px;
+    }
+
+    /*Text containers*/
+
+      .text-container1 h1 {
+        top: 185px;
+        left: -130px;
+    }
+
+      .text-container2 h1 {
+        top: 260px;
+        left: -130px;
+    }
+
+      .text-container3 h1 {
+        top: 135px;
+        left: 30px;
+    }
+
+      .text-container4 h1 {
+        top: 205px;
+        display: block;
+        left: 80px;
+    }
+
+      .text-container5 h1 {
+        top: 350px;
+        left: -35px;
+    }
+
+      .text-container6 h1 {
+        top: 335px;
+        left: 30px;
+    }
 
 
- 
+      .scroll-container {
+        left: 135px;
+    }
+
+    /*-------------
+    HIDDEN ELEMENTS
+    -----------------*/
+      .home-container p {
+        display: none;
+    }
+
 }
-
-
-
-
-
-
-
-
-
-
-
+/*-------------------390px END---------------------*/
 
 
 /*--------------
-Max-width 345px
+Max-width 320px
 -------------------------------*/
+
+@media screen and (max-width: 320px) {
+
+
+  /*--Images and caption boxes--*/
+
+    .color-box1 {
+      height: 100px;
+      top: 250px;
+  }
+
+    .col-2 img {
+      top: 50px;
+  }
+
+    .color-box2 {
+      height: 100px;
+      top: 10px;
+  }
+
+    .col-3 img {
+      top: 6px;
+  }
+
+    .color-box3 {
+      top: 160px;
+  }
+
+    .col-4 img {
+      top: 52px;
+  }
+
+    .col-5 img {
+      top: -26px;
+  }
+
+    .color-box4 {
+      top: 280px;
+  }
+
+    .col-6 img {
+      top: 26px;
+  }
+
+    .color-box5 {
+      top: 225px;
+  }
+
+    .col-7 img {
+      top: 88px;
+  }
+
+    .color-box6 {
+      height: 100px;
+      top: 245px;
+  }
+
+    .col-8 img {
+      top: 138px;
+  }
+
+  /*--Text containers--*/
+
+    .text-container1 h1 {
+      top: 120px;
+      left: -120px;
+  }
+
+    .text-container2 h1 {
+      top: 175px;
+      left: -110px;
+  }
+
+    .text-container4 h1 {
+      top: 130px;
+      left: 100px;
+  }
+
+    .text-container5 h1 {
+      top: 245px;
+      left: -30px;
+  }
+
+    .text-container6 h1 {
+      top: 225px;
+      left: 30px;
+  }
+
+    .scroll-container {
+      left: 105px;
+  }
+
+}
+
+/*-------------------320px END---------------------*/

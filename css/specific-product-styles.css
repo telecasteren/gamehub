@@ -293,7 +293,7 @@ Hidden elements (elements visible on smaller screens)
 
       .addToCartBTN {
         top: -240px;
-  }
+    }
 
       #productBox1 {
         background-color: rgba(20, 47, 204, 0.95);
@@ -303,7 +303,7 @@ Hidden elements (elements visible on smaller screens)
         height: 90px;
         top: 520px;
         z-index: -1;
-      }
+    }
   
       #productBox2 {
         display: block;
@@ -328,52 +328,52 @@ Hidden elements (elements visible on smaller screens)
         z-index: 20;
     }
 
-    .prod-col1-img img {
-      display: block;
-      position: relative;
-      top: 240px;
-      left: 50px;
-      margin: none;
-      width: 400px;
-      height: auto;
-  }
-
-    .prod-col2-img img {
-      display: block;
-      position: relative;
-      top: 350px;
-      width: 100vw;
-      height: auto;
+      .prod-col1-img img {
+        display: block;
+        position: relative;
+        top: 240px;
+        left: 50px;
+        margin: none;
+        width: 400px;
+        height: auto;
     }
 
-    .productText-container {
-      position: relative;
-      top: 0;
+      .prod-col2-img img {
+        display: block;
+        position: relative;
+        top: 350px;
+        width: 100vw;
+        height: auto;
     }
 
-    .productText p {
-      position: absolute;
-      font-size: 14px;
-      color: rgba(27, 32, 61, 1);
-      z-index: 20;
+      .productText-container {
+        position: relative;
+        top: 0;
     }
 
-    .prod-col1-text {
-      top: -530px;
-      text-align: start;
-      left: 600px;
-  }
+      .productText p {
+        position: absolute;
+        font-size: 14px;
+        color: rgba(27, 32, 61, 1);
+        z-index: 20;
+    }
 
-    .prod-col2-text {
-      margin-top: 330px;
-      text-align: center;
-      left: 85px;
-      width: 100%;
-  }
+      .prod-col1-text {
+        top: -530px;
+        text-align: start;
+        left: 600px;
+    }
 
-  p.prod-col2-text {
-    color: rgba(254, 254, 255, 1);
-  }
+      .prod-col2-text {
+        margin-top: 330px;
+        text-align: center;
+        left: 85px;
+        width: 100%;
+    }
+
+      p.prod-col2-text {
+        color: rgba(254, 254, 255, 1);
+    }
 
 
       .incl-cont-icons-mobile img {
@@ -484,7 +484,6 @@ Hidden elements (elements visible on smaller screens)
    }
 
       .prod-col2-text {
-        top: ;
         left: 95px;
    }
 
@@ -543,11 +542,11 @@ Hidden elements (elements visible on smaller screens)
     }
 
         .prod-col1-img img {
-          top: 225px;
+          top: 275px;
     }
 
         .prod-col1-text {
-          top: -220px;
+          top: -170px;
           left: 380px;
           text-align: start;
     }
