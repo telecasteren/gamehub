@@ -38,7 +38,7 @@
             <p class="userInfoLogOut">log out</p>
 
     <main>
-        <section class="checkoutPage">          <!--do something with the section, it fucks up alignment-->
+        <section class="checkout-page">
             <div class="checkoutDetails">
                 <div>
                     <h2>checkout</h2>
@@ -53,6 +53,7 @@
                 <br>
                 <p>subtotal</p>
                 <br>
+                <div class="delivery-method">
                     <b><p>delivery method</p></b>
                     <label>pick-up at store: FREE</label>
                     <input type="radio" id="pick-up" name="delivery" value="pick-up" class="radioBTN"/>
@@ -60,16 +61,15 @@
                     <input type="radio" id="post-office" name="delivery" value="post-office" class="radioBTN"/>
                     <label>home-delivery $9,90</label>
                     <input type="radio" id="home-delivery" name="delivery" value="home-delivery" class="radioBTN"/>
+                </div>
                     
-                    <br>
-                    <br>
-                    
-                    <b><label>promo-code:</label></b>
+                    <div class="promo-label"><b><label>promo-code:</label></b></div>
                     <br>
                     <input type="text" id="promoCode" name="promo-code" class="promo-code"/>
                 
                     <b><p>TOTAL incl.mva (VAT)</p></b>
             </div>
+
                 <br>
 
             <div class="checkoutLineBottom"><hr></div>
@@ -85,8 +85,6 @@
                     <input type="text" class="postalCode" name="postalcode" placeholder="postal code *"/>           <!--pretend required attribute-->
                 </fieldset>
 
-                <br>
-
                 <b><p>payment method</p></b>
                 <fieldset class="paymentFields">
                     <select name="payment">
@@ -99,8 +97,8 @@
                     <input type="number" name="number" placeholder="cardnumber *"/>   <!--required attribute-->
                     <input type="number" name="number" placeholder="cvc number *"/>   <!--required attribute-->
                 </fieldset>
-
             </form>
+
             <a href="checkout-success.html"><button id="checkoutBTN">PLACE ORDER</button></a>
         </section>
 

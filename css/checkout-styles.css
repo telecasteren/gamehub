@@ -4,114 +4,228 @@ Checkout- and checkout success page styles
 ------------------------------------------*/
 
 
-/*Checkout page START----------*/
-.logoCheckout {
-    text-align: center;
-     margin-top: 40px;
+/*------------------
+Checkout page START
+---------------------*/
+
+    .logoCheckout {
+        text-align: center;
+        margin-top: 40px;
  }
- .logoCheckout .logo {
-     width: 160px;
-     margin: 0 0 15px 0;
- }
- 
- .userInfoMember,
- .userInfoMail,
- .userInfoLogOut {
-     margin-top: 5px;
-     text-align: center;
-     font-size: 14px;
-     color: rgba(20, 47, 204, 0.6);
- }
- .userInfoLogOut {
-     text-decoration: underline;
- }
- .checkoutLineTop,
- .checkoutLineBottom {
-     width: 750px;
- }
- .checkoutLineBottom {
-     margin-left: 50px;
+    .logoCheckout .logo {
+        width: 160px;
+        margin: 0 0 15px 0;
  }
  
- .checkoutPage {
-     padding-top: 20px;
-     padding-bottom: 40px;
-     display: grid;
-     grid-template-columns: auto;
-     column-gap: 10px;
-     justify-content: center;
-     align-items: center;
-     transition: all 1s;
+    .userInfoMember,
+    .userInfoMail,
+    .userInfoLogOut {
+        margin-top: 5px;
+        text-align: center;
+        font-size: 14px;
+        color: rgba(20, 47, 204, 0.6);
+ }
+    .userInfoLogOut {
+        text-decoration: underline;
+ }
+    .checkoutLineTop,
+    .checkoutLineBottom {
+        width: 750px;
+ }
+
+
+    .checkout-page {
+        margin-top: 50px;
+        display: grid;
+        justify-content: center;
+        transition: all 0.5s;
+}
+
+    .checkoutFields {
+        width: 40%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
  }
  
- .checkoutDetails,
- .checkoutForm {
-     margin-left: 50px;
+    #pick-up {
+        margin-top: 10px;
  }
  
- .checkoutForm {
-     margin-top: 20px;
+    #pick-up, #post-office {
+        margin-right: 15px;
  }
  
- .checkoutFields {
-     width: 40%;
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
+    .promo-code {
+        width: 145px;
+        padding: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+ }
+
+    form p,
+    .promo-label,
+    .checkoutDetails h3 {
+        margin-top: 20px;
+ }
+
+    input.promo-code {
+        margin-top: -5px;
+        margin-bottom: 20px;
  }
  
- #pick-up {
-     margin-top: 10px;
+    .checkoutFields input:hover,
+    .paymentFields input:hover,
+    .paymentFields select:hover,
+    input#promoCode:hover {
+        border: 1px solid rgba(249, 114, 38, 0.8);
  }
  
- #pick-up, #post-office {
-     margin-right: 15px;
- }
+    select,
+    input[type=date] {
+        width: 298px;
+}
+
+    .paymentFields {
+        width: 40%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+}
  
- .promo-code {
-     width: 145px;
-     padding: 0;
-     margin-top: 10px;
-     margin-bottom: 10px;
+    #checkoutBTN {
+        margin-top: 10px;
+        margin-left: 545px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid rgba(20, 47, 204, 0.6);
+        background-color: rgba(20, 47, 204, 1);
+        color: rgba(254, 254, 255, 1);
+        transition: 0.3s;
  }
- 
- .checkoutFields input:hover,
- .paymentFields input:hover,
- .paymentFields select:hover,
- input#promoCode:hover {
-     border: 1px solid rgba(249, 114, 38, 0.8);
+
+    #checkoutBTN:hover {
+        width: 210px;
+        border-color: rgba(249, 114, 38, 0.8);
  }
- 
- .paymentFields {
-     width: 40%;
-     grid-template-columns: repeat(2, 2fr);
- }
- 
- #checkoutBTN {
-     margin-top: 10px;
-     margin-left: 650px;
-     width: 200px;
-     padding: 10px;
-     border-radius: 10px;
-     border: 1px solid rgba(20, 47, 204, 0.6);
-     background-color: rgba(20, 47, 204, 1);
-     color: rgba(254, 254, 255, 1);
-     transition: 0.3s;
- }
- #checkoutBTN:hover {
-     width: 210px;
-     border-color: rgba(249, 114, 38, 0.8);
- }
- /*Checkout page END --------------------------*/
+ /*---------------- Checkout page END --------------------------*/
  
 
 
- /*Checkout success page--------------------------*/
- .checkout-success {
-     align-items: center;
-     justify-content: center;
-     text-align: center;
+ /*-------------------
+ Checkout success page
+ --------------------------*/
+    .checkout-success {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+ }
+
+    .checkout-success h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
  }
  
- .checkoutPage > h2 {
-     margin-top: 50px;
+    .checkout-page > h2 {
+        margin-top: 50px;
  }
+
+    .checkout-lines {
+        left: 530px;
+        width: 450px;
+        position: relative;
+}
+/*---------------- Checkout success page END ------------------*/
+
+
+
+  /*------------------------------
+  Media queries Checkout page
+  -----------------------------------*/
+
+  /*------------------------
+  Max-width 770px
+  ----------------------------*/
+
+  @media screen and (max-width: 770px) {
+
+        .checkout-page {
+            left: 0;
+            position: relative;
+    }
+
+        #checkoutBTN {
+            margin-left: 320px;
+    }
+
+        .checkoutLineTop,
+        .checkoutLineBottom {
+            width: 525px;
+    }
+
+  }
+  /* --------------------770px END----------------------*/
+
+  /*------------------------
+  Max-width 535px
+  ----------------------------*/
+
+  @media screen and (max-width: 535px) {
+
+        .checkout-page {
+            left: 10px;
+            position: relative;
+    }
+
+        .delivery-method {
+            display: grid;
+    }
+
+        .delivery-method p {
+            margin-bottom: 10px;
+    }
+
+        input[type=radio] {
+            margin: 12px;
+    }
+
+        #checkoutBTN {
+            margin-left: 210px;
+    }
+
+        .checkoutLineTop,
+        .checkoutLineBottom {
+            width: 425px;
+    }
+
+}
+/* --------------------535px END----------------------*/
+
+/*------------------------
+  Max-width 425px
+  ----------------------------*/
+
+  @media screen and (max-width: 425px) {
+
+
+    /*------------------------------------------ Start your journey here my friend ----------------*/
+
+
+  }
+
+
+
+
+/*---------------------------------
+  Media queries Checkout success page
+  ------------------------------------*/
+
+  @media screen and (max-width: 535px) {
+
+        .checkout-lines {
+            left: 40px;
+            width: 450px;
+            position: relative;
+    }
+    
+  }
+  /* --------------------535px END----------------------*/
