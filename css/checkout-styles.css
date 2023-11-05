@@ -11,11 +11,11 @@ Checkout page START
     .logoCheckout {
         text-align: center;
         margin-top: 40px;
- }
+}
     .logoCheckout .logo {
         width: 160px;
         margin: 0 0 15px 0;
- }
+}
  
     .userInfoMember,
     .userInfoMail,
@@ -24,14 +24,14 @@ Checkout page START
         text-align: center;
         font-size: 14px;
         color: rgba(20, 47, 204, 0.6);
- }
+}
     .userInfoLogOut {
         text-decoration: underline;
- }
+}
     .checkoutLineTop,
     .checkoutLineBottom {
         width: 750px;
- }
+}
 
 
     .checkout-page {
@@ -45,44 +45,45 @@ Checkout page START
         width: 40%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
- }
+}
  
     #pick-up {
         margin-top: 10px;
- }
+}
  
     #pick-up, #post-office {
         margin-right: 15px;
- }
+}
  
     .promo-code {
         width: 145px;
         padding: 0;
         margin-top: 10px;
         margin-bottom: 10px;
- }
+}
 
     form p,
     .promo-label,
     .checkoutDetails h3 {
         margin-top: 20px;
- }
+}
 
     input.promo-code {
         margin-top: -5px;
         margin-bottom: 20px;
- }
+}
  
     .checkoutFields input:hover,
     .paymentFields input:hover,
     .paymentFields select:hover,
     input#promoCode:hover {
         border: 1px solid rgba(249, 114, 38, 0.8);
- }
+}
  
     select,
-    input[type=date] {
-        width: 298px;
+    input[type=date],
+    .paymentFields {
+        width: 326px;
 }
 
     .paymentFields {
@@ -101,12 +102,12 @@ Checkout page START
         background-color: rgba(20, 47, 204, 1);
         color: rgba(254, 254, 255, 1);
         transition: 0.3s;
- }
+}
 
     #checkoutBTN:hover {
         width: 210px;
         border-color: rgba(249, 114, 38, 0.8);
- }
+}
  /*---------------- Checkout page END --------------------------*/
  
 
@@ -127,12 +128,6 @@ Checkout page START
         .checkout-page {
             left: 0;
             position: relative;
-    }
-
-        select,
-        input[type=date],
-        .paymentFields {
-            width: 326px;
     }
 
         #checkoutBTN {
