@@ -63,7 +63,6 @@ About page styles
         .buyBTN:hover,
         .sellBTN:hover {
             border: 1px solid rgba(249, 114, 38, 0.8);
-            width: 200px;
     }
 
 }
@@ -150,7 +149,8 @@ Media queries
 
 @media screen and (max-width: 375px) {
 
-        .buyBTN, .sellBTN {
+        .buyBTN,
+        .sellBTN {
             top: 60px;
             left: 75px;
             width: 130px;
