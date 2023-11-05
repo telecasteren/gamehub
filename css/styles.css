@@ -41,55 +41,57 @@ GLOBAL STYLES
 
 
 
-h1{
-    text-align: center;   
-    color: rgba(249, 114, 38, 0.8);                 /* <---- only example pages --*/
+    h1{
+        text-align: center;   
+        color: rgba(249, 114, 38, 0.8);                 /* <---- only example pages --*/
 }
 
 
 
 /*--------------------------------------------------------
 Pagetitle for pages: About, Contact, Profile  */
-.pageTitle {
-    padding: 50px;
-    margin-top: 90px;
-    background-color: rgba(20, 47, 204, 0.95);
+    .pageTitle {
+        padding: 50px;
+        margin-top: 90px;
+        background-color: rgba(20, 47, 204, 0.95);
 }
 
-.pageTitle h1 {
-    color: rgba(254, 254, 255, 1);
-    font-size: 50px;
-    text-align: center;
-    font-weight: normal;
-    font-style: italic;
+    .pageTitle h1 {
+        color: rgba(254, 254, 255, 1);
+        font-size: 50px;
+        text-align: center;
+        font-weight: normal;
+        font-style: italic;
 }
 /*-------------------------------------------------------*/
 
 
 /*Previous page arrow on checkout pages*/
-.arrowIcon {
-    margin-top: 40px;
-    margin-left: 150px;
+    .arrowIcon {
+        margin-top: 40px;
+        margin-left: 150px;
 }
 /*-------------------------------------*/
 
 
 /*Back to #top scroll ---------*/
-.scroll-container {
-    position: relative;
-    top: 140px;
-    left: 750px;
-    height: 100%;
-    z-index: 100;
+    .scroll-container {
+        position: relative;
+        top: 140px;
+        left: 750px;
+        height: 100%;
+        z-index: 100;
   }
-  .scroll-container::before {
-    display: none;
-    pointer-events: none;
+
+    .scroll-container::before {
+        display: none;
+        pointer-events: none;
   }
-  .scroll-container a {
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 20px;
+
+    .scroll-container a {
+        text-decoration: underline;
+        cursor: pointer;
+        font-size: 20px;
   }
   /*--------------END--------------*/
 
@@ -97,16 +99,18 @@ Pagetitle for pages: About, Contact, Profile  */
 
 /*Seperation lines*/
 
-.topLine {
-    width: auto;
-    padding: 10px;
+    .topLine {
+        width: auto;
+        padding: 10px;
 }
+
 @media screen and (max-width: 770) {
     .topLine {
         padding: 10px;
         width: 920px;
     }
 }
+
 @media screen and (max-width: 430) {
     .topLine {
         padding: 10px;
@@ -114,55 +118,55 @@ Pagetitle for pages: About, Contact, Profile  */
     }
 }
 
-.middleLine {
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-bottom: 20px;
+    .middleLine {
+        margin-left: 80px;
+        margin-right: 80px;
+        margin-bottom: 20px;
 }
 
-.bottomLine {
-    padding: 5px 10px 10px 10px;
-    position: relative;
-    margin-top: 50px;
+    .bottomLine {
+        padding: 5px 10px 10px 10px;
+        position: relative;
+        margin-top: 50px;
 }
 /*--------END---------*/
 
 
 
 /*-- FORMS, FIELDSETS, INPUT-FIELDS -------------*/
-form ::placeholder {
-    color: rgba(20, 47, 204, 0.6);
-    text-align: center;
+    form ::placeholder {
+        color: rgba(20, 47, 204, 0.6);
+        text-align: center;
 }
 
-fieldset, .inputFields {
-    border: none;
-    margin: none;
+    fieldset, .inputFields {
+        border: none;
+        margin: none;
 }
 
-input[type=text],
-input[type=email],
-input[type=tel],
-input[type=number],
-input[type=date],
-select[name=payment],
-textarea {
-    padding: 8px;
-    margin-top: 10px;
-    text-align: center;
-    border-radius: 10px;
-    border: 1px solid rgba(20, 47, 204, 0.6);
-    background-color: rgba(248, 248, 255, 1);
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    input[type=number],
+    input[type=date],
+    select[name=payment],
+    textarea {
+        padding: 8px;
+        margin-top: 10px;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid rgba(20, 47, 204, 0.6);
+        background-color: rgba(248, 248, 255, 1);
 }
 
-input[type=submit] {
-    width: 100px;
-    padding: 10px;
-    border-radius: 10px;
-    justify-content: center;
-    border: 1px solid rgba(20, 47, 204, 0.6);
-    background-color: rgba(20, 47, 204, 1);
-    color: rgba(254, 254, 255, 1);
+    input[type=submit] {
+        width: 100px;
+        padding: 10px;
+        border-radius: 10px;
+        justify-content: center;
+        border: 1px solid rgba(20, 47, 204, 0.6);
+        background-color: rgba(20, 47, 204, 1);
+        color: rgba(254, 254, 255, 1);
   }
   /*-------------------END---------------------*/
 
@@ -171,35 +175,38 @@ input[type=submit] {
 /*----------------------------
 FOOTER START
 -----------------------------*/
-footer {
-    display: flex;
-    background-color: rgba(248, 248, 255, 1);
-    margin-top: 100px;
-    margin-bottom: 5px;
-    width: 100%;
-    height: 100px;
-    justify-content: space-between;
-    position: relative;
-    top: 50px;
-}
-.footerRow {
-    position: relative;
-    margin-left: 60px;
-    margin-top: 40px;
-}
-.copyright-text {
-    font-weight: medium;
+    footer {
+        display: flex;
+        background-color: rgba(248, 248, 255, 1);
+        margin-top: 100px;
+        margin-bottom: 5px;
+        width: 100%;
+        height: 100px;
+        justify-content: space-between;
+        position: relative;
+        top: 50px;
 }
 
-.social-icons {
-    position: relative;
-    display: flex;
-    list-style-type: none;
-    margin-right: 60px;
-    margin-top: 40px;
+    .footerRow {
+        position: relative;
+        margin-left: 60px;
+        margin-top: 40px;
 }
-.facebook, .instagram, .linkedin {
-    padding-right: 40px;
+
+    .copyright-text {
+        font-weight: medium;
+}
+
+    .social-icons {
+        position: relative;
+        display: flex;
+        list-style-type: none;
+        margin-right: 60px;
+        margin-top: 40px;
+}
+
+    .facebook, .instagram, .linkedin {
+        padding-right: 40px;
 }
 
 /*----------------------------
@@ -213,11 +220,13 @@ Media query FOOTER
         width: 100%;
         height: 100px;
     }
+
     .footerRow {
         position: relative;
         margin-left: 20px;
         margin-top: 40px;
     }
+
     .copyright-text {
         font-size: 12px;
     }
@@ -227,6 +236,7 @@ Media query FOOTER
         margin-right: 20px;
         margin-top: 40px;
     }
+
     .facebook, .instagram, .linkedin {
         padding-right: 15px;
         width: 20px;
@@ -242,11 +252,13 @@ Media query FOOTER
         margin-bottom: 5px;
         position: sticky;
     }
+
     .footerRow {
         position: relative;
         margin-left: 20px;
         margin-top: 40px;
     }
+
     .copyright-text {
         font-size: 12px;
     }
@@ -256,6 +268,7 @@ Media query FOOTER
         margin-right: 20px;
         margin-top: 40px;
     }
+
     .facebook, .instagram, .linkedin {
         padding-right: 15px;
         width: 20px;
@@ -276,6 +289,7 @@ TOP of pages START
     cursor: pointer;
     position: relative;
 }
+
 @media screen and (max-width: 900px){
     .logo {
         width: 160px;
@@ -283,6 +297,7 @@ TOP of pages START
         margin-top: 40px;
     }
 }
+
 @media screen and (min-width: 1480px){
     .logo {
         margin-left: 80px;
@@ -296,6 +311,7 @@ TOP of pages START
     padding: 0;
     overflow: hidden;
 }
+
 @media screen and (max-width: 900px){
     .container{
         padding-left: 2%;
@@ -328,18 +344,22 @@ nav {
     text-align: right;
     margin-top: 10px;
 }
+
 #current {
     font-weight: bolder;
 }
+
 nav ul li {
     list-style: none;
     display: inline-block;
     margin-right: 30px;
 }
+
 nav ul li a {
     color: rgba(27, 32, 61, 1); /*background-white for mobile screens?: rgba(254, 254, 255, 1);*/
     font-size: 16px;
 }
+
 nav ul li a:hover {
     color: rgba(249, 114, 38, 1); /*darker orange?: rgba(204, 86, 20, 0.8);*/
 }
@@ -392,26 +412,31 @@ nav ul li a:hover {
         position: relative;
         right: 40px;
     }
+
     nav ul {
-        width: 100%;
-        height: 200px;
         background: linear-gradient(rgba(20, 47, 204, 0.8), rgba(20, 47, 204, 0.4));
         position: absolute;
+        width: 100%;
+        height: 200px;
         top: 78px;
         right: 0;
         z-index: 2;
     }
+
     nav ul li {
         display: block;
         margin-top: 10px;
         margin-bottom: 10px;
     }
+
     nav ul li a {
         color: rgba(254, 254, 255, 1);
     }
+
     nav ul li a:hover {
         color: rgba(249, 114, 38, 1);
     }
+
     #menuList {
         overflow: hidden;
         transition: 0.5s;
@@ -419,6 +444,7 @@ nav ul li a:hover {
         top: 12px;
         width: 100vw;
     }
+
     #current {
         font-weight: bolder;
         color: rgba(27, 32, 61, 1);

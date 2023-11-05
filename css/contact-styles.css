@@ -4,60 +4,178 @@ Contact page styles
 --------------------------------------------------*/
 
 
-section {
-    margin-top: 50px;
-    margin-left: 250px;
-    margin-right: 250px;
-    justify-content: center;
-}
-.accountsBox,
-.communityBox,
-.discountsBox,
-.locationBox {
-    background-color: rgba(248, 248, 255, 1);
-    border: 1px solid rgba(20, 47, 204, 0.6);
-    border-radius: 10px;
-    display: inline-table;
-    width: 250px;
-    height: 200px;
+    .contact-section {
+        margin-top: 50px;
+        left: 220px;
+        display: inline-flex;
+        position: relative;
 }
 
-#accountsText,
-#communityText,
-#discountsText,
-#locationText {
-    text-align: center;
-    margin-top: 60px;
-    color: rgba(20, 47, 204, 0.6);
+    .accountsBox,
+    .communityBox,
+    .discountsBox,
+    .locationBox {
+        background-color: rgba(248, 248, 255, 1);
+        border: 1px solid rgba(20, 47, 204, 0.6);
+        border-radius: 10px;
+        width: 250px;
+        height: 200px;
 }
 
-.communityBox{
-    margin-left: 125px;
+    .communityBox,
+    .discountsBox,
+    .locationBox {
+        margin-left: 25px;
 }
 
-.discountsBox {
-    float: right;
-}
-.locationBox {
-    margin-top: 40px;
-    margin-left: 380px;
-}
-
-.locationIcon {
-    margin-top: 5px;
-    text-align: center;
+    #accountsText,
+    #communityText,
+    #discountsText,
+    #locationText {
+        text-align: center;
+        margin-top: 60px;
+        color: rgba(20, 47, 204, 0.6);
 }
 
-.inputFields, .messageText {
-    text-align: center;
+
+    .locationIcon {
+        margin-top: 5px;
+        text-align: center;
 }
 
-.contactForm {
-    margin-top: 50px;
+    .inputFields,
+    .messageText {
+        text-align: center;
 }
-.sendBTN {
-    margin-top: 10px;
-    text-align: center;
+
+    .contactForm {
+        margin-top: 50px;
+}
+
+    .sendBTN {
+        margin-top: 10px;
+        text-align: center;
   }
-  
 /*----------------------------------------------*/
+
+/*----------------
+Media queries
+--------------------------*/
+
+@media screen and (max-width: 1300px) {
+
+        .contact-section {
+            left: 110px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+        .contact-section {
+            left: 75px;    
+    }
+
+        .accountsBox,
+        .communityBox,
+        .discountsBox,
+        .locationBox {
+            width: 200px;
+            height: 150px;
+    }
+
+        #locationText {
+            margin-top: 35px;
+            font-size: 14px;
+    }
+
+        #accountsText,
+        #communityText,
+        #discountsText {
+            margin-top: 40px;
+    }
+}
+/*------------------------- 1024px END --------------------*/
+
+
+@media screen and (max-width: 900px) {
+
+        .contact-section {
+            left: 15px;
+    }
+}
+/*------------------------- 900px END --------------------*/
+
+@media screen and (max-width: 770px) {
+
+    .contact-section {
+        left: 135px;
+        margin-right: 180px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+        .communityBox,
+        .discountsBox,
+        .locationBox {
+            margin-left: 0;
+    }
+
+        .discountsBox,
+        .locationBox {
+            margin-top: 20px;
+    }
+}
+/*------------------------- 770px END --------------------*/
+
+
+@media screen and (max-width: 425px) {
+
+    .contact-section {
+        left: 10px;
+        margin-right: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+/*------------------------- 425px END --------------------*/
+
+@media screen and (max-width: 375px) {
+
+        .accountsBox,
+        .communityBox,
+        .discountsBox,
+        .locationBox {
+            width: 170px;
+            height: 150px;
+    }
+
+        .locationIcon {
+            margin-top: -5px;
+    }
+}
+/*------------------------- 375px END --------------------*/
+
+@media screen and (max-width: 320px) {
+
+        .contact-section {
+            left: 75px;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+    }
+
+        .accountsBox,
+        .communityBox,
+        .discountsBox,
+        .locationBox {
+            margin-top: 20px;
+    }
+
+        .messageText textarea {
+            width: 250px;
+    }
+}
+/*------------------------- 320px END --------------------*/
+
+
