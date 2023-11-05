@@ -44,30 +44,18 @@ Regular DESKTOP sizes (+/- 1500px)
     z-index: 10;
   }
 
-  @media screen and (max-width: 600px) {
-    #getBTN {
-    transform: translateX(-50%);
-    display: flex;
-    top: 400px;
-    left: 50%;
-    right: auto;
-    }
-  }
-
   #getBTN img {
     width: 30px;
-    display: none;
+    margin-top: 4px;
+    margin-left: 5px;
   }
-  #getBTN:hover img {
-    display: block;
-  }
+
   #getBTN:hover {
-    right: 40%;
-    width: 300px;
-    font-size: 22px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-color: rgba(57, 87, 255, 0.95);
+    background-color: rgba(57, 87, 255, 0.95);
   }
 
 .home-container {
@@ -733,7 +721,7 @@ max-width 770px
     }
 
       #getBTN {
-        top: 370px;
+        top: 320px;
         right: 34%;
     }
 
@@ -942,6 +930,17 @@ max-width 770px
 }
 /*----------------770px END----------------*/
 
+@media screen and (max-width: 600px) {
+    #getBTN {
+    transform: translateX(-50%);
+    display: flex;
+    top: 400px;
+    left: 50%;
+    right: auto;
+    }
+}
+/*---------------- 600px END ----------------*/
+
 
 
 /*--------------
@@ -957,11 +956,11 @@ Max-width 430px
   }
 
     .homepageCarousel {
-      margin-top: 40px;
+      margin-top: 30px;
   }
 
     #getBTN {
-      top: 328px;
+      top: 275px;
       width: 200px;
   }
 
@@ -1098,8 +1097,9 @@ Max-width 390px
     }
 
       #getBTN {
-        top: 285px;
+        top: 235px;
     }
+
 
     /*Images and caption boxes*/
   

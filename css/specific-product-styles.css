@@ -280,6 +280,11 @@ Hidden elements (elements visible on smaller screens)
         margin-left: 20px;
     }
 
+    .cartWindow {
+      top: 200px;
+      left: 70px;
+    }
+
       #addToCartBox {
         width: 500px;
         height: 260px;
@@ -310,10 +315,10 @@ Hidden elements (elements visible on smaller screens)
         background-color: rgba(20, 47, 204, 0.95);
         position: absolute;
         width: 100%;
-        height: 120px;
-        top: 1740px;
+        height: 150px;
+        top: 1690px;
         z-index: -1;
-    }
+  }
 
       .product-icons-mobile img {
         display: block;
@@ -324,7 +329,7 @@ Hidden elements (elements visible on smaller screens)
       .product-icons-mobile {
         position: relative;
         margin-left: 240px;
-        top: 110px;
+        top: 160px;
         z-index: 20;
     }
 
@@ -408,6 +413,7 @@ Hidden elements (elements visible on smaller screens)
       .cartWindow {
         border: none;
         padding: 0;
+        left: 50px;
     }
 
       #addToCartBox {
@@ -442,7 +448,7 @@ Hidden elements (elements visible on smaller screens)
       #productBox2 {
         display: block;
         background-color: rgba(20, 47, 204, 0.95);
-        top: 1175px;
+        top: 1075px;
     }
 
       .product-icons-mobile img {
@@ -454,14 +460,14 @@ Hidden elements (elements visible on smaller screens)
       .product-icons-mobile {
         position: relative;
         margin-left: 60px;
-        top: 145px;
+        top: 195px;
         z-index: 20;
     }
 
       .prod-col1-img img {
         display: block;
         position: relative;
-        top: 215px;
+        top: 285px;
         left: 50px;
         margin: none;
         width: 200px;
@@ -479,12 +485,13 @@ Hidden elements (elements visible on smaller screens)
     }
 
       .prod-col1-text {
-        top: -265px;
+        top: -195px;
         left: 390px;
    }
 
       .prod-col2-text {
         left: 95px;
+        top: 40px;
    }
 
       .incl-cont-icons-mobile img {
@@ -536,9 +543,10 @@ Hidden elements (elements visible on smaller screens)
           left: 50px;
     }
 
+        
         .product-icons-mobile {
           margin-left: 35px;
-          top: 165px;
+          top: 220px;
     }
 
         .prod-col1-img img {
@@ -554,7 +562,7 @@ Hidden elements (elements visible on smaller screens)
         #productBox2 {
           display: block;
           background-color: rgba(20, 47, 204, 0.95);
-          top: 1110px;
+          top: 1030px;
     }
 
         .prod-col2-text {
@@ -616,7 +624,7 @@ Hidden elements (elements visible on smaller screens)
 
         .product-icons-mobile {
           margin-left: 35px;
-          top: 190px;
+          top: 240px;
     }
 
         .product-icons-mobile img {
@@ -624,34 +632,37 @@ Hidden elements (elements visible on smaller screens)
         }
 
         .prod-col1-img img {
-          top: 240px;
+          top: 300px;
           width: 90vw;
           left: 16px;
           height: auto;
     }
 
         .prod-col1-text {
-          top: 50px;
+          top: 100px;
           left: 180px;
           text-align: center;
           right: -20px;
     }
 
-    #productBox2 {
-      display: block;
-      background-color: rgba(20, 47, 204, 0.95);
-      top: 1110px;
-}
+        .prod-col2-img img {
+        top: 390px;
+    }
 
-    .prod-col2-text {
-      top: 35px;
-}
+      #productBox2 {
+        display: block;
+        background-color: rgba(20, 47, 204, 0.95);
+        top: 1110px;
+    }
 
-    .incl-cont-icons-mobile img {
-      width: 280px;
-      left: -5px;
-}
+      .prod-col2-text {
+        top: 95px;
+    }
 
+      .incl-cont-icons-mobile img {
+        width: 280px;
+        left: -5px;
+    }
 
 /*-----------------
     HIDDEN ELEMENTS (elements visible on larger screens)

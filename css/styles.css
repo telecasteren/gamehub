@@ -50,13 +50,21 @@ GLOBAL STYLES
 
 /*--------------------------------------------------------
 Pagetitle for pages: About, Contact, Profile  */
-    .pageTitle {
+    .page-title {
         padding: 50px;
         margin-top: 90px;
         background-color: rgba(20, 47, 204, 0.95);
 }
 
-    .pageTitle h1 {
+@media screen and (max-width: 770px) {
+
+        .page-title {
+            margin-top: 50px;
+    }
+    
+}
+
+    .page-title h1 {
         color: rgba(254, 254, 255, 1);
         font-size: 50px;
         text-align: center;
@@ -293,8 +301,9 @@ TOP of pages START
 @media screen and (max-width: 900px){
     .logo {
         width: 160px;
-        margin-left: 15px;
-        margin-top: 40px;
+        margin-left: 35px;
+        margin-top: -20px;
+        margin-bottom: 10px;
     }
 }
 
