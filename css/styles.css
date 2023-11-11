@@ -9,15 +9,27 @@ profile         (only example of redirect pages)
 
 /*------------------------------------------------------------------------------
 COLORS in use:
-dark blue(same as logo):    rgba(27, 32, 61, 1)
-white background/text:      rgba(254, 254, 255, 1)
-blue background box:        rgba(248, 248, 255, 1)
+logo blue/dark blue:        rgba(27, 32, 61, 1)
+white:                      rgba(254, 254, 255, 1)
+background box blue:        rgba(248, 248, 255, 1)
 light blue:                 rgba(20, 47, 204, 0.6)
-bright blue:                rgba(20, 47, 204, 0.95) / rgba(20, 47, 204, 1)
-orange:                     rgba(249, 114, 38, 0.8) / rgba(249, 114, 38, 0.6)
+bright blue strong:         rgba(20, 47, 204, 1)
+bright blue soft:           rgba(20, 47, 204, 0.95)
+orange strong:              rgba(249, 114, 38, 0.8)
+orange soft:                rgba(249, 114, 38, 0.6)
 -------------------------------------------------------------------------------*/
 
+/*------------
+IMPORT SHEETS ---------------------*/
 
+@import "imports/index-styles.css";
+@import "imports/about-styles.css";
+@import "imports/contact-styles.css";
+@import "imports/product-styles.css";
+@import "imports/checkout-styles.css";
+@import "imports/specific-product-styles.css";
+
+/*----------------------------------*/
 
 
 /*-------------------------------------------------
