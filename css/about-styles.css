@@ -50,7 +50,7 @@ About page styles
         color: rgba(20, 47, 204, 0.95);
 }
 
-    .about-backgroundIMG {
+    .about-backgroundIMG img {
         position: relative;
         top: 45px;
         width: 100vw;
