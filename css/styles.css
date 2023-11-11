@@ -395,7 +395,8 @@ nav ul li a:hover {
     color: rgba(249, 114, 38, 1); /*darker orange?: rgba(204, 86, 20, 0.8);*/
 }
 
-/*------------
+
+/*--------------------------
  Media queries for NAVBAR, menu icon and dropdown list
  -----------------------------------------------------*/
 @media screen and (max-width: 430px) {

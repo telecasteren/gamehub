@@ -14,6 +14,7 @@ Regular DESKTOP sizes (+/- 1500px)
     overflow-x: auto;
     scroll-snap-type: x mandatory;
 }
+
 .homepageCarousel div {
     display: flex;
     flex-shrink: 0;
@@ -25,6 +26,7 @@ Regular DESKTOP sizes (+/- 1500px)
     align-items: center;
     animation: scroll 10s linear infinite;
 }
+
 .homepageCarousel img {
     max-width: 100vw;
 }
@@ -291,10 +293,144 @@ Regular DESKTOP sizes (+/- 1500px)
 
 
 
-
-  /*----------------------------------------------
-Media queries for smaller screens
+/*----------------------------------------------
+Media queries
 ----------------------------------------------*/
+
+/*--------------
+Max-width 1920px
+-------------------------------*/
+
+@media screen and (min-width: 1900px) {
+
+      .middleLine {
+        margin-top: 20px;
+    }
+
+      .col-1 img {
+        margin-left: 5px;
+        width: 800px;
+        height: auto;
+    }
+
+      .color-box1 {
+        left: 675px;
+        width: 350px;
+        height: 692px;
+    }
+
+      .col-2 img {
+        margin-left: 105px;
+        width: 840px;
+        height: auto;
+    }
+
+      .color-box2 {
+        top: 510px;
+        left: 106px;
+        width: 840px;
+        height: 310px;
+    }
+
+      .text-container2 h1 {
+        left: -260px;
+        top: 460px;
+    }
+
+      .text-container2 p {
+        top: 365px;
+    }
+
+      .col-3 img {
+        width: 1020px;
+        height: auto;
+    }
+
+      .color-box3 {
+        top: 200px;
+        width: 1020px;
+    }
+
+    .text-container3 {
+      top: 355px;
+    }
+
+      .col-4 img {
+        margin-left: 30px;
+        width: 841px;
+    }
+
+      .col-5 img {
+        margin-left: 5px;
+        width: 800px;
+        height: auto;
+        top: -80px;
+        position: relative;
+    }
+
+      .color-box4 {
+        left: 675px;
+        width: 350px;
+        height: 692px;
+        top: 61px;
+    }
+
+      .col-6 img {
+        margin-left: 105px;
+        width: 840px;
+        height: auto;
+    }
+
+      .color-box5 {
+        top: 700px;
+        left: 106px;
+        width: 840px;
+        height: 265px;
+    }
+
+    .text-container5 {
+      top: 500px;
+    }
+
+      .text-container5 h1 {
+        left: -55px;
+        top: 460px;
+    }
+
+      .text-container5 p {
+        top: 365px;
+    }
+
+      .col-7 img {
+        margin-top: -68px;
+        width: 1020px;
+        height: auto;
+    }
+
+      .color-box6 {
+        top: 200px;
+        margin-left: 5px;
+        width: 1020px;
+        height: 500px;
+    }
+
+      .text-container6 h1 {
+        top: 250px;
+    }
+
+      .text-container6 p {
+        top: 245px;
+    }
+
+      .col-8 img {
+        position: relative;
+        top: 145px;
+        margin-left: 30px;
+        width: 841px;
+    }
+
+}
+/*----------------------- MIN-WIDTH 1920px END --------------------*/
 
 /*--------------
 Max-width 1440px
@@ -390,7 +526,6 @@ Max-width 1440px
   
 }
 /*-------------------1440px END----------------*/
-
 
 
 /*--------------
