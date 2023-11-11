@@ -428,7 +428,6 @@ Max-width 1920px
         margin-left: 30px;
         width: 841px;
     }
-
 }
 /*----------------------- MIN-WIDTH 1920px END --------------------*/
 
@@ -1195,7 +1194,7 @@ Max-width 430px
   }
 
     #getBTN {
-      top: 275px;
+      top: 195px;
       width: 272px;
   }
 
@@ -1333,9 +1332,8 @@ Max-width 390px
     }
 
       #getBTN {
-        top: 235px;
+        top: 155px;
     }
-
 
     /*Images and caption boxes*/
   
@@ -1442,6 +1440,10 @@ Max-width 320px
 -------------------------------*/
 
 @media screen and (max-width: 320px) {
+
+    #getBTN {
+      top: 140px;
+  }
 
 
   /*--Images and caption boxes--*/
