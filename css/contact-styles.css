@@ -159,17 +159,19 @@ Media queries
 
 @media screen and (max-width: 320px) {
 
-        .contact-section {
-            left: 75px;
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-    }
-
         .accountsBox,
         .communityBox,
         .discountsBox,
         .locationBox {
-            margin-top: 20px;
+            margin-top: 10px;
+            width: 145px;
+    }
+
+        input[type=text],
+        input[type=email],
+        input[type=tel],
+        input[type=number] {
+            width: 140px;
     }
 
         .messageText textarea {

@@ -33,7 +33,6 @@ Checkout page START
         width: 750px;
 }
 
-
     .checkout-page {
         margin-top: 50px;
         display: grid;
@@ -46,6 +45,15 @@ Checkout page START
         display: grid;
         grid-template-columns: repeat(2, 1fr);
 }
+
+    #subtotal-price,
+    #total-price {
+        font-weight: 600;
+        left: 650px;
+        top: -16px;
+        position: relative;
+}
+
  
     #pick-up {
         margin-top: 10px;
@@ -105,11 +113,13 @@ Checkout page START
 }
 
     #checkoutBTN:hover {
-        width: 210px;
-        border-color: rgba(249, 114, 38, 0.8);
+        border-color: rgba(57, 87, 255, 0.95);
+        background-color: rgba(57, 87, 255, 0.95);
 }
  /*---------------- Checkout page END --------------------------*/
  
+
+
 
   /*------------------------------
   Media queries Checkout page
@@ -128,6 +138,11 @@ Checkout page START
         .checkout-page {
             left: 0;
             position: relative;
+    }
+
+        #subtotal-price,
+        #total-price {
+            left: 495px;
     }
 
         #checkoutBTN {
@@ -151,6 +166,11 @@ Checkout page START
         .checkout-page {
             left: 10px;
             position: relative;
+    }
+
+        #subtotal-price,
+        #total-price {
+            left: 390px;
     }
 
         .delivery-method {
@@ -191,6 +211,11 @@ Checkout page START
             margin-left: 15px;
     }
 
+        #subtotal-price,
+        #total-price {
+            left: 310px;
+    }
+
         #checkoutBTN {
             margin-left: 75px;
     }
@@ -221,6 +246,11 @@ Checkout page START
             margin-left: 0;
     }
 
+        #subtotal-price,
+        #total-price {
+            left: 220px;
+    }
+
         select,
         input[type=date],
         .paymentFields {
@@ -237,7 +267,7 @@ Checkout page START
 
         .checkoutLineTop,
         .checkoutLineBottom {
-            width: 55px;
+            width: 275px;
     }
 
 }
@@ -275,6 +305,15 @@ Checkout page START
   Media queries CHECKOUT SUCCESS page
   ------------------------------------*/
 
+  @media screen and (max-width: 1024px) {
+
+        .checkout-lines {
+            left: 290px;
+    }
+
+}
+/* -------------------- 1024px END ----------------------*/
+
   @media screen and (max-width: 770px) {
 
         .checkout-lines {
@@ -305,6 +344,24 @@ Checkout page START
 
 }
   /* -------------------- 425px END ----------------------*/
+
+  @media screen and (max-width: 375px) {
+
+        .checkout-success p {
+            font-size: 12px;
+    }
+
+        .checkout-success h2 {
+            font-size: 18px;
+    }
+
+        .checkout-lines {
+            left: 40px;
+            width: 300px;
+    }
+
+}
+/* -------------------- 375px END ----------------------*/
 
   @media screen and (max-width: 320px) {
 

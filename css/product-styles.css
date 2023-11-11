@@ -138,10 +138,33 @@ Media screens
 --------------------------*/
 
 /*--------------------
+media screen max-width 1440px
+------------------------------*/
+
+@media screen and (max-width: 1440px) {
+
+    
+        input#searchGames {
+            margin-left: 650px;
+    }
+    
+        input#searchGames:hover {
+            margin-left: 620px;
+    }
+    
+        #gamingNav {
+            left: 50px;
+    }
+
+}
+/*-------------------1440px END-----------------------*/
+
+
+/*--------------------
 media screen max-width 1370px
 ------------------------------*/
 
-@media screen and (max-width: 1369px) {
+@media screen and (max-width: 1370px) {
 
         #product1-img,
         #product2-img,
@@ -170,6 +193,10 @@ media screen max-width 1025px
         #searchGames {
             left: -240px;
             position: relative;
+    }
+
+        #gamingNav {
+            left: 20px;
     }
 
         #expandBTN {
@@ -284,7 +311,11 @@ media screen max-width 375px
 @media screen and (max-width: 375px) {
 
         #searchGames {
-            left: -560px;
+            left: -580px;
+    }
+
+        #gamingNav {
+            left: 5px;
     }
 
         .product-wrapper {
@@ -309,12 +340,14 @@ media screen max-width 320px
 @media screen and (max-width: 320px) {
 
         #searchGames {
-            left: -590px;
+            left: -610px;
     }
 
         #gamingNav img {
             width: 260px;
             height: auto;
+            left: -10px;
+            position: relative;
     }
 
         .product-wrapper {

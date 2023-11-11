@@ -92,11 +92,8 @@ Regular DESKTOP sizes (+/- 1500px)
 }
 
 .addToCartBTN:hover {
-  width: 190px;
-  font-size: 22px;
-  border: 2px solid rgba(249, 114, 38, 0.8);
+  background-color: rgba(254, 254, 255, 0.55);
 }
-
 
 
 #productBox1 {

@@ -147,7 +147,8 @@ Pagetitle for pages: About, Contact, Profile  */
         text-align: center;
 }
 
-    fieldset, .inputFields {
+    fieldset,
+    .inputFields {
         border: none;
         margin: none;
 }
@@ -175,6 +176,15 @@ Pagetitle for pages: About, Contact, Profile  */
         border: 1px solid rgba(20, 47, 204, 0.6);
         background-color: rgba(20, 47, 204, 1);
         color: rgba(254, 254, 255, 1);
+  }
+
+  @media screen and (min-width: 1024px) {
+
+        input[type=submit]:hover {
+            background-color: rgba(254, 254, 255, 1);
+            color: rgba(20, 47, 204, 1);
+    }
+    
   }
   /*-------------------END---------------------*/
 
@@ -474,9 +484,9 @@ nav ul li a:hover {
 Profile page styles
 ---------------------*/
 
-.logInForm {
-    display: block;
-    text-align: center;
+    .logInForm {
+        display: block;
+        text-align: center;
  }
 
  /*---------------END---------------*/
