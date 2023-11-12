@@ -697,7 +697,8 @@ Max-width 1024px
     }
 
       .scroll-container {
-        left: 490px;
+        left: 0;
+        margin-left: -280px;
     }
 }
 /*-------------------1024px END----------------*/
@@ -1049,10 +1050,10 @@ max-width 770px
       font-size: 14px;
     }
 
-    .scroll-container {
-      left: 325px;
-      top: 280px;
-  }
+      .scroll-container {
+        margin-left: -400px;
+        margin-top: 160px;
+    }
 
 }
 /*----------------770px END----------------*/
@@ -1301,8 +1302,7 @@ Max-width 430px
   /*--------TEXT containers END-------*/
 
     .scroll-container {
-      left: 160px;
-      top: 280px;
+      margin-left: -580px;
   }
 
   /*--------------

@@ -111,7 +111,8 @@ Pagetitle for pages: About, Contact, Profile  */
 
   @media screen and (min-width: 1900px) {
 
-        .scroll-container {
+        .scroll-container,
+        .scroll-container a {
             display: none;
     }
     
