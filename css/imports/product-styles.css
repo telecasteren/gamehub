@@ -1,7 +1,7 @@
 
-/*---------------------------------------
-Productlist page styles
----------------------------------------*/
+/*-------------------------------------------
+Productlist page + xtra-products page styles
+----------------------------------------------*/
 
         .productSlides {
             margin-top: 70px;
@@ -136,6 +136,67 @@ Productlist page styles
 /*--------------
 Media screens
 --------------------------*/
+
+
+/*--------------------
+Min-width 1900px
+------------------------------*/
+
+@media screen and (min-width: 1900px) {
+
+        input#searchGames {
+            margin-left: 840px;
+    }
+
+        input#searchGames:hover {
+            margin-left: 810px;
+    }
+
+        #product1-img,
+        #product2-img,
+        #product3-img,
+        #product5-img,
+        #product6-img,
+        #product7-img,
+        #product9-img,
+        #product10-img,
+        #product11-img,
+        #product13-img,
+        #product14-img,
+        #product15-img {
+            margin-right: 0;
+    }
+
+        #expandBTN {
+            position: relative;
+            margin-top: 30px;
+            margin-left: 910px;
+    }
+}
+/*------------------------------- 1900px END ---------------------*/
+
+/*--------------------
+Max-width 1600px
+------------------------------*/
+
+@media screen and (max-width: 1600px) {
+
+        input#searchGames {
+            margin-left: 700px;
+    }
+
+        input#searchGames:hover {
+            margin-left: 670px;
+    }
+
+        #gamingNav {
+            left: 20px;
+    }
+
+}
+/*------------------------------- 1600px END ---------------------*/
+
+
 
 /*--------------------
 media screen max-width 1440px

@@ -5,7 +5,7 @@ specific product page styles
 
 
 /*---------------------------------
-Regular DESKTOP sizes (+/- 1500px)
+DESKTOP
 ----------------------------------*/
 
 #backArrow {
@@ -129,12 +129,14 @@ Regular DESKTOP sizes (+/- 1500px)
 }
 
 .ingameIMGs {
-  display: block;
-  position: relative;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  margin-left: 160px;
-  top: -340px;
   padding: 0;
+  margin: 0;
+  left: 0;
+  top: -340px;
+  position: relative;
 }
 
 .gamingIcons {
@@ -166,49 +168,58 @@ Hidden elements (elements visible on smaller screens)
           MEDIA QUERIES
   -------------------------------
 
+   /*-- min-width 1600px
+  ---------------------------------------*/
+  @media screen and (min-width: 1600px) {
+
+      .productIMG img {
+        width: 100vw;
+        height: auto;
+    }
+
+      .cartWindow {
+        left: 250px;
+    }
+
+      #backArrow {
+        margin-left: 240px;
+    }
+    
+  }
+  /*--------------------- 1600px END ------------------------*/
+
+
   /*-- max width 1024px
   ---------------------------------------*/
   @media screen and (max-width: 1024px) {
 
-    .productIMG img {
-      width: 100vw;
-  }
+        .productIMG img {
+          width: 100vw;
+      }
 
-    #addToCartBox {
-      width: 500px;
-      height: 300px;
-  }
+        #addToCartBox {
+          width: 500px;
+          height: 300px;
+      }
 
-      #title {
-        top: -265px;
-  }
+          #title {
+            top: -265px;
+      }
 
-    #tagline p {
-      top: 115px;
-  }
+        #tagline p {
+          top: 115px;
+      }
 
-  .addToCartBTN {
-    top: -220px;
-    left: 160px;
-}
+      .addToCartBTN {
+        top: -220px;
+        left: 160px;
+    }
 
       .productText-container {
         position: relative;
         display: flex;
         top: -450px;
         left: -95px;
-    }
-
-      .ingameIMGs {
-        display: block;
-        position: relative;
-        margin-left: 100px;
-        top: -340px;
-        padding: 0;
-    }
-    .ingameIMGs img {
-      display: block;
-        width: 800px;
     }
 
     .gamingIcons {
@@ -247,14 +258,6 @@ Hidden elements (elements visible on smaller screens)
       .addToCartBTN {
         top: -220px;
         left: 160px;
-    }
-
-      .ingameIMGs {
-        position: relative;
-        margin-left: 65px;
-    }
-      .ingameIMGs img {
-        display: block;
     }
 
       .gamingIcons {

@@ -4,10 +4,6 @@ Home page styles
 ----------------------------------------------*/
 
 
-/*---------------------------------
-Regular DESKTOP sizes (+/- 1500px)
-----------------------------------*/
-
 .homepageCarousel {
     margin-top: 70px;
     display: flex;
@@ -298,7 +294,7 @@ Media queries
 ----------------------------------------------*/
 
 /*--------------
-Max-width 1920px
+Min-width 1900px
 -------------------------------*/
 
 @media screen and (min-width: 1900px) {
@@ -429,7 +425,7 @@ Max-width 1920px
         width: 841px;
     }
 }
-/*----------------------- MIN-WIDTH 1920px END --------------------*/
+/*----------------------- MIN-WIDTH 1900px END --------------------*/
 
 /*--------------
 Max-width 1440px
@@ -1444,7 +1440,6 @@ Max-width 320px
     #getBTN {
       top: 140px;
   }
-
 
   /*--Images and caption boxes--*/
 

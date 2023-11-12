@@ -103,15 +103,18 @@ Pagetitle for pages: About, Contact, Profile  */
         z-index: 100;
   }
 
-    .scroll-container::before {
-        display: none;
-        pointer-events: none;
-  }
-
     .scroll-container a {
         text-decoration: underline;
         cursor: pointer;
         font-size: 20px;
+  }
+
+  @media screen and (min-width: 1900px) {
+
+        .scroll-container {
+            display: none;
+    }
+    
   }
   /*--------------END--------------*/
 
