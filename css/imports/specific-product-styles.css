@@ -579,15 +579,15 @@ Hidden elements (elements visible on smaller screens)
     /*-----------------
     HIDDEN ELEMENTS (elements visible on larger screens)
     ------------------*/
-    .ingameIMGs,
-    .ingameIMGs img,
-    .gamingIcons,
-    .productTextIcons,
-    .seperationLine,
-    #tagline p,
-    #backArrow {
-      display: none;
-  }
+      .ingameIMGs,
+      .ingameIMGs img,
+      .gamingIcons,
+      .productTextIcons,
+      .seperationLine,
+      #tagline p,
+      #backArrow {
+        display: none;
+    }
 
 
   }
@@ -600,7 +600,7 @@ Hidden elements (elements visible on smaller screens)
 
   @media screen and (max-width: 345px) {
 
-      .productIMG img {
+        .productIMG img {
           position: relative;
           top: -50px;
     }
@@ -629,7 +629,7 @@ Hidden elements (elements visible on smaller screens)
 
         .product-icons-mobile img {
           width: 250px;
-        }
+    }
 
         .prod-col1-img img {
           top: 300px;
@@ -646,36 +646,36 @@ Hidden elements (elements visible on smaller screens)
     }
 
         .prod-col2-img img {
-        top: 390px;
+          top: 390px;
     }
 
-      #productBox2 {
-        display: block;
-        background-color: rgba(20, 47, 204, 0.95);
-        top: 1110px;
+        #productBox2 {
+          display: block;
+          background-color: rgba(20, 47, 204, 0.95);
+          top: 1110px;
     }
 
-      .prod-col2-text {
-        top: 95px;
+        .prod-col2-text {
+          top: 95px;
     }
 
-      .incl-cont-icons-mobile img {
-        width: 280px;
-        left: -5px;
+        .incl-cont-icons-mobile img {
+          width: 280px;
+          left: -5px;
     }
 
 /*-----------------
     HIDDEN ELEMENTS (elements visible on larger screens)
     ------------------*/
-    .ingameIMGs,
-    .ingameIMGs img,
-    .gamingIcons,
-    .productTextIcons,
-    .seperationLine,
-    #tagline p,
-    #backArrow {
-      display: none;
-  }
+      .ingameIMGs,
+      .ingameIMGs img,
+      .gamingIcons,
+      .productTextIcons,
+      .seperationLine,
+      #tagline p,
+      #backArrow {
+        display: none;
+    }
 
   }
   /*------------------345px END---------------------*/
