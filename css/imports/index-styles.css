@@ -39,7 +39,7 @@ Home page styles
     font-size: 20px;
     padding: 16px 30px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 5;
   }
 
   #getBTN img {

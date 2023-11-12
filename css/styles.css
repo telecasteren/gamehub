@@ -362,7 +362,6 @@ NAVIGATION BAR
     width: 100%;
     display: flex;
     align-items: center;
-    z-index: 500;
 }
 
 .menu-icon {
@@ -377,6 +376,7 @@ nav {
     position: relative;
     text-align: right;
     margin-top: 10px;
+    z-index: 500;
 }
 
 #current {

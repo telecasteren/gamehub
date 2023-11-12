@@ -378,6 +378,7 @@ Hidden elements (elements visible on smaller screens)
 
       p.prod-col2-text {
         color: rgba(254, 254, 255, 1);
+        font-size: 12px;
     }
 
 
@@ -521,10 +522,10 @@ Hidden elements (elements visible on smaller screens)
 
 
 
-  /*-- max width 390px
+  /*-- max width 395px
   ---------------------------------------*/
 
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 395px) {
 
         #addToCartBox {
           width: 300px;
@@ -554,7 +555,7 @@ Hidden elements (elements visible on smaller screens)
     }
 
         .prod-col1-text {
-          top: -170px;
+          top: -182px;
           left: 380px;
           text-align: start;
     }
@@ -591,7 +592,7 @@ Hidden elements (elements visible on smaller screens)
 
 
   }
-/*-------------------390px END--------------------*/
+/*-------------------395px END--------------------*/
 
 
 
@@ -655,8 +656,8 @@ Hidden elements (elements visible on smaller screens)
           top: 1110px;
     }
 
-        .prod-col2-text {
-          top: 95px;
+      p.prod-col2-text {
+        top: 70px;
     }
 
         .incl-cont-icons-mobile img {
