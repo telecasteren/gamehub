@@ -62,7 +62,7 @@ Contact page styles
 Media queries
 --------------------------*/
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 800px) {
 
         .contact-section {
             left: 0;
@@ -70,7 +70,7 @@ Media queries
             justify-content: center;
     }
 }
-/*------------------------- 860px END --------------------*/
+/*------------------------- 800px END --------------------*/
 
 
 @media screen and (max-width: 1024px) {

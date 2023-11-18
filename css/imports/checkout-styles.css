@@ -131,10 +131,6 @@ Checkout page START
 
   @media screen and (max-width: 770px) {
 
-        .arrowIcon {
-            margin-left: 80px;
-    }
-
         .checkout-page {
             left: 0;
             position: relative;
@@ -203,10 +199,6 @@ Checkout page START
 
   @media screen and (max-width: 425px) {
 
-        .arrowIcon {
-            margin-left: 50px;
-    }
-
         .checkoutForm {
             margin-left: 15px;
     }
@@ -234,9 +226,6 @@ Checkout page START
 
   @media screen and (max-width: 320px) {
 
-        .arrowIcon {
-            margin-left: 30px;
-    }
 
         .checkout-page {
             left: 20px;

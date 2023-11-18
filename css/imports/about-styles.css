@@ -159,6 +159,18 @@ Media queries
 }
 /*--------------------------- 425px END ---------------------*/
 
+@media screen and (max-width: 413px) {
+
+        .buyBTN,
+        .sellBTN {
+            top: 60px;
+            left: 45px;
+            width: 130px;
+    }
+
+}
+/*--------------------------- 413px END ---------------------*/
+
 
 @media screen and (max-width: 375px) {
 

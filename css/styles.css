@@ -22,7 +22,7 @@ orange soft:                rgba(249, 114, 38, 0.6)
 /*------------
 IMPORT SHEETS ---------------------*/
 
-@import "imports/index-styles.css";
+@import "imports/home-styles.css";
 @import "imports/about-styles.css";
 @import "imports/contact-styles.css";
 @import "imports/product-styles.css";
@@ -86,21 +86,40 @@ Pagetitle for pages: About, Contact, Profile  */
 /*-------------------------------------------------------*/
 
 
-/*Previous page arrow on checkout pages*/
+/*--- Previous page arrow on checkout pages -----*/
     .arrowIcon {
         margin-top: 40px;
         margin-left: 150px;
 }
-/*-------------------------------------*/
+
+@media screen and (max-width: 770px) {
+
+        .arrowIcon {
+            margin-left: 100px;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    
+        .arrowIcon {
+            margin-left: 50px;
+            margin-top: 10px;
+    }
+
+}
+/*-------------------------------------------*/
 
 
 /*Back to #top scroll ---------*/
     .scroll-container {
         position: relative;
         top: 140px;
-        left: 750px;
+        left: 700px;
         height: 100%;
         z-index: 100;
+        margin-top: 30px;
+        margin-bottom: 30px;
   }
 
     .scroll-container a {
@@ -117,7 +136,49 @@ Pagetitle for pages: About, Contact, Profile  */
     }
     
   }
-  /*--------------END--------------*/
+
+  @media screen and (max-width: 1024px) {
+
+        .scroll-container {
+            left: 465px;
+    }
+    
+  }
+
+  @media screen and (max-width: 770px) {
+
+        .scroll-container {
+            top: 300px;
+            left: 350px;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+
+        .scroll-container {
+            left: 160px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+        .scroll-container {
+            left: 140px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+        .scroll-container {
+            left: 110px;
+            top: 200px;
+    }
+
+}
+/*--------------------- scroll-container END ---------------------*/
 
 
 
@@ -146,6 +207,7 @@ Pagetitle for pages: About, Contact, Profile  */
         margin-left: 80px;
         margin-right: 80px;
         margin-bottom: 20px;
+        margin-top: 20px;
 }
 
     .bottomLine {

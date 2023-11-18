@@ -196,6 +196,27 @@ Max-width 1600px
 }
 /*------------------------------- 1600px END ---------------------*/
 
+/*--------------------
+media screen max-width 1515px
+------------------------------*/
+
+@media screen and (max-width: 1515px) {
+
+    
+        input#searchGames {
+            margin-left: 630px;
+    }
+
+        input#searchGames:hover {
+            margin-left: 600px;
+    }
+
+        #gamingNav {
+            left: 0;
+    }
+}
+/*-------------------1515px END-----------------------*/
+
 
 
 /*--------------------
@@ -366,10 +387,10 @@ media screen max-width 430px
 /*--------------------430px END----------------------*/
 
 /*--------------------
-media screen max-width 375px
+media screen max-width 390px
 ------------------------------*/
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 390px) {
 
         #searchGames {
             left: -580px;
@@ -391,14 +412,14 @@ media screen max-width 375px
             left: 135px;
     }
 }
-/*--------------------375px END----------------------*/
+/*--------------------390px END----------------------*/
 
 
 /*--------------------
-media screen max-width 320px
+media screen max-width 360px
 ------------------------------*/
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
 
         #searchGames {
             left: -610px;
@@ -443,4 +464,4 @@ media screen max-width 320px
             left: 105px;
     }
 }
-/*--------------------320px END----------------------*/
+/*--------------------360px END----------------------*/

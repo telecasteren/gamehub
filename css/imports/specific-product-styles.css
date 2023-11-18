@@ -124,8 +124,8 @@ DESKTOP
 }
 
 .productTextIcons {
-    margin-top: 40px;
-    margin-left: 65px;
+  margin-top: 40px;
+  margin-right: 230px;
 }
 
 .ingameIMGs {
@@ -220,6 +220,11 @@ Hidden elements (elements visible on smaller screens)
         display: flex;
         top: -450px;
         left: -95px;
+    }
+
+      .productTextIcons {
+        margin-top: 40px;
+        margin-right: 0px;
     }
 
     .gamingIcons {
