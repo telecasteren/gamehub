@@ -344,6 +344,26 @@ media screen max-width 900px
 }
 /*--------------------900px END----------------------*/
 
+/*--------------------
+media screen max-width 800px
+------------------------------*/
+
+@media screen and (max-width: 800px) {
+
+    #searchGames {
+        left: -360px;
+}
+
+    .product-wrapper {
+        margin-left: 125px;
+}
+
+    #expandBTN {
+        margin-left: 340px;
+}
+}
+/*--------------------800px END----------------------*/
+
 
 /*--------------------
 media screen max-width 770px
@@ -355,11 +375,37 @@ media screen max-width 770px
             left: -368px;
     }
 
+        .product-wrapper {
+            margin-left: 115px;
+    }
+
         #expandBTN {
             margin-left: 340px;
     }
 }
 /*--------------------770px END----------------------*/
+
+
+/*--------------------
+media screen max-width 600px
+------------------------------*/
+
+@media screen and (max-width: 600px) {
+
+        #searchGames {
+            left: -475px;
+    }
+
+        #gamingNav {
+            left: 0;
+    }
+
+        #expandBTN {
+            margin-left: 248px;
+    }
+
+}
+/*--------------------600px END----------------------*/
 
 /*--------------------
 media screen max-width 430px
@@ -368,7 +414,11 @@ media screen max-width 430px
 @media screen and (max-width: 430px) {
 
         #searchGames {
-            left: -540px;
+            left: -555px;
+    }
+
+        #gamingNav {
+            left: 5px;
     }
 
         .product-wrapper {

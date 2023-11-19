@@ -22,7 +22,7 @@ orange soft:                rgba(249, 114, 38, 0.6)
 /*------------
 IMPORT SHEETS ---------------------*/
 
-@import "imports/home-styles.css";
+@import "imports/index-styles.css";
 @import "imports/about-styles.css";
 @import "imports/contact-styles.css";
 @import "imports/product-styles.css";
