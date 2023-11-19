@@ -102,26 +102,6 @@ Productlist page + xtra-products page styles
             margin-right: 61px;
     }
 
-        #product1-img:hover,
-        #product2-img:hover,
-        #product3-img:hover,
-        #product4-img:hover,
-        #product5-img:hover,
-        #product6-img:hover,
-        #product7-img:hover,
-        #product8-img:hover,
-        #product9-img:hover,
-        #product10-img:hover,
-        #product11-img:hover,
-        #product12-img:hover,
-        #product13-img:hover,
-        #product14-img:hover,
-        #product15-img:hover,
-        #product16-img:hover {
-            border-style: groove;                /*----DO SOMETHING NICE WITH HOVER ANIMATION FOR ALL PRODUCTS----*/
-            border: none;
-            padding: 0;
-    }
 
         #expandBTN {
             position: relative;
