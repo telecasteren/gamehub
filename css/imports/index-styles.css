@@ -1409,7 +1409,6 @@ max-width 770px
         top: 140px;
   }
 
-
 }
 /*---------------- 600px END ----------------*/
 
@@ -1433,7 +1432,11 @@ Max-width 430px
 
     #getBTN {
       top: 195px;
-      width: 272px;
+      width: 236px;
+  }
+
+    #getBTN img {
+    display: none;
   }
 
   
