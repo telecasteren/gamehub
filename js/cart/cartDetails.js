@@ -1,19 +1,6 @@
 import { fetchGameDetails } from "../api/gameApi.js";
-import { loadError } from "../components/errorMessages.js";
+import { loadError, alertMessage } from "../components/messages.js";
 import { continueShoppingEvent } from "../components/continueShopping.js";
-
-// Hide checkout button if cart is empty:
-function emptyCart() {
-  const checkoutButton = document.querySelector("._checkout");
-  const subtotalPrice = document.querySelector("#subtotal-price");
-
-  const cartItems = getItemsInLocalStorage();
-
-  if (Array.isArray(cartItems) && cartItems.length < 1) {
-    checkoutButton.style.display = "none";
-    subtotalPrice.style.display = "none";
-  }
-}
 
 document.addEventListener("DOMContentLoaded", () => {
   emptyCart();
@@ -211,9 +198,54 @@ function calculateTotalPrice() {
 }
 calculateTotalPrice();
 
+// Hide checkout button if cart is empty:
+function emptyCart() {
+  const checkoutButton = document.querySelector("._checkout");
+  const subtotalPrice = document.querySelector("#subtotal-price");
+
+  const cartItems = getItemsInLocalStorage();
+
+  if (Array.isArray(cartItems) && cartItems.length < 1) {
+    checkoutButton.style.display = "none";
+    subtotalPrice.style.display = "none";
+  }
+}
+
+function clearCartAfterOrderPlaced() {
+  const placeOrderBtn = document.querySelector("._placeOrder");
+  const customAlert = document.querySelector(".alert-message");
+  const closeBtn = document.querySelector(".close-alert");
+  const messageContent = document.querySelector(".messageContent");
+
+  if (placeOrderBtn) {
+    placeOrderBtn.addEventListener("click", () => {
+      localStorage.removeItem("cart");
+      customAlert.style.display = "block";
+    });
+  }
+
+  if (messageContent) {
+    messageContent.innerHTML = `<p>Order confirmed!<p>`;
+  } else {
+    alertMessage();
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      customAlert.style.display = "none";
+    });
+  }
+
+  window.addEventListener("click", (event) => {
+    if (event.target === customAlert) {
+      customAlert.style.display = "none";
+    }
+  });
+}
+clearCartAfterOrderPlaced();
+
 // ------------------------ TO DO:
-// - DEPLOY AND TEST
-// - CLEAN UP ALL CODE AND STRUCTURE - REWRITE: eachItemInCartHtml at cartDetails.js
+// - CLEAN UP ALL CODE AND STRUCTURE (mobile screens) - REWRITE: simplify the eachItemInCartHtml at cartDetails.js
 // - Check all loaders throughout all pages
 // - ERROR HANDLING in general
 // EXTRAS:

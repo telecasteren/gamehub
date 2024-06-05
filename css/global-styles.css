@@ -49,7 +49,51 @@ body {
   color: rgb(236, 2, 2);
 }
 
+/*- ALERT message -*/
+
+.alert-message {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.alert-content {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(254, 254, 255, 1);
+  padding: 50px;
+  border-radius: 22px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  width: 30%;
+  min-width: 300px;
+  height: auto;
+  text-align: center;
+}
+
+.messageContent {
+  font-size: 145%;
+}
+
+.close-alert {
+  color: rgba(249, 114, 38, 1);
+  float: right;
+  font-size: 42px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-alert:hover {
+  color: black;
+}
 /*--------------------------------------------------------
+
 Pagetitle for pages: About, Contact, Profile  */
 .page-title {
   padding: 50px;
@@ -161,7 +205,6 @@ footer {
   margin-bottom: 5px;
   width: 100%;
   height: 100px;
-  /* justify-content: space-between; */
   position: relative;
   top: 50px;
 }
