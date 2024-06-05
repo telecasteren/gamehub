@@ -1,0 +1,240 @@
+/*-----------------------------------------
+Checkout- and checkout success page styles
+------------------------------------------*/
+
+/*------------------
+Checkout page START
+---------------------*/
+
+.logoCheckout .logo {
+  margin-left: 45%;
+  margin-top: 6%;
+}
+
+.loggedInUser-info {
+  margin-top: 10%;
+}
+
+.userInfoMember,
+.userInfoMail,
+.userInfoLogOut {
+  margin-top: 0.4%;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(20, 47, 204, 0.6);
+}
+
+.userInfoLogOut {
+  text-decoration: underline;
+}
+
+.checkoutLineTop,
+.checkoutLineBottom {
+  width: 750px;
+}
+
+#checkoutTitle {
+  font-size: 200%;
+  margin-bottom: 1%;
+}
+
+.cart-image {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 25%;
+}
+
+#subtotal,
+#subtotal-price,
+.total-price,
+#total-price {
+  font-weight: 600;
+  font-size: larger;
+}
+
+#subtotal-price,
+#total-price {
+  margin-left: 90%;
+  margin-bottom: 1%;
+  font-size: 130%;
+}
+
+#subtotal,
+#totalSum {
+  margin-top: 5%;
+}
+
+.cartInfo-title {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.quantity-number {
+  width: 60px;
+  background-color: rgba(20, 47, 204, 0.6);
+  color: rgba(254, 254, 255, 1);
+  text-align: center;
+  margin-bottom: 1%;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.increase-icon,
+.decrease-icon {
+  width: 25px;
+  height: auto;
+  margin-left: 18px;
+  cursor: pointer;
+}
+
+.increase-icon:hover,
+.decrease-icon:hover {
+  width: 30px;
+  height: auto;
+  margin-left: 16px;
+}
+
+.counter-icon-div {
+  justify-content: center;
+  width: 60px;
+  height: 25px;
+  margin-bottom: 1%;
+}
+
+.checkout-page {
+  margin-top: 50px;
+  display: grid;
+  justify-content: center;
+  transition: all 0.5s;
+  font-size: 100%;
+}
+
+.checkoutFields {
+  width: 82%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4%;
+}
+
+.checkoutForm {
+  margin-top: 1%;
+  margin-bottom: 4%;
+}
+
+#pick-up {
+  margin-top: 10px;
+}
+
+#pick-up,
+#post-office {
+  margin-right: 15px;
+}
+
+.promo-code {
+  width: 145px;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+form p,
+.promo-label,
+.checkoutDetails h3 {
+  margin-top: 20px;
+}
+
+input.promo-code {
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
+
+.checkoutFields input:hover,
+.paymentFields input:hover,
+.paymentFields select:hover,
+input#promoCode:hover {
+  border: 1px solid rgba(249, 114, 38, 0.8);
+}
+
+select,
+input[type="date"],
+.paymentFields {
+  width: 326px;
+}
+
+.paymentFields {
+  width: 40%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+#cardDetails {
+  width: 100%;
+}
+
+.checkoutBTN {
+  margin-top: 10px;
+  margin-left: 75%;
+  width: 30%;
+  min-width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(20, 47, 204, 0.6);
+  background-color: rgba(20, 47, 204, 1);
+  color: rgba(254, 254, 255, 1);
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 120%;
+}
+
+.checkoutBTN a {
+  color: rgba(254, 254, 255, 1);
+}
+
+.checkoutBTN:hover {
+  color: rgba(254, 254, 255, 1);
+  border-color: rgba(57, 87, 255, 0.95);
+  background-color: rgba(57, 87, 255, 0.95);
+}
+
+._allGames {
+  background-color: rgba(254, 254, 255, 1);
+  border-color: rgba(20, 47, 204, 1);
+  color: rgba(20, 47, 204, 0.95);
+}
+
+/*--------------------------------------
+ Checkout success page START
+ ---------------------------------------------*/
+.checkout-success {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.checkout-success h2 {
+  margin-top: 12%;
+  margin-bottom: 2%;
+}
+
+#thanksH2 {
+  margin-top: 5%;
+}
+
+@media screen and (max-width: 375px) {
+  .checkout-success p {
+    font-size: 12px;
+  }
+
+  .checkout-success h2 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .checkout-success p {
+    font-size: 12px;
+  }
+}

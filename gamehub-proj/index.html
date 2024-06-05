@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GameHub website project" />
+    <link rel="stylesheet" href="css/global-styles.css" />
+    <title>GameHub | Home</title>
+    <script defer type="module" src="./js/script.js"></script>
+    <script defer type="module" src="./js/products/index.js"></script>
+    <script defer src="./js/components/menuList.js"></script>
+  </head>
+  <body>
+    <div class="topLine"><hr /></div>
+
+    <div class="nav-bar">
+      <nav>
+        <ul id="menuList">
+          <li><a href="./index.html" id="current">home</a></li>
+          <li><a href="../gamehub-proj/html/products.html">games</a></li>
+          <li><a href="../gamehub-proj/html/about.html">about</a></li>
+          <li><a href="../gamehub-proj/html/contact.html">contact</a></li>
+          <li><a href="../gamehub-proj/html/profile.html">profile</a></li>
+          <li>
+            <a class="rightNavElement" href="../gamehub-proj/html/cart.html"
+              >your cart <span id="item-counter">0</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <img
+        src="./images/menu-icon.png"
+        class="menu-icon"
+        alt="menu icon"
+        onclick="togglemenu()"
+      />
+    </div>
+
+    <a href="./index.html"
+      ><img src="images/GameHub-top-logo.svg" class="logo" alt="main logo"
+    /></a>
+
+    <main>
+      <section>
+        <div class="homepageCarousel">
+          <img src="images/carousel-img1.svg" alt="carousel game images" />
+          <img src="images/carousel-img2.svg" alt="carousel game images" />
+          <img src="images/carousel-img5.svg" alt="carousel game images" />
+          <img src="images/carousel-img1.svg" alt="carousel game images" />
+          <img src="images/carousel-img2.svg" alt="carousel game images" />
+          <img src="images/carousel-img5.svg" alt="carousel game images" />
+        </div>
+        <button class="getBTN">
+          GET YOURS NOW
+          <img src="images/getBTNarrow.svg" alt="button arrow" />
+        </button>
+
+        <div class="middleLine"><hr /></div>
+
+        <div class="home-container">
+          <div class="loader"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footerRow">
+        <p class="copyright-text">
+          Copyright &copy; 2023 All Rights Reserved by GameHub
+        </p>
+      </div>
+    </footer>
+    <div class="bottomLine"><hr /></div>
+  </body>
+</html>

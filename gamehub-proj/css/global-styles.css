@@ -1,0 +1,403 @@
+/*------------------------------------------------------------------------------
+COLORS in use:
+logo blue/dark blue:        rgba(27, 32, 61, 1)
+white:                      rgba(254, 254, 255, 1)
+background box blue:        rgba(248, 248, 255, 1)
+light blue:                 rgba(20, 47, 204, 0.6)
+bright blue strong:         rgba(20, 47, 204, 1)
+bright blue soft:           rgba(20, 47, 204, 0.95)
+orange strong:              rgba(249, 114, 38, 0.8)
+orange soft:                rgba(249, 114, 38, 0.6)
+-------------------------------------------------------------------------------*/
+/* :root {
+  --orange-strong: rgba(249, 114, 38, 0.8);
+} */
+
+/*------------
+IMPORT SHEETS ---------------------*/
+@import "../css/imports/index-styles.css";
+@import "../css/imports/products-page.css";
+@import "../css/imports/product-details.css";
+@import "../css/imports/about-styles.css";
+@import "../css/imports/checkout-styles.css";
+@import "../css/imports/contact-styles.css";
+@import "../css/imports/components/loader.css";
+@import "../css/imports/components/messages.css";
+/*----------------------------------*/
+
+/*-------------------------------------------------
+GLOBAL STYLES
+-------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: medium;
+  text-decoration: none;
+  color: rgba(27, 32, 61, 1);
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.discount-price {
+  color: rgb(236, 2, 2);
+}
+
+/*--------------------------------------------------------
+Pagetitle for pages: About, Contact, Profile  */
+.page-title {
+  padding: 50px;
+  margin-top: 90px;
+  background-color: rgba(20, 47, 204, 0.95);
+}
+
+@media screen and (max-width: 770px) {
+  .page-title {
+    margin-top: 50px;
+  }
+}
+
+.page-title h1 {
+  color: rgba(254, 254, 255, 1);
+  font-size: 50px;
+  text-align: center;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/*- Seperation lines -*/
+
+.topLine {
+  width: auto;
+  padding: 10px;
+}
+
+@media screen and (max-width: 770) {
+  .topLine {
+    padding: 10px;
+    width: 920px;
+  }
+}
+
+@media screen and (max-width: 430) {
+  .topLine {
+    padding: 10px;
+    width: 960px;
+  }
+}
+
+.middleLine {
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.bottomLine {
+  padding: 5px 10px 10px 10px;
+  position: relative;
+  margin-top: 50px;
+}
+/*--------END---------*/
+
+/*-- FORMS, FIELDSETS, INPUT-FIELDS -------------*/
+form ::placeholder {
+  color: rgba(20, 47, 204, 0.6);
+  text-align: center;
+}
+
+fieldset,
+.inputFields {
+  border: none;
+  margin: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select[name="payment"],
+textarea {
+  padding: 8px;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(20, 47, 204, 0.6);
+  background-color: rgba(248, 248, 255, 1);
+}
+
+input[type="submit"] {
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  justify-content: center;
+  border: 1px solid rgba(20, 47, 204, 0.6);
+  background-color: rgba(20, 47, 204, 1);
+  color: rgba(254, 254, 255, 1);
+}
+
+@media screen and (min-width: 1024px) {
+  input[type="submit"]:hover {
+    background-color: rgba(254, 254, 255, 1);
+    color: rgba(20, 47, 204, 1);
+  }
+}
+/*-------------------END---------------------*/
+
+/*----------------------------
+FOOTER START
+-----------------------------*/
+footer {
+  display: grid;
+  background-color: rgba(248, 248, 255, 1);
+  margin-top: 100px;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 100px;
+  /* justify-content: space-between; */
+  position: relative;
+  top: 50px;
+}
+
+.footerRow {
+  position: relative;
+  margin-top: 40px;
+  justify-self: center;
+}
+
+.copyright-text {
+  font-weight: medium;
+}
+
+/*----------------------------
+Media query FOOTER
+-----------------------------*/
+@media screen and (max-width: 900px) {
+  footer {
+    margin-top: 100px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 100px;
+  }
+
+  .footerRow {
+    position: relative;
+    margin-left: 20px;
+    margin-top: 40px;
+  }
+
+  .copyright-text {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  footer {
+    margin-top: 800px;
+    margin-bottom: 5px;
+    position: sticky;
+  }
+
+  .footerRow {
+    position: relative;
+    margin-left: 20px;
+    margin-top: 40px;
+  }
+
+  .copyright-text {
+    font-size: 12px;
+  }
+}
+/*--------------END--------------*/
+
+/*----------------------------
+TOP of pages START
+-----------------------------*/
+.logo {
+  margin-top: 1%;
+  margin-left: 5%;
+  width: 160px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+/*--------------
+NAVIGATION BAR
+---------------*/
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute; /* position: fixed; ?? */
+  z-index: 500;
+}
+
+.menu-icon {
+  width: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+nav {
+  flex: 1;
+  right: 30px;
+  position: relative;
+  text-align: right;
+  margin-top: 10px;
+  z-index: 500;
+}
+
+#current {
+  font-weight: bolder;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  color: rgba(27, 32, 61, 1);
+  font-size: 20px;
+}
+
+nav ul li a:hover {
+  color: rgba(249, 114, 38, 1);
+}
+
+#item-counter {
+  background-color: rgba(249, 114, 38, 1);
+  color: rgba(254, 254, 255, 1);
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+/*--------------------------
+ Media queries for NAVBAR, menu icon and dropdown list
+ -----------------------------------------------------*/
+@media screen and (max-width: 430px) {
+  .menu-icon {
+    position: relative;
+    right: 40px;
+  }
+
+  #menuList {
+    position: absolute;
+    overflow: hidden;
+    transition: 0.5s;
+    right: -60px;
+    top: 12px;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .menu-icon {
+    position: relative;
+    right: 40px;
+  }
+
+  #menuList {
+    right: -60px;
+    top: 12px;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #menuList {
+    right: -60px;
+    top: 12px;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .menu-icon {
+    display: block;
+    position: relative;
+    right: 40px;
+  }
+
+  nav ul {
+    background: linear-gradient(rgba(20, 47, 204, 0.8), rgba(20, 47, 204, 0.4));
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    top: 78px;
+    right: 0;
+    z-index: 2;
+  }
+
+  nav ul li {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    color: rgba(254, 254, 255, 1);
+    font-size: 35px;
+  }
+
+  nav ul li a:hover {
+    color: rgba(249, 114, 38, 1);
+  }
+
+  #menuList {
+    overflow: hidden;
+    transition: 0.5s;
+    right: -60px;
+    top: 12px;
+    width: 100vw;
+  }
+
+  #current {
+    font-weight: bolder;
+    color: rgba(27, 32, 61, 1);
+  }
+}
+
+@media screen and (min-width: 1480px) {
+  nav ul li .rightNavElement {
+    margin-right: 60px;
+  }
+}
+
+/*----------------GLOBAL STYLES END------------------------*/
+
+/*--------------------
+Profile page styles
+---------------------*/
+.logInForm {
+  display: block;
+  text-align: center;
+  margin-top: 10%;
+}
+/*---------------END---------------*/

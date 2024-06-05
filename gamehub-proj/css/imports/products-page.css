@@ -1,0 +1,256 @@
+/*-------------------------------------------
+Productlist page + xtra-products page styles
+----------------------------------------------*/
+
+.productSlides {
+  margin-top: 70px;
+  margin-bottom: 30px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.productSlides img {
+  max-width: 100vw;
+}
+
+.productSlides > div {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  height: 450px;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  justify-content: center;
+  align-items: center;
+  animation: scroll 10s linear infinite;
+}
+
+#searchGames {
+  width: 245px;
+  height: 40px;
+  border-radius: 8px;
+  margin-top: 50px;
+  border: solid rgba(20, 47, 204, 1);
+  background-color: rgba(254, 254, 255, 1);
+  transition: 0.5s;
+}
+
+#searchGames::placeholder {
+  text-align: center;
+}
+
+input#searchGames {
+  margin-left: 42%;
+}
+
+input#searchGames:hover {
+  margin-left: 40%;
+  width: 300px;
+  border: 1px solid rgba(249, 114, 38, 0.8);
+}
+
+#gamingNav {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 0;
+  transition: all 1s;
+}
+
+.xtra-prod-section {
+  margin-top: 2%;
+}
+
+#returnArrow {
+  position: absolute;
+  margin-left: 6%;
+  margin-top: 0;
+}
+
+.products-section {
+  box-sizing: border-box;
+}
+
+.product-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 6%;
+  margin-top: 5%;
+}
+
+.products {
+  margin-top: 50px;
+  width: 80%;
+  height: auto;
+}
+
+.products:hover {
+  width: 79%;
+  height: auto;
+  border: 4px solid;
+  border-radius: 5px;
+  border-color: rgba(249, 114, 38, 0.8);
+}
+
+#expandBTN {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 700px;
+  background-color: rgba(254, 254, 255, 1);
+  border: none;
+  cursor: pointer;
+}
+/*------------------------------------------*/
+
+/*--------------
+Media screens
+--------------------------*/
+
+/*--------------------
+Min-width 1900px
+------------------------------*/
+
+@media screen and (min-width: 1900px) {
+  #expandBTN {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 910px;
+  }
+}
+/*------------------------------- 1900px END ---------------------*/
+
+/*--------------------
+media screen max-width 1025px
+------------------------------*/
+
+@media screen and (max-width: 1025px) {
+  #expandBTN {
+    margin-left: 450px;
+  }
+
+  .scroll-container {
+    top: 100px;
+    left: 450px;
+  }
+}
+/*-------------------1025px END-----------------------*/
+
+/*--------------------
+media screen max-width 900px
+------------------------------*/
+
+@media screen and (max-width: 900px) {
+  input#searchGames {
+    margin-left: 36%;
+  }
+
+  .productSlides {
+    margin-bottom: 10px;
+  }
+
+  .products {
+    padding: 10px;
+  }
+
+  #expandBTN {
+    margin-left: 400px;
+  }
+
+  .scroll-container {
+    top: 100px;
+    left: 400px;
+  }
+}
+/*--------------------900px END----------------------*/
+
+/*--------------------
+media screen max-width 800px
+------------------------------*/
+
+@media screen and (max-width: 800px) {
+  #expandBTN {
+    margin-left: 340px;
+  }
+}
+/*--------------------800px END----------------------*/
+
+/*--------------------
+media screen max-width 770px
+------------------------------*/
+
+@media screen and (max-width: 770px) {
+  #expandBTN {
+    margin-left: 340px;
+  }
+}
+/*--------------------770px END----------------------*/
+
+/*--------------------
+media screen max-width 600px
+------------------------------*/
+
+@media screen and (max-width: 600px) {
+  input#searchGames {
+    margin-left: 26%;
+  }
+
+  #expandBTN {
+    margin-left: 248px;
+  }
+}
+/*--------------------600px END----------------------*/
+
+/*--------------------
+media screen max-width 430px
+------------------------------*/
+
+@media screen and (max-width: 430px) {
+  #expandBTN {
+    margin-left: 170px;
+  }
+
+  .scroll-container {
+    top: 100px;
+    left: 155px;
+  }
+}
+/*--------------------430px END----------------------*/
+
+/*--------------------
+media screen max-width 390px
+------------------------------*/
+
+@media screen and (max-width: 390px) {
+  #expandBTN {
+    margin-left: 140px;
+  }
+
+  .scroll-container {
+    left: 135px;
+  }
+}
+/*--------------------390px END----------------------*/
+
+/*--------------------
+media screen max-width 360px
+------------------------------*/
+
+@media screen and (max-width: 360px) {
+  #gamingNav img {
+    width: 260px;
+    height: auto;
+    position: relative;
+  }
+
+  #expandBTN {
+    margin-left: 105px;
+  }
+
+  .scroll-container {
+    left: 105px;
+  }
+}
+/*--------------------360px END----------------------*/

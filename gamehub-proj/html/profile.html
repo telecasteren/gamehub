@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GameHub website project" />
+    <link rel="stylesheet" href="../css/global-styles.css" />
+    <title>GameHub | Profile</title>
+    <script defer type="module" src="../js/script.js"></script>
+    <script defer src="../js/components/menuList.js"></script>
+  </head>
+  <body>
+    <div class="topLine"><hr /></div>
+
+    <div class="nav-bar">
+      <nav>
+        <ul id="menuList">
+          <li><a href="../index.html">home</a></li>
+          <li><a href="products.html">games</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li><a href="profile.html" id="current">profile</a></li>
+          <li>
+            <a class="rightNavElement" href="cart.html"
+              >your cart <span id="item-counter">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <img
+        src="../images/menu-icon.png"
+        class="menu-icon"
+        alt="menu icon"
+        onclick="togglemenu()"
+      />
+    </div>
+    <a href="../index.html"
+      ><img src="../images/GameHub-top-logo.svg" class="logo" alt="main logo"
+    /></a>
+
+    <main>
+      <section>
+        <div class="page-title"><h1>Profile page</h1></div>
+
+        <form class="logInForm">
+          <input
+            type="text"
+            id="username"
+            placeholder="username"
+            required
+            autocomplete="on"
+          />
+          <input type="text" id="password" placeholder="password" required />
+          <input type="submit" value="login" />
+          <p>
+            <i
+              ><small
+                >you must be logged in to view order history and sell
+                games</small
+              ></i
+            >
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footerRow">
+        <p class="copyright-text">
+          Copyright &copy; 2023 All Rights Reserved by GameHub
+        </p>
+      </div>
+    </footer>
+    <div class="bottomLine"><hr /></div>
+  </body>
+</html>

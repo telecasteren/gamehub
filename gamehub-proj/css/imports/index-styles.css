@@ -1,0 +1,114 @@
+/*----------------------------------------------
+Home page styles
+----------------------------------------------*/
+
+.homepageCarousel {
+  margin-top: 70px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.homepageCarousel div {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  height: 450px;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  justify-content: center;
+  align-items: center;
+  animation: scroll 10s linear infinite;
+}
+
+.homepageCarousel img {
+  max-width: 100vw;
+}
+
+.getBTN {
+  background-color: rgba(20, 47, 204, 0.95);
+  border-color: rgba(20, 47, 204, 0.95);
+  color: rgba(254, 254, 255, 1);
+  border-style: solid;
+  border-radius: 20px;
+  position: absolute;
+  margin-left: 40%;
+  font-size: 20px;
+  padding: 20px 30px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.getBTN img {
+  width: 30px;
+  margin-top: 2px;
+  margin-left: 5px;
+}
+
+.getBTN:hover {
+  border-color: rgba(57, 87, 255, 0.95);
+  background-color: rgba(57, 87, 255, 0.95);
+}
+
+.home-container {
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  max-width: 100vw;
+  height: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.column {
+  max-width: 80%;
+  justify-self: center;
+  margin-top: 15%;
+}
+
+.product {
+  max-width: 100%;
+}
+
+.titleH2 {
+  font-size: 160%;
+}
+
+.prodText {
+  font-size: 120%;
+  margin-top: 5%;
+}
+
+.titleH2,
+.prodText {
+  text-align: center;
+  color: rgba(254, 254, 255, 1);
+}
+
+.color-box {
+  background: rgba(20, 47, 204, 0.95);
+  width: 100%;
+  height: 18%;
+  margin-bottom: 30%;
+}
+
+@media (max-width: 900px) {
+  .getBTN {
+    margin-left: 35%;
+  }
+}
+
+@media (max-width: 770px) {
+  .getBTN img {
+    display: none;
+  }
+
+  .home-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .getBTN {
+    margin-left: 20%;
+  }
+}
