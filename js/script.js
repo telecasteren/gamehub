@@ -19,7 +19,7 @@ export function updateCartCounter() {
 
 // Common redirection to specific products:
 export function goToProduct(productID) {
-  window.location.href = `/gamehub-proj/html/specificProd.html?gameId=${productID}`;
+  window.location.href = `/html/specificProd.html?gameId=${productID}`;
 }
 
 // Saving current page to localStorage:
