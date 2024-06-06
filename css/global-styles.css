@@ -51,6 +51,10 @@ body {
 
 /*- ALERT message -*/
 
+._alert-hidden {
+  display: none;
+}
+
 .alert-message {
   background-color: rgba(0, 0, 0, 0.5);
   display: block;

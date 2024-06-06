@@ -3,8 +3,8 @@ import { loadError, alertMessage } from "../components/messages.js";
 import { continueShoppingEvent } from "../components/continueShopping.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  emptyCart();
-  loadCartItems();
+  mimicEmptyCart();
+  eachItemInCartHtml();
   initItemCounter();
   cartDetails();
   displaySubtotal();
@@ -24,7 +24,7 @@ function getItemsInLocalStorage() {
   return JSON.parse(localStorage.getItem("cart")) || [];
 }
 
-function loadCartItems() {
+function eachItemInCartHtml() {
   const cartContainer = document.querySelector(".cart-section");
   const cart = getItemsInLocalStorage();
 
@@ -40,85 +40,105 @@ function loadCartItems() {
       let prodPrice = product.price;
       const discountPrice = product.discountedPrice;
       const priceClass = product.onSale ? "discount-price" : "";
+      const addItem = `../images/add-item.png`;
+      const removeItem = `../images/remove-item.png`;
 
       if (product.onSale) {
         prodPrice = discountPrice;
       }
 
-      const eachItemInCartHtml = `
-    <div class="cart-items" data-product-id="${prodId}">
-        <div class="cartIMG">
-          <img class="cart-image" src="${prodIMG}"
-          alt="${prodAlt || `Game cover for ${prodTitle}`}">
-        </div>
-        <div class="counter-icon-div">
-          <img class="increase-icon" src="../images/add-item.png" alt="plus icon for adding items in cart">
-        </div>
-        <div class="quantity-number" id="quantity-${prodId}">
-        ${prodQuantity}
-        </div>
-        <div class="counter-icon-div">
-          <img class="decrease-icon" src="../images/remove-item.png" alt="minus icon for removing items in cart">
-        </div>
-        <div class="cartInfo-title"><p><b>${prodTitle}</b>
-        - full game + digital soundtrack: <b><span class="${priceClass}">$${prodPrice}</span></b></p></div>
-      </div>
-      <div><hr /></div>
-    `;
+      const cartItems = document.createElement("div");
+      cartItems.setAttribute(`data-product-id`, prodId);
 
-      cartContainer.innerHTML += eachItemInCartHtml;
+      const cartImgDiv = document.createElement("div");
+      cartImgDiv.classList.add("cartIMG");
+      const cartImage = document.createElement("img");
+      cartImage.alt = `${prodAlt}` || `Game cover for ${prodTitle}`;
+      cartImage.src =
+        `${prodIMG}` || `<div class="noImage">NO IMAGE FOUND</div>`;
+      cartImage.classList.add("cart-image");
+
+      const counterIconDivIncrease = document.createElement("div");
+      counterIconDivIncrease.classList.add("counter-icon-div");
+
+      const increaseIcon = document.createElement("img");
+      increaseIcon.src = `${addItem}`;
+      increaseIcon.alt = `Plus icon for adding items in cart`;
+      increaseIcon.classList.add("increase-icon");
+      increaseIcon.addEventListener("click", () => {
+        updateQuantity(prodId, 1);
+      });
+
+      const counter = document.createElement("div");
+      counter.classList.add("quantity-number");
+      counter.id = `quantity-${prodId}`;
+      counter.innerHTML = `${prodQuantity}`;
+
+      const counterIconDivDecrease = document.createElement("div");
+      counterIconDivDecrease.classList.add("counter-icon-div");
+
+      const decreaseIcon = document.createElement("img");
+      decreaseIcon.src = `${removeItem}`;
+      decreaseIcon.alt = `Minus icon for removing items in cart`;
+      decreaseIcon.classList.add("decrease-icon");
+      decreaseIcon.addEventListener("click", () => {
+        updateQuantity(prodId, -1);
+      });
+
+      const cartItemTitle = document.createElement("div");
+      cartItemTitle.classList.add("cartInfo-title");
+      cartItemTitle.innerHTML = `<p><b>${prodTitle}</b>
+            - full game + digital soundtrack: <b><span class="${priceClass}">$${prodPrice}</span></b></p>`;
+
+      const separationLine = document.createElement("hr");
+
+      cartImgDiv.appendChild(cartImage);
+      cartItems.appendChild(cartImgDiv);
+
+      counterIconDivIncrease.appendChild(increaseIcon);
+      cartItems.appendChild(counterIconDivIncrease);
+
+      cartItems.appendChild(counter);
+
+      counterIconDivDecrease.appendChild(decreaseIcon);
+      cartItems.appendChild(counterIconDivDecrease);
+
+      cartItems.appendChild(cartItemTitle);
+
+      cartContainer.appendChild(cartItems);
+      cartContainer.appendChild(separationLine);
     });
+
     displaySubtotal();
-    initCartItemEvents();
   } catch (error) {
     console.error("Error occurred: ", error);
     loadError();
   }
-  emptyCart();
-}
 
-// ---------
-// Incrementing/decrementing cart items + updating NAV cart-items badge equally:
-function initCartItemEvents() {
-  const cartItems = document.querySelectorAll(".cart-items");
+  // Incrementing/decrementing cart items + updating NAV cart-items badge equally:
+  function updateQuantity(productId, delta) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const productIndex = cart.findIndex((item) => item.id === productId);
 
-  cartItems.forEach((item) => {
-    const increaseNumber = item.querySelector(".increase-icon");
-    const decreaseNumber = item.querySelector(".decrease-icon");
-    const quantityNumber = item.querySelector(".quantity-number");
-    const productId = item.dataset.productId;
+    if (productIndex !== -1) {
+      cart[productIndex].quantity += delta;
+      if (cart[productIndex].quantity < 1) {
+        cart.splice(productIndex, 1);
+        cartContainer
+          .querySelector(`[data-product-id="${productId}"]`)
+          .remove();
+      } else {
+        document.getElementById(`quantity-${productId}`).textContent =
+          cart[productIndex].quantity;
+      }
 
-    increaseNumber.addEventListener("click", () => {
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      const product = cart.find((item) => item.id === productId);
-
-      product.quantity++;
-      quantityNumber.textContent = product.quantity;
       localStorage.setItem("cart", JSON.stringify(cart));
+      calculateTotalPrice();
       updateTotals();
       displaySubtotal();
-      emptyCart();
-    });
-
-    decreaseNumber.addEventListener("click", () => {
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      const productIndex = cart.findIndex((item) => item.id === productId);
-
-      if (productIndex !== -1) {
-        if (cart[productIndex].quantity > 1) {
-          cart[productIndex].quantity--;
-          quantityNumber.textContent = cart[productIndex].quantity;
-        } else {
-          cart.splice(productIndex, 1);
-          item.remove();
-        }
-        localStorage.setItem("cart", JSON.stringify(cart));
-        updateTotals();
-        displaySubtotal();
-        emptyCart();
-      }
-    });
-  });
+      mimicEmptyCart();
+    }
+  }
 }
 
 function updateTotals() {
@@ -199,7 +219,7 @@ function calculateTotalPrice() {
 calculateTotalPrice();
 
 // Hide checkout button if cart is empty:
-function emptyCart() {
+function mimicEmptyCart() {
   const checkoutButton = document.querySelector("._checkout");
   const subtotalPrice = document.querySelector("#subtotal-price");
 
@@ -217,10 +237,9 @@ function clearCartAfterOrderPlaced() {
   const closeBtn = document.querySelector(".close-alert");
   const messageContent = document.querySelector(".messageContent");
 
-  if (placeOrderBtn) {
-    placeOrderBtn.addEventListener("click", () => {
-      localStorage.removeItem("cart");
-      customAlert.style.display = "block";
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      customAlert.style.display = "none";
     });
   }
 
@@ -228,12 +247,7 @@ function clearCartAfterOrderPlaced() {
     messageContent.innerHTML = `<p>Order confirmed!<p>`;
   } else {
     alertMessage();
-  }
-
-  if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-      customAlert.style.display = "none";
-    });
+    return;
   }
 
   window.addEventListener("click", (event) => {
@@ -241,13 +255,20 @@ function clearCartAfterOrderPlaced() {
       customAlert.style.display = "none";
     }
   });
+
+  if (placeOrderBtn) {
+    placeOrderBtn.addEventListener("click", () => {
+      localStorage.removeItem("cart");
+      customAlert.style.display = "block";
+    });
+  }
 }
 clearCartAfterOrderPlaced();
 
 // ------------------------ TO DO:
-// - CLEAN UP ALL CODE AND STRUCTURE (mobile screens) - REWRITE: simplify the eachItemInCartHtml at cartDetails.js
+// - CLEAN UP ALL CODE AND STRUCTURE (mobile screens)
 // - Check all loaders throughout all pages
-// - ERROR HANDLING in general
+// - ERROR HANDLING and errors in console
 // EXTRAS:
 // - HOME page: Style the overall design, title and description
 // - Add working filtering functionality in search in products page

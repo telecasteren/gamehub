@@ -3,7 +3,7 @@ Checkout- and checkout success page styles
 ------------------------------------------*/
 
 /*------------------
-Checkout page START
+Checkout page
 ---------------------*/
 
 .logoCheckout .logo {
@@ -206,7 +206,7 @@ input[type="date"],
 }
 
 /*--------------------------------------
- Checkout success page START
+ Checkout success page
  ---------------------------------------------*/
 .checkout-success {
   align-items: center;
@@ -230,11 +230,5 @@ input[type="date"],
 
   .checkout-success h2 {
     font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .checkout-success p {
-    font-size: 12px;
   }
 }

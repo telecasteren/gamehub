@@ -8,5 +8,9 @@ export function loadError() {
 
 export function alertMessage() {
   const alertMessage = document.querySelector(".messageContent");
-  alertMessage.textContent = `<div class="error">Unknown error ocurred.</div>`;
+
+  if (alertMessage) {
+    alertMessage.textContent = "Unknown error ocurred.";
+    alertMessage.classList.add("error");
+  }
 }

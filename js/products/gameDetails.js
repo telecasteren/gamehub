@@ -2,15 +2,17 @@ import { fetchGameDetails } from "../api/gameApi.js";
 import { updateCartCounter } from "../script.js";
 
 const cartWindow = document.getElementById("cartWindow-box");
+const imageContainer = document.querySelector(".prodImg-container");
 
-// Fetching the specific product by id, calling the function for creating the html for each product
-// and calling the addToCartEvent for it to add product to cart by id
+// Fetching the product by id, calling the function for creating the html
+// and calling the function for adding product to cart by id
 async function specificGame() {
   try {
     const details = await fetchGameDetails();
 
     const cartButton = document.querySelector(".addToCartBTN").outerHTML;
 
+    imageContainer.innerHTML = "";
     cartWindow.innerHTML = "";
 
     const gameId = new URLSearchParams(window.location.search).get("gameId");
@@ -73,14 +75,13 @@ function gameDetails(product) {
     const gameImg = product.image.url;
     const gameAlt = product.image.alt;
 
-    const imgDiv = document.querySelector(".productIMG");
     const imgEl = document.createElement("img");
 
     imgEl.classList.add("productIMG");
     imgEl.src = gameImg;
     imgEl.alt = gameAlt;
 
-    imgDiv.appendChild(imgEl);
+    imageContainer.appendChild(imgEl);
 
     if (!gameAlt.length) {
       imgEl.alt = `Game cover for ${product.title}`;
