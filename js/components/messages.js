@@ -3,7 +3,10 @@
 // Error message upon loading cart:
 export function loadError() {
   const cartSection = document.querySelector(".cart-section");
-  cartSection.innerHTML = `<div class="error">Couldn't load products in cart.</div>`;
+
+  if (cartSection) {
+    cartSection.innerHTML = `<div class="error">Couldn't load products in cart.</div>`;
+  }
 }
 
 export function alertMessage() {

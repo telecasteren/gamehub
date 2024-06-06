@@ -1,6 +1,6 @@
 import { fetchGameDetails } from "../api/gameApi.js";
 import { loadError, alertMessage } from "../components/messages.js";
-import { continueShoppingEvent } from "../components/continueShopping.js";
+import { continueShoppingEvent } from "../script.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   mimicEmptyCart();
@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
   cartDetails();
   displaySubtotal();
   continueShoppingEvent();
+
+  const orderConfirmed = localStorage.getItem("orderConfirmed");
+  if (orderConfirmed === "true") {
+    localStorage.removeItem("cart");
+    localStorage.removeItem("orderConfirmed");
+  }
 });
 
 async function cartDetails() {
@@ -29,85 +35,87 @@ function eachItemInCartHtml() {
   const cart = getItemsInLocalStorage();
 
   try {
-    cartContainer.innerHTML = "";
+    if (cartContainer) {
+      cartContainer.innerHTML = "";
 
-    cart.forEach((product) => {
-      const prodId = product.id;
-      const prodTitle = product.title;
-      const prodQuantity = product.quantity;
-      const prodIMG = product.image.url;
-      const prodAlt = product.image.alt;
-      let prodPrice = product.price;
-      const discountPrice = product.discountedPrice;
-      const priceClass = product.onSale ? "discount-price" : "";
-      const addItem = `../images/add-item.png`;
-      const removeItem = `../images/remove-item.png`;
+      cart.forEach((product) => {
+        const prodId = product.id;
+        const prodTitle = product.title;
+        const prodQuantity = product.quantity;
+        const prodIMG = product.image.url;
+        const prodAlt = product.image.alt;
+        let prodPrice = product.price;
+        const discountPrice = product.discountedPrice;
+        const priceClass = product.onSale ? "discount-price" : "";
+        const addItem = `../images/add-item.png`;
+        const removeItem = `../images/remove-item.png`;
 
-      if (product.onSale) {
-        prodPrice = discountPrice;
-      }
+        if (product.onSale) {
+          prodPrice = discountPrice;
+        }
 
-      const cartItems = document.createElement("div");
-      cartItems.setAttribute(`data-product-id`, prodId);
+        const cartItems = document.createElement("div");
+        cartItems.setAttribute(`data-product-id`, prodId);
 
-      const cartImgDiv = document.createElement("div");
-      cartImgDiv.classList.add("cartIMG");
-      const cartImage = document.createElement("img");
-      cartImage.alt = `${prodAlt}` || `Game cover for ${prodTitle}`;
-      cartImage.src =
-        `${prodIMG}` || `<div class="noImage">NO IMAGE FOUND</div>`;
-      cartImage.classList.add("cart-image");
+        const cartImgDiv = document.createElement("div");
+        cartImgDiv.classList.add("cartIMG");
+        const cartImage = document.createElement("img");
+        cartImage.alt = `${prodAlt}` || `Game cover for ${prodTitle}`;
+        cartImage.src =
+          `${prodIMG}` || `<div class="noImage">NO IMAGE FOUND</div>`;
+        cartImage.classList.add("cart-image");
 
-      const counterIconDivIncrease = document.createElement("div");
-      counterIconDivIncrease.classList.add("counter-icon-div");
+        const counterIconDivIncrease = document.createElement("div");
+        counterIconDivIncrease.classList.add("counter-icon-div");
 
-      const increaseIcon = document.createElement("img");
-      increaseIcon.src = `${addItem}`;
-      increaseIcon.alt = `Plus icon for adding items in cart`;
-      increaseIcon.classList.add("increase-icon");
-      increaseIcon.addEventListener("click", () => {
-        updateQuantity(prodId, 1);
+        const increaseIcon = document.createElement("img");
+        increaseIcon.src = `${addItem}`;
+        increaseIcon.alt = `Plus icon for adding items in cart`;
+        increaseIcon.classList.add("increase-icon");
+        increaseIcon.addEventListener("click", () => {
+          updateQuantity(prodId, 1);
+        });
+
+        const counter = document.createElement("div");
+        counter.classList.add("quantity-number");
+        counter.id = `quantity-${prodId}`;
+        counter.innerHTML = `${prodQuantity}`;
+
+        const counterIconDivDecrease = document.createElement("div");
+        counterIconDivDecrease.classList.add("counter-icon-div");
+
+        const decreaseIcon = document.createElement("img");
+        decreaseIcon.src = `${removeItem}`;
+        decreaseIcon.alt = `Minus icon for removing items in cart`;
+        decreaseIcon.classList.add("decrease-icon");
+        decreaseIcon.addEventListener("click", () => {
+          updateQuantity(prodId, -1);
+        });
+
+        const cartItemTitle = document.createElement("div");
+        cartItemTitle.classList.add("cartInfo-title");
+        cartItemTitle.innerHTML = `<p><b>${prodTitle}</b>
+              - full game + digital soundtrack: <b><span class="${priceClass}">$${prodPrice}</span></b></p>`;
+
+        const separationLine = document.createElement("hr");
+
+        cartImgDiv.appendChild(cartImage);
+        cartItems.appendChild(cartImgDiv);
+
+        counterIconDivIncrease.appendChild(increaseIcon);
+        cartItems.appendChild(counterIconDivIncrease);
+
+        cartItems.appendChild(counter);
+
+        counterIconDivDecrease.appendChild(decreaseIcon);
+        cartItems.appendChild(counterIconDivDecrease);
+
+        cartItems.appendChild(cartItemTitle);
+
+        cartContainer.appendChild(cartItems);
+        cartContainer.appendChild(separationLine);
       });
-
-      const counter = document.createElement("div");
-      counter.classList.add("quantity-number");
-      counter.id = `quantity-${prodId}`;
-      counter.innerHTML = `${prodQuantity}`;
-
-      const counterIconDivDecrease = document.createElement("div");
-      counterIconDivDecrease.classList.add("counter-icon-div");
-
-      const decreaseIcon = document.createElement("img");
-      decreaseIcon.src = `${removeItem}`;
-      decreaseIcon.alt = `Minus icon for removing items in cart`;
-      decreaseIcon.classList.add("decrease-icon");
-      decreaseIcon.addEventListener("click", () => {
-        updateQuantity(prodId, -1);
-      });
-
-      const cartItemTitle = document.createElement("div");
-      cartItemTitle.classList.add("cartInfo-title");
-      cartItemTitle.innerHTML = `<p><b>${prodTitle}</b>
-            - full game + digital soundtrack: <b><span class="${priceClass}">$${prodPrice}</span></b></p>`;
-
-      const separationLine = document.createElement("hr");
-
-      cartImgDiv.appendChild(cartImage);
-      cartItems.appendChild(cartImgDiv);
-
-      counterIconDivIncrease.appendChild(increaseIcon);
-      cartItems.appendChild(counterIconDivIncrease);
-
-      cartItems.appendChild(counter);
-
-      counterIconDivDecrease.appendChild(decreaseIcon);
-      cartItems.appendChild(counterIconDivDecrease);
-
-      cartItems.appendChild(cartItemTitle);
-
-      cartContainer.appendChild(cartItems);
-      cartContainer.appendChild(separationLine);
-    });
+    }
 
     displaySubtotal();
   } catch (error) {
@@ -183,7 +191,9 @@ function displaySubtotal() {
   });
 
   const subtotalElement = document.getElementById("subtotal-price");
-  subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+  if (subtotalElement) {
+    subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+  }
 
   return subtotal;
 }
@@ -245,6 +255,7 @@ function clearCartAfterOrderPlaced() {
 
   if (messageContent) {
     messageContent.innerHTML = `<p>Order confirmed!<p>`;
+    localStorage.setItem("orderConfirmed", "true");
   } else {
     alertMessage();
     return;
@@ -258,7 +269,6 @@ function clearCartAfterOrderPlaced() {
 
   if (placeOrderBtn) {
     placeOrderBtn.addEventListener("click", () => {
-      localStorage.removeItem("cart");
       customAlert.style.display = "block";
     });
   }
