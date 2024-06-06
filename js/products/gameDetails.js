@@ -31,6 +31,7 @@ specificGame();
 
 // Creating the HTML for the specific product page
 function gameDetails(product) {
+
   if (product) {
     const price = product.price;
     const discountPrice = product.discountedPrice;
@@ -40,6 +41,9 @@ function gameDetails(product) {
     const releaseDate = product.released;
     const gameText = product.description;
     const textContainer = document.querySelector(".productText");
+
+    const pageTitle = document.querySelector("title");
+    pageTitle.innerHTML = `GameHub | ${product.title}`;
 
     textContainer.innerHTML = "";
 

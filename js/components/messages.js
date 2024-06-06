@@ -9,6 +9,7 @@ export function loadError() {
   }
 }
 
+// Reusable message:
 export function alertMessage() {
   const alertMessage = document.querySelector(".messageContent");
 
