@@ -17,11 +17,6 @@ export function updateCartCounter() {
   localStorage.setItem("itemCounter", totalQuantity);
 }
 
-// Common redirection to specific products:
-export function goToProduct(productID) {
-  window.location.href = `/html/specificProd.html?gameId=${productID}`;
-}
-
 // Saving current page to localStorage:
 function saveCurrentPage() {
   window.addEventListener("beforeunload", () => {
@@ -51,3 +46,22 @@ function loadPreviousPage() {
   });
 }
 loadPreviousPage();
+
+// ---------- Redirect user locations:
+
+// Common redirection to specific products:
+export function goToProduct(productID) {
+  window.location.href = `/html/specificProd.html?gameId=${productID}`;
+}
+
+// Continue shopping button in cart and checkout:
+export function continueShoppingEvent() {
+  const allGames = document.querySelector("._allGames");
+
+  if (allGames) {
+    function goToGames() {
+      window.location.href = `./products.html`;
+    }
+    allGames.addEventListener("click", goToGames);
+  }
+}

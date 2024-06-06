@@ -272,5 +272,5 @@ clearCartAfterOrderPlaced();
 // EXTRAS:
 // - HOME page: Style the overall design, title and description
 // - Add working filtering functionality in search in products page
-// - Profile page, mimic user login etc
+// - Profile page: mimic user login and account page
 // -----------------------------------------------------------------
