@@ -61,8 +61,7 @@ function eachItemInCartHtml() {
         cartImgDiv.classList.add("cartIMG");
         const cartImage = document.createElement("img");
         cartImage.alt = `${prodAlt}` || `Game cover for ${prodTitle}`;
-        cartImage.src =
-          `${prodIMG}` || `<div class="noImage">NO IMAGE FOUND</div>`;
+        cartImage.src = `${prodIMG}` || `../images/no_image_found.jpg`;
         cartImage.classList.add("cart-image");
 
         const counterIconDivIncrease = document.createElement("div");
@@ -276,11 +275,9 @@ function clearCartAfterOrderPlaced() {
 clearCartAfterOrderPlaced();
 
 // ------------------------ TO DO:
-// - CLEAN UP ALL CODE AND STRUCTURE (mobile screens)
-// - Check all loaders throughout all pages
 // - ERROR HANDLING and errors in console
 // EXTRAS:
 // - HOME page: Style the overall design, title and description
 // - Add working filtering functionality in search in products page
-// - Profile page: mimic user login and account page
+// - Profile page: mimic user login and form validation
 // -----------------------------------------------------------------

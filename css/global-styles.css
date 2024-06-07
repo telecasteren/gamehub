@@ -49,7 +49,7 @@ body {
   color: rgb(236, 2, 2);
 }
 
-/*- ALERT message -*/
+/*- ALERT message component-*/
 
 ._alert-hidden {
   display: none;
@@ -59,7 +59,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   display: block;
   position: fixed;
-  z-index: 1;
+  z-index: 500;
   left: 0;
   top: 0;
   width: 100%;
@@ -79,26 +79,28 @@ body {
   min-width: 300px;
   height: auto;
   text-align: center;
+  z-index: 600;
 }
 
 .messageContent {
   font-size: 145%;
+  font-weight: 600;
 }
 
 .close-alert {
   color: rgba(249, 114, 38, 1);
+  margin-left: 1%;
   float: right;
   font-size: 42px;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
 }
 
 .close-alert:hover {
-  color: black;
+  color: rgba(27, 32, 61, 1);
 }
-/*--------------------------------------------------------
 
-Pagetitle for pages: About, Contact, Profile  */
+/* Page title for pages: About, Contact, Profile  */
 .page-title {
   padding: 50px;
   margin-top: 90px;
@@ -119,7 +121,7 @@ Pagetitle for pages: About, Contact, Profile  */
   font-style: italic;
 }
 
-/*- Seperation lines -*/
+/*- Separation lines -*/
 
 .topLine {
   width: auto;
@@ -150,11 +152,10 @@ Pagetitle for pages: About, Contact, Profile  */
 .bottomLine {
   padding: 5px 10px 10px 10px;
   position: relative;
-  margin-top: 50px;
+  margin-top: 1%;
 }
-/*--------END---------*/
 
-/*-- FORMS, FIELDSETS, INPUT-FIELDS -------------*/
+/*-- FORMS, FIELDSET, INPUT-FIELDS --*/
 form ::placeholder {
   color: rgba(20, 47, 204, 0.6);
   text-align: center;
@@ -197,20 +198,18 @@ input[type="submit"] {
     color: rgba(20, 47, 204, 1);
   }
 }
-/*-------------------END---------------------*/
 
 /*----------------------------
 FOOTER START
 -----------------------------*/
 footer {
+  position: relative;
   display: grid;
-  background-color: rgba(248, 248, 255, 1);
-  margin-top: 100px;
-  margin-bottom: 5px;
+  margin-top: 10%;
+  margin-bottom: 1%;
   width: 100%;
   height: 100px;
-  position: relative;
-  top: 50px;
+  background-color: rgba(248, 248, 255, 1);
 }
 
 .footerRow {
@@ -223,9 +222,6 @@ footer {
   font-weight: medium;
 }
 
-/*----------------------------
-Media query FOOTER
------------------------------*/
 @media screen and (max-width: 900px) {
   footer {
     margin-top: 100px;
@@ -246,12 +242,6 @@ Media query FOOTER
 }
 
 @media screen and (max-width: 770px) {
-  footer {
-    margin-top: 800px;
-    margin-bottom: 5px;
-    position: sticky;
-  }
-
   .footerRow {
     position: relative;
     margin-left: 20px;
@@ -262,7 +252,6 @@ Media query FOOTER
     font-size: 12px;
   }
 }
-/*--------------END--------------*/
 
 /*----------------------------
 TOP of pages START
@@ -298,7 +287,7 @@ NAVIGATION BAR
   width: 100%;
   display: flex;
   align-items: center;
-  position: absolute; /* position: fixed; ?? */
+  position: absolute;
   z-index: 500;
 }
 
@@ -314,7 +303,7 @@ nav {
   position: relative;
   text-align: right;
   margin-top: 10px;
-  z-index: 500;
+  z-index: 400;
 }
 
 #current {

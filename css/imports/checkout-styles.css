@@ -1,25 +1,22 @@
 /*-----------------------------------------
-Checkout- and checkout success page styles
+Cart, checkout- and checkout success page
 ------------------------------------------*/
 
-/*------------------
-Checkout page
----------------------*/
-
 .logoCheckout .logo {
-  margin-left: 45%;
-  margin-top: 6%;
+  margin-top: 10%;
+  margin-left: 15%;
 }
 
 .loggedInUser-info {
   margin-top: 10%;
+  margin-right: 15%;
 }
 
 .userInfoMember,
 .userInfoMail,
 .userInfoLogOut {
   margin-top: 0.4%;
-  text-align: center;
+  text-align: end;
   font-size: 14px;
   color: rgba(20, 47, 204, 0.6);
 }
@@ -59,6 +56,10 @@ Checkout page
   font-size: 130%;
 }
 
+#total-price {
+  text-decoration: underline;
+}
+
 #subtotal,
 #totalSum {
   margin-top: 5%;
@@ -70,14 +71,14 @@ Checkout page
 }
 
 .quantity-number {
-  width: 60px;
+  width: 50px;
   background-color: rgba(20, 47, 204, 0.6);
   color: rgba(254, 254, 255, 1);
   text-align: center;
   margin-bottom: 1%;
   padding: 12px;
   border-radius: 12px;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -85,7 +86,7 @@ Checkout page
 .decrease-icon {
   width: 25px;
   height: auto;
-  margin-left: 18px;
+  margin-left: 14px;
   cursor: pointer;
 }
 
@@ -93,7 +94,7 @@ Checkout page
 .decrease-icon:hover {
   width: 30px;
   height: auto;
-  margin-left: 16px;
+  margin-left: 12px;
 }
 
 .counter-icon-div {
@@ -104,11 +105,12 @@ Checkout page
 }
 
 .checkout-page {
-  margin-top: 50px;
-  display: grid;
+  position: relative;
+  margin: 15%;
+  margin-top: 10%;
   justify-content: center;
-  transition: all 0.5s;
   font-size: 100%;
+  display: grid;
 }
 
 .checkoutFields {
@@ -122,6 +124,7 @@ Checkout page
 .checkoutForm {
   margin-top: 1%;
   margin-bottom: 4%;
+  justify-self: center;
 }
 
 #pick-up {
@@ -176,7 +179,7 @@ input[type="date"],
 
 .checkoutBTN {
   margin-top: 10px;
-  margin-left: 75%;
+  margin-left: 45vw;
   width: 30%;
   min-width: 250px;
   padding: 10px;
@@ -205,6 +208,30 @@ input[type="date"],
   color: rgba(20, 47, 204, 0.95);
 }
 
+@media screen and (max-width: 500px) {
+  .logoCheckout .logo {
+    margin-top: 10%;
+    margin-left: 15%;
+  }
+
+  .loggedInUser-info {
+    margin-top: 30%;
+    margin-right: 15%;
+  }
+
+  #subtotal-price,
+  #total-price {
+    margin-left: 78%;
+    margin-bottom: 2%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .checkoutBTN {
+    margin-left: 0;
+  }
+}
+
 /*--------------------------------------
  Checkout success page
  ---------------------------------------------*/
@@ -212,15 +239,21 @@ input[type="date"],
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: 15%;
 }
 
 .checkout-success h2 {
-  margin-top: 12%;
   margin-bottom: 2%;
 }
 
 #thanksH2 {
   margin-top: 5%;
+}
+
+@media screen and (max-width: 1000px) {
+  .checkout-success {
+    margin-top: 25%;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -229,6 +262,6 @@ input[type="date"],
   }
 
   .checkout-success h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 }

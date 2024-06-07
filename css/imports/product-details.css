@@ -37,8 +37,8 @@ DESKTOP
   display: grid;
   margin-left: 22%;
   width: 65%;
-  min-width: 464px;
   max-height: 480px;
+  min-height: 200px;
   height: 70%;
   border-radius: 10px;
   background-color: rgba(20, 48, 204, 0.936);
@@ -65,10 +65,6 @@ DESKTOP
   padding-bottom: 10px;
   color: rgba(254, 254, 255, 1);
 }
-
-/* .tagline b {
-  color: rgb(236, 2, 2);
-} */
 
 .addToCartBTN {
   background-color: rgba(254, 254, 255, 1);
@@ -151,295 +147,57 @@ DESKTOP
   margin-right: 80px;
 }
 
-/*-------------------------
-Hidden elements (elements visible on smaller screens)
---------------------------*/
-.product-icons-mobile img,
-.prod-col1-img img,
-.prod-col2-img img,
-.incl-cont-icons-mobile img {
-  display: none;
-  width: 100%;
+@media screen and (max-width: 1000px) {
+  #backArrow {
+    display: none;
+  }
+
+  .tagline p {
+    font-size: 18px;
+  }
+
+  .productText {
+    margin-left: 8%;
+    margin-right: 1%;
+    max-width: 80%;
+  }
+
+  .productTextIcons {
+    margin-left: 60vw;
+    margin-top: 1%;
+  }
 }
 
-/*-------------------------------
-          MEDIA QUERIES
-  -------------------------------
-
-
-/*-- max width 770px
-  ------------------------------------------*/
-/* @media screen and (max-width: 770px) {
-  #productBox2 {
-    display: block;
-    background-color: rgba(20, 47, 204, 0.95);
-    position: absolute;
-    width: 100%;
-    height: 150px;
-    top: 1690px;
-    z-index: -1;
+@media screen and (max-width: 770px) {
+  .cartWindow {
+    margin-top: 20%;
   }
 
-  .product-icons-mobile img {
-    display: block;
-    width: 300px;
+  .title p {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .cartWindow {
+    grid-template-columns: auto;
+  }
+
+  #cartWindow-box {
+    margin-left: 18vw;
+  }
+
+  .productIMG {
+    width: 60%;
     height: auto;
+    margin-top: 5%;
+    margin-left: 0;
+    margin-left: 20vw;
   }
 
-  .product-icons-mobile {
-    position: relative;
-    margin-left: 240px;
-    top: 160px;
-    z-index: 20;
-  }
-
-  .prod-col1-img img {
-    display: block;
-    position: relative;
-    top: 240px;
-    left: 50px;
-    margin: none;
-    width: 400px;
-    height: auto;
-  }
-
-  .prod-col2-img img {
-    display: block;
-    position: relative;
-    top: 350px;
-    width: 100vw;
-    height: auto;
-  }
-
-  .productText p {
-    position: absolute;
-    font-size: 14px;
-    color: rgba(27, 32, 61, 1);
-    z-index: 20;
-  }
-
-  .prod-col1-text {
-    top: -530px;
-    text-align: start;
-    left: 600px;
-  }
-
-  .prod-col2-text {
-    margin-top: 330px;
-    text-align: center;
-    left: 85px;
-    width: 100%;
-  }
-
-  p.prod-col2-text {
-    color: rgba(254, 254, 255, 1);
-    font-size: 12px;
-  }
-
-  .incl-cont-icons-mobile img {
-    position: absolute;
-    display: block;
-    width: 500px;
-    margin-left: 150px;
-    top: 1950px;
-  } */
-
-/*-----------------
-    HIDDEN ELEMENTS (elements visible on larger screens)
-    ------------------*/
-/* .ingameIMGs,
-  .ingameIMGs img,
-  .gamingIcons,
-  .productTextIcons {
-    display: none;
-  }
-} */
-/*-------------------770px END--------------------*/
-
-/*-- max width 430px
-  ---------------------------------------*/
-
-/* @media screen and (max-width: 430px) {
-  #productBox2 {
-    display: block;
-    background-color: rgba(20, 47, 204, 0.95);
-    top: 1075px;
-  }
-
-  .product-icons-mobile img {
-    display: block;
-    width: 300px;
-    height: auto;
-  }
-
-  .product-icons-mobile {
-    position: relative;
-    margin-left: 60px;
-    top: 195px;
-    z-index: 20;
-  }
-
-  .prod-col1-img img {
-    display: block;
-    position: relative;
-    top: 285px;
-    left: 50px;
-    margin: none;
-    width: 200px;
-    height: auto;
-  }
-
-  .prod-col2-img img {
-    display: block;
-    width: 100vw;
-    height: auto;
-  }
-
-  .productText p {
-    font-size: 10px;
-  }
-
-  .prod-col1-text {
-    top: -195px;
-    left: 390px;
-  }
-
-  .prod-col2-text {
-    left: 95px;
-    top: 40px;
-  }
-
-  .incl-cont-icons-mobile img {
-    position: absolute;
-    display: block;
-    width: 320px;
-    margin-left: 60px;
-    top: 1400px;
-  } */
-
-/*-----------------
-    HIDDEN ELEMENTS (elements visible on larger screens)
-    ------------------*/
-/* .ingameIMGs,
-  .ingameIMGs img,
-  .gamingIcons,
   .productTextIcons,
-  .seperationLine,
-  #tagline p,
-  #backArrow {
-    display: none;
+  .productText {
+    justify-self: center;
+    margin-left: 0;
   }
-} */
-/*-------------------430px END--------------------*/
-
-/*-- max width 395px
-  ---------------------------------------*/
-
-/* @media screen and (max-width: 395px) {
-  .product-icons-mobile {
-    margin-left: 35px;
-    top: 220px;
-  }
-
-  .prod-col1-img img {
-    top: 275px;
-  }
-
-  .prod-col1-text {
-    top: -182px;
-    left: 380px;
-    text-align: start;
-  }
-
-  #productBox2 {
-    display: block;
-    background-color: rgba(20, 47, 204, 0.95);
-    top: 1030px;
-  }
-
-  .prod-col2-text {
-    top: 45px;
-  }
-
-  .incl-cont-icons-mobile img {
-    position: absolute;
-    display: block;
-    margin-left: 30px;
-    top: 1300px;
-  } */
-
-/*-----------------
-    HIDDEN ELEMENTS (elements visible on larger screens)
-    ------------------*/
-/* .ingameIMGs,
-  .ingameIMGs img,
-  .gamingIcons,
-  .productTextIcons,
-  .seperationLine,
-  #tagline p,
-  #backArrow {
-    display: none;
-  }
-} */
-/*-------------------395px END--------------------*/
-
-/*-- max width 345px
-  ---------------------------------------*/
-
-/* @media screen and (max-width: 345px) {
-  .product-icons-mobile {
-    margin-left: 35px;
-    top: 240px;
-  }
-
-  .product-icons-mobile img {
-    width: 250px;
-  }
-
-  .prod-col1-img img {
-    top: 300px;
-    width: 90vw;
-    left: 16px;
-    height: auto;
-  }
-
-  .prod-col1-text {
-    top: 100px;
-    left: 180px;
-    text-align: center;
-    right: -20px;
-  }
-
-  .prod-col2-img img {
-    top: 390px;
-  }
-
-  #productBox2 {
-    display: block;
-    background-color: rgba(20, 47, 204, 0.95);
-    top: 1110px;
-  }
-
-  p.prod-col2-text {
-    top: 70px;
-  }
-
-  .incl-cont-icons-mobile img {
-    width: 280px;
-    left: -5px;
-  } */
-
-/*-----------------
-    HIDDEN ELEMENTS (elements visible on larger screens)
-    ------------------*/
-/* .ingameIMGs,
-  .ingameIMGs img,
-  .gamingIcons,
-  .productTextIcons,
-  .seperationLine,
-  #tagline p,
-  #backArrow {
-    display: none;
-  }
-} */
-/*------------------345px END---------------------*/
+}
