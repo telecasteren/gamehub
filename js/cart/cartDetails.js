@@ -277,7 +277,7 @@ clearCartAfterOrderPlaced();
 // ------------------------ TO DO:
 // - ERROR HANDLING and errors in console
 // EXTRAS:
-// - HOME page: Style the overall design, title and description
 // - Add working filtering functionality in search in products page
+// - HOME page: Style the overall design, title and description
 // - Profile page: mimic user login and form validation
 // -----------------------------------------------------------------
