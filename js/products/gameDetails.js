@@ -31,14 +31,13 @@ specificGame();
 
 // Creating the HTML for the specific product page
 function gameDetails(product) {
-
   if (product) {
     const price = product.price;
     const discountPrice = product.discountedPrice;
-    const genre = product.genre;
+    const genre = product.genre || "Unknown";
     const gameTitle = product.title;
-    const ageRate = product.ageRating;
-    const releaseDate = product.released;
+    const ageRate = product.ageRating || "Rating unknown";
+    const releaseDate = product.released || "Unknown";
     const gameText = product.description;
     const textContainer = document.querySelector(".productText");
 

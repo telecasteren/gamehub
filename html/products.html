@@ -27,11 +27,7 @@
     <title>GameHub | Products</title>
     <script defer type="module" src="../js/script.js"></script>
     <script defer src="../js/components/menuList.js"></script>
-    <script
-      defer
-      type="module"
-      src="../js/products/productsDetails.js"
-    ></script>
+    <script defer type="module" src="../js/products/products.js"></script>
   </head>
   <body>
     <div class="topLine"><hr /></div>
@@ -76,12 +72,14 @@
         <div class="middleLine"><hr /></div>
 
         <section class="products-section">
-          <input
-            id="searchGames"
-            type="text"
-            name="search-games"
-            placeholder="search in games.."
-          />
+          <form id="search-form">
+            <input
+              id="searchGames"
+              type="text"
+              name="search-games"
+              placeholder="search in games.."
+            />
+          </form>
           <div id="gamingNav">
             <img src="../images/gaming-navigation.svg" alt="navigation menu" />
           </div>

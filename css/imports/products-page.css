@@ -27,6 +27,7 @@ Productlist page + xtra-products page styles
 }
 
 #searchGames {
+  font-size: 20px;
   position: relative;
   margin-left: 40vw;
   width: 245px;
@@ -39,6 +40,7 @@ Productlist page + xtra-products page styles
 
 #searchGames::placeholder {
   text-align: center;
+  font-size: 16px;
 }
 
 input#searchGames:hover {
