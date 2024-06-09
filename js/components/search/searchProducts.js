@@ -1,5 +1,5 @@
-import { searchKey } from "../search/constants.js";
-import { gamesHTML } from "../products/products.js";
+import { SEARCH_KEY } from "../constants.js";
+import { gamesHTML } from "../../products/products.js";
 
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("searchGames");
@@ -12,11 +12,11 @@ export function setSearchListeners(info) {
 
     searchInput.addEventListener("input", function (event) {
       const searchTerm = event.target.value.trim();
-      localStorage.setItem(searchKey, searchTerm);
+      localStorage.setItem(SEARCH_KEY, searchTerm);
       gamesHTML(info.data);
     });
 
-    const searchTerm = localStorage.getItem(searchKey) || "";
+    const searchTerm = localStorage.getItem(SEARCH_KEY) || "";
     searchInput.value = searchTerm;
     if (searchTerm !== "") {
       gamesHTML(info.data);

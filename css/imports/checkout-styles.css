@@ -18,7 +18,7 @@ Cart, checkout- and checkout success page
   margin-top: 0.4%;
   text-align: end;
   font-size: 14px;
-  color: rgba(20, 47, 204, 0.6);
+  color: var(--light-blue);
 }
 
 .userInfoLogOut {
@@ -72,8 +72,8 @@ Cart, checkout- and checkout success page
 
 .quantity-number {
   width: 50px;
-  background-color: rgba(20, 47, 204, 0.6);
-  color: rgba(254, 254, 255, 1);
+  background-color: var(--light-blue);
+  color: var(--white);
   text-align: center;
   margin-bottom: 1%;
   padding: 12px;
@@ -157,7 +157,7 @@ input.promo-code {
 .paymentFields input:hover,
 .paymentFields select:hover,
 input#promoCode:hover {
-  border: 1px solid rgba(249, 114, 38, 0.8);
+  border: 1px solid var(--orange-strong);
 }
 
 select,
@@ -183,28 +183,28 @@ input[type="date"],
   min-width: 250px;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid rgba(20, 47, 204, 0.6);
-  background-color: rgba(20, 47, 204, 1);
-  color: rgba(254, 254, 255, 1);
+  border: 1px solid var(--light-blue);
+  background-color: var(--bright-blue-strong);
+  color: var(--white);
   transition: 0.3s;
   cursor: pointer;
   font-size: 120%;
 }
 
 .checkoutBTN a {
-  color: rgba(254, 254, 255, 1);
+  color: var(--white);
 }
 
 .checkoutBTN:hover {
-  color: rgba(254, 254, 255, 1);
-  border-color: rgba(57, 87, 255, 0.95);
-  background-color: rgba(57, 87, 255, 0.95);
+  color: var(--white);
+  border-color: var(--bright-hover-blue);
+  background-color: var(--bright-hover-blue);
 }
 
 ._allGames {
-  background-color: rgba(254, 254, 255, 1);
-  border-color: rgba(20, 47, 204, 1);
-  color: rgba(20, 47, 204, 0.95);
+  background-color: var(--white);
+  border-color: var(--bright-blue-strong);
+  color: var(--bright-blue-soft);
 }
 
 @media screen and (max-width: 500px) {

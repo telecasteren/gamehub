@@ -7,6 +7,7 @@ export async function fetchGames() {
   try {
     const response = await fetch(gameUrl);
     const info = await response.json();
+
     return info;
   } catch (error) {
     console.log("Error occurred: ", error);

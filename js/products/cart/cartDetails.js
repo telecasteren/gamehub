@@ -1,38 +1,86 @@
-import { fetchGameDetails } from "/js/api/gameApi.js";
+import { fetchGames } from "/js/api/productsApi.js";
 import { loadError, alertMessage } from "/js/components/messages.js";
 import { continueShoppingEvent } from "/js/script.js";
 import { updateCartCounter } from "../../script.js";
+import {
+  INCREASE_ICON_ALT,
+  DECREASE_ICON_ALT,
+  PRICE_NOT_FOUND,
+  PRODUCT_NOT_FOUND,
+  CART_KEY,
+  ITEM_COUNT_KEY,
+  NO_IMAGE_FOUND_IMG,
+  ORDER_CONFIRMED_KEY,
+} from "/js/components/constants.js";
 
-document.addEventListener("DOMContentLoaded", () => {
+const cartContainer = document.querySelector(".cart-section");
+
+// Initialize cart page when DOM is fully loaded:
+document.addEventListener("DOMContentLoaded", async () => {
+  await updateCartWithAPI();
   mimicEmptyCart();
-  eachItemInCartHtml();
+  renderCartProducts();
   initItemCounter();
-  cartDetails();
   displaySubtotal();
   continueShoppingEvent();
 
-  const orderConfirmed = localStorage.getItem("orderConfirmed");
+  const orderConfirmed = localStorage.getItem(ORDER_CONFIRMED_KEY);
   if (orderConfirmed === "true") {
-    localStorage.removeItem("cart");
-    localStorage.removeItem("orderConfirmed");
+    localStorage.removeItem(CART_KEY);
+    localStorage.removeItem(ORDER_CONFIRMED_KEY);
   }
 });
 
-async function cartDetails() {
+// Fetching data from the API upon changes and update items in localStorage if needed:
+async function updateCartWithAPI() {
   try {
-    const details = await fetchGameDetails();
+    const apiData = await fetchGames();
+    const localData = getItemsInLocalStorage();
+
+    const updatedCartData = localData.map((localItem) => {
+      const apiItem = apiData.data.find(
+        (apiItem) => apiItem.id === localItem.id
+      );
+      return apiItem ? { ...localItem, ...apiItem } : localItem;
+    });
+
+    localStorage.setItem(CART_KEY, JSON.stringify(updatedCartData));
   } catch (error) {
-    console.error("Error occurred: ", error);
+    console.log("Error occurred while fetching details:", error);
     loadError();
   }
 }
 
 function getItemsInLocalStorage() {
-  return JSON.parse(localStorage.getItem("cart")) || [];
+  return JSON.parse(localStorage.getItem(CART_KEY)) || [];
 }
 
-function eachItemInCartHtml() {
-  const cartContainer = document.querySelector(".cart-section");
+// Incrementing/decrementing cart items + item counter equally:
+function updateQuantity(productId, change) {
+  const cart = getItemsInLocalStorage();
+  const productIndex = cart.findIndex((item) => item.id === productId);
+
+  if (productIndex !== -1) {
+    cart[productIndex].quantity += change;
+
+    if (cart[productIndex].quantity < 1) {
+      cart.splice(productIndex, 1);
+      cartContainer.querySelector(`[data-product-id="${productId}"]`).remove();
+    } else {
+      document.getElementById(`quantity-${productId}`).textContent =
+        cart[productIndex].quantity;
+    }
+
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    calculateTotalPrice();
+    updateTotals();
+    displaySubtotal();
+    mimicEmptyCart();
+  }
+}
+
+// Creating the html:
+function renderCartProducts() {
   const cart = getItemsInLocalStorage();
 
   try {
@@ -40,18 +88,18 @@ function eachItemInCartHtml() {
       cartContainer.innerHTML = "";
 
       cart.forEach((product) => {
-        const prodId = product.id;
-        const prodTitle = product.title;
+        const prodId = product.id || PRODUCT_NOT_FOUND;
+        const prodTitle = product.title || `ProductID: ${prodId}`;
         const prodQuantity = product.quantity;
-        const prodIMG = product.image.url || `../images/no_image_found.jpg`;
+        const prodIMG = product.image.url || NO_IMAGE_FOUND_IMG;
         const prodAlt = product.image.alt || `Game cover for ${prodTitle}`;
-        let prodPrice = product.price;
-        const discountPrice = product.discountedPrice;
+        let prodPrice = product.price || PRICE_NOT_FOUND;
+        const discountPrice = product.discountedPrice || `${prodPrice}`;
         const priceClass = product.onSale ? "discount-price" : "";
         const addItem = `../images/add-item.png`;
         const removeItem = `../images/remove-item.png`;
-        const increaseIconAlt = `Plus icon for adding items in cart`;
-        const decreaseIconAlt = `Minus icon for removing items in cart`;
+        const increaseIconAlt = INCREASE_ICON_ALT;
+        const decreaseIconAlt = DECREASE_ICON_ALT;
 
         if (product.onSale) {
           prodPrice = discountPrice;
@@ -124,31 +172,6 @@ function eachItemInCartHtml() {
     console.error("Error occurred: ", error);
     loadError();
   }
-
-  // Incrementing/decrementing cart items + updating NAV cart-items badge equally:
-  function updateQuantity(productId, change) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const productIndex = cart.findIndex((item) => item.id === productId);
-
-    if (productIndex !== -1) {
-      cart[productIndex].quantity += change;
-      if (cart[productIndex].quantity < 1) {
-        cart.splice(productIndex, 1);
-        cartContainer
-          .querySelector(`[data-product-id="${productId}"]`)
-          .remove();
-      } else {
-        document.getElementById(`quantity-${productId}`).textContent =
-          cart[productIndex].quantity;
-      }
-
-      localStorage.setItem("cart", JSON.stringify(cart));
-      calculateTotalPrice();
-      updateTotals();
-      displaySubtotal();
-      mimicEmptyCart();
-    }
-  }
 }
 
 function updateTotals() {
@@ -161,12 +184,12 @@ function updateTotals() {
 
   const itemCounter = document.getElementById("item-counter");
   itemCounter.textContent = totalQuantity;
-  localStorage.setItem("itemCounter", totalQuantity);
+  localStorage.setItem(ITEM_COUNT_KEY, totalQuantity);
 }
 
 function initItemCounter() {
   const itemCounter = document.getElementById("item-counter");
-  const currentTotalCount = localStorage.getItem("itemCounter");
+  const currentTotalCount = localStorage.getItem(ITEM_COUNT_KEY);
 
   if (currentTotalCount) {
     itemCounter.textContent = currentTotalCount;
@@ -179,7 +202,7 @@ updateTotals();
 
 // Calculate and display subtotal price:
 function displaySubtotal() {
-  const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartItems = JSON.parse(localStorage.getItem(CART_KEY)) || [];
   let subtotal = 0;
 
   cartItems.forEach((product) => {
@@ -250,7 +273,7 @@ function clearCartAfterOrderPlaced() {
 
   if (placeOrderBtn) {
     placeOrderBtn.addEventListener("click", () => {
-      sessionStorage.setItem("orderConfirmed", "true");
+      sessionStorage.setItem(ORDER_CONFIRMED_KEY, "true");
       window.location.href = "./checkout-success.html";
     });
   }
@@ -258,12 +281,12 @@ function clearCartAfterOrderPlaced() {
 
 function checkoutSuccess() {
   document.addEventListener("DOMContentLoaded", () => {
-    const orderConfirmed = sessionStorage.getItem("orderConfirmed");
+    const orderConfirmed = sessionStorage.getItem(ORDER_CONFIRMED_KEY);
     if (orderConfirmed === "true") {
       alertMessage("Order confirmed!");
-      sessionStorage.removeItem("orderConfirmed");
+      sessionStorage.removeItem(ORDER_CONFIRMED_KEY);
 
-      localStorage.removeItem("cart");
+      localStorage.removeItem(CART_KEY);
       updateCartCounter();
     }
   });
@@ -271,10 +294,3 @@ function checkoutSuccess() {
 
 clearCartAfterOrderPlaced();
 checkoutSuccess();
-
-// ------------------------ TO DO:
-// - ERROR HANDLING and errors in console
-// EXTRAS:
-// - HOME page: Style the overall design, title and description
-// - Profile page: mimic user login and form validation
-// -----------------------------------------------------------------

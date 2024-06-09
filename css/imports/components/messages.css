@@ -4,15 +4,15 @@
   min-width: 300px;
   height: 80px;
   text-align: center;
-  color: darkred;
-  border: 2px solid darkred;
-  background: rgba(255, 0, 0, 0.1);
+  color: var(--error-red-front);
+  border: 2px solid var(--error-red-front);
+  background: var(--error-red-back);
 }
 
 /*- Search -*/
 .no-results {
-  color: rgba(254, 254, 255, 1);
-  background-color: rgba(27, 32, 61, 1);
+  color: var(--white);
+  background-color: var(--logo-dark-blue);
   width: 300px;
   padding: 20px;
   border-radius: 8px;
@@ -21,7 +21,6 @@
 }
 
 /*- Alert message component-*/
-
 .alert-message {
   display: block;
   position: fixed;
@@ -33,19 +32,19 @@
 }
 
 .alert-info {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--alert-info);
 }
 
 .alert-success {
-  background-color: rgba(29, 135, 24, 0.546);
+  background-color: var(--alert-success);
 }
 
 .alert-warning {
-  background-color: rgba(131, 101, 0, 0.529);
+  background-color: var(--alert-warning);
 }
 
 .alert-error {
-  background-color: rgba(139, 0, 0, 0.531);
+  background-color: var(--alert-error);
 }
 
 .alert-content {
@@ -53,10 +52,10 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(254, 254, 255, 1);
+  background-color: var(--white);
   padding: 50px;
   border-radius: 22px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 20px var(--alert-box-shadow);
   width: 30%;
   min-width: 300px;
   height: auto;
@@ -70,7 +69,7 @@
 }
 
 .close-alert {
-  color: rgba(249, 114, 38, 1);
+  color: var(--orange-strong);
   margin-left: 1%;
   float: right;
   font-size: 42px;
@@ -79,5 +78,5 @@
 }
 
 .close-alert:hover {
-  color: rgba(27, 32, 61, 1);
+  color: var(--logo-dark-blue);
 }

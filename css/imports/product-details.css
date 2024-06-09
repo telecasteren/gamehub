@@ -1,11 +1,3 @@
-/*-----------------------------------
-specific product page styles
-------------------------------------*/
-
-/*---------------------------------
-DESKTOP
-----------------------------------*/
-
 .details-wrapper {
   display: grid;
 }
@@ -41,7 +33,7 @@ DESKTOP
   min-height: 200px;
   height: 70%;
   border-radius: 10px;
-  background-color: rgba(20, 48, 204, 0.936);
+  background-color: var(--bright-blue-soft);
 }
 
 .title {
@@ -63,13 +55,13 @@ DESKTOP
 .tagline p {
   text-align: center;
   padding-bottom: 10px;
-  color: rgba(254, 254, 255, 1);
+  color: var(--white);
 }
 
 .addToCartBTN {
-  background-color: rgba(254, 254, 255, 1);
-  border-color: rgba(20, 47, 204, 0.95);
-  color: rgba(20, 47, 204, 0.95);
+  background-color: var(--white);
+  border-color: var(--bright-blue-soft);
+  color: var(--bright-blue-soft);
   border-style: solid;
   border-radius: 24px;
   font-size: 20px;
@@ -83,11 +75,11 @@ DESKTOP
 }
 
 .addToCartBTN a {
-  color: rgba(20, 47, 204, 0.95);
+  color: var(--bright-blue-soft);
 }
 
 .addToCartBTN:hover {
-  background-color: rgba(254, 254, 255, 0.55);
+  background-color: var(--faded-hover-white);
 }
 
 .productText-container {
@@ -98,7 +90,7 @@ DESKTOP
 }
 
 #productBox1 {
-  background-color: rgba(20, 47, 204, 0.95);
+  background-color: var(--bright-blue-soft);
   border: none;
   display: grid;
   width: 100vw;
@@ -113,7 +105,7 @@ DESKTOP
 }
 
 .productText p {
-  color: rgba(254, 254, 255, 1);
+  color: var(--white);
   line-height: 1.5;
   font-size: 20px;
 }

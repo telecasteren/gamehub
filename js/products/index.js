@@ -1,4 +1,4 @@
-import { fetchGames } from "../api/allProductsApi.js";
+import { fetchGames } from "../api/productsApi.js";
 import { goToProduct } from "../script.js";
 
 // Adding event listener to the carousel product button:

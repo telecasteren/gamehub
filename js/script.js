@@ -1,12 +1,18 @@
-// This file contains common javascript
+// Common javascript
 
-// Item counter badge for the #item-counter element in the NAV:
+import {
+  CART_KEY,
+  ITEM_COUNT_KEY,
+  PREVIOUS_PAGE_KEY,
+} from "./components/constants.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   updateCartCounter();
 });
 
+// Item counter element in the NAV:
 export function updateCartCounter() {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
   const totalQuantity = cart.reduce(
     (total, product) => total + product.quantity,
     0
@@ -14,13 +20,15 @@ export function updateCartCounter() {
   const itemCounter = document.getElementById("item-counter");
 
   itemCounter.textContent = totalQuantity;
-  localStorage.setItem("itemCounter", totalQuantity);
+  localStorage.setItem(ITEM_COUNT_KEY, totalQuantity);
 }
+
+// ---------- Redirect user locations:
 
 // Saving current page to localStorage:
 function saveCurrentPage() {
   window.addEventListener("beforeunload", () => {
-    localStorage.setItem("previousPage", window.location.href);
+    localStorage.setItem(PREVIOUS_PAGE_KEY, window.location.href);
   });
 }
 saveCurrentPage();
@@ -28,7 +36,7 @@ saveCurrentPage();
 // Loading previous page from localStorage:
 function loadPreviousPage() {
   document.addEventListener("DOMContentLoaded", () => {
-    let previousPage = localStorage.getItem("previousPage");
+    let previousPage = localStorage.getItem(PREVIOUS_PAGE_KEY);
     const arrowCursor = document.querySelector("#backArrow");
 
     if (arrowCursor) {
@@ -47,8 +55,6 @@ function loadPreviousPage() {
 }
 loadPreviousPage();
 
-// ---------- Redirect user locations:
-
 // Redirection to specific products:
 export function goToProduct(productID) {
   window.location.href = `/html/specificProd.html?gameId=${productID}`;
@@ -65,10 +71,3 @@ export function continueShoppingEvent() {
     allGames.addEventListener("click", goToGames);
   }
 }
-
-// ------------------------ TO DO:
-// - ERROR HANDLING and errors in console
-// EXTRAS:
-// - HOME page: Style the overall design, title and description
-// - Profile page: mimic user login and form validation
-// -----------------------------------------------------------------

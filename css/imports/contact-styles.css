@@ -1,174 +1,148 @@
-
-/*-------------------------------------------------
-Contact page styles
---------------------------------------------------*/
-
-
-    .contact-section {
-        margin-top: 50px;
-        left: 220px;
-        display: inline-flex;
-        position: relative;
+.contact-section {
+  margin-top: 50px;
+  left: 220px;
+  display: inline-flex;
+  position: relative;
 }
 
-    .accountsBox,
-    .communityBox,
-    .discountsBox,
-    .locationBox {
-        background-color: rgba(248, 248, 255, 1);
-        border: 1px solid rgba(20, 47, 204, 0.6);
-        border-radius: 10px;
-        width: 250px;
-        height: 200px;
+.accountsBox,
+.communityBox,
+.discountsBox,
+.locationBox {
+  background-color: var(--light-blue-box);
+  border: 1px solid var(--light-blue);
+  border-radius: 10px;
+  width: 250px;
+  height: 200px;
 }
 
-    .communityBox,
-    .discountsBox,
-    .locationBox {
-        margin-left: 25px;
+.communityBox,
+.discountsBox,
+.locationBox {
+  margin-left: 25px;
 }
 
-    #accountsText,
-    #communityText,
-    #discountsText,
-    #locationText {
-        text-align: center;
-        margin-top: 60px;
-        color: rgba(20, 47, 204, 0.6);
+#accountsText,
+#communityText,
+#discountsText,
+#locationText {
+  text-align: center;
+  margin-top: 60px;
+  color: var(--light-blue);
 }
 
-
-    .locationIcon {
-        margin-top: 5px;
-        text-align: center;
+.locationIcon {
+  margin-top: 5px;
+  text-align: center;
 }
 
-    .inputFields,
-    .messageText {
-        text-align: center;
+.inputFields,
+.messageText {
+  text-align: center;
 }
 
-    .contactForm {
-        margin-top: 50px;
+.contactForm {
+  margin-top: 50px;
 }
 
-    .sendBTN {
-        margin-top: 10px;
-        text-align: center;
-  }
-/*----------------------------------------------*/
+.sendBTN {
+  margin-top: 10px;
+  text-align: center;
+}
 
 /*----------------
 Media queries
 --------------------------*/
 
 @media screen and (min-width: 800px) {
-
-        .contact-section {
-            left: 0;
-            display: flex;
-            justify-content: center;
-    }
+  .contact-section {
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
 }
-/*------------------------- 800px END --------------------*/
-
 
 @media screen and (max-width: 1024px) {
+  .accountsBox,
+  .communityBox,
+  .discountsBox,
+  .locationBox {
+    width: 200px;
+    height: 150px;
+  }
 
-        .accountsBox,
-        .communityBox,
-        .discountsBox,
-        .locationBox {
-            width: 200px;
-            height: 150px;
-    }
+  #locationText {
+    margin-top: 35px;
+    font-size: 14px;
+  }
 
-        #locationText {
-            margin-top: 35px;
-            font-size: 14px;
-    }
-
-        #accountsText,
-        #communityText,
-        #discountsText {
-            margin-top: 40px;
-    }
+  #accountsText,
+  #communityText,
+  #discountsText {
+    margin-top: 40px;
+  }
 }
-/*------------------------- 1024px END --------------------*/
-
 
 @media screen and (max-width: 770px) {
+  .contact-section {
+    left: 135px;
+    margin-right: 180px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .contact-section {
-        left: 135px;
-        margin-right: 180px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .communityBox,
+  .discountsBox,
+  .locationBox {
+    margin-left: 0;
+  }
 
-        .communityBox,
-        .discountsBox,
-        .locationBox {
-            margin-left: 0;
-    }
-
-        .discountsBox,
-        .locationBox {
-            margin-top: 20px;
-    }
+  .discountsBox,
+  .locationBox {
+    margin-top: 20px;
+  }
 }
-/*------------------------- 770px END --------------------*/
-
 
 @media screen and (max-width: 425px) {
-
-    .contact-section {
-        left: 10px;
-        margin-right: 10px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+  .contact-section {
+    left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-/*------------------------- 425px END --------------------*/
 
 @media screen and (max-width: 375px) {
+  .accountsBox,
+  .communityBox,
+  .discountsBox,
+  .locationBox {
+    width: 170px;
+    height: 150px;
+  }
 
-        .accountsBox,
-        .communityBox,
-        .discountsBox,
-        .locationBox {
-            width: 170px;
-            height: 150px;
-    }
-
-        .locationIcon {
-            margin-top: -5px;
-    }
+  .locationIcon {
+    margin-top: -5px;
+  }
 }
-/*------------------------- 375px END --------------------*/
 
 @media screen and (max-width: 320px) {
+  .accountsBox,
+  .communityBox,
+  .discountsBox,
+  .locationBox {
+    margin-top: 10px;
+    width: 145px;
+  }
 
-        .accountsBox,
-        .communityBox,
-        .discountsBox,
-        .locationBox {
-            margin-top: 10px;
-            width: 145px;
-    }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"] {
+    width: 140px;
+  }
 
-        input[type=text],
-        input[type=email],
-        input[type=tel],
-        input[type=number] {
-            width: 140px;
-    }
-
-        .messageText textarea {
-            width: 250px;
-    }
+  .messageText textarea {
+    width: 250px;
+  }
 }
-/*------------------------- 320px END --------------------*/
-
-

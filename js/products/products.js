@@ -1,8 +1,8 @@
-import { fetchGames } from "../api/allProductsApi.js";
-// import { alertMessage } from "../components/messages.js";
+import { fetchGames } from "../api/productsApi.js";
 import { goToProduct } from "../script.js";
-import { searchKey } from "../search/constants.js";
-import { setSearchListeners } from "../search/searchProducts.js";
+import { SEARCH_KEY } from "../components/constants.js";
+import { setSearchListeners } from "../components/search/searchProducts.js";
+import { noResult } from "../components/messages.js";
 
 const wrapper = document.querySelector(".product-wrapper");
 
@@ -14,6 +14,7 @@ async function fetchGamesAPI() {
   try {
     const info = await fetchGames();
     const allGames = info.data;
+
     gamesHTML(allGames);
     setSearchListeners(info);
   } catch (error) {
@@ -26,7 +27,7 @@ export function gamesHTML(games) {
   wrapper.innerHTML = "";
 
   try {
-    const searchTerm = localStorage.getItem(searchKey) || "";
+    const searchTerm = localStorage.getItem(SEARCH_KEY) || "";
     const filteredProducts = games.filter((game) =>
       game.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -34,11 +35,11 @@ export function gamesHTML(games) {
     if (filteredProducts.length) {
       filteredProducts.forEach((game) => renderProduct(game));
     } else {
-      wrapper.innerHTML = `<h3 class="no-results">No results here, buddy. Try again.</h3>`;
+      noResult();
     }
   } catch (error) {
     console.error("Error occurred: ", error);
-    wrapper.innerHTML = `<div class="error">An error occurred when searching for products..</div>`;
+    wrapper.innerHTML = `<div class="error">An error occurred when loading products..</div>`;
   }
 }
 

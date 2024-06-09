@@ -26,9 +26,9 @@ Home page styles
 }
 
 .getBTN {
-  background-color: rgba(20, 47, 204, 0.95);
-  border-color: rgba(20, 47, 204, 0.95);
-  color: rgba(254, 254, 255, 1);
+  background-color: var(--bright-blue-soft);
+  border-color: var(--bright-blue-soft);
+  color: var(--white);
   border-style: solid;
   border-radius: 20px;
   position: absolute;
@@ -46,8 +46,8 @@ Home page styles
 }
 
 .getBTN:hover {
-  border-color: rgba(57, 87, 255, 0.95);
-  background-color: rgba(57, 87, 255, 0.95);
+  border-color: var(--bright-hover-blue);
+  background-color: var(--bright-hover-blue);
 }
 
 .home-container {
@@ -83,11 +83,11 @@ Home page styles
 .titleH2,
 .prodText {
   text-align: center;
-  color: rgba(254, 254, 255, 1);
+  color: var(--white);
 }
 
 .color-box {
-  background: rgba(20, 47, 204, 0.95);
+  background: var(--bright-blue-soft);
   width: 100%;
   height: 20%;
   margin-bottom: 30%;

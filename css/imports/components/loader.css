@@ -1,6 +1,6 @@
 .loader {
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid rgba(20, 47, 204, 0.95);
+  border: 16px solid var(--white);
+  border-top: 16px solid var(--bright-blue-soft);
   border-radius: 100%;
   width: 150px;
   height: 150px;

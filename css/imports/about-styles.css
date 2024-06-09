@@ -1,205 +1,164 @@
-
-/*------------------------------
-About page styles
-------------------------------*/
-
-    #about-background {
-        position: absolute;
-        margin-top: 30px;
-        z-index: -1;
-        width: 100%;
-        height: 400px;
-        background-color: rgba(248, 248, 255, 1);
-        border: none;
+#about-background {
+  position: absolute;
+  margin-top: 30px;
+  z-index: -1;
+  width: 100%;
+  height: 400px;
+  background-color: var(--light-blue-box);
+  border: none;
 }
 
-    .about-text {
-        margin-top: 120px;
-        margin-bottom: 30px;
-        text-align: start;
-        margin-left: 240px;
+.about-text {
+  margin-top: 120px;
+  margin-bottom: 30px;
+  text-align: start;
+  margin-left: 240px;
 }
 
-    .buyBTN,
-    .sellBTN {
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        border: 1px solid;
-        font-size: 20px;
-        padding: 16px 30px;
-        border-radius: 20px;
-        cursor: pointer;
-        transition: 0.5s;
-        top: -130px;
-        float: right;
+.buyBTN,
+.sellBTN {
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border: 1px solid;
+  font-size: 20px;
+  padding: 16px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  top: -130px;
+  float: right;
 }
 
-    .buyBTN {
-        position: relative;
-        margin-right: 35px;
-        background-color: rgba(20, 47, 204, 0.95);
-        border-color: rgba(20, 47, 204, 0.95);
-        color: rgba(254, 254, 255, 1);
+.buyBTN {
+  position: relative;
+  margin-right: 35px;
+  background-color: var(--bright-blue-soft);
+  border-color: var(--bright-blue-soft);
+  color: var(--white);
 }
 
-    .sellBTN {
-        position: relative;
-        margin-right: 10px;
-        background-color:rgba(254, 254, 255, 1);
-        border-color: rgba(20, 47, 204, 1);
-        color: rgba(20, 47, 204, 0.95);
+.sellBTN {
+  position: relative;
+  margin-right: 10px;
+  background-color: var(--white);
+  border-color: var(--bright-blue-strong);
+  color: var(--bright-blue-soft);
 }
 
-    .about-backgroundIMG img {
-        position: relative;
-        top: 45px;
-        width: 100vw;
-        height: auto;
-        z-index: 1;
+.about-backgroundIMG img {
+  position: relative;
+  top: 45px;
+  width: 100vw;
+  height: auto;
+  z-index: 1;
 }
-
-/*------------------------------------------*/
-
 
 /*------------------------------
 Media queries
 ------------------------------*/
 
 @media screen and (max-width: 1350px) {
+  .about-text {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-left: 40px;
+  }
 
-        .about-text {
-            margin-top: 60px;
-            margin-bottom: 50px;
-            text-align: center;
-            margin-left: 40px;
-    }
+  .buyBTN,
+  .sellBTN {
+    top: 10px;
+    left: -350px;
+  }
 
-        .buyBTN,
-        .sellBTN {
-            top: 10px;
-            left: -350px;
-    }
-
-        .about-backgroundIMG img {
-            top: 25px;
-            width: 100vw;
-    }
+  .about-backgroundIMG img {
+    top: 25px;
+    width: 100vw;
+  }
 }
-/*--------------------------- 1350px END ---------------------*/
 
 @media screen and (min-width: 1024px) {
+  .buyBTN:hover {
+    background-color: var(--white);
+    border-color: var(--bright-blue-strong);
+    color: var(--bright-blue-soft);
+  }
 
-        .buyBTN:hover {
-            background-color:rgba(254, 254, 255, 1);
-            border-color: rgba(20, 47, 204, 1);
-            color: rgba(20, 47, 204, 0.95);
-    }
-
-        .sellBTN:hover {
-            background-color: rgba(20, 47, 204, 0.95);
-            border-color: rgba(20, 47, 204, 0.95);
-            color: rgba(254, 254, 255, 1);
-    }
-
+  .sellBTN:hover {
+    background-color: var(--bright-blue-soft);
+    border-color: var(--bright-blue-soft);
+    color: var(--white);
+  }
 }
 
 @media screen and (max-width: 1024px) {
-
-        .buyBTN,
-        .sellBTN {
-            top: 10px;
-            left: -180px;
-    }
-
+  .buyBTN,
+  .sellBTN {
+    top: 10px;
+    left: -180px;
+  }
 }
-/*--------------------------- 1024px END ---------------------*/
 
 @media screen and (max-width: 800px) {
-
-        .buyBTN,
-        .sellBTN {
-            top: 10px;
-            left: -70px;
-    }
-
+  .buyBTN,
+  .sellBTN {
+    top: 10px;
+    left: -70px;
+  }
 }
-/*--------------------------- 800px END ---------------------*/
-
 
 @media screen and (max-width: 770px) {
+  .buyBTN,
+  .sellBTN {
+    top: 10px;
+    left: -50px;
+  }
 
-        .buyBTN,
-        .sellBTN {
-            top: 10px;
-            left: -50px;
-    }
-
-        .about-backgroundIMG img {
-            top: 45px;
-            position: relative;
-    }
-
+  .about-backgroundIMG img {
+    top: 45px;
+    position: relative;
+  }
 }
-/*--------------------------- 770px END ---------------------*/
-
 
 @media screen and (max-width: 425px) {
+  .about-text {
+    margin-left: 15px;
+    text-align: start;
+  }
 
-        .about-text {
-            margin-left: 15px;
-            text-align: start;
-    }
-
-        .buyBTN,
-        .sellBTN {
-            top: 10px;
-            left: 110px;
-    }
-
+  .buyBTN,
+  .sellBTN {
+    top: 10px;
+    left: 110px;
+  }
 }
-/*--------------------------- 425px END ---------------------*/
 
 @media screen and (max-width: 413px) {
-
-        .buyBTN,
-        .sellBTN {
-            top: 60px;
-            left: 45px;
-            width: 130px;
-    }
-
+  .buyBTN,
+  .sellBTN {
+    top: 60px;
+    left: 45px;
+    width: 130px;
+  }
 }
-/*--------------------------- 413px END ---------------------*/
-
 
 @media screen and (max-width: 375px) {
+  .about-text p {
+    margin: 15px;
+    text-align: start;
+  }
 
-        .about-text p {
-            margin: 15px;
-            text-align: start;
-    }
-
-        .buyBTN,
-        .sellBTN {
-            top: 60px;
-            left: 45px;
-            width: 130px;
-    }
+  .buyBTN,
+  .sellBTN {
+    top: 60px;
+    left: 45px;
+    width: 130px;
+  }
 }
-/*--------------------------- 375px END ---------------------*/
 
 @media screen and (max-width: 320px) {
-
-        .buyBTN,
-        .sellBTN {
-            left: 75px;
-    }
+  .buyBTN,
+  .sellBTN {
+    left: 75px;
+  }
 }
-/*--------------------------- 320px END ---------------------*/
-
-
-
-
-
-
-
