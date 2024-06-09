@@ -27,7 +27,11 @@
     <title>GameHub | Checkout success</title>
     <script defer type="module" src="../js/script.js"></script>
     <script defer src="../js/components/menuList.js"></script>
-    <script defer type="module" src="../js/cart/cartDetails.js"></script>
+    <script
+      defer
+      type="module"
+      src="../js/products/cart/cartDetails.js"
+    ></script>
   </head>
   <body>
     <div class="topLine"><hr /></div>
@@ -65,13 +69,8 @@
     </div>
 
     <main>
-      <section>
-        <div class="alert-message">
-          <div class="alert-content">
-            <span class="close-alert">&times;</span>
-            <div class="messageContent"></div>
-          </div>
-        </div>
+      <section class="_main-section">
+        <div class="alert-container"></div>
 
         <div class="checkout-success">
           <h2 id="success-h2">Good choice!</h2>

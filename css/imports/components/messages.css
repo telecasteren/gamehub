@@ -1,3 +1,4 @@
+/*- Error message component -*/
 .error {
   padding: 1rem;
   min-width: 300px;
@@ -6,4 +7,77 @@
   color: darkred;
   border: 2px solid darkred;
   background: rgba(255, 0, 0, 0.1);
+}
+
+/*- Search -*/
+.no-results {
+  color: rgba(254, 254, 255, 1);
+  background-color: rgba(27, 32, 61, 1);
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 28px;
+}
+
+/*- Alert message component-*/
+
+.alert-message {
+  display: block;
+  position: fixed;
+  z-index: 500;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.alert-info {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.alert-success {
+  background-color: rgba(29, 135, 24, 0.546);
+}
+
+.alert-warning {
+  background-color: rgba(131, 101, 0, 0.529);
+}
+
+.alert-error {
+  background-color: rgba(139, 0, 0, 0.531);
+}
+
+.alert-content {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(254, 254, 255, 1);
+  padding: 50px;
+  border-radius: 22px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  width: 30%;
+  min-width: 300px;
+  height: auto;
+  text-align: center;
+  z-index: 600;
+}
+
+.messageContent {
+  font-size: 145%;
+  font-weight: 600;
+}
+
+.close-alert {
+  color: rgba(249, 114, 38, 1);
+  margin-left: 1%;
+  float: right;
+  font-size: 42px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.close-alert:hover {
+  color: rgba(27, 32, 61, 1);
 }

@@ -49,57 +49,6 @@ body {
   color: rgb(236, 2, 2);
 }
 
-/*- ALERT message component-*/
-
-._alert-hidden {
-  display: none;
-}
-
-.alert-message {
-  background-color: rgba(0, 0, 0, 0.5);
-  display: block;
-  position: fixed;
-  z-index: 500;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.alert-content {
-  position: relative;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(254, 254, 255, 1);
-  padding: 50px;
-  border-radius: 22px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-  width: 30%;
-  min-width: 300px;
-  height: auto;
-  text-align: center;
-  z-index: 600;
-}
-
-.messageContent {
-  font-size: 145%;
-  font-weight: 600;
-}
-
-.close-alert {
-  color: rgba(249, 114, 38, 1);
-  margin-left: 1%;
-  float: right;
-  font-size: 42px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.close-alert:hover {
-  color: rgba(27, 32, 61, 1);
-}
-
 /* Page title for pages: About, Contact, Profile  */
 .page-title {
   padding: 50px;
@@ -426,8 +375,6 @@ nav ul li a:hover {
   }
 }
 
-/*----------------GLOBAL STYLES END------------------------*/
-
 /*--------------------
 Profile page styles
 ---------------------*/
@@ -436,4 +383,3 @@ Profile page styles
   text-align: center;
   margin-top: 10%;
 }
-/*---------------END---------------*/

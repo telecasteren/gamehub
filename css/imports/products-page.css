@@ -1,6 +1,6 @@
-/*-------------------------------------------
-Productlist page + xtra-products page styles
-----------------------------------------------*/
+/*-----------------------------------
+Productlist page + xtra-products page
+------------------------------------*/
 
 .productSlides {
   margin-top: 70px;
@@ -26,16 +26,21 @@ Productlist page + xtra-products page styles
   animation: scroll 10s linear infinite;
 }
 
+#search-form {
+  display: grid;
+  width: 100vw;
+  justify-content: center;
+}
+
 #searchGames {
   font-size: 20px;
-  position: relative;
-  margin-left: 40vw;
   width: 245px;
   height: 40px;
   border-radius: 8px;
   margin-top: 50px;
   border: solid rgba(20, 47, 204, 1);
   background-color: rgba(254, 254, 255, 1);
+  cursor: pointer;
 }
 
 #searchGames::placeholder {
@@ -45,28 +50,20 @@ Productlist page + xtra-products page styles
 
 input#searchGames:hover {
   transition: 0.5s;
-  margin-left: 40vw;
   width: 300px;
   border: 1px solid rgba(249, 114, 38, 0.8);
 }
 
 #gamingNav {
   width: 100%;
-  z-index: 1;
   position: relative;
   text-align: center;
-  margin-top: 6%;
+  margin-top: 8%;
   margin-bottom: 0;
 }
 
 .xtra-prod-section {
-  margin-top: 2%;
-}
-
-#returnArrow {
-  position: absolute;
-  margin-left: 6%;
-  margin-top: 0;
+  margin-top: 10%;
 }
 
 .products-section {
@@ -78,12 +75,14 @@ input#searchGames:hover {
   grid-template-columns: repeat(3, 1fr);
   margin-left: 6%;
   margin-top: 5%;
+  padding-bottom: 5%;
 }
 
 .products {
   margin-top: 10%;
   width: 80%;
   height: auto;
+  cursor: pointer;
 }
 
 .products:hover {
@@ -95,8 +94,7 @@ input#searchGames:hover {
 }
 
 #expandBTN {
-  position: relative;
-  margin-top: 20px;
+  padding-top: 8%;
   margin-left: 50vw;
   background-color: rgba(254, 254, 255, 1);
   border: none;
@@ -114,18 +112,6 @@ Media screens
 
   .product-wrapper {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 770px) {
-  input#searchGames {
-    margin-left: 32vw;
-  }
-}
-
-@media screen and (max-width: 430px) {
-  input#searchGames {
-    margin-left: 22vw;
   }
 }
 

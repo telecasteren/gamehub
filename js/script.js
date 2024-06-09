@@ -49,12 +49,12 @@ loadPreviousPage();
 
 // ---------- Redirect user locations:
 
-// Common redirection to specific products:
+// Redirection to specific products:
 export function goToProduct(productID) {
   window.location.href = `/html/specificProd.html?gameId=${productID}`;
 }
 
-// Continue shopping button in cart and checkout:
+// Continue shopping button at cart/checkout:
 export function continueShoppingEvent() {
   const allGames = document.querySelector("._allGames");
 
@@ -65,3 +65,10 @@ export function continueShoppingEvent() {
     allGames.addEventListener("click", goToGames);
   }
 }
+
+// ------------------------ TO DO:
+// - ERROR HANDLING and errors in console
+// EXTRAS:
+// - HOME page: Style the overall design, title and description
+// - Profile page: mimic user login and form validation
+// -----------------------------------------------------------------

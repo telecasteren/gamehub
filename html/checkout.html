@@ -27,7 +27,11 @@
     <title>GameHub | Checkout</title>
     <script defer type="module" src="../js/script.js"></script>
     <script defer src="../js/components/menuList.js"></script>
-    <script defer type="module" src="../js/cart/cartDetails.js"></script>
+    <script
+      defer
+      type="module"
+      src="../js/products/cart/cartDetails.js"
+    ></script>
   </head>
   <body>
     <div class="topLine"><hr /></div>
@@ -76,6 +80,8 @@
 
     <main>
       <section class="checkout-page">
+        <div class="alert-container"></div>
+
         <h1 id="checkoutTitle">checkout</h1>
 
         <div><hr /></div>
@@ -218,9 +224,7 @@
           </div>
         </div>
 
-        <button class="checkoutBTN _placeOrder">
-          <a href="checkout-success.html">PLACE ORDER</a>
-        </button>
+        <button class="checkoutBTN _placeOrder">PLACE ORDER</button>
         <button class="checkoutBTN _allGames">continue shopping</button>
       </section>
     </main>

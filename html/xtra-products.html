@@ -27,11 +27,7 @@
     <title>GameHub | More products</title>
     <script defer type="module" src="../js/script.js"></script>
     <script defer src="../js/components/menuList.js"></script>
-    <script
-      defer
-      type="module"
-      src="../js/products/productsDetails.js"
-    ></script>
+    <script defer type="module" src="../js/products/products.js"></script>
   </head>
   <body>
     <div class="topLine"><hr /></div>
@@ -64,10 +60,24 @@
 
     <main>
       <section class="xtra-prod-section">
-        <div id="returnArrow">
+        <div class="alert-container"></div>
+
+        <div id="backArrow">
           <a href="products.html"
             ><img src="../images/backArrow2.svg" alt="previous page arrow"
           /></a>
+        </div>
+
+        <form id="search-form">
+          <input
+            id="searchGames"
+            type="text"
+            name="search-games"
+            placeholder="search in games.."
+          />
+        </form>
+        <div id="gamingNav">
+          <img src="../images/gaming-navigation.svg" alt="navigation menu" />
         </div>
 
         <div class="product-wrapper">

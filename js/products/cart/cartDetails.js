@@ -1,6 +1,7 @@
-import { fetchGameDetails } from "../api/gameApi.js";
-import { loadError, alertMessage } from "../components/messages.js";
-import { continueShoppingEvent } from "../script.js";
+import { fetchGameDetails } from "/js/api/gameApi.js";
+import { loadError, alertMessage } from "/js/components/messages.js";
+import { continueShoppingEvent } from "/js/script.js";
+import { updateCartCounter } from "../../script.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   mimicEmptyCart();
@@ -42,13 +43,15 @@ function eachItemInCartHtml() {
         const prodId = product.id;
         const prodTitle = product.title;
         const prodQuantity = product.quantity;
-        const prodIMG = product.image.url;
-        const prodAlt = product.image.alt;
+        const prodIMG = product.image.url || `../images/no_image_found.jpg`;
+        const prodAlt = product.image.alt || `Game cover for ${prodTitle}`;
         let prodPrice = product.price;
         const discountPrice = product.discountedPrice;
         const priceClass = product.onSale ? "discount-price" : "";
         const addItem = `../images/add-item.png`;
         const removeItem = `../images/remove-item.png`;
+        const increaseIconAlt = `Plus icon for adding items in cart`;
+        const decreaseIconAlt = `Minus icon for removing items in cart`;
 
         if (product.onSale) {
           prodPrice = discountPrice;
@@ -60,8 +63,8 @@ function eachItemInCartHtml() {
         const cartImgDiv = document.createElement("div");
         cartImgDiv.classList.add("cartIMG");
         const cartImage = document.createElement("img");
-        cartImage.alt = `${prodAlt}` || `Game cover for ${prodTitle}`;
-        cartImage.src = `${prodIMG}` || `../images/no_image_found.jpg`;
+        cartImage.alt = `${prodAlt}`;
+        cartImage.src = `${prodIMG}`;
         cartImage.classList.add("cart-image");
 
         const counterIconDivIncrease = document.createElement("div");
@@ -69,7 +72,7 @@ function eachItemInCartHtml() {
 
         const increaseIcon = document.createElement("img");
         increaseIcon.src = `${addItem}`;
-        increaseIcon.alt = `Plus icon for adding items in cart`;
+        increaseIcon.alt = `${increaseIconAlt}`;
         increaseIcon.classList.add("increase-icon");
         increaseIcon.addEventListener("click", () => {
           updateQuantity(prodId, 1);
@@ -85,7 +88,7 @@ function eachItemInCartHtml() {
 
         const decreaseIcon = document.createElement("img");
         decreaseIcon.src = `${removeItem}`;
-        decreaseIcon.alt = `Minus icon for removing items in cart`;
+        decreaseIcon.alt = `${decreaseIconAlt}`;
         decreaseIcon.classList.add("decrease-icon");
         decreaseIcon.addEventListener("click", () => {
           updateQuantity(prodId, -1);
@@ -94,7 +97,7 @@ function eachItemInCartHtml() {
         const cartItemTitle = document.createElement("div");
         cartItemTitle.classList.add("cartInfo-title");
         cartItemTitle.innerHTML = `<p><b>${prodTitle}</b>
-              - full game + digital soundtrack: <b><span class="${priceClass}">$${prodPrice}</span></b></p>`;
+              - full game: <b><span class="${priceClass}">$${prodPrice}</span></b></p>`;
 
         const separationLine = document.createElement("hr");
 
@@ -123,12 +126,12 @@ function eachItemInCartHtml() {
   }
 
   // Incrementing/decrementing cart items + updating NAV cart-items badge equally:
-  function updateQuantity(productId, delta) {
+  function updateQuantity(productId, change) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     const productIndex = cart.findIndex((item) => item.id === productId);
 
     if (productIndex !== -1) {
-      cart[productIndex].quantity += delta;
+      cart[productIndex].quantity += change;
       if (cart[productIndex].quantity < 1) {
         cart.splice(productIndex, 1);
         cartContainer
@@ -232,47 +235,42 @@ function mimicEmptyCart() {
   const checkoutButton = document.querySelector("._checkout");
   const subtotalPrice = document.querySelector("#subtotal-price");
 
-  const cartItems = getItemsInLocalStorage();
+  if (checkoutButton) {
+    const cartItems = getItemsInLocalStorage();
 
-  if (Array.isArray(cartItems) && cartItems.length < 1) {
-    checkoutButton.style.display = "none";
-    subtotalPrice.style.display = "none";
+    if (Array.isArray(cartItems) && cartItems.length < 1) {
+      checkoutButton.style.display = "none";
+      subtotalPrice.style.display = "none";
+    }
   }
 }
 
 function clearCartAfterOrderPlaced() {
   const placeOrderBtn = document.querySelector("._placeOrder");
-  const customAlert = document.querySelector(".alert-message");
-  const closeBtn = document.querySelector(".close-alert");
-  const messageContent = document.querySelector(".messageContent");
-
-  if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-      customAlert.style.display = "none";
-    });
-  }
-
-  if (messageContent) {
-    messageContent.innerHTML = `<p>Order confirmed!<p>`;
-    localStorage.setItem("orderConfirmed", "true");
-  } else {
-    alertMessage();
-    return;
-  }
-
-  window.addEventListener("click", (event) => {
-    if (event.target === customAlert) {
-      customAlert.style.display = "none";
-    }
-  });
 
   if (placeOrderBtn) {
     placeOrderBtn.addEventListener("click", () => {
-      customAlert.style.display = "block";
+      sessionStorage.setItem("orderConfirmed", "true");
+      window.location.href = "./checkout-success.html";
     });
   }
 }
+
+function checkoutSuccess() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const orderConfirmed = sessionStorage.getItem("orderConfirmed");
+    if (orderConfirmed === "true") {
+      alertMessage("Order confirmed!");
+      sessionStorage.removeItem("orderConfirmed");
+
+      localStorage.removeItem("cart");
+      updateCartCounter();
+    }
+  });
+}
+
 clearCartAfterOrderPlaced();
+checkoutSuccess();
 
 // ------------------------ TO DO:
 // - ERROR HANDLING and errors in console
