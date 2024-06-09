@@ -1,4 +1,5 @@
 import { fetchGames } from "../api/productsApi.js";
+import { UNKNOWN_KEY } from "../components/constants.js";
 import { goToProduct } from "../script.js";
 
 // Adding event listener to the carousel product button:
@@ -13,16 +14,20 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     const info = await fetchGames();
     const products = info.data.length;
+    let specificProductId;
 
     if (products > 2) {
-      const specificProductId = info.data[3].id;
+      specificProductId = info.data[3].id;
 
       getBtn.addEventListener("click", () => {
         goToProduct(specificProductId);
       });
     } else {
       getBtn.textContent = `Error upon loading button`;
-      console.log(`Error ocurred while loading product-id: ${info.data[3].id}`);
+      specificProductId = UNKNOWN_KEY;
+      console.log(
+        `Error ocurred while loading product-id: ${specificProductId}`
+      );
     }
   } catch (error) {
     console.log("Error ocurred:", error);

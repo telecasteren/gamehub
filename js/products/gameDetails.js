@@ -2,6 +2,7 @@ import { fetchGames } from "../api/productsApi.js";
 import { updateCartCounter } from "../script.js";
 import { loadError } from "../components/messages.js";
 import {
+  UNKNOWN_KEY,
   PRICE_NOT_FOUND,
   PRODUCT_NOT_FOUND,
   NO_IMAGE_FOUND_IMG,
@@ -42,15 +43,15 @@ function gameDetails(product) {
       const prodId = product.id || PRODUCT_NOT_FOUND;
       const price = product.price || PRICE_NOT_FOUND;
       const discountPrice = product.discountedPrice || `${price}`;
-      const genre = product.genre || "Unknown";
+      const genre = product.genre || UNKNOWN_KEY;
       const gameTitle = product.title || `ProductID: ${prodId}`;
-      const ageRate = product.ageRating || "Rating unknown";
-      const releaseDate = product.released || "Unknown";
+      const ageRate = product.ageRating || UNKNOWN_KEY;
+      const releaseDate = product.released || UNKNOWN_KEY;
       const gameText = product.description;
       const textContainer = document.querySelector(".productText");
 
       const pageTitle = document.querySelector("title");
-      pageTitle.innerHTML = `GameHub | ${product.title}`;
+      pageTitle.innerHTML = `GameHub | ${gameTitle}`;
 
       textContainer.innerHTML = "";
 

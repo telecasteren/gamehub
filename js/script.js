@@ -40,8 +40,6 @@ function loadPreviousPage() {
     const arrowCursor = document.querySelector("#backArrow");
 
     if (arrowCursor) {
-      arrowCursor.style.cursor = "pointer";
-
       document.querySelector("#backArrow").addEventListener("click", () => {
         if (previousPage) {
           window.location.href = previousPage;

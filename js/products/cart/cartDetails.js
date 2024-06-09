@@ -3,6 +3,8 @@ import { loadError, alertMessage } from "/js/components/messages.js";
 import { continueShoppingEvent } from "/js/script.js";
 import { updateCartCounter } from "../../script.js";
 import {
+  INCREASE_ICON_IMG,
+  DECREASE_ICON_IMG,
   INCREASE_ICON_ALT,
   DECREASE_ICON_ALT,
   PRICE_NOT_FOUND,
@@ -46,7 +48,7 @@ async function updateCartWithAPI() {
 
     localStorage.setItem(CART_KEY, JSON.stringify(updatedCartData));
   } catch (error) {
-    console.log("Error occurred while fetching details:", error);
+    console.log("Error occurred while fetching API details:", error);
     loadError();
   }
 }
@@ -96,8 +98,8 @@ function renderCartProducts() {
         let prodPrice = product.price || PRICE_NOT_FOUND;
         const discountPrice = product.discountedPrice || `${prodPrice}`;
         const priceClass = product.onSale ? "discount-price" : "";
-        const addItem = `../images/add-item.png`;
-        const removeItem = `../images/remove-item.png`;
+        const addItem = INCREASE_ICON_IMG;
+        const removeItem = DECREASE_ICON_IMG;
         const increaseIconAlt = INCREASE_ICON_ALT;
         const decreaseIconAlt = DECREASE_ICON_ALT;
 

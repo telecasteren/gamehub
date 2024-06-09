@@ -8,13 +8,16 @@ export function loadError() {
 }
 
 // No result in search for products:
-export function noResult() {
+export function noResultMessage() {
   const wrapper = document.querySelector(".product-wrapper");
-  const messageContainer = document.createElement("div");
-  messageContainer.classList.add("no-results");
-  messageContainer.innerText = "No results here, buddy. Try again!";
 
-  wrapper.appendChild(messageContainer);
+  if (wrapper) {
+    const messageContainer = document.createElement("div");
+    messageContainer.classList.add("no-results");
+    messageContainer.innerText = "No results here, buddy. Try again!";
+
+    wrapper.appendChild(messageContainer);
+  }
 }
 
 // Alert message component:

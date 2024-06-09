@@ -3,6 +3,7 @@
 }
 
 #backArrow {
+  cursor: pointer;
   position: absolute;
   margin-left: 6%;
   margin-top: 5%;

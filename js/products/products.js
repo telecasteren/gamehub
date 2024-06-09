@@ -2,7 +2,7 @@ import { fetchGames } from "../api/productsApi.js";
 import { goToProduct } from "../script.js";
 import { SEARCH_KEY } from "../components/constants.js";
 import { setSearchListeners } from "../components/search/searchProducts.js";
-import { noResult } from "../components/messages.js";
+import { noResultMessage } from "../components/messages.js";
 
 const wrapper = document.querySelector(".product-wrapper");
 
@@ -35,7 +35,7 @@ export function gamesHTML(games) {
     if (filteredProducts.length) {
       filteredProducts.forEach((game) => renderProduct(game));
     } else {
-      noResult();
+      noResultMessage();
     }
   } catch (error) {
     console.error("Error occurred: ", error);
