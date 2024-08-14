@@ -1,8 +1,8 @@
-import { fetchGames } from "../api/productsApi.js";
-import { goToProduct } from "../script.js";
-import { SEARCH_KEY } from "../components/constants.js";
-import { setSearchListeners } from "../components/search/searchProducts.js";
-import { noResultMessage } from "../components/messages.js";
+import { fetchGames } from "/js/api/productsApi.js";
+import { goToProduct } from "/js/script.js";
+import { SEARCH_KEY } from "/js/utils/general/constants.js";
+import { setSearchListeners } from "/js/utils/components/search/searchProducts.js";
+import { noResultMessage } from "/js/utils/auth/messages.js";
 
 const wrapper = document.querySelector(".product-wrapper");
 

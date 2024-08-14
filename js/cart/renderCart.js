@@ -1,16 +1,16 @@
 import { fetchGames } from "/js/api/productsApi.js";
-import { loadError } from "/js/components/messages.js";
+import { loadError } from "/js/utils/auth/messages.js";
 import { continueShoppingEvent } from "/js/script.js";
 import { renderCartProducts } from "./cartHtml.js";
-import { getItemsInLocalStorage } from "/js/products/cart/storage/getItemsInLocalStorage.js";
-import { displaySubtotal } from "/js/products/cart/displaySubtotal.js";
-import { initItemCounter } from "/js/products/cart/updateTotals.js";
-import { mimicEmptyCart } from "/js/products/cart/mimicEmptyCart.js";
-import { CART_KEY, ORDER_CONFIRMED_KEY } from "/js/components/constants.js";
+import { getItemsInLocalStorage } from "/js/cart/storage/getItemsInLocalStorage.js";
+import { displaySubtotal } from "/js/cart/checkout/displaySubtotal.js";
+import { initItemCounter } from "/js/cart/updateCart/updateTotals.js";
+import { mimicEmptyCart } from "/js/cart/checkout/mimicEmptyCart.js";
+import { CART_KEY, ORDER_CONFIRMED_KEY } from "/js/utils/general/constants.js";
 import {
   clearCartAfterOrderPlaced,
   checkoutSuccess,
-} from "/js/products/cart/checkoutSuccess.js";
+} from "/js/cart/checkout/checkoutSuccess.js";
 
 // Initialize cart page when DOM is fully loaded:
 document.addEventListener("DOMContentLoaded", async () => {

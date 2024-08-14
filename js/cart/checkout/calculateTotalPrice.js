@@ -1,4 +1,4 @@
-import { displaySubtotal } from "/js/products/cart/displaySubtotal.js";
+import { displaySubtotal } from "/js/cart/checkout/displaySubtotal.js";
 
 // Calculate and display total price:
 export function calculateTotalPrice() {

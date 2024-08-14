@@ -1,6 +1,6 @@
-import { displaySubtotal } from "/js/products/cart/displaySubtotal.js";
-import { getItemsInLocalStorage } from "/js/products/cart/storage/getItemsInLocalStorage.js";
-import { updateQuantity } from "/js/products/cart/updateCartItems.js";
+import { displaySubtotal } from "/js/cart/checkout/displaySubtotal.js";
+import { getItemsInLocalStorage } from "/js/cart/storage/getItemsInLocalStorage.js";
+import { updateQuantity } from "/js/cart/updateCart/updateCartItems.js";
 import {
   INCREASE_ICON_IMG,
   DECREASE_ICON_IMG,
@@ -10,7 +10,7 @@ import {
   PRODUCT_NOT_FOUND,
   NO_IMAGE_FOUND_IMG,
   cartContainer,
-} from "/js/components/constants.js";
+} from "/js/utils/general/constants.js";
 
 // Creating the html:
 export function renderCartProducts() {

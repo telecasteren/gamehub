@@ -1,4 +1,4 @@
-import { CART_KEY } from "/js/components/constants.js";
+import { CART_KEY } from "/js/utils/general/constants.js";
 
 // Calculate and display subtotal price:
 export function displaySubtotal() {

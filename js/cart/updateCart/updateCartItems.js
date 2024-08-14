@@ -1,9 +1,9 @@
-import { CART_KEY, cartContainer } from "/js/components/constants.js";
-import { calculateTotalPrice } from "/js/products/cart/calculateTotalPrice.js";
-import { updateTotals } from "/js/products/cart/updateTotals.js";
-import { displaySubtotal } from "/js/products/cart/displaySubtotal.js";
-import { mimicEmptyCart } from "/js/products/cart/mimicEmptyCart.js";
-import { getItemsInLocalStorage } from "/js/products/cart/storage/getItemsInLocalStorage.js";
+import { CART_KEY, cartContainer } from "/js/utils/general/constants.js";
+import { calculateTotalPrice } from "/js/cart/checkout/calculateTotalPrice.js";
+import { updateTotals } from "/js/cart/updateCart/updateTotals.js";
+import { displaySubtotal } from "/js/cart/checkout/displaySubtotal.js";
+import { mimicEmptyCart } from "/js/cart/checkout/mimicEmptyCart.js";
+import { getItemsInLocalStorage } from "/js/cart/storage/getItemsInLocalStorage.js";
 
 // Incrementing/decrementing cart items + item counter equally:
 export function updateQuantity(productId, change) {

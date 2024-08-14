@@ -1,5 +1,5 @@
-import { SEARCH_KEY } from "../constants.js";
-import { gamesHTML } from "../../products/products.js";
+import { SEARCH_KEY } from "/js/utils/general/constants.js";
+import { gamesHTML } from "/js/products/products.js";
 
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("searchGames");

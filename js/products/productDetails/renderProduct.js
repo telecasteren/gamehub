@@ -1,13 +1,12 @@
-import { fetchGames } from "../api/productsApi.js";
-import { updateCartCounter } from "../script.js";
-import { loadError } from "../components/messages.js";
+import { fetchGames } from "/js/api/productsApi.js";
+import { loadError } from "/js/utils/auth/messages.js";
+import { addToCartEvent } from "/js/products/productDetails/AddToCartFunctions.js";
 import {
   UNKNOWN_KEY,
   PRICE_NOT_FOUND,
   PRODUCT_NOT_FOUND,
   NO_IMAGE_FOUND_IMG,
-  CART_KEY,
-} from "../components/constants.js";
+} from "/js/utils/general/constants.js";
 
 const cartWindow = document.getElementById("cartWindow-box");
 const imageContainer = document.querySelector(".prodImg-container");
@@ -98,34 +97,4 @@ function gameDetails(product) {
     console.log("Error occurred: ", error);
     loadError();
   }
-}
-
-function addToCartEvent(product) {
-  const cartButton = document.querySelector(".addToCartBTN");
-
-  function goToCart() {
-    addToCart(product);
-
-    // Setting a small timeout to make sure
-    // the actions in addToCartEvent happens before going to cart:
-    setTimeout(() => {
-      window.location.href = `/navigate/cart/your-cart/`;
-    }, 100);
-  }
-  cartButton.addEventListener("click", goToCart);
-}
-
-function addToCart(product) {
-  let cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
-  const existingProducts = cart.findIndex((item) => item.id === product.id);
-
-  if (existingProducts !== -1) {
-    cart[existingProducts].quantity++;
-  } else {
-    product.quantity = 1;
-    cart.push(product);
-  }
-
-  localStorage.setItem(CART_KEY, JSON.stringify(cart));
-  updateCartCounter();
 }

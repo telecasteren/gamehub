@@ -1,27 +1,9 @@
-// Common javascript
-
-import {
-  CART_KEY,
-  ITEM_COUNT_KEY,
-  PREVIOUS_PAGE_KEY,
-} from "./components/constants.js";
+import { updateCartCounter } from "/js/cart/updateCart/updateCartCounter.js";
+import { PREVIOUS_PAGE_KEY } from "./utils/general/constants.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   updateCartCounter();
 });
-
-// Item counter element in the NAV:
-export function updateCartCounter() {
-  const cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
-  const totalQuantity = cart.reduce(
-    (total, product) => total + product.quantity,
-    0
-  );
-  const itemCounter = document.getElementById("item-counter");
-
-  itemCounter.textContent = totalQuantity;
-  localStorage.setItem(ITEM_COUNT_KEY, totalQuantity);
-}
 
 // ---------- Redirect user locations:
 

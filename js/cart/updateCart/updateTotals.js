@@ -1,4 +1,4 @@
-import { ITEM_COUNT_KEY } from "/js/components/constants.js";
+import { ITEM_COUNT_KEY } from "/js/utils/general/constants.js";
 
 export function updateTotals() {
   let totalQuantity = 0;

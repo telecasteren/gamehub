@@ -1,6 +1,6 @@
-import { ORDER_CONFIRMED_KEY, CART_KEY } from "/js/components/constants.js";
-import { alertMessage } from "/js/components/messages.js";
-import { updateCartCounter } from "/js/script.js";
+import { ORDER_CONFIRMED_KEY, CART_KEY } from "/js/utils/general/constants.js";
+import { alertMessage } from "/js/utils/auth/messages.js";
+import { updateCartCounter } from "/js/cart/updateCart/updateCartCounter.js";
 
 // Clear the cart upon checkout success
 export function clearCartAfterOrderPlaced() {

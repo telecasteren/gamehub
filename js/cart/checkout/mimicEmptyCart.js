@@ -1,4 +1,4 @@
-import { getItemsInLocalStorage } from "/js/products/cart/storage/getItemsInLocalStorage.js";
+import { getItemsInLocalStorage } from "/js/cart/storage/getItemsInLocalStorage.js";
 
 // Hide checkout button if cart is empty:
 export function mimicEmptyCart() {

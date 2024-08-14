@@ -1,41 +1,8 @@
-import { fetchGames } from "../api/productsApi.js";
-import { UNKNOWN_KEY } from "../components/constants.js";
-import { goToProduct } from "../script.js";
+import { fetchGames } from "/js/api/productsApi.js";
+import { goToProduct } from "/js/script.js";
 
-// Adding event listener to the carousel product button:
-document.addEventListener("DOMContentLoaded", async () => {
-  const getBtn = document.querySelector(".getBTN");
-
-  if (!getBtn) {
-    console.log("Button not found!");
-    return;
-  }
-
-  try {
-    const info = await fetchGames();
-    const products = info.data.length;
-    let specificProductId;
-
-    if (products > 2) {
-      specificProductId = info.data[3].id;
-
-      getBtn.addEventListener("click", () => {
-        goToProduct(specificProductId);
-      });
-    } else {
-      getBtn.textContent = `Error upon loading button`;
-      specificProductId = UNKNOWN_KEY;
-      console.log(
-        `Error ocurred while loading product-id: ${specificProductId}`
-      );
-    }
-  } catch (error) {
-    console.log("Error ocurred:", error);
-  }
-});
-
-// Displaying main content:
-async function displayContent() {
+// Creating the html:
+export async function displayContent() {
   try {
     const info = await fetchGames();
 
@@ -91,4 +58,3 @@ async function displayContent() {
     throw error;
   }
 }
-displayContent();
