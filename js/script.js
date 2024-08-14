@@ -55,7 +55,7 @@ loadPreviousPage();
 
 // Redirection to specific products:
 export function goToProduct(productID) {
-  window.location.href = `/html/specificProd.html?gameId=${productID}`;
+  window.location.href = `/navigate/products/?gameId=${productID}`;
 }
 
 // Continue shopping button at cart/checkout:
@@ -64,7 +64,7 @@ export function continueShoppingEvent() {
 
   if (allGames) {
     function goToGames() {
-      window.location.href = `./products.html`;
+      window.location.href = `/navigate/products/product-list/`;
     }
     allGames.addEventListener("click", goToGames);
   }

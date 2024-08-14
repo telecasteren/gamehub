@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GameHub website project" />
+    <link rel="stylesheet" href="/css/global-styles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <title>GameHub | Checkout</title>
+
+    <script defer type="module" src="/js/script.js"></script>
+    <script defer src="/js/components/menuList.js"></script>
+    <script defer type="module" src="/js/products/cart/renderCart.js"></script>
+  </head>
+  <body>
+    <div class="topLine"><hr /></div>
+
+    <div class="nav-bar">
+      <nav>
+        <ul id="menuList">
+          <li><a href="/">home</a></li>
+          <li><a href="/navigate/products/product-list/">games</a></li>
+          <li><a href="/navigate/about/">about</a></li>
+          <li><a href="/navigate/contact/">contact</a></li>
+          <li><a href="/navigate/profile/">profile</a></li>
+          <li>
+            <a class="rightNavElement" href="/navigate/cart/your-cart/"
+              >your cart <span id="item-counter">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <img
+        src="/images/menu-icon.png"
+        class="menu-icon"
+        alt="menu icon"
+        id="menuIcon"
+      />
+    </div>
+
+    <div id="backArrow">
+      <img src="/images/backArrow2.svg" alt="previous page arrow" />
+    </div>
+
+    <div class="logoCheckout">
+      <a href="/">
+        <img
+          src="/images/GameHub-top-logo.svg"
+          class="logo"
+          alt="GameHub main logo"
+      /></a>
+    </div>
+
+    <div class="loggedInUser-info">
+      <p class="userInfoMember">you are member nr: #666</p>
+      <p class="userInfoMail">wolly.winka@mail.com</p>
+      <p class="userInfoLogOut">log out</p>
+    </div>
+
+    <main>
+      <section class="checkout-page">
+        <div class="alert-container"></div>
+
+        <h1 id="checkoutTitle">checkout</h1>
+
+        <div><hr /></div>
+
+        <form action="purchase.php" method="POST" class="checkoutForm">
+          <p><b>delivery details</b></p>
+
+          <fieldset class="checkoutFields">
+            <input
+              type="text"
+              name="firstname"
+              placeholder="firstname *"
+              required
+              autocomplete="on"
+            />
+
+            <input
+              type="text"
+              name="lastname"
+              placeholder="lastname *"
+              required
+              autocomplete="on"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="email *"
+              required
+              autocomplete="on"
+            />
+
+            <input
+              type="tel"
+              name="phone"
+              placeholder="phone"
+              autocomplete="on"
+            />
+            <input
+              type="text"
+              class="deliveryAddress"
+              name="address"
+              placeholder="delivery address *"
+              required
+              autocomplete="on"
+            />
+
+            <input
+              type="text"
+              class="postalCode"
+              name="postalcode"
+              placeholder="postal code *"
+              required
+              autocomplete="on"
+            />
+          </fieldset>
+
+          <p><b>payment method</b></p>
+          <fieldset class="paymentFields">
+            <select name="payment" id="cardDetails">
+              <option value="option-one">Mastercard</option>
+              <option value="option-two">Visa Debit</option>
+              <option value="option-three">American Express</option>
+            </select>
+
+            <input type="date" name="date" id="cardDetails" required />
+            <br />
+            <input
+              type="number"
+              name="number"
+              placeholder="cardnumber *"
+              required
+            />
+            <input
+              type="number"
+              name="number"
+              placeholder="cvc number *"
+              required
+            />
+          </fieldset>
+        </form>
+
+        <div><hr /></div>
+
+        <div class="checkoutDetails">
+          <div class="cart-elements">
+            <div class="cart-section">
+              <div class="loader"></div>
+            </div>
+            <h3>summary</h3>
+            <p id="subtotal">subtotal</p>
+            <div id="subtotal-price"></div>
+          </div>
+
+          <div class="delivery-method">
+            <p><b>delivery method</b></p>
+            <label for="pick-up">pick-up at store: FREE</label>
+            <input
+              type="radio"
+              id="pick-up"
+              name="delivery"
+              value="pick-up"
+              class="radioBTN"
+              data-price="0"
+            />
+            <label for="post-office">post-office: $6.90</label>
+            <input
+              type="radio"
+              id="post-office"
+              name="delivery"
+              value="post-office"
+              class="radioBTN"
+              data-price="6.90"
+            />
+            <label for="home-delivery">home-delivery $9.90</label>
+            <input
+              type="radio"
+              id="home-delivery"
+              name="delivery"
+              value="home-delivery"
+              class="radioBTN"
+              data-price="9.90"
+            />
+          </div>
+
+          <div class="promo-label">
+            <b><label for="promoCode">promo-code:</label></b>
+          </div>
+          <br />
+          <input
+            type="text"
+            id="promoCode"
+            name="promo-code"
+            class="promo-code"
+          />
+
+          <div class="totalSum">
+            <p class="total-price"><b>TOTAL incl.mva (VAT)</b></p>
+            <div id="total-price"></div>
+          </div>
+        </div>
+
+        <button class="checkoutBTN _placeOrder">PLACE ORDER</button>
+        <button class="checkoutBTN _allGames">continue shopping</button>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footerRow">
+        <p class="copyright-text">
+          Copyright &copy; 2023 All Rights Reserved by GameHub
+        </p>
+      </div>
+    </footer>
+    <div class="bottomLine"><hr /></div>
+  </body>
+</html>

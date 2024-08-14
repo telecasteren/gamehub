@@ -1,38 +1,15 @@
 /*------------
 IMPORT SHEETS ---------------------*/
-@import "../css/imports/index-styles.css";
-@import "../css/imports/products-page.css";
-@import "../css/imports/product-details.css";
-@import "../css/imports/about-styles.css";
-@import "../css/imports/checkout-styles.css";
-@import "../css/imports/contact-styles.css";
-@import "../css/imports/components/loader.css";
-@import "../css/imports/components/messages.css";
+@import "/css/imports/index-styles.css";
+@import "/css/imports/product-list.css";
+@import "/css/imports/product.css";
+@import "/css/imports/about-styles.css";
+@import "/css/imports/checkout-styles.css";
+@import "/css/imports/contact-styles.css";
+@import "/css/imports/components/loader.css";
+@import "/css/imports/components/messages.css";
+@import "/css/imports/utils/variables.css";
 /*----------------------------------*/
-
-:root {
-  --white: rgba(254, 254, 255, 1);
-  --logo-dark-blue: rgba(27, 32, 61, 1);
-  --light-blue: rgba(20, 47, 204, 0.6);
-  --bright-blue-soft: rgba(20, 47, 204, 0.95);
-  --bright-blue-strong: rgba(20, 47, 204, 1);
-  --orange-soft: rgba(249, 114, 38, 0.6);
-  --orange-strong: rgba(249, 114, 38, 0.8);
-
-  /*- special operations -*/
-  --light-blue-box: rgba(248, 248, 255, 1);
-  --bright-hover-blue: rgba(57, 87, 255, 0.95);
-  --faded-hover-white: rgba(254, 254, 255, 0.55);
-
-  --discount-red: rgb(236, 2, 2);
-  --error-red-front: darkred;
-  --error-red-back: rgba(255, 0, 0, 0.1);
-  --alert-box-shadow: rgba(0, 0, 0, 0.3);
-  --alert-info: rgba(0, 0, 0, 0.5);
-  --alert-success: rgba(29, 135, 24, 0.546);
-  --alert-warning: rgba(131, 101, 0, 0.529);
-  --alert-error: rgba(139, 0, 0, 0.531);
-}
 
 /*--------------------
 Profile page styles

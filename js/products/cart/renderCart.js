@@ -1,0 +1,52 @@
+import { fetchGames } from "/js/api/productsApi.js";
+import { loadError } from "/js/components/messages.js";
+import { continueShoppingEvent } from "/js/script.js";
+import { renderCartProducts } from "./cartHtml.js";
+import { getItemsInLocalStorage } from "/js/products/cart/storage/getItemsInLocalStorage.js";
+import { displaySubtotal } from "/js/products/cart/displaySubtotal.js";
+import { initItemCounter } from "/js/products/cart/updateTotals.js";
+import { mimicEmptyCart } from "/js/products/cart/mimicEmptyCart.js";
+import { CART_KEY, ORDER_CONFIRMED_KEY } from "/js/components/constants.js";
+import {
+  clearCartAfterOrderPlaced,
+  checkoutSuccess,
+} from "/js/products/cart/checkoutSuccess.js";
+
+// Initialize cart page when DOM is fully loaded:
+document.addEventListener("DOMContentLoaded", async () => {
+  await updateCartWithAPI();
+  mimicEmptyCart();
+  renderCartProducts();
+  initItemCounter();
+  displaySubtotal();
+  continueShoppingEvent();
+
+  const orderConfirmed = localStorage.getItem(ORDER_CONFIRMED_KEY);
+  if (orderConfirmed === "true") {
+    localStorage.removeItem(CART_KEY);
+    localStorage.removeItem(ORDER_CONFIRMED_KEY);
+  }
+});
+
+// Fetching data from the API upon changes and update items in localStorage if needed:
+async function updateCartWithAPI() {
+  try {
+    const apiData = await fetchGames();
+    const localData = getItemsInLocalStorage();
+
+    const updatedCartData = localData.map((localItem) => {
+      const apiItem = apiData.data.find(
+        (apiItem) => apiItem.id === localItem.id
+      );
+      return apiItem ? { ...localItem, ...apiItem } : localItem;
+    });
+
+    localStorage.setItem(CART_KEY, JSON.stringify(updatedCartData));
+  } catch (error) {
+    console.log("Error occurred while fetching API details:", error);
+    loadError();
+  }
+}
+
+clearCartAfterOrderPlaced();
+checkoutSuccess();

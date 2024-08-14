@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GameHub website project" />
+    <link rel="stylesheet" href="/css/global-styles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <title>GameHub | Products</title>
+
+    <script defer type="module" src="/js/script.js"></script>
+    <script defer src="/js/components/menuList.js"></script>
+    <script defer type="module" src="/js/products/products.js"></script>
+  </head>
+  <body>
+    <div class="topLine"><hr /></div>
+
+    <div class="nav-bar">
+      <nav>
+        <ul id="menuList">
+          <li><a href="/">home</a></li>
+          <li><a href="./" id="current">games</a></li>
+          <li><a href="/navigate/about/">about</a></li>
+          <li><a href="/navigate/contact/">contact</a></li>
+          <li><a href="/navigate/profile/">profile</a></li>
+          <li>
+            <a class="rightNavElement" href="/navigate/cart/your-cart/"
+              >your cart <span id="item-counter">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <img
+        src="/images/menu-icon.png"
+        class="menu-icon"
+        alt="menu icon"
+        id="menuIcon"
+      />
+    </div>
+    <a href="/"
+      ><img src="/images/GameHub-top-logo.svg" class="logo" alt="main logo"
+    /></a>
+
+    <main>
+      <section>
+        <div class="alert-container"></div>
+
+        <div class="productSlides">
+          <img src="/images/carousel-img3.svg" alt="carousel images" />
+          <img src="/images/carousel-img5.svg" alt="carousel images" />
+          <img src="/images/carousel-img6.svg" alt="carousel images" />
+          <img src="/images/carousel-img3.svg" alt="carousel images" />
+          <img src="/images/carousel-img5.svg" alt="carousel images" />
+          <img src="/images/carousel-img6.svg" alt="carousel images" />
+        </div>
+
+        <div class="middleLine"><hr /></div>
+
+        <section class="products-section">
+          <form id="search-form">
+            <input
+              id="searchGames"
+              type="text"
+              name="search-games"
+              placeholder="search games.."
+            />
+          </form>
+
+          <div id="gamingNav">
+            <img src="/images/gaming-navigation.svg" alt="navigation menu" />
+          </div>
+
+          <div class="product-wrapper">
+            <div class="loader"></div>
+          </div>
+
+          <button id="expandBTN">
+            <a href="/navigate/products/product-list/more/">
+              <img src="/images/expand-products.svg" alt="expand-arrow"
+            /></a>
+          </button>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footerRow">
+        <p class="copyright-text">
+          Copyright &copy; 2023 All Rights Reserved by GameHub
+        </p>
+      </div>
+    </footer>
+    <div class="bottomLine"><hr /></div>
+  </body>
+</html>

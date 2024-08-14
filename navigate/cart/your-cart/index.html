@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GameHub website project" />
+    <link rel="stylesheet" href="/css/global-styles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <title>GameHub | Cart</title>
+
+    <script defer type="module" src="/js/script.js"></script>
+    <script defer src="/js/components/menuList.js"></script>
+    <script defer type="module" src="/js/products/cart/renderCart.js"></script>
+  </head>
+  <body>
+    <div class="topLine"><hr /></div>
+
+    <div class="nav-bar">
+      <nav>
+        <ul id="menuList">
+          <li><a href="/">home</a></li>
+          <li><a href="/navigate/products/product-list/">games</a></li>
+          <li><a href="/navigate/about/">about</a></li>
+          <li><a href="/navigate/contact/">contact</a></li>
+          <li><a href="/navigate/profile/">profile</a></li>
+          <li>
+            <a
+              class="rightNavElement"
+              id="current"
+              href="/navigate/cart/your-cart/"
+              >your cart <span id="item-counter">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <img
+        src="/images/menu-icon.png"
+        class="menu-icon"
+        alt="menu icon"
+        id="menuIcon"
+      />
+    </div>
+
+    <div id="backArrow">
+      <img src="/images/backArrow2.svg" alt="previous page arrow" />
+    </div>
+
+    <div class="logoCheckout">
+      <a href="/">
+        <img
+          src="/images/GameHub-top-logo.svg"
+          class="logo"
+          alt="GameHub main logo"
+      /></a>
+    </div>
+    <div class="loggedInUser-info">
+      <p class="userInfoMember">you are member nr: #666</p>
+      <p class="userInfoMail">wolly.winka@mail.com</p>
+      <p class="userInfoLogOut">log out</p>
+    </div>
+
+    <main>
+      <section class="checkout-page">
+        <div class="alert-container"></div>
+
+        <h1 id="checkoutTitle">your cart</h1>
+
+        <div class="checkout-lines"><hr /></div>
+
+        <div class="cart-elements">
+          <div class="cart-section">
+            <div class="loader"></div>
+          </div>
+          <h3>summary</h3>
+          <br />
+          <br />
+          <br />
+          <p id="subtotal">subtotal</p>
+          <div id="subtotal-price"></div>
+        </div>
+
+        <button class="checkoutBTN _allGames">continue shopping</button>
+        <button class="checkoutBTN _checkout">
+          <a href="/navigate/cart/checkout/">Take me to CHECKOUT</a>
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footerRow">
+        <p class="copyright-text">
+          Copyright &copy; 2023 All Rights Reserved by GameHub
+        </p>
+      </div>
+    </footer>
+    <div class="bottomLine"><hr /></div>
+  </body>
+</html>

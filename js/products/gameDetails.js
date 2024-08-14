@@ -109,7 +109,7 @@ function addToCartEvent(product) {
     // Setting a small timeout to make sure
     // the actions in addToCartEvent happens before going to cart:
     setTimeout(() => {
-      window.location.href = `./cart.html`;
+      window.location.href = `/navigate/cart/your-cart/`;
     }, 100);
   }
   cartButton.addEventListener("click", goToCart);

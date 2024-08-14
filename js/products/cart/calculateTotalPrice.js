@@ -1,0 +1,31 @@
+import { displaySubtotal } from "/js/products/cart/displaySubtotal.js";
+
+// Calculate and display total price:
+export function calculateTotalPrice() {
+  const totalSum = document.querySelector(".totalSum");
+
+  if (totalSum) {
+    function displayTotal(subtotal) {
+      const selectedDelivery = document.querySelector(
+        `input[name="delivery"]:checked`
+      );
+      const deliveryPrice = selectedDelivery
+        ? parseFloat(selectedDelivery.dataset.price)
+        : 0;
+      const total = subtotal + deliveryPrice;
+
+      const totalPrice = document.querySelector("#total-price");
+      totalPrice.textContent = `$${total.toFixed(2)}`;
+    }
+
+    document.querySelectorAll(`input[name="delivery"]`).forEach((radio) => {
+      radio.addEventListener(`change`, () => {
+        const subtotal = displaySubtotal();
+        displayTotal(subtotal);
+      });
+    });
+    const cartSub = displaySubtotal();
+    displayTotal(cartSub);
+  }
+}
+calculateTotalPrice();
