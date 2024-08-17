@@ -86,46 +86,40 @@
 
         <div><hr /></div>
 
-        <div class="form-container">
-          <form action="">
-            <h2 class="formTitle">delivery details</h2>
-            <label for="fname">First name</label>
+        <form action="purchase.php" method="POST" class="checkoutForm">
+          <p><b>delivery details</b></p>
+
+          <fieldset class="checkoutFields">
             <input
               type="text"
-              id="fname"
               name="firstname"
-              placeholder="your first name"
+              placeholder="firstname *"
               required
-              autocomplete="name"
+              autocomplete="on"
             />
 
-            <label for="lname">Last name</label>
             <input
               type="text"
-              id="lname"
               name="lastname"
-              placeholder="your last name"
+              placeholder="lastname *"
               required
-              autocomplete="name"
+              autocomplete="on"
             />
 
-            <label for="email">Email</label>
             <input
               type="email"
-              id="email"
               name="email"
-              placeholder="your email address"
-              autocomplete="email"
+              placeholder="email *"
+              required
+              autocomplete="on"
             />
 
-            <label for="tel">Phone</label>
             <input
               type="tel"
               name="phone"
-              placeholder="phone (optional)"
+              placeholder="phone"
               autocomplete="on"
             />
-            <label for="address">Address</label>
             <input
               type="text"
               class="deliveryAddress"
@@ -135,45 +129,40 @@
               autocomplete="on"
             />
 
-            <label for="zipCode">Postal code</label>
             <input
               type="text"
-              class="zipCode"
-              name="zipCode"
+              class="postalCode"
+              name="postalcode"
               placeholder="postal code *"
               required
               autocomplete="on"
             />
-          </form>
-        </div>
+          </fieldset>
 
-        <div class="paymentForm">
-          <div class="form-container">
-            <form>
-              <h2 class="formTitle">payment details</h2>
-              <select name="payment" id="cardDetails">
-                <option value="option-one">Mastercard</option>
-                <option value="option-two">Visa Debit</option>
-                <option value="option-three">American Express</option>
-              </select>
+          <p><b>payment method</b></p>
+          <fieldset class="paymentFields">
+            <select name="payment" id="cardDetails">
+              <option value="option-one">Mastercard</option>
+              <option value="option-two">Visa Debit</option>
+              <option value="option-three">American Express</option>
+            </select>
 
-              <input type="date" name="date" id="cardDetails" required />
-              <br />
-              <input
-                type="number"
-                name="number"
-                placeholder="cardnumber *"
-                required
-              />
-              <input
-                type="number"
-                name="number"
-                placeholder="cvc number *"
-                required
-              />
-            </form>
-          </div>
-        </div>
+            <input type="date" name="date" id="cardDetails" required />
+            <br />
+            <input
+              type="number"
+              name="number"
+              placeholder="cardnumber *"
+              required
+            />
+            <input
+              type="number"
+              name="number"
+              placeholder="cvc number *"
+              required
+            />
+          </fieldset>
+        </form>
 
         <div><hr /></div>
 
@@ -219,7 +208,7 @@
           </div>
 
           <div class="promo-label">
-            <b><label id="promoLabel" for="promoCode">promo-code:</label></b>
+            <b><label for="promoCode">promo-code:</label></b>
           </div>
           <br />
           <input

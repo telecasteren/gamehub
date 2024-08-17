@@ -1,5 +1,5 @@
 /*------------
-IMPORT SHEETS ---------------------*/
+IMPORT SHEETS ---------------------------*/
 @import "/css/imports/index-styles.css";
 @import "/css/imports/product-list.css";
 @import "/css/imports/product.css";
@@ -7,24 +7,39 @@ IMPORT SHEETS ---------------------*/
 @import "/css/imports/checkout-styles.css";
 @import "/css/imports/contact-styles.css";
 @import "/css/imports/components/loader.css";
-@import "/css/imports/components/messages.css";
+@import "/css/imports/components/forms.css";
+@import "/css/imports/components/navBar.css";
+@import "/css/imports/components/footer.css";
 @import "/css/imports/utils/variables.css";
-/*----------------------------------*/
+@import "/css/imports/utils//auth/messages.css";
+@import "/css/imports/utils/auth/login.css";
+/*-----------------------------------------------*/
 
-/*--------------------
-Profile page styles
----------------------*/
-.logInForm {
-  display: block;
-  text-align: center;
-  margin-top: 10%;
-  width: 100vw;
+/*---------------------- COMMON STYLES -----------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: medium;
+  text-decoration: none;
+  color: var(--logo-dark-blue);
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
-#username,
-#password {
-  width: 300px;
+
+html,
+body {
+  overflow-x: hidden;
 }
-/*--------------------*/
+
+.logo {
+  margin-top: 1%;
+  margin-left: 5%;
+  width: 160px;
+  cursor: pointer;
+  position: absolute;
+}
 
 /* Page title for pages: About, Contact, Profile  */
 .page-title {
@@ -45,30 +60,6 @@ Profile page styles
   text-align: center;
   font-weight: normal;
   font-style: italic;
-}
-
-/*---------------------------------------
-GLOBAL STYLES
-----------------------------------------*/
-
-* {
-  margin: 0;
-  padding: 0;
-  font-weight: medium;
-  text-decoration: none;
-  color: var(--logo-dark-blue);
-  font-family: Arial, Helvetica, sans-serif;
-  scroll-behavior: smooth;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  overflow-x: hidden;
-}
-
-.discount-price {
-  color: var(--discount-red);
 }
 
 /*- Separation lines -*/
@@ -103,275 +94,4 @@ body {
   padding: 5px 10px 10px 10px;
   position: relative;
   margin-top: 1%;
-}
-
-/*-- FORMS, FIELDSET, INPUT-FIELDS --*/
-form ::placeholder {
-  color: var(--light-blue);
-  text-align: center;
-}
-
-fieldset,
-.inputFields {
-  border: none;
-  margin: none;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-input[type="date"],
-select[name="payment"],
-textarea {
-  padding: 8px;
-  margin-top: 10px;
-  text-align: center;
-  border-radius: 10px;
-  border: 1px solid var(--light-blue);
-  background-color: var(--light-blue-box);
-}
-
-input[type="submit"] {
-  width: 100px;
-  padding: 10px;
-  border-radius: 10px;
-  justify-content: center;
-  border: 1px solid var(--light-blue);
-  background-color: var(--bright-blue-strong);
-  color: var(--white);
-}
-
-@media screen and (min-width: 1024px) {
-  input[type="submit"]:hover {
-    background-color: var(--faded-hover-white);
-    color: var(--bright-blue-strong);
-  }
-}
-
-/*----------------------------
-TOP of pages
------------------------------*/
-.logo {
-  margin-top: 1%;
-  margin-left: 5%;
-  width: 160px;
-  cursor: pointer;
-  position: absolute;
-}
-
-.container {
-  width: 100vw;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 900px) {
-  .container {
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-}
-
-/*--------------
-NAVIGATION BAR
----------------*/
-
-.nav-bar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  position: absolute;
-  z-index: 500;
-}
-
-.menu-icon {
-  width: 30px;
-  cursor: pointer;
-  display: none;
-}
-
-nav {
-  flex: 1;
-  right: 30px;
-  position: relative;
-  text-align: right;
-  margin-top: 10px;
-  z-index: 400;
-}
-
-#current {
-  font-weight: bolder;
-}
-
-nav ul li {
-  list-style: none;
-  display: inline-block;
-  margin-right: 30px;
-}
-
-nav ul li a {
-  color: var(--logo-dark-blue);
-  font-size: 20px;
-}
-
-nav ul li a:hover {
-  color: var(--orange-strong);
-}
-
-#item-counter {
-  background-color: var(--orange-strong);
-  color: var(--white);
-  border-radius: 50%;
-  padding: 4px 8px;
-  font-size: 16px;
-  vertical-align: middle;
-}
-
-/*--------------------------
- Media queries for NAVBAR
- --------------------------*/
-@media screen and (max-width: 430px) {
-  .menu-icon {
-    position: relative;
-    right: 40px;
-  }
-
-  #menuList {
-    position: absolute;
-    overflow: hidden;
-    transition: 0.5s;
-    right: -60px;
-    top: 12px;
-    width: 100vw;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  .menu-icon {
-    position: relative;
-    right: 40px;
-  }
-
-  #menuList {
-    right: -60px;
-    top: 12px;
-    width: 100vw;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  #menuList {
-    right: -60px;
-    top: 12px;
-    width: 100vw;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  .menu-icon {
-    display: block;
-    position: relative;
-    right: 40px;
-  }
-
-  nav ul {
-    background: var(--light-blue);
-    position: absolute;
-    width: 100%;
-    height: 350px;
-    top: 78px;
-    right: 0;
-    z-index: 2;
-  }
-
-  nav ul li {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  nav ul li a {
-    color: var(--white);
-    font-size: 35px;
-  }
-
-  nav ul li a:hover {
-    color: var(--orange-strong);
-  }
-
-  #menuList {
-    overflow: hidden;
-    transition: 0.5s;
-    right: -60px;
-    top: 12px;
-    width: 100vw;
-  }
-
-  #current {
-    font-weight: bolder;
-    color: var(--logo-dark-blue);
-  }
-}
-
-@media screen and (min-width: 1480px) {
-  nav ul li .rightNavElement {
-    margin-right: 60px;
-  }
-}
-
-/*----------------------------
-FOOTER
------------------------------*/
-footer {
-  position: relative;
-  display: grid;
-  margin-top: 10%;
-  margin-bottom: 1%;
-  width: 100%;
-  height: 100px;
-  background-color: var(--light-blue-box);
-}
-
-.footerRow {
-  position: relative;
-  margin-top: 40px;
-  justify-self: center;
-}
-
-.copyright-text {
-  font-weight: medium;
-}
-
-@media screen and (max-width: 900px) {
-  footer {
-    margin-top: 100px;
-    margin-bottom: 5px;
-    width: 100%;
-    height: 100px;
-  }
-
-  .footerRow {
-    position: relative;
-    margin-left: 20px;
-    margin-top: 40px;
-  }
-
-  .copyright-text {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  .footerRow {
-    position: relative;
-    margin-left: 20px;
-    margin-top: 40px;
-  }
-
-  .copyright-text {
-    font-size: 12px;
-  }
 }

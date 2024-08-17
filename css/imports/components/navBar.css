@@ -1,0 +1,146 @@
+/*--------------
+NAVIGATION BAR
+---------------*/
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 500;
+}
+
+.menu-icon {
+  width: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+nav {
+  flex: 1;
+  right: 30px;
+  position: relative;
+  text-align: right;
+  margin-top: 10px;
+  z-index: 400;
+}
+
+#current {
+  font-weight: bolder;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  color: var(--logo-dark-blue);
+  font-size: 20px;
+}
+
+nav ul li a:hover {
+  color: var(--orange-strong);
+}
+
+#item-counter {
+  background-color: var(--orange-strong);
+  color: var(--white);
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+/*--------------------------
+ Media queries for NAVBAR
+ --------------------------*/
+@media screen and (max-width: 430px) {
+  .menu-icon {
+    position: relative;
+    right: 40px;
+  }
+
+  #menuList {
+    position: absolute;
+    overflow: hidden;
+    transition: 0.5s;
+    right: -60px;
+    top: 12px;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .menu-icon {
+    position: relative;
+    right: 40px;
+  }
+
+  #menuList {
+    right: -60px;
+    top: 12px;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #menuList {
+    right: -60px;
+    top: 12px;
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .menu-icon {
+    display: block;
+    position: relative;
+    right: 40px;
+  }
+
+  nav ul {
+    background: var(--light-blue);
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    top: 78px;
+    right: 0;
+    z-index: 2;
+  }
+
+  nav ul li {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    color: var(--white);
+    font-size: 35px;
+  }
+
+  nav ul li a:hover {
+    color: var(--orange-strong);
+  }
+
+  #menuList {
+    overflow: hidden;
+    transition: 0.5s;
+    right: -60px;
+    top: 12px;
+    width: 100vw;
+  }
+
+  #current {
+    font-weight: bolder;
+    color: var(--logo-dark-blue);
+  }
+}
+
+@media screen and (min-width: 1480px) {
+  nav ul li .rightNavElement {
+    margin-right: 60px;
+  }
+}

@@ -2,6 +2,10 @@
   display: grid;
 }
 
+.discount-price {
+  color: var(--discount-red);
+}
+
 #backArrow {
   cursor: pointer;
   position: absolute;

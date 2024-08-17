@@ -1,0 +1,10 @@
+.logInForm {
+  margin-top: 10%;
+  width: 100vw;
+  text-align: center;
+}
+
+#username,
+#password {
+  width: 300px;
+}

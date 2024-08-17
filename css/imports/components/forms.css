@@ -1,0 +1,112 @@
+.form-container {
+  border-radius: 10px;
+  border: 1px solid var(--light-blue);
+  background-color: var(--light-blue-box);
+  padding: 20px;
+  max-width: 1000px;
+  justify-self: center;
+  margin: 10%;
+}
+
+.paymentForm {
+  margin: 0;
+  margin-top: -10%;
+}
+
+.formTitle {
+  text-align: center;
+  color: var(--logo-dark-blue);
+  font-weight: lighter;
+}
+
+.contactPage-container {
+  display: grid;
+}
+
+.inquiry-container {
+  margin-top: 10%;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.inquiry-container p {
+  margin-top: 5%;
+}
+
+.radioBTN {
+  margin: 2%;
+}
+
+.promo-label {
+  margin-bottom: -2%;
+}
+
+#promoLabel {
+  color: var(--logo-dark-blue);
+}
+
+#promoCode {
+  max-width: 200px;
+}
+
+form p,
+.promo-label,
+.checkoutDetails h3 {
+  margin-top: 2%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid var(--light-blue);
+  background-color: var(--faded-hover-white);
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="date"]:hover,
+input[type="number"]:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--orange-strong);
+}
+
+label {
+  color: var(--light-blue);
+}
+
+form ::placeholder {
+  color: var(--light-blue);
+  text-align: center;
+}
+
+input[type="submit"] {
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  justify-content: center;
+  border: 1px solid var(--light-blue);
+  background-color: var(--bright-blue-strong);
+  color: var(--white);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  input[type="submit"]:hover {
+    background-color: var(--faded-hover-white);
+    color: var(--bright-blue-strong);
+  }
+}

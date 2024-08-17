@@ -36,20 +36,6 @@
   text-align: center;
 }
 
-.inputFields,
-.messageText {
-  text-align: center;
-}
-
-.contactForm {
-  margin-top: 50px;
-}
-
-.sendBTN {
-  margin-top: 10px;
-  text-align: center;
-}
-
 /*----------------
 Media queries
 --------------------------*/
@@ -133,16 +119,5 @@ Media queries
   .locationBox {
     margin-top: 10px;
     width: 145px;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="number"] {
-    width: 140px;
-  }
-
-  .messageText textarea {
-    width: 250px;
   }
 }

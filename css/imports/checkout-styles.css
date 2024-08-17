@@ -1,7 +1,3 @@
-/*-----------------------------------------
-Cart, checkout- and checkout success page
-------------------------------------------*/
-
 .logoCheckout .logo {
   margin-top: 10%;
   margin-left: 15%;
@@ -111,69 +107,6 @@ Cart, checkout- and checkout success page
   justify-content: center;
   font-size: 100%;
   display: grid;
-}
-
-.checkoutFields {
-  width: 82%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4%;
-}
-
-.checkoutForm {
-  margin-top: 1%;
-  margin-bottom: 4%;
-}
-
-#pick-up {
-  margin-top: 10px;
-}
-
-#pick-up,
-#post-office {
-  margin-right: 15px;
-}
-
-.promo-code {
-  width: 145px;
-  padding: 0;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-form p,
-.promo-label,
-.checkoutDetails h3 {
-  margin-top: 20px;
-}
-
-input.promo-code {
-  margin-top: -5px;
-  margin-bottom: 20px;
-}
-
-.checkoutFields input:hover,
-.paymentFields input:hover,
-.paymentFields select:hover,
-input#promoCode:hover {
-  border: 1px solid var(--orange-strong);
-}
-
-select,
-input[type="date"],
-.paymentFields {
-  width: 326px;
-}
-
-.paymentFields {
-  width: 40%;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-}
-
-#cardDetails {
-  width: 100%;
 }
 
 .checkoutBTN {
