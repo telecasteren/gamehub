@@ -1,7 +1,6 @@
 // ------------------------ TO DO:
-// EXTRAS:
-// - Home page: Style the overall design, title and description
+// - Home page: Only display 4 products from the API (random selection per session?)
 // - Profile page: mimic user login, form validation and account page
 // - Products page: Add a clear search input symbol beside the search bar, when the search field contains any value
-// - Fix double api call
+// - Fix return icon event listener
 // -----------------------------------------------------------------------------------------------------

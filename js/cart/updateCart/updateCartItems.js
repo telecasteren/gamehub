@@ -3,7 +3,7 @@ import { calculateTotalPrice } from "/js/cart/checkout/calculateTotalPrice.js";
 import { updateTotals } from "/js/cart/updateCart/updateTotals.js";
 import { displaySubtotal } from "/js/cart/checkout/displaySubtotal.js";
 import { mimicEmptyCart } from "/js/cart/checkout/mimicEmptyCart.js";
-import { getItemsInLocalStorage } from "/js/cart/storage/getItemsInLocalStorage.js";
+import { getItemsInLocalStorage } from "/js/utils/storage/getItemsInLocalStorage.js";
 
 // Incrementing/decrementing cart items + item counter equally:
 export function updateQuantity(productId, change) {

@@ -1,18 +1,18 @@
 /*------------
 IMPORT SHEETS ---------------------------*/
+@import "/css/imports/utils/variables.css";
+@import "/css/imports/utils//auth/messages.css";
+@import "/css/imports/utils/auth/login.css";
+@import "/css/imports/components/loader.css";
+@import "/css/imports/components/forms.css";
+@import "/css/imports/components/navBar.css";
+@import "/css/imports/components/footer.css";
 @import "/css/imports/index-styles.css";
 @import "/css/imports/product-list.css";
 @import "/css/imports/product.css";
 @import "/css/imports/about-styles.css";
 @import "/css/imports/checkout-styles.css";
 @import "/css/imports/contact-styles.css";
-@import "/css/imports/components/loader.css";
-@import "/css/imports/components/forms.css";
-@import "/css/imports/components/navBar.css";
-@import "/css/imports/components/footer.css";
-@import "/css/imports/utils/variables.css";
-@import "/css/imports/utils//auth/messages.css";
-@import "/css/imports/utils/auth/login.css";
 /*-----------------------------------------------*/
 
 /*---------------------- COMMON STYLES -----------------------*/

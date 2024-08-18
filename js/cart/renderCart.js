@@ -2,7 +2,7 @@ import { fetchGames } from "/js/api/productsApi.js";
 import { loadError } from "/js/utils/auth/messages.js";
 import { continueShoppingEvent } from "/js/script.js";
 import { renderCartProducts } from "./cartHtml.js";
-import { getItemsInLocalStorage } from "/js/cart/storage/getItemsInLocalStorage.js";
+import { getItemsInLocalStorage } from "/js/utils/storage/getItemsInLocalStorage.js";
 import { displaySubtotal } from "/js/cart/checkout/displaySubtotal.js";
 import { initItemCounter } from "/js/cart/updateCart/updateTotals.js";
 import { mimicEmptyCart } from "/js/cart/checkout/mimicEmptyCart.js";

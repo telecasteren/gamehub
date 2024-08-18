@@ -1,11 +1,8 @@
-import { fetchGames } from "/js/api/productsApi.js";
+import { alertMessage } from "/js/utils/auth/messages.js";
 import { UNKNOWN_KEY } from "/js/utils/general/constants.js";
 import { goToProduct } from "/js/script.js";
-import { displayContent } from "/js/homepage/indexHtml.js";
-import { alertMessage } from "/js/utils/auth/messages.js";
 
-// Adding event listener to the carousel product button:
-document.addEventListener("DOMContentLoaded", async () => {
+export function handleGetButton(products) {
   const getBtn = document.querySelector(".getBTN");
 
   if (!getBtn) {
@@ -15,12 +12,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const info = await fetchGames();
-    const products = info.data.length;
     let specificProductId;
 
-    if (products > 2) {
-      specificProductId = info.data[3].id;
+    if (products.length > 2) {
+      specificProductId = products[3].id;
 
       getBtn.addEventListener("click", () => {
         goToProduct(specificProductId);
@@ -29,16 +24,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       specificProductId = UNKNOWN_KEY;
       getBtn.addEventListener("click", () => {
         alertMessage(
-          `Error ocurred while loading product-id: ${specificProductId}`,
+          `Error occurred while loading product-id: ${specificProductId}`,
           "error"
         );
         getBtn.textContent = `Button: bad request`;
       });
     }
   } catch (error) {
-    console.log("Error ocurred: ", error);
-    alertMessage("Error ocurred: ", error, "error");
+    console.log("Error occurred: ", error);
+    alertMessage("Error occurred: ", error, "error");
   }
-
-  displayContent();
-});
+}

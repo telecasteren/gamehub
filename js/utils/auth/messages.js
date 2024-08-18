@@ -20,7 +20,7 @@ export function noResultMessage() {
   }
 }
 
-// Alert message component:
+// Alert message - popup component:
 export function alertMessage(text, type = "info") {
   const alertMessage = document.createElement("div");
   alertMessage.classList.add("alert-message", "alert", `alert-${type}`);

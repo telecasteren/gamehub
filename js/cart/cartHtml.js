@@ -1,6 +1,7 @@
 import { displaySubtotal } from "/js/cart/checkout/displaySubtotal.js";
-import { getItemsInLocalStorage } from "/js/cart/storage/getItemsInLocalStorage.js";
+import { getItemsInLocalStorage } from "/js/utils/storage/getItemsInLocalStorage.js";
 import { updateQuantity } from "/js/cart/updateCart/updateCartItems.js";
+import { loadError } from "/js/utils/auth/messages.js";
 import {
   INCREASE_ICON_IMG,
   DECREASE_ICON_IMG,
@@ -24,8 +25,14 @@ export function renderCartProducts() {
         const prodId = product.id || PRODUCT_NOT_FOUND;
         const prodTitle = product.title || `ProductID: ${prodId}`;
         const prodQuantity = product.quantity;
-        const prodIMG = product.image.url || NO_IMAGE_FOUND_IMG;
-        const prodAlt = product.image.alt || `Game cover for ${prodTitle}`;
+        const prodIMG =
+          product.image && product.image.url
+            ? product.image.url
+            : NO_IMAGE_FOUND_IMG;
+        const prodAlt =
+          product.image && product.image.alt
+            ? product.image.alt
+            : `Game cover for ${prodTitle}`;
         let prodPrice = product.price || PRICE_NOT_FOUND;
         const discountPrice = product.discountedPrice || `${prodPrice}`;
         const priceClass = product.onSale ? "discount-price" : "";

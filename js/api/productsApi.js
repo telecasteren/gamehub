@@ -1,11 +1,9 @@
-const wrapper = document.querySelector(".product-wrapper");
-const url = "https://v2.api.noroff.dev/gamehub";
-const proxy = "https://noroffcors.onrender.com/";
-const gameUrl = proxy + url;
+import { wrapper, gameUrl } from "/js/utils/general/constants.js";
 
-export async function fetchGames() {
+export async function fetchGames(id) {
   try {
-    const response = await fetch(gameUrl);
+    const url = id ? `${gameUrl}/${id}` : `${gameUrl}`;
+    const response = await fetch(url);
     const info = await response.json();
 
     return info;
@@ -15,4 +13,3 @@ export async function fetchGames() {
     throw error;
   }
 }
-fetchGames();

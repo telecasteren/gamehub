@@ -1,5 +1,7 @@
-import { fetchGames } from "/js/api/productsApi.js";
 import { goToProduct } from "/js/script.js";
+import { fetchGames } from "/js/api/productsApi.js";
+import { homeContainer } from "/js/utils/general/constants.js";
+import { handleGetButton } from "/js/homepage/getButton/handleButtonLogic.js";
 
 // Creating the html:
 export async function displayContent() {
@@ -7,8 +9,6 @@ export async function displayContent() {
     const info = await fetchGames();
 
     if (info && Array.isArray(info.data)) {
-      const homeContainer = document.querySelector(".home-container");
-
       homeContainer.innerHTML = "";
 
       info.data.forEach((product) => {
@@ -49,6 +49,8 @@ export async function displayContent() {
         column.appendChild(backgroundBox);
         homeContainer.appendChild(column);
       });
+
+      handleGetButton(info.data);
     } else {
       const homeContainer = document.querySelector(".home-container");
       homeContainer.innerHTML = `<div class="error">An error occurred when loading the content..</div>`;

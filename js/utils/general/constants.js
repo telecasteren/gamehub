@@ -1,4 +1,8 @@
-// ACTIVE:
+// API call
+export const wrapper = document.querySelector(".product-wrapper");
+const url = "https://v2.api.noroff.dev/gamehub";
+const proxy = "https://noroffcors.onrender.com/";
+export const gameUrl = proxy + url;
 
 // Storage
 export const SEARCH_KEY = "search";
@@ -7,8 +11,11 @@ export const ITEM_COUNT_KEY = "itemCounter";
 export const PREVIOUS_PAGE_KEY = "previousPage";
 export const ORDER_CONFIRMED_KEY = "orderConfirmed";
 
-// Cart
+// Containers
 export const cartContainer = document.querySelector(".cart-section");
+export const cartWindow = document.getElementById("cartWindow-box");
+export const imageContainer = document.querySelector(".prodImg-container");
+export const homeContainer = document.querySelector(".home-container");
 
 // General
 export const UNKNOWN_KEY = "Unknown";
