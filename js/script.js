@@ -1,15 +1,21 @@
+import { initCarouselSlider } from "/js/utils/components/carousel.js";
+import { togglemenu } from "/js/utils/components/navbar/menuList.js";
 import { updateCartCounter } from "/js/cart/updateCart/updateCartCounter.js";
 import { saveCurrentPage } from "/js/utils/storage/saveCurrentPage.js";
 import { loadPreviousPage } from "/js/utils/storage/loadPreviousPage.js";
 import { displayContent } from "/js/homepage/indexHtml.js";
-import { homeContainer } from "/js/utils/general/constants.js";
+import { homeContainer, carousel } from "/js/utils/general/constants.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   updateCartCounter();
   saveCurrentPage();
   loadPreviousPage();
   if (homeContainer) {
+    // Display landing page
     displayContent();
+  }
+  if (carousel) {
+    initCarouselSlider();
   }
 });
 
@@ -29,3 +35,6 @@ export function continueShoppingEvent() {
     allGames.addEventListener("click", goToGames);
   }
 }
+
+// Mobile menu
+togglemenu();

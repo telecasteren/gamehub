@@ -7,6 +7,7 @@ IMPORT SHEETS ---------------------------*/
 @import "/css/imports/components/forms.css";
 @import "/css/imports/components/navBar.css";
 @import "/css/imports/components/footer.css";
+@import "/css/imports/components/carousel.css";
 @import "/css/imports/index-styles.css";
 @import "/css/imports/product-list.css";
 @import "/css/imports/product.css";
