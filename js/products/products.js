@@ -1,54 +1,38 @@
 import { fetchGames } from "/js/api/productsApi.js";
 import { goToProduct } from "/js/script.js";
-import { SEARCH_KEY } from "/js/utils/general/constants.js";
-import { setSearchListeners } from "/js/utils/components/search/searchProducts.js";
-import { noResultMessage } from "/js/utils/auth/messages.js";
-
-const wrapper = document.querySelector(".product-wrapper");
+import { gamesHTML } from "/js/utils/components/search/filterProducts.js";
+import { setSearchListeners } from "/js/utils/components/search/searchListeners.js";
+import { UNKNOWN_KEY, wrapper } from "/js/utils/general/constants.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   fetchGamesAPI();
 });
 
-async function fetchGamesAPI() {
+export async function fetchGamesAPI() {
   try {
     const info = await fetchGames();
     const allGames = info.data;
 
-    gamesHTML(allGames);
     setSearchListeners(info);
+    gamesHTML(allGames);
   } catch (error) {
     console.error("Error occurred: ", error);
     wrapper.innerHTML = `<div class="error">An error occurred when loading the products..</div>`;
   }
 }
 
-export function gamesHTML(games) {
-  wrapper.innerHTML = "";
-
-  try {
-    const searchTerm = localStorage.getItem(SEARCH_KEY) || "";
-    const filteredProducts = games.filter((game) =>
-      game.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-
-    if (filteredProducts.length) {
-      filteredProducts.forEach((game) => renderProduct(game));
-    } else {
-      noResultMessage();
-    }
-  } catch (error) {
-    console.error("Error occurred: ", error);
-    wrapper.innerHTML = `<div class="error">An error occurred when loading products..</div>`;
-  }
-}
-
 export function renderProduct(game) {
   try {
-    const gameID = game.id;
+    const gameID = game.id || UNKNOWN_KEY;
     const gameTitle = game.title || `Product Id: ${gameID}`;
-    const gameAlt = game.image.alt || `Game cover for ${gameTitle}`;
-    const gameImg = game.image.url || `../images/no_image_found.jpg`;
+    const gameAlt =
+      game.image && game.image.alt
+        ? game.image.alt
+        : `Game cover for ${gameTitle}`;
+    const gameImg =
+      game.image && game.image.url
+        ? game.image.url
+        : `../images/no_image_found.jpg`;
 
     const prodDiv = document.createElement("div");
     const imgElement = document.createElement("img");
