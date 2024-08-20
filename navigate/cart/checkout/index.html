@@ -145,16 +145,18 @@
           </form>
         </div>
 
-        <div class="paymentForm">
-          <div class="form-container">
+        <div class="form-container">
+          <div class="paymentForm">
             <form>
               <h2 class="formTitle">payment details</h2>
+              <label for="payment">Card provider</label>
               <select name="payment" id="cardDetails">
                 <option value="option-one">Mastercard</option>
                 <option value="option-two">Visa Debit</option>
                 <option value="option-three">American Express</option>
               </select>
 
+              <label for="date">Expiration date</label>
               <input type="date" name="date" id="cardDetails" required />
               <br />
               <input
@@ -163,6 +165,7 @@
                 placeholder="cardnumber *"
                 required
               />
+              <label for="number">CVC code</label>
               <input
                 type="number"
                 name="number"
