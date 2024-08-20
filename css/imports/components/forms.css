@@ -57,6 +57,7 @@ form p,
 }
 
 input[type="text"],
+input[type="password"],
 input[type="email"],
 input[type="tel"],
 input[type="date"],
@@ -90,7 +91,6 @@ label {
 
 form ::placeholder {
   color: var(--light-blue);
-  text-align: center;
 }
 
 input[type="submit"] {

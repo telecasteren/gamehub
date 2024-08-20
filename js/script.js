@@ -5,6 +5,10 @@ import { saveCurrentPage } from "/js/utils/storage/saveCurrentPage.js";
 import { loadPreviousPage } from "/js/utils/storage/loadPreviousPage.js";
 import { displayContent } from "/js/homepage/indexHtml.js";
 import { homeContainer, carousel } from "/js/utils/general/constants.js";
+import {
+  updateHelpTextEvents,
+  displayHelpTextOnProfile,
+} from "/js/utils/components/profile/popUpText.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   updateCartCounter();
@@ -16,6 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   if (carousel) {
     initCarouselSlider();
+  }
+
+  // help text for certain actions when user is not logged in
+  if (window.location.pathname.includes("/contact/")) {
+    updateHelpTextEvents();
+  } else if (window.location.pathname.includes("/profile/")) {
+    displayHelpTextOnProfile();
   }
 });
 

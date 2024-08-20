@@ -31,6 +31,15 @@
   color: var(--light-blue);
 }
 
+#accountsText:hover,
+#communityText:hover,
+#discountsText:hover,
+#locationText:hover {
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
 .locationIcon {
   margin-top: 5px;
   text-align: center;
