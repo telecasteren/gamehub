@@ -24,6 +24,8 @@ export async function fetchGamesAPI() {
 export function renderProduct(game) {
   try {
     const gameID = game.id || UNKNOWN_KEY;
+    const price = game.price || PRICE_NOT_FOUND;
+    const discountPrice = game.discountedPrice || `${price}`;
     const gameTitle = game.title || `Product Id: ${gameID}`;
     const gameAlt =
       game.image && game.image.alt
@@ -35,16 +37,34 @@ export function renderProduct(game) {
         : `../images/no_image_found.jpg`;
 
     const prodDiv = document.createElement("div");
-    const imgElement = document.createElement("img");
+    prodDiv.classList.add("product-container");
 
+    const imgElement = document.createElement("img");
     imgElement.classList.add("products");
     imgElement.src = gameImg;
     imgElement.alt = gameAlt;
 
+    const overlayDiv = document.createElement("div");
+    overlayDiv.classList.add("overlay");
+
+    const textDiv = document.createElement("div");
+    textDiv.classList.add("overlayText");
+    textDiv.innerHTML = `
+    ${gameTitle}<br>
+    Price: ${price}`;
+
+    if (game.onSale) {
+      textDiv.innerHTML = `
+    ${gameTitle}<br>
+    Now only: ${discountPrice}`;
+    }
+
+    overlayDiv.appendChild(textDiv);
     prodDiv.appendChild(imgElement);
+    prodDiv.appendChild(overlayDiv);
     wrapper.appendChild(prodDiv);
 
-    imgElement.addEventListener("click", () => {
+    overlayDiv.addEventListener("click", () => {
       goToProduct(gameID);
     });
   } catch (error) {

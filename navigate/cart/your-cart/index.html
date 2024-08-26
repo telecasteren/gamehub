@@ -31,32 +31,39 @@
     <script type="module" src="/js/cart/renderCart.js"></script>
   </head>
   <body>
-    <div class="topLine"><hr /></div>
+    <div class="topMenu-mobileView">
+      <div class="nav-bar">
+        <nav>
+          <ul id="menuList">
+            <li><a href="/">home</a></li>
+            <li><a href="/navigate/products/product-list/">games</a></li>
+            <li><a href="/navigate/about/">about</a></li>
+            <li><a href="/navigate/contact/">contact</a></li>
+            <li><a href="/navigate/profile/">profile</a></li>
+            <li>
+              <a
+                class="rightNavElement"
+                id="current"
+                href="/navigate/cart/your-cart/"
+                >your cart <span id="item-counter">0</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <img
+          src="/images/menu-icon.png"
+          class="menu-icon"
+          alt="menu icon"
+          id="menuIcon"
+        />
+      </div>
 
-    <div class="nav-bar">
-      <nav>
-        <ul id="menuList">
-          <li><a href="/">home</a></li>
-          <li><a href="/navigate/products/product-list/">games</a></li>
-          <li><a href="/navigate/about/">about</a></li>
-          <li><a href="/navigate/contact/">contact</a></li>
-          <li><a href="/navigate/profile/">profile</a></li>
-          <li>
-            <a
-              class="rightNavElement"
-              id="current"
-              href="/navigate/cart/your-cart/"
-              >your cart <span id="item-counter">0</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <img
-        src="/images/menu-icon.png"
-        class="menu-icon"
-        alt="menu icon"
-        id="menuIcon"
-      />
+      <a href="/">
+        <img
+          src="/images/GameHub-top-logo.svg"
+          class="logo"
+          alt="GameHub main logo"
+      /></a>
     </div>
 
     <div id="backArrow">
@@ -65,14 +72,6 @@
       </a>
     </div>
 
-    <div class="logoCheckout">
-      <a href="/">
-        <img
-          src="/images/GameHub-top-logo.svg"
-          class="logo"
-          alt="GameHub main logo"
-      /></a>
-    </div>
     <div class="loggedInUser-info">
       <p class="userInfoMember">you are member nr: #666</p>
       <p class="userInfoMail">wolly.winka@mail.com</p>
@@ -112,6 +111,5 @@
         </p>
       </div>
     </footer>
-    <div class="bottomLine"><hr /></div>
   </body>
 </html>

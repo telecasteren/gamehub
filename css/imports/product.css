@@ -4,21 +4,15 @@
 
 .discount-price {
   color: var(--discount-red);
-}
-
-#backArrow {
-  cursor: pointer;
-  position: absolute;
-  margin-left: 6%;
-  margin-top: 5%;
+  font-weight: bold;
 }
 
 .productIMG {
-  width: 80%;
+  width: 60%;
   height: auto;
-  margin-top: -5%;
   margin-left: 5%;
   position: relative;
+  border-radius: 10px;
 }
 
 .cartWindow {
@@ -28,38 +22,42 @@
   height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
 }
 
 #cartWindow-box {
   display: grid;
-  margin-left: 22%;
-  width: 65%;
-  max-height: 480px;
-  min-height: 200px;
-  height: 70%;
+  margin-top: 12%;
+  justify-self: center;
+  width: fit-content;
+  height: auto;
+  max-height: 420px;
+  padding: 10%;
   border-radius: 10px;
   background-color: var(--bright-blue-soft);
 }
 
 .title {
-  margin-top: 10%;
+  margin-top: 5%;
+  display: grid;
 }
 
 .title p {
-  font-size: 260%;
-  font-family: cursive, Arial, Helvetica, sans-serif;
-  font-style: italic;
+  color: var(--white);
+  font-size: 320%;
+  font-family: "Thunder", sans-serif;
+  letter-spacing: 3px;
 }
 
 .tagline {
-  font-size: 25px;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--white);
 }
 
-.title p,
 .tagline p {
-  text-align: center;
-  padding-bottom: 10px;
+  margin-top: 5%;
+  justify-self: center;
   color: var(--white);
 }
 
@@ -69,14 +67,15 @@
   color: var(--bright-blue-soft);
   border-style: solid;
   border-radius: 24px;
+  text-align: center;
   font-size: 20px;
   font-weight: 700;
   padding: 15px 15px;
   max-width: 180px;
-  cursor: pointer;
-  text-align: center;
   height: min-content;
+  margin-top: 5%;
   justify-self: center;
+  cursor: pointer;
 }
 
 .addToCartBTN a {
@@ -145,12 +144,18 @@
 }
 
 @media screen and (max-width: 1000px) {
+  #cartWindow-box {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
   #backArrow {
     display: none;
   }
 
   .tagline p {
     font-size: 18px;
+    margin: 10px;
   }
 
   .productText {
@@ -166,10 +171,6 @@
 }
 
 @media screen and (max-width: 770px) {
-  .cartWindow {
-    margin-top: 20%;
-  }
-
   .title p {
     font-size: 30px;
   }
@@ -180,15 +181,9 @@
     grid-template-columns: auto;
   }
 
-  #cartWindow-box {
-    margin-left: 18vw;
-  }
-
   .productIMG {
-    width: 60%;
     height: auto;
     margin-top: 5%;
-    margin-left: 0;
     margin-left: 20vw;
   }
 
@@ -196,5 +191,11 @@
   .productText {
     justify-self: center;
     margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 655px) {
+  #cartWindow-box {
+    margin-left: 25%;
   }
 }

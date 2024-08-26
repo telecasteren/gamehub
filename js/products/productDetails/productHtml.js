@@ -31,17 +31,33 @@ export function gameDetails(product) {
 
       const gameTag = document.createElement("div");
       gameTag.classList.add("tagline");
-      gameTag.innerHTML = `<p>
-            Ages: ${ageRate}</br>
-            Genre: ${genre}</br>
-            Price: $${price}</p>`;
+
+      const p = document.createElement("p");
+      p.classList.add("tagline");
+
+      const agesText = document.createTextNode(`Ages: ${ageRate}`);
+      p.appendChild(agesText);
+      p.appendChild(document.createElement("br"));
+
+      const genreText = document.createTextNode(`Genre: ${genre}`);
+      p.appendChild(genreText);
+      p.appendChild(document.createElement("br"));
+
+      const priceText = document.createTextNode(`Price: ${price}`);
+      p.appendChild(priceText);
 
       if (product.onSale) {
-        gameTag.innerHTML = `<p>
-            Ages: ${ageRate}</br>
-            Genre: ${genre}</br>
-            Price: $${price}</br><b>Now only: <span class="discount-price">${discountPrice}</span></b></p>`;
+        p.appendChild(document.createElement("br"));
+
+        const discountText = document.createTextNode("Now only: ");
+        p.appendChild(discountText);
+
+        const discountSpan = document.createElement("span");
+        discountSpan.classList.add("discount-price");
+        discountSpan.textContent = `${discountPrice}`;
+        p.appendChild(discountSpan);
       }
+      gameTag.appendChild(p);
 
       textContainer.innerHTML = `<p>About:</br>${gameText}</br></br>Release year: ${releaseDate}</p>`;
 

@@ -70,6 +70,7 @@ Home page styles
   height: 20%;
   margin-bottom: 30%;
   z-index: -100;
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {

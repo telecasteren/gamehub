@@ -4,7 +4,7 @@ import { PREVIOUS_PAGE_KEY } from "/js/utils/general/constants.js";
 export function loadPreviousPage() {
   document.addEventListener("DOMContentLoaded", () => {
     let previousPage = localStorage.getItem(PREVIOUS_PAGE_KEY);
-    const arrowCursor = document.querySelector("#backArrow");
+    const arrowCursor = document.querySelector("#backArrow img");
 
     if (arrowCursor) {
       document.querySelector("#backArrow").addEventListener("click", () => {

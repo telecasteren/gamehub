@@ -10,6 +10,10 @@
   display: grid;
 }
 
+.contactForm-container {
+  justify-self: center;
+}
+
 .paymentForm {
   margin: 0;
 }
@@ -77,13 +81,14 @@ textarea {
 }
 
 input[type="text"]:hover,
+input[type="password"]:hover,
 input[type="email"]:hover,
 input[type="tel"]:hover,
 input[type="date"]:hover,
 input[type="number"]:hover,
 select:hover,
 textarea:hover {
-  border-color: var(--orange-strong);
+  border-color: var(--dark-hover-green);
 }
 
 label {

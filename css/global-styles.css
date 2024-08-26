@@ -21,9 +21,9 @@ IMPORT SHEETS ---------------------------*/
 * {
   margin: 0;
   padding: 0;
-  font-weight: medium;
   text-decoration: none;
   color: var(--logo-dark-blue);
+  font-weight: medium;
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -35,17 +35,34 @@ body {
 }
 
 .logo {
-  margin-top: 1%;
   margin-left: 5%;
-  width: 160px;
+  width: 120px;
   cursor: pointer;
   position: absolute;
+}
+
+#backArrow {
+  cursor: pointer;
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+
+#backArrow img {
+  width: 80%;
+  height: auto;
+}
+
+@media screen and (max-width: 1000px) {
+  #backArrow {
+    display: none;
+  }
 }
 
 /* Page title for pages: About, Contact, Profile  */
 .page-title {
   padding: 50px;
-  margin-top: 90px;
+  margin-top: 75px;
   background-color: var(--bright-blue-soft);
 }
 
@@ -57,42 +74,19 @@ body {
 
 .page-title h1 {
   color: var(--white);
-  font-size: 50px;
   text-align: center;
-  font-weight: normal;
-  font-style: italic;
+
+  font-size: 65px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  font-family: "Thunder", sans-serif;
 }
 
 /*- Separation lines -*/
-
-.topLine {
-  width: auto;
-  padding: 10px;
-}
-
-@media screen and (max-width: 770) {
-  .topLine {
-    padding: 10px;
-    width: 920px;
-  }
-}
-
-@media screen and (max-width: 430) {
-  .topLine {
-    padding: 10px;
-    width: 960px;
-  }
-}
 
 .middleLine {
   margin-left: 80px;
   margin-right: 80px;
   margin-bottom: 20px;
   margin-top: 20px;
-}
-
-.bottomLine {
-  padding: 5px 10px 10px 10px;
-  position: relative;
-  margin-top: 1%;
 }

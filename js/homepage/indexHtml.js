@@ -1,6 +1,7 @@
 import { goToProduct } from "/js/script.js";
 import { fetchGames } from "/js/api/productsApi.js";
 import { homeContainer } from "/js/utils/general/constants.js";
+import { loadError } from "/js/utils/auth/messages.js";
 import { handleGetButton } from "/js/homepage/getButton/handleButtonLogic.js";
 
 // Creating the html:
@@ -52,11 +53,10 @@ export async function displayContent() {
 
       handleGetButton(info.data);
     } else {
-      const homeContainer = document.querySelector(".home-container");
       homeContainer.innerHTML = `<div class="error">An error occurred when loading the content..</div>`;
     }
   } catch (error) {
-    console.log("Error occurred: ", error);
+    loadError("Error occurred while loading content");
     throw error;
   }
 }
