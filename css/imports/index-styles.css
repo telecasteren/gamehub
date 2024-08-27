@@ -8,23 +8,26 @@ Home page styles
   color: var(--white);
   border-style: solid;
   border-radius: 20px;
-  position: absolute;
-  margin-left: 40%;
   font-size: 20px;
   padding: 20px 30px;
   cursor: pointer;
-  z-index: 5;
-}
 
-.getBTN img {
-  width: 30px;
-  margin-top: 2px;
-  margin-left: 5px;
+  width: 280px;
+  position: relative;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, 0);
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
 }
 
 .getBTN:hover {
+  transform: translate(-50%, 0) scale(1.04);
   border-color: var(--bright-hover-blue);
   background-color: var(--bright-hover-blue);
+}
+
+@media screen and (max-width: 1000px) {
 }
 
 .home-container {
@@ -73,17 +76,7 @@ Home page styles
   cursor: pointer;
 }
 
-@media (max-width: 900px) {
-  .getBTN {
-    margin-left: 35%;
-  }
-}
-
 @media (max-width: 770px) {
-  .getBTN img {
-    display: none;
-  }
-
   .home-container {
     grid-template-columns: 1fr;
   }
@@ -91,7 +84,7 @@ Home page styles
 
 @media (max-width: 500px) {
   .getBTN {
-    margin-left: 20%;
+    width: 240px;
   }
 
   .titleH2 {

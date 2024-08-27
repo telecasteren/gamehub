@@ -1,4 +1,4 @@
-import { initCarouselSlider } from "/js/utils/components/carousel.js";
+import { initCarouselSlider } from "/js/utils/components/carousel/carousel.js";
 import { togglemenu } from "/js/utils/components/navbar/menuList.js";
 import { updateCartCounter } from "/js/cart/updateCart/updateCartCounter.js";
 import { saveCurrentPage } from "/js/utils/storage/saveCurrentPage.js";

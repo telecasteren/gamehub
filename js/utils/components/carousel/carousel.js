@@ -1,5 +1,6 @@
-import { fetchGames } from "../../api/productsApi.js";
+import { fetchGames } from "/js/api/productsApi.js";
 import { carousel, carouselImages } from "/js/utils/general/constants.js";
+import { goToCarouselProduct } from "/js/utils/components/carousel/goToCarouselProduct.js";
 
 export async function initCarouselSlider() {
   const carouselWrapper = document.createElement("div");
@@ -28,9 +29,12 @@ export async function initCarouselSlider() {
     slide.appendChild(overlayDiv);
     slide.appendChild(img);
     carouselWrapper.appendChild(slide);
+
+    goToCarouselProduct(prodTitle, overlayDiv);
   });
   carousel.appendChild(carouselWrapper);
 
+  // Handle the slideshow here
   const slides = document.querySelectorAll(".carousel-slide");
   const totalSlides = slides.length;
   let currentIndex = 0;
@@ -41,10 +45,7 @@ export async function initCarouselSlider() {
     carouselWrapper.style.transform = `translateX(${offset}%)`;
   }
 
-  // carouselWrapper.style.width = `${totalSlides * 100}%`;
-  // carouselWrapper.style.transition = "transform 1s ease-in-out";
   slides.forEach((slide) => (slide.style.flex = "0 0 100%"));
-
   carouselWrapper.style.transform = `translateX(0%)`;
 
   setInterval(nextSlide, 5000);
