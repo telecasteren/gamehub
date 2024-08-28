@@ -2,6 +2,4 @@
 // - Home page: Only display 4 products from the API (random selection per session?)
 // - Profile page: mimic user login, form validation and account page
 // - See Notions list
-// - BUGS:
-// - loadPreviousPage event listener does not work
 // -----------------------------------------------------------------------------------------------------
