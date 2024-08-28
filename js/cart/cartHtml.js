@@ -2,6 +2,7 @@ import { displaySubtotal } from "/js/cart/checkout/displaySubtotal.js";
 import { getItemsInLocalStorage } from "/js/utils/storage/getItemsInLocalStorage.js";
 import { updateQuantity } from "/js/cart/updateCart/updateCartItems.js";
 import { loadError } from "/js/utils/auth/messages.js";
+import { goToProduct } from "/js/script.js";
 import {
   INCREASE_ICON_IMG,
   DECREASE_ICON_IMG,
@@ -54,6 +55,10 @@ export function renderCartProducts() {
         cartImage.alt = `${prodAlt}`;
         cartImage.src = `${prodIMG}`;
         cartImage.classList.add("cart-image");
+
+        cartImage.addEventListener("click", () => {
+          goToProduct(prodId);
+        });
 
         const counterIconDivIncrease = document.createElement("div");
         counterIconDivIncrease.classList.add("counter-icon-div");

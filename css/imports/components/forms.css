@@ -12,6 +12,7 @@
 
 .contactForm-container {
   justify-self: center;
+  margin: 10%;
 }
 
 .paymentForm {
@@ -39,24 +40,6 @@
   margin-top: 5%;
 }
 
-.radioBTN {
-  margin: 2%;
-}
-
-.promo-label {
-  margin-bottom: -2%;
-}
-
-#promoLabel {
-  color: var(--logo-dark-blue);
-}
-
-#promoCode {
-  max-width: 200px;
-}
-
-form p,
-.promo-label,
 .checkoutDetails h3 {
   margin-top: 2%;
 }
@@ -91,11 +74,14 @@ textarea:hover {
   border-color: var(--dark-hover-green);
 }
 
-label {
+label,
+input[type="date"]#cardDetails {
   color: var(--light-blue);
 }
 
-form ::placeholder {
+form ::placeholder,
+select:invalid,
+select#cardDetails {
   color: var(--light-blue);
 }
 

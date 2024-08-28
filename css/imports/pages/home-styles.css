@@ -18,7 +18,8 @@ Home page styles
   top: 40%;
   transform: translate(-50%, 0);
   transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out,
-    background-color 0.3s ease-in-out;
+    background-color 0.3s ease-in-out, width 0.3s ease-in-out,
+    font-size 0.3 ease-in-out;
 }
 
 .getBTN:hover {
@@ -27,7 +28,19 @@ Home page styles
   background-color: var(--bright-hover-blue);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
+  .getBTN {
+    width: 180px !important;
+    font-size: 12px;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.middleLine {
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .home-container {
@@ -83,10 +96,6 @@ Home page styles
 }
 
 @media (max-width: 500px) {
-  .getBTN {
-    width: 240px;
-  }
-
   .titleH2 {
     font-size: 120%;
   }

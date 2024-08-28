@@ -1,0 +1,21 @@
+#backArrow {
+  cursor: pointer;
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+
+#backArrow img {
+  width: 80%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+#backArrow img:hover {
+  transform: translate(-50%, 0) scale(1.04);
+}
+
+@media screen and (max-width: 1000px) {
+  #backArrow {
+    display: none;
+  }
+}

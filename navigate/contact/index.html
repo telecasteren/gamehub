@@ -104,42 +104,43 @@
               action="/navigate/contact/message-delivery/"
               class="contactForm"
             >
-              <label for="fname">Name</label>
+              <label hidden for="fname">Name</label>
               <input
                 type="text"
                 id="fname"
                 name="fullname"
-                placeholder="your name"
+                placeholder="Your name"
                 required
                 autocomplete="name"
               />
 
-              <label for="email">Email</label>
+              <label hidden for="email">Email</label>
               <input
                 type="email"
                 id="email"
                 name="email"
-                placeholder="your email address"
+                placeholder="Your email address"
                 autocomplete="email"
               />
 
-              <label for="inquiry">Subject</label>
+              <label hidden for="inquiry">Subject</label>
               <select id="inquiry" name="inquiry" required>
-                <option value="required">-</option>
+                <option value="" disabled selected hidden>Subject</option>
                 <option value="hello">Problems with login</option>
                 <option value="work">Returns</option>
                 <option value="other">Other</option>
               </select>
 
-              <label for="message">Message</label>
+              <label hidden for="message">Message</label>
               <textarea
                 id="message"
                 name="message"
-                placeholder="your message here.."
+                placeholder="Your message here.."
                 style="height: 200px"
                 required
               ></textarea>
 
+              <label hidden for="submit">Submit</label>
               <input id="contactFormSubmit" type="submit" value="Send" />
             </form>
           </div>

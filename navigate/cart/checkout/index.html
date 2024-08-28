@@ -78,101 +78,7 @@
     <main>
       <div class="alert-container"></div>
       <section class="checkout-page">
-        <h1 id="checkoutTitle">checkout</h1>
-
-        <div><hr /></div>
-
-        <div class="form-container">
-          <form action="">
-            <h2 class="formTitle">delivery details</h2>
-            <label for="fname">First name</label>
-            <input
-              type="text"
-              id="fname"
-              name="firstname"
-              placeholder="your first name"
-              required
-              autocomplete="given-name"
-            />
-
-            <label for="lname">Last name</label>
-            <input
-              type="text"
-              id="lname"
-              name="lastname"
-              placeholder="your last name"
-              required
-              autocomplete="family-name"
-            />
-
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="your email address"
-              autocomplete="email"
-            />
-
-            <label for="tel">Phone</label>
-            <input
-              type="tel"
-              name="phone"
-              placeholder="phone (optional)"
-              autocomplete="on"
-            />
-            <label for="address">Address</label>
-            <input
-              type="text"
-              class="deliveryAddress"
-              name="address"
-              placeholder="delivery address *"
-              required
-              autocomplete="on"
-            />
-
-            <label for="zipCode">Postal code</label>
-            <input
-              type="text"
-              class="zipCode"
-              name="zipCode"
-              placeholder="postal code *"
-              required
-              autocomplete="on"
-            />
-          </form>
-        </div>
-
-        <div class="form-container">
-          <div class="paymentForm">
-            <form>
-              <h2 class="formTitle">payment details</h2>
-              <label for="payment">Card provider</label>
-              <select name="payment" id="cardDetails">
-                <option value="option-one">Mastercard</option>
-                <option value="option-two">Visa Debit</option>
-                <option value="option-three">American Express</option>
-              </select>
-
-              <label for="date">Expiration date</label>
-              <input type="date" name="date" id="cardDetails" required />
-              <br />
-              <input
-                type="number"
-                name="number"
-                placeholder="cardnumber *"
-                required
-              />
-              <label for="number">CVC code</label>
-              <input
-                type="number"
-                name="number"
-                placeholder="cvc number *"
-                required
-              />
-            </form>
-          </div>
-        </div>
+        <h1 id="checkoutTitle">Checkout</h1>
 
         <div><hr /></div>
 
@@ -181,14 +87,114 @@
             <div class="cart-section">
               <div class="loader"></div>
             </div>
-            <h3>summary</h3>
-            <p id="subtotal">subtotal</p>
+
+            <h3>Summary</h3>
+            <p id="subtotal">Subtotal</p>
             <div id="subtotal-price"></div>
+
+            <div class="form-container">
+              <form action="">
+                <h2 class="formTitle">Delivery details</h2>
+
+                <label hidden for="fname">First name</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="your first name"
+                  required
+                  autocomplete="given-name"
+                />
+
+                <label hidden for="lname">Last name</label>
+                <input
+                  type="text"
+                  id="lname"
+                  name="lastname"
+                  placeholder="your last name"
+                  required
+                  autocomplete="family-name"
+                />
+
+                <label hidden for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your email address"
+                  autocomplete="email"
+                />
+
+                <label hidden for="tel">Phone</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="phone (optional)"
+                  autocomplete="on"
+                />
+                <label hidden for="address">Address</label>
+                <input
+                  type="text"
+                  class="deliveryAddress"
+                  name="address"
+                  placeholder="delivery address *"
+                  required
+                  autocomplete="on"
+                />
+
+                <label hidden for="zipCode">Postal code</label>
+                <input
+                  type="text"
+                  class="zipCode"
+                  name="zipCode"
+                  placeholder="postal code *"
+                  required
+                  autocomplete="on"
+                />
+              </form>
+            </div>
+
+            <div class="form-container">
+              <div class="paymentForm">
+                <form>
+                  <h2 class="formTitle">Payment details</h2>
+
+                  <label hidden for="payment">Card provider</label>
+                  <select name="payment" id="cardDetails">
+                    <option value="" disabled selected hidden>
+                      Choose card provider
+                    </option>
+                    <option value="option-one">Mastercard</option>
+                    <option value="option-two">Visa Debit</option>
+                    <option value="option-three">American Express</option>
+                  </select>
+
+                  <label hidden for="date">Expiration date</label>
+                  <input type="date" name="date" id="cardDetails" required />
+                  <br />
+                  <input
+                    type="number"
+                    name="number"
+                    placeholder="cardnumber *"
+                    required
+                  />
+                  <label hidden for="number">CVC code</label>
+                  <input
+                    type="number"
+                    name="number"
+                    placeholder="cvc number *"
+                    required
+                  />
+                </form>
+              </div>
+            </div>
           </div>
 
+          <div><hr /></div>
+
           <div class="delivery-method">
-            <p><b>delivery method</b></p>
-            <label for="pick-up">pick-up at store: FREE</label>
+            <p class="delivery-label"><b>Delivery method</b></p>
+            <label for="pick-up">Pick-up at store: FREE</label>
             <input
               type="radio"
               id="pick-up"
@@ -197,7 +203,7 @@
               class="radioBTN"
               data-price="0"
             />
-            <label for="post-office">post-office: $6.90</label>
+            <label for="post-office">Post-office: $6.90</label>
             <input
               type="radio"
               id="post-office"
@@ -206,7 +212,7 @@
               class="radioBTN"
               data-price="6.90"
             />
-            <label for="home-delivery">home-delivery $9.90</label>
+            <label for="home-delivery">Home-delivery $9.90</label>
             <input
               type="radio"
               id="home-delivery"
@@ -218,24 +224,24 @@
           </div>
 
           <div class="promo-label">
-            <b><label id="promoLabel" for="promoCode">promo-code:</label></b>
+            <b><label id="promoLabel" for="promoInput">Promo-code:</label></b>
           </div>
           <br />
           <input
             type="text"
-            id="promoCode"
-            name="promo-code"
-            class="promo-code"
+            id="promoInput"
+            name="promo-input"
+            class="promo-input"
           />
 
           <div class="totalSum">
-            <p class="total-price"><b>TOTAL incl.mva (VAT)</b></p>
+            <p class="total-price"><b>Total incl.mva (VAT)</b></p>
             <div id="total-price"></div>
           </div>
         </div>
 
-        <button class="checkoutBTN _placeOrder">PLACE ORDER</button>
-        <button class="checkoutBTN _allGames">continue shopping</button>
+        <button class="checkoutBTN _placeOrder">Place order</button>
+        <button class="checkoutBTN _allGames">Continue shopping</button>
       </section>
     </main>
 

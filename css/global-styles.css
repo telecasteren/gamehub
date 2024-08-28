@@ -1,19 +1,29 @@
 /*------------
 IMPORT SHEETS ---------------------------*/
+
+/* UTILS */
 @import "/css/imports/utils/variables.css";
 @import "/css/imports/utils//auth/messages.css";
 @import "/css/imports/utils/auth/login.css";
+
+/* COMPONENTS */
 @import "/css/imports/components/loader.css";
 @import "/css/imports/components/forms.css";
-@import "/css/imports/components/navBar.css";
-@import "/css/imports/components/footer.css";
+@import "/css/imports/components/staticUI/navBar.css";
+@import "/css/imports/components/staticUI/footer.css";
+@import "/css/imports/components/staticUI/backArrow.css";
+@import "/css/imports/components/staticUI/pageTitles.css";
 @import "/css/imports/components/carousel.css";
-@import "/css/imports/index-styles.css";
-@import "/css/imports/product-list.css";
-@import "/css/imports/product.css";
-@import "/css/imports/about-styles.css";
-@import "/css/imports/checkout-styles.css";
-@import "/css/imports/contact-styles.css";
+@import "/css/imports/components/checkoutSuccess.css";
+
+/* PAGES */
+@import "/css/imports/pages/home-styles.css";
+@import "/css/imports/pages/product-list.css";
+@import "/css/imports/pages/product.css";
+@import "/css/imports/pages/about-styles.css";
+@import "/css/imports/pages/checkout-styles.css";
+@import "/css/imports/pages/contact-styles.css";
+
 /*-----------------------------------------------*/
 
 /*---------------------- COMMON STYLES -----------------------*/
@@ -34,59 +44,18 @@ body {
   overflow-x: hidden;
 }
 
+hr {
+  margin-bottom: 2%;
+}
+
 .logo {
   margin-left: 5%;
   width: 120px;
   cursor: pointer;
   position: absolute;
+  transition: transform 0.3s ease-in-out;
 }
 
-#backArrow {
-  cursor: pointer;
-  position: absolute;
-  margin-left: 5%;
-  margin-top: 10%;
-}
-
-#backArrow img {
-  width: 80%;
-  height: auto;
-}
-
-@media screen and (max-width: 1000px) {
-  #backArrow {
-    display: none;
-  }
-}
-
-/* Page title for pages: About, Contact, Profile  */
-.page-title {
-  padding: 50px;
-  margin-top: 75px;
-  background-color: var(--bright-blue-soft);
-}
-
-@media screen and (max-width: 770px) {
-  .page-title {
-    margin-top: 50px;
-  }
-}
-
-.page-title h1 {
-  color: var(--white);
-  text-align: center;
-
-  font-size: 65px;
-  letter-spacing: 3px;
-  font-weight: 600;
-  font-family: "Thunder", sans-serif;
-}
-
-/*- Separation lines -*/
-
-.middleLine {
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+.logo:hover {
+  transform: translate(0, 0) scale(1.08);
 }

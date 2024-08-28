@@ -1,0 +1,26 @@
+/* For pages:
+About,
+Contact,
+Profile,  */
+
+.page-title {
+  padding: 50px;
+  margin-top: 75px;
+  background-color: var(--bright-blue-soft);
+}
+
+@media screen and (max-width: 770px) {
+  .page-title {
+    margin-top: 50px;
+  }
+}
+
+.page-title h1 {
+  color: var(--white);
+  text-align: center;
+
+  font-size: 65px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  font-family: "Thunder", sans-serif;
+}

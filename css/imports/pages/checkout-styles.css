@@ -1,6 +1,7 @@
 .loggedInUser-info {
   margin-top: 10%;
   margin-right: 15%;
+  display: none; /*------------------- WHAT DO WE DO WITH THE USER DETAILS? ---*/
 }
 
 .userInfoMember,
@@ -16,10 +17,7 @@
   text-decoration: underline;
 }
 
-.checkoutLineTop,
-.checkoutLineBottom {
-  width: 750px;
-}
+/*--------------------------------------*/
 
 #checkoutTitle {
   font-size: 200%;
@@ -30,6 +28,37 @@
   margin-top: 20px;
   margin-bottom: 10px;
   width: 25%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cart-image:hover {
+  opacity: 0.8;
+}
+
+.radioBTN {
+  margin: 2%;
+}
+
+#promoLabel,
+.promo-label,
+.delivery-label {
+  margin-bottom: -1%;
+  color: var(--logo-dark-blue);
+}
+
+.promo-label {
+  margin-top: 5%;
+}
+
+#promoInput {
+  cursor: pointer;
+  max-width: 200px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#promoInput:hover {
+  transform: translate(0, 0) scale(1.04);
 }
 
 #subtotal,
@@ -42,8 +71,9 @@
 
 #subtotal-price,
 #total-price {
-  margin-left: 90%;
-  margin-bottom: 1%;
+  margin-left: 30%;
+  margin-top: -2%;
+  margin-bottom: 5%;
   font-size: 130%;
 }
 
@@ -117,6 +147,7 @@
   transition: 0.3s;
   cursor: pointer;
   font-size: 120%;
+  transition: transform 0.3s ease-in-out;
 }
 
 .checkoutBTN a {
@@ -127,6 +158,7 @@
   color: var(--white);
   border-color: var(--bright-hover-blue);
   background-color: var(--bright-hover-blue);
+  transform: translate(0, 0) scale(1.04);
 }
 
 ._allGames {
@@ -156,39 +188,5 @@
 @media screen and (max-width: 650px) {
   .checkoutBTN {
     margin-left: 0;
-  }
-}
-
-/*--------------------------------------
- Checkout success page
- ---------------------------------------------*/
-.checkout-success {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 15%;
-}
-
-.checkout-success h2 {
-  margin-bottom: 2%;
-}
-
-#thanksH2 {
-  margin-top: 5%;
-}
-
-@media screen and (max-width: 1000px) {
-  .checkout-success {
-    margin-top: 25%;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .checkout-success p {
-    font-size: 12px;
-  }
-
-  .checkout-success h2 {
-    font-size: 20px;
   }
 }

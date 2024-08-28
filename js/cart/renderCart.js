@@ -3,12 +3,13 @@ import { loadError } from "/js/utils/auth/messages.js";
 import { continueShoppingEvent } from "/js/script.js";
 import { renderCartProducts } from "./cartHtml.js";
 import { getItemsInLocalStorage } from "/js/utils/storage/getItemsInLocalStorage.js";
+import { renderPurchase } from "/js/cart/checkout/renderPurchase.js";
 import { displaySubtotal } from "/js/cart/checkout/displaySubtotal.js";
 import { initItemCounter } from "/js/cart/updateCart/updateTotals.js";
 import { mimicEmptyCart } from "/js/cart/checkout/mimicEmptyCart.js";
 import { CART_KEY, ORDER_CONFIRMED_KEY } from "/js/utils/general/constants.js";
 import {
-  clearCartAfterOrderPlaced,
+  storeItemsAfterOrderPlaced,
   checkoutSuccess,
 } from "/js/cart/checkout/checkoutSuccess.js";
 
@@ -26,6 +27,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     localStorage.removeItem(CART_KEY);
     localStorage.removeItem(ORDER_CONFIRMED_KEY);
   }
+
+  // Render purchase on checkout success
+  renderPurchase();
 });
 
 // Fetching data from the API upon changes and update items in localStorage if needed:
@@ -48,5 +52,5 @@ async function updateCartWithAPI() {
   }
 }
 
-clearCartAfterOrderPlaced();
+storeItemsAfterOrderPlaced();
 checkoutSuccess();

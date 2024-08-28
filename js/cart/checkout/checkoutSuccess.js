@@ -1,29 +1,40 @@
-import { ORDER_CONFIRMED_KEY, CART_KEY } from "/js/utils/general/constants.js";
+import {
+  ORDER_CONFIRMED_KEY,
+  CART_KEY,
+  PURCHASED_ITEMS_KEY,
+} from "/js/utils/general/constants.js";
 import { alertMessage } from "/js/utils/auth/messages.js";
 import { updateCartCounter } from "/js/cart/updateCart/updateCartCounter.js";
+import { renderPurchase } from "/js/cart/checkout/renderPurchase.js";
 
-// Clear the cart upon checkout success
-export function clearCartAfterOrderPlaced() {
+export function storeItemsAfterOrderPlaced() {
   const placeOrderBtn = document.querySelector("._placeOrder");
 
   if (placeOrderBtn) {
     placeOrderBtn.addEventListener("click", () => {
+      const cartData = localStorage.getItem(CART_KEY);
+      sessionStorage.setItem(PURCHASED_ITEMS_KEY, cartData);
+
       sessionStorage.setItem(ORDER_CONFIRMED_KEY, "true");
       window.location.href = "/navigate/cart/checkout-success/";
     });
   }
 }
 
-// Order confirmed, remove cart items from sessionStorage
+// Order confirmed, remove items from localStorage and sessionStorage
 export function checkoutSuccess() {
   document.addEventListener("DOMContentLoaded", () => {
     const orderConfirmed = sessionStorage.getItem(ORDER_CONFIRMED_KEY);
     if (orderConfirmed === "true") {
       alertMessage("Order confirmed!");
-      sessionStorage.removeItem(ORDER_CONFIRMED_KEY);
 
+      renderPurchase();
+
+      sessionStorage.removeItem(ORDER_CONFIRMED_KEY);
       localStorage.removeItem(CART_KEY);
       updateCartCounter();
+
+      // sessionStorage.removeItem(PURCHASED_ITEMS_KEY); <--- This cannot happen here, because then the purchase does not display
     }
   });
 }

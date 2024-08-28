@@ -30,6 +30,7 @@ export const CART_KEY = "product by id";
 export const ITEM_COUNT_KEY = "item count";
 export const PREVIOUS_PAGE_KEY = "previous page";
 export const ORDER_CONFIRMED_KEY = "order confirmed";
+export const PURCHASED_ITEMS_KEY = "purchased items";
 export const SEARCH_KEY = "search";
 export const navigateAway = "navigated away";
 
@@ -45,4 +46,4 @@ export const DECREASE_ICON_IMG = `/images/remove-item.png`;
 
 // TO BE USED LATER:
 // export const USERS_KEY = "users";
-// export const PRODUCTS_KEY = "products";
+// export const FAVOURITES_KEY = "favourites";
