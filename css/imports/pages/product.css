@@ -90,7 +90,7 @@
   position: relative;
   margin-top: 5%;
   width: 100vw;
-  height: 550px;
+  height: fit-content;
 }
 
 #productBox1 {
@@ -98,14 +98,15 @@
   border: none;
   display: grid;
   width: 100vw;
-  height: 85%;
+  height: 80%;
+  padding: 5%;
 }
 
 .productText {
   margin-left: 15%;
   margin-right: 1%;
-  margin-top: 10%;
-  max-width: 800px;
+  margin-top: 2%;
+  max-width: 59%;
 }
 
 .productText p {
@@ -115,8 +116,9 @@
 }
 
 .productTextIcons {
+  position: relative;
   display: grid;
-  margin-top: -15%;
+  margin-top: -10%;
   width: max-content;
   margin-left: 73%;
 }
@@ -128,14 +130,15 @@
 .gamingIcons {
   width: 100vw;
   margin-left: 12%;
-  margin-top: 5%;
   margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 .gamingIcons img {
   position: relative;
   width: 80%;
   max-width: 100%;
+  height: auto;
 }
 
 .seperationLine {

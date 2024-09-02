@@ -14,7 +14,7 @@ IMPORT SHEETS ---------------------------*/
 @import "/css/imports/components/staticUI/backArrow.css";
 @import "/css/imports/components/staticUI/pageTitles.css";
 @import "/css/imports/components/carousel.css";
-@import "/css/imports/components/checkoutSuccess.css";
+@import "/css/imports/pages/checkoutSuccess.css";
 
 /* PAGES */
 @import "/css/imports/pages/home-styles.css";

@@ -1,4 +1,4 @@
-import { displaySubtotal } from "/js/cart/checkout/displaySubtotal.js";
+import { displaySubtotal } from "/js/cart/checkout/price/displaySubtotal.js";
 import { getItemsInLocalStorage } from "/js/utils/storage/getItemsInLocalStorage.js";
 import { updateQuantity } from "/js/cart/updateCart/updateCartItems.js";
 import { loadError } from "/js/utils/auth/messages.js";

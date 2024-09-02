@@ -5,7 +5,8 @@ import {
 } from "/js/utils/general/constants.js";
 import { alertMessage } from "/js/utils/auth/messages.js";
 import { updateCartCounter } from "/js/cart/updateCart/updateCartCounter.js";
-import { renderPurchase } from "/js/cart/checkout/renderPurchase.js";
+import { renderPurchase } from "/js/cart/checkout/success/renderPurchase.js";
+import { successMessage } from "/js/cart/checkout/success/successMessage.js";
 
 export function storeItemsAfterOrderPlaced() {
   const placeOrderBtn = document.querySelector("._placeOrder");
@@ -29,6 +30,7 @@ export function checkoutSuccess() {
       alertMessage("Order confirmed!");
 
       renderPurchase();
+      successMessage();
 
       sessionStorage.removeItem(ORDER_CONFIRMED_KEY);
       localStorage.removeItem(CART_KEY);

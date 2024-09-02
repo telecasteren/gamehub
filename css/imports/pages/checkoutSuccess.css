@@ -5,30 +5,6 @@
   margin-top: 15%;
 }
 
-.checkout-success h2 {
-  margin-bottom: 2%;
-}
-
-#thanksH2 {
-  margin-top: 5%;
-}
-
-@media screen and (max-width: 1000px) {
-  .checkout-success {
-    margin-top: 25%;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .checkout-success p {
-    font-size: 12px;
-  }
-
-  .checkout-success h2 {
-    font-size: 20px;
-  }
-}
-
 .success {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -43,4 +19,25 @@
   width: 25%;
   border-radius: 10px;
   margin-top: 5%;
+}
+
+#success-h2 {
+  margin-bottom: 5%;
+  font-size: 48px;
+}
+
+#thanksH3 {
+  margin-top: 5%;
+  font-size: 38px;
+}
+
+.successMessage {
+  margin-top: 2%;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 1000px) {
+  .checkout-success {
+    margin-top: 25%;
+  }
 }

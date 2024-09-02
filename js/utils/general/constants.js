@@ -44,6 +44,9 @@ export const DECREASE_ICON_ALT = `Icon for removing items`;
 export const INCREASE_ICON_IMG = `/images/add-item.png`;
 export const DECREASE_ICON_IMG = `/images/remove-item.png`;
 
+// User
+export const UserEmail = "UserEmail";
+
 // TO BE USED LATER:
 // export const USERS_KEY = "users";
 // export const FAVOURITES_KEY = "favourites";

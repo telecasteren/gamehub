@@ -3,15 +3,15 @@ import { loadError } from "/js/utils/auth/messages.js";
 import { continueShoppingEvent } from "/js/script.js";
 import { renderCartProducts } from "./cartHtml.js";
 import { getItemsInLocalStorage } from "/js/utils/storage/getItemsInLocalStorage.js";
-import { renderPurchase } from "/js/cart/checkout/renderPurchase.js";
-import { displaySubtotal } from "/js/cart/checkout/displaySubtotal.js";
+import { renderPurchase } from "/js/cart/checkout/success/renderPurchase.js";
+import { displaySubtotal } from "/js/cart/checkout/price/displaySubtotal.js";
 import { initItemCounter } from "/js/cart/updateCart/updateTotals.js";
 import { mimicEmptyCart } from "/js/cart/checkout/mimicEmptyCart.js";
 import { CART_KEY, ORDER_CONFIRMED_KEY } from "/js/utils/general/constants.js";
 import {
   storeItemsAfterOrderPlaced,
   checkoutSuccess,
-} from "/js/cart/checkout/checkoutSuccess.js";
+} from "/js/cart/checkout/success/checkoutSuccess.js";
 
 // Initialize cart page when DOM is fully loaded:
 document.addEventListener("DOMContentLoaded", async () => {

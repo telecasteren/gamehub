@@ -1,7 +1,7 @@
 import { CART_KEY, cartContainer } from "/js/utils/general/constants.js";
-import { calculateTotalPrice } from "/js/cart/checkout/calculateTotalPrice.js";
+import { calculateTotalPrice } from "/js/cart/checkout/price/calculateTotalPrice.js";
 import { updateTotals } from "/js/cart/updateCart/updateTotals.js";
-import { displaySubtotal } from "/js/cart/checkout/displaySubtotal.js";
+import { displaySubtotal } from "/js/cart/checkout/price/displaySubtotal.js";
 import { mimicEmptyCart } from "/js/cart/checkout/mimicEmptyCart.js";
 import { getItemsInLocalStorage } from "/js/utils/storage/getItemsInLocalStorage.js";
 
