@@ -7,16 +7,6 @@ export function loadError() {
   }
 }
 
-// export function loadError(message, targetElementSelector = "main") {
-//   const targetElement = document.querySelector(targetElementSelector);
-
-//   if (targetElement) {
-//     targetElement.innerHTML = `<div class="error">${message}</div>`;
-//   } else {
-//     console.error("Target element not found.");
-//   }
-// }
-
 // No result in search for products:
 export function noResultMessage() {
   const wrapper = document.querySelector(".product-wrapper");
