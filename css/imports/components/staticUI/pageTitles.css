@@ -6,7 +6,7 @@ Profile,  */
 .page-title {
   padding: 50px;
   margin-top: 75px;
-  background-color: var(--bright-blue-soft);
+  background-color: var(--blue-base);
 }
 
 @media screen and (max-width: 770px) {

@@ -69,7 +69,7 @@
 }
 
 .close-alert {
-  color: var(--orange-strong);
+  color: var(--dark-blue-base);
   margin-left: 1%;
   float: right;
   font-size: 42px;
@@ -78,5 +78,5 @@
 }
 
 .close-alert:hover {
-  color: var(--logo-dark-blue);
+  color: var(--bright-hover-blue-base);
 }

@@ -1,6 +1,6 @@
 .form-container {
   border-radius: 10px;
-  border: 1px solid var(--light-blue);
+  border: 1px solid var(--light-blue-base);
   background-color: var(--light-blue-box);
   padding: 20px;
   max-width: 1000px;
@@ -59,7 +59,7 @@ textarea {
   resize: vertical;
   box-sizing: border-box;
   border-radius: 10px;
-  border: 1px solid var(--light-blue);
+  border: 1px solid var(--light-blue-base);
   background-color: var(--faded-hover-white);
 }
 
@@ -71,18 +71,19 @@ input[type="date"]:hover,
 input[type="number"]:hover,
 select:hover,
 textarea:hover {
-  border-color: var(--dark-hover-green);
+  border-color: var(--bright-hover-blue-base);
+  cursor: pointer;
 }
 
 label,
 input[type="date"]#cardDetails {
-  color: var(--light-blue);
+  color: var(--light-blue-base);
 }
 
 form ::placeholder,
 select:invalid,
 select#cardDetails {
-  color: var(--light-blue);
+  color: var(--light-blue-base);
 }
 
 input[type="submit"] {
@@ -90,8 +91,8 @@ input[type="submit"] {
   padding: 10px;
   border-radius: 10px;
   justify-content: center;
-  border: 1px solid var(--light-blue);
-  background-color: var(--bright-blue-strong);
+  border: 1px solid var(--light-blue-base);
+  background-color: var(--light-blue-base);
   color: var(--white);
   cursor: pointer;
 }
@@ -99,6 +100,6 @@ input[type="submit"] {
 @media screen and (min-width: 1024px) {
   input[type="submit"]:hover {
     background-color: var(--faded-hover-white);
-    color: var(--bright-blue-strong);
+    color: var(--light-blue-base);
   }
 }

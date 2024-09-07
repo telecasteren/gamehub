@@ -32,8 +32,8 @@
 .buyBTN {
   position: relative;
   margin-right: 35px;
-  background-color: var(--bright-blue-soft);
-  border-color: var(--bright-blue-soft);
+  background-color: var(--light-blue-base);
+  border-color: var(--light-blue-base);
   color: var(--white);
 }
 
@@ -41,8 +41,8 @@
   position: relative;
   margin-right: 10px;
   background-color: var(--white);
-  border-color: var(--bright-blue-strong);
-  color: var(--bright-blue-soft);
+  border-color: var(--light-blue-base);
+  color: var(--light-blue-base);
 }
 
 .about-backgroundIMG img {
@@ -80,13 +80,13 @@ Media queries
 @media screen and (min-width: 1024px) {
   .buyBTN:hover {
     background-color: var(--white);
-    border-color: var(--bright-blue-strong);
-    color: var(--bright-blue-soft);
+    border-color: var(--light-blue-base);
+    color: var(--light-blue-base);
   }
 
   .sellBTN:hover {
-    background-color: var(--bright-blue-soft);
-    border-color: var(--bright-blue-soft);
+    background-color: var(--light-blue-base);
+    border-color: var(--light-blue-base);
     color: var(--white);
   }
 }

@@ -35,7 +35,7 @@
   height: 40px;
   border-radius: 8px;
   margin-top: 50px;
-  border: solid var(--bright-blue-strong);
+  border: solid var(--light-blue-base);
   background-color: var(--white);
   cursor: pointer;
 }
@@ -48,7 +48,7 @@
 input#searchGames:hover {
   transition: 0.5s;
   width: 300px;
-  border: 1px solid var(--dark-hover-green);
+  border: 1px solid var(--bright-hover-blue-base);
 }
 
 #gamingNav {
@@ -75,6 +75,7 @@ input#searchGames:hover {
 }
 
 .products {
+  border-radius: 10px;
   margin-top: 10%;
   width: 100%;
   height: 100%;
@@ -82,6 +83,7 @@ input#searchGames:hover {
 }
 
 .overlay {
+  border-radius: 10px;
   position: absolute;
   cursor: pointer;
   top: 0;

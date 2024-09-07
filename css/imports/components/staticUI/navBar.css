@@ -37,16 +37,18 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--logo-dark-blue);
+  color: var(--dark-blue-base);
   font-size: 16px;
 }
 
 nav ul li a:hover {
-  color: var(--orange-strong);
+  color: var(--bright-hover-blue-base);
 }
 
 #item-counter {
-  background-color: var(--orange-strong);
+  /* background-color: var(--orange-strong); */
+  background-color: var(--light-blue-base);
+
   color: var(--white);
   border-radius: 50%;
   padding: 4px 8px;

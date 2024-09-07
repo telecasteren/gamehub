@@ -3,7 +3,7 @@ import { togglemenu } from "/js/utils/components/navbar/menuList.js";
 import { updateCartCounter } from "/js/cart/updateCart/updateCartCounter.js";
 import { saveCurrentPage } from "/js/utils/storage/saveCurrentPage.js";
 import { loadPreviousPage } from "/js/utils/storage/loadPreviousPage.js";
-import { displayContent } from "/js/homepage/indexHtml.js";
+import { displayLandingContent } from "/js/homepage/displayContent.js";
 import { homeContainer, carousel } from "/js/utils/general/constants.js";
 import {
   updateHelpTextEvents,
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   loadPreviousPage();
   if (homeContainer) {
     // Display landing page
-    displayContent();
+    displayLandingContent();
   }
   if (carousel) {
     initCarouselSlider();

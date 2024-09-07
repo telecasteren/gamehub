@@ -5,12 +5,16 @@
   position: relative;
 }
 
+.inquiry-container {
+  margin-top: 10%;
+}
+
 .accountsBox,
 .communityBox,
 .discountsBox,
 .locationBox {
   background-color: var(--light-blue-box);
-  border: 1px solid var(--light-blue);
+  border: 1px solid var(--light-blue-base);
   border-radius: 10px;
   width: 250px;
   height: 200px;
@@ -28,7 +32,7 @@
 #locationText {
   text-align: center;
   margin-top: 60px;
-  color: var(--light-blue);
+  color: var(--light-blue-base);
 }
 
 #accountsText:hover,

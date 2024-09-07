@@ -1,24 +1,37 @@
 :root {
-  --white: rgba(254, 254, 255, 1);
-  --logo-dark-blue: rgba(27, 32, 61, 1);
-  --light-blue: rgba(20, 47, 204, 0.6);
-  --bright-blue-soft: rgba(20, 47, 204, 0.949);
-  --bright-blue-strong: rgba(20, 47, 204, 1);
+  /* --white: rgba(254, 254, 255, 1); */
+  /* --logo-dark-blue: rgba(27, 32, 61, 1); */
+  /* --light-blue: rgba(20, 47, 204, 0.6); */
+  /* --bright-blue-soft: rgba(20, 47, 204, 0.949); */
+  /* --bright-blue-strong: rgba(20, 47, 204, 1);
   --orange-soft: rgba(249, 114, 38, 0.6);
-  --orange-strong: rgba(249, 114, 38, 0.8);
+  --orange-strong: rgba(249, 114, 38, 0.8); */
+  /* --bright-hover-blue: rgba(57, 87, 255, 0.95); */
 
-  /*- special operations -*/
-  --light-blue-box: rgba(248, 248, 255, 1);
-  --bright-hover-blue: rgba(57, 87, 255, 0.95);
+  /*- Base colours -*/
+  --white: #fefeff;
+  --logo-dark-blue: #1b203d; /* brand base color */
+  --black-blue-base: #051923; /* ??? NOT USE ??? */
+  --dark-blue-base: #003554; /* text color */
+  --blue-base: #006494; /* general base color for background */
+  --light-blue-base: #0582ca; /* buttons, icons */
+  --bright-hover-blue-base: #00a6fb; /* text and button hover */
+
+  /*- Special operations -*/
+  --light-blue-box: rgba(248, 248, 255, 1); /* ------ CHANGE ??? */
+
   --faded-hover-white: rgba(254, 254, 255, 0.55);
   --overlay-faded-black: rgba(0, 0, 0, 0.5);
-  --nav-menu-white: rgb(249, 249, 255);
-  --dark-hover-green: rgb(9, 118, 29);
+  --overlay-article-black: rgba(0, 0, 0, 0.8);
+
+  --nav-menu-white: rgb(249, 249, 255); /* ------ CHANGE ??? */
 
   --discount-red: rgb(209, 34, 31);
   --error-red-front: rgb(159, 16, 17);
   --error-red-back: rgba(255, 0, 0, 0.1);
-  --alert-box-shadow: rgba(0, 0, 0, 0.3);
+
+  --alert-box-shadow: rgba(0, 0, 0, 0.3); /* ALL box shadows --- RENAME ??? */
+
   --alert-info: rgba(0, 0, 0, 0.5);
   --alert-success: rgba(29, 135, 24, 0.546);
   --alert-warning: rgba(131, 101, 0, 0.529);

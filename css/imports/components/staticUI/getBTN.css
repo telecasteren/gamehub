@@ -1,0 +1,33 @@
+.getBTN {
+  background-color: var(--light-blue-base);
+  border-color: var(--light-blue-base);
+  color: var(--white);
+  border-style: solid;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 20px 30px;
+  cursor: pointer;
+
+  width: 280px;
+  position: relative;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    background-color 0.3s ease-in-out, width 0.3s ease-in-out,
+    font-size 0.3 ease-in-out;
+}
+
+.getBTN:hover {
+  transform: translate(-50%, -50%) scale(1.04);
+  border-color: var(--bright-hover-blue-base);
+  background-color: var(--bright-hover-blue-base);
+}
+
+@media screen and (max-width: 800px) {
+  .getBTN {
+    width: 180px !important;
+    font-size: 12px;
+    transition: 0.3s ease-in-out;
+  }
+}

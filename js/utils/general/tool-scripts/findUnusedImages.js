@@ -27,3 +27,5 @@ fs.readdir(imagesDir, (err, files) => {
     console.log("No unused images found.");
   }
 });
+
+// Run like this: node findUnusedImages.js

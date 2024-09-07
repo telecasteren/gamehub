@@ -34,7 +34,7 @@
   max-height: 420px;
   padding: 10%;
   border-radius: 10px;
-  background-color: var(--bright-blue-soft);
+  background-color: var(--blue-base);
 }
 
 .title {
@@ -63,8 +63,8 @@
 
 .addToCartBTN {
   background-color: var(--white);
-  border-color: var(--bright-blue-soft);
-  color: var(--bright-blue-soft);
+  border-color: var(--blue-base);
+  color: var(--blue-base);
   border-style: solid;
   border-radius: 24px;
   text-align: center;
@@ -79,7 +79,7 @@
 }
 
 .addToCartBTN a {
-  color: var(--bright-blue-soft);
+  color: var(--blue-base);
 }
 
 .addToCartBTN:hover {
@@ -94,7 +94,7 @@
 }
 
 #productBox1 {
-  background-color: var(--bright-blue-soft);
+  background-color: var(--blue-base);
   border: none;
   display: grid;
   width: 100vw;

@@ -10,7 +10,7 @@
   margin-top: 0.4%;
   text-align: end;
   font-size: 14px;
-  color: var(--light-blue);
+  color: var(--light-blue-base);
 }
 
 .userInfoLogOut {
@@ -38,6 +38,11 @@
 
 .radioBTN {
   margin: 2%;
+  cursor: pointer;
+}
+
+#delivery-text {
+  cursor: pointer;
 }
 
 #promoLabel,
@@ -93,7 +98,7 @@
 
 .quantity-number {
   width: 50px;
-  background-color: var(--light-blue);
+  background-color: var(--light-blue-base);
   color: var(--white);
   text-align: center;
   margin-bottom: 1%;
@@ -141,8 +146,8 @@
   min-width: 250px;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid var(--light-blue);
-  background-color: var(--bright-blue-strong);
+  border: 1px solid var(--light-blue-base);
+  background-color: var(--light-blue-base);
   color: var(--white);
   transition: 0.3s;
   cursor: pointer;
@@ -156,15 +161,15 @@
 
 .checkoutBTN:hover {
   color: var(--white);
-  border-color: var(--bright-hover-blue);
-  background-color: var(--bright-hover-blue);
+  border-color: var(--bright-hover-blue-base);
+  background-color: var(--bright-hover-blue-base);
   transform: translate(0, 0) scale(1.04);
 }
 
 ._allGames {
   background-color: var(--white);
-  border-color: var(--bright-blue-strong);
-  color: var(--bright-blue-soft);
+  border-color: var(--light-blue-base);
+  color: var(--light-blue-base);
 }
 
 @media screen and (max-width: 500px) {
