@@ -27,14 +27,14 @@
 
 #cartWindow-box {
   display: grid;
-  margin-top: 12%;
+  margin-top: 8%;
   justify-self: center;
   width: fit-content;
   height: auto;
   max-height: 420px;
   padding: 10%;
   border-radius: 10px;
-  background-color: var(--blue-base);
+  gap: 40px;
 }
 
 .title {
@@ -43,7 +43,7 @@
 }
 
 .title p {
-  color: var(--white);
+  color: var(--blue-base);
   font-size: 320%;
   font-family: "Thunder", sans-serif;
   letter-spacing: 3px;
@@ -52,13 +52,12 @@
 .tagline {
   font-size: 20px;
   line-height: 1.2;
-  color: var(--white);
 }
 
 .tagline p {
   margin-top: 5%;
   justify-self: center;
-  color: var(--white);
+  color: var(--blue-base);
 }
 
 .addToCartBTN {
@@ -73,9 +72,8 @@
   padding: 15px 15px;
   max-width: 180px;
   height: min-content;
-  margin-top: 5%;
-  justify-self: center;
   cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .addToCartBTN a {
@@ -84,13 +82,7 @@
 
 .addToCartBTN:hover {
   background-color: var(--faded-hover-white);
-}
-
-.productText-container {
-  position: relative;
-  margin-top: 5%;
-  width: 100vw;
-  height: fit-content;
+  transform: scale(1.1);
 }
 
 #productBox1 {
@@ -98,7 +90,7 @@
   border: none;
   display: grid;
   width: 100vw;
-  height: 80%;
+  height: 100%;
   padding: 5%;
 }
 
@@ -150,6 +142,8 @@
   #cartWindow-box {
     margin-left: 8%;
     margin-right: 8%;
+    margin-top: 12%;
+    gap: 5px;
   }
 
   #backArrow {
@@ -159,6 +153,7 @@
   .tagline p {
     font-size: 18px;
     margin: 10px;
+    margin-left: 0;
   }
 
   .productText {
@@ -176,6 +171,7 @@
 @media screen and (max-width: 770px) {
   .title p {
     font-size: 30px;
+    font-weight: 500;
   }
 }
 

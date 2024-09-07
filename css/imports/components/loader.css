@@ -1,11 +1,11 @@
 .loader {
   border: 16px solid var(--white);
-  border-top: 16px solid var(--blue-base);
+  border-top: 16px solid var(--light-blue-base);
   border-radius: 100%;
-  /* width: 150px;
-  height: 150px; */
-  width: 20%;
-  height: 20%;
+  width: 100px;
+  height: 100px;
+  /* width: 20%;
+  height: 20%; */
   animation: spin 2s linear infinite;
   margin-left: 5%;
   margin-top: 50%;
@@ -17,5 +17,12 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .loader {
+    width: 60px;
+    height: 60px;
   }
 }
