@@ -6,6 +6,7 @@
         "url": "/images/article-imgs/istock-womanGaming.jpg",
         "alt": "Woman sitting in a led lighted room gaming"
       },
+      "link": "",
       "content": [
         "In the world of gaming, women are proving that the future is fierce and limitless. Whether you're a complete newbie or a seasoned pro, gaming offers something for everyone—a thrilling adventure, a chance to test your skills, and a way to connect with people across the globe. And let's be real: gaming isn't just about winning; it's about finding your tribe, building confidence, and having a blast while doing it.",
         "More women are gaming now than ever before, breaking down barriers and shattering stereotypes. From epic fantasy worlds to fast-paced shooters, women are diving into every genre and making their mark. But the best part? The gaming community is growing more inclusive and supportive every day. By joining this vibrant scene, you're not just a player—you're part of a movement that's reshaping the digital landscape.",
@@ -15,15 +16,28 @@
       ]
     },
     {
-      "title": "Another Text Title",
+      "title": "In need of new gear? Get it here",
       "image": {
-        "url": "/images/article-imgs/istock-gamingController.jpg",
+        "url": ["/images/article-imgs/istock-gamingController.jpg"],
         "alt": "Person holding a gaming controller playing on the tv"
       },
+      "link": "",
       "content": [
-        "This is the first paragraph of another text.",
-        "Here is the second paragraph.",
-        "And this is the third paragraph."
+        "When deciding between new or used gaming gear, it's all about finding what suits your needs. New gear offers the latest features and a warranty, while used gear can save you money and still perform well if chosen carefully.",
+        "If you're unsure what to invest in, starting with used gear can be a cost-effective way to test the waters. GameHub offers a curated assortment of used gear, take a look!"
+      ]
+    },
+    {
+      "title": "Game design - from idea to screen",
+      "image": {
+        "url": "/images/article-imgs/istock-designingGames.jpg",
+        "alt": "article test"
+      },
+      "link": "",
+      "content": [
+        "Ever wonder how your favorite games go from just an idea to something you can actually play? It all starts with a simple concept—maybe it's about saving a magical world or winning a high-speed race. Game designers take that idea and create characters, rules, and levels, sketching them out like a blueprint. Next, artists bring the world to life with vibrant colors and 3D models, while programmers write lines of code to make everything move and interact.",
+        "Here's a cool fact: the classic game *Minecraft* was created by just one person in his free time! It shows that with the right tools—many of which are free and available to everyone—anyone can make a game. All you need when starting out is creativity, patience, and the passion to learn.",
+        "What's really exciting is how technology is making game design more accessible. With beginner-friendly engines like Unity and Unreal Engine, even if you've never coded before, you can start building your own games. Online tutorials, communities, and game jams help people at any skill level dive right in. All it takes is the first step—maybe your idea could be the next big hit?!"
       ]
     },
     {
@@ -32,18 +46,7 @@
         "url": "/images/article-imgs/istock-blackLined.jpg",
         "alt": "article test"
       },
-      "content": [
-        "This is the first paragraph of another text.",
-        "Here is the second paragraph.",
-        "And this is the third paragraph."
-      ]
-    },
-    {
-      "title": "Game design - from idea to release date",
-      "image": {
-        "url": "/images/article-imgs/istock-designingGames.jpg",
-        "alt": "article test"
-      },
+      "link": "",
       "content": [
         "This is the first paragraph of another text.",
         "Here is the second paragraph.",

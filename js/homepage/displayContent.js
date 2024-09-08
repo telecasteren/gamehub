@@ -6,6 +6,35 @@ import { handleGetButton } from "/js/homepage/getButton/handleButtonLogic.js";
 import { articlePopupModalEvents } from "/js/homepage/articles/articleModal.js";
 import { fetchGames } from "/js/api/productsApi.js";
 
+function getRandomSubset(array, size) {
+  const shuffled = [...array].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, size);
+}
+
+async function getSelectedProductIndices(productElements) {
+  const lastUpdate = localStorage.getItem("lastProductUpdate");
+  const presentTime = new Date().getTime();
+  const oneMonth = 30 * 24 * 60 * 60 * 1000;
+
+  if (lastUpdate && presentTime - lastUpdate < oneMonth) {
+    const storedIndices = sessionStorage.getItem("selectedProductIndices");
+    if (storedIndices) {
+      return JSON.parse(storedIndices);
+    }
+  }
+
+  const numProductsToSelect = 4;
+  const indices = getRandomSubset(
+    productElements.map((_, index) => index),
+    numProductsToSelect
+  ).sort((a, b) => a - b);
+
+  sessionStorage.setItem("selectedProductIndices", JSON.stringify(indices));
+  localStorage.setItem("lastProductUpdate", presentTime);
+
+  return indices;
+}
+
 export async function displayLandingContent() {
   try {
     const productData = await fetchGames();
@@ -15,70 +44,39 @@ export async function displayLandingContent() {
     }
 
     const [productElements, articleElements] = await Promise.all([
-      createProductsHtml(),
+      createProductsHtml([]),
       createArticlesHtml(),
     ]);
 
     if (productElements.length || articleElements.length) {
       homeContainer.innerHTML = "";
 
-      // ----- TESTING
+      const selectedProductIndices = await getSelectedProductIndices(
+        productData.data
+      );
 
-      const combinedContent = [];
-      let productIndex = 0;
-
-      for (let i = 0; i < articleElements.length; i++) {
-        combinedContent.push(articleElements[i]);
-
-        if (productElements[productIndex]) {
-          combinedContent.push(productElements[productIndex]);
+      articleElements.forEach((article) => {
+        if (article instanceof Node) {
+          homeContainer.appendChild(article);
+        } else {
+          console.warn("Invalid article element:", article);
         }
-        if (productElements[productIndex + 1]) {
-          combinedContent.push(productElements[productIndex + 1]);
-        }
-
-        productIndex += 2;
-      }
-
-      while (productIndex < productElements.length) {
-        combinedContent.push(productElements[productIndex]);
-        productIndex++;
-      }
-
-      combinedContent.forEach((element) => {
-        homeContainer.appendChild(element);
       });
+
+      const productsHtml = await createProductsHtml(selectedProductIndices);
+      if (productsHtml instanceof Node) {
+        homeContainer.appendChild(productsHtml);
+      } else {
+        console.warn("productsHtml is not a valid DOM node:", productsHtml);
+      }
 
       handleGetButton(productData.data);
       await articlePopupModalEvents();
     } else {
-      homeContainer.innerHTML = `<div class=error>An error occurred when loading the content.</div>`;
+      homeContainer.innerHTML = `<div class="error">An error occurred when loading the content.</div>`;
     }
   } catch (error) {
     loadError("Error occurred while loading content");
     throw error;
   }
 }
-
-// Starting with products before articles:
-// for (let i = 0; i < articleElements.length || productIndex < productElements.length; i++) {
-//   // Add two products first, if available
-//   if (productElements[productIndex]) {
-//     combinedContent.push(productElements[productIndex]);
-//   }
-//   if (productElements[productIndex + 1]) {
-//     combinedContent.push(productElements[productIndex + 1]);
-//   }
-
-//   // Move to the next pair of products
-//   productIndex += 2;
-
-//   // Add an article, if available
-//   if (articleElements[i]) {
-//     combinedContent.push(articleElements[i]);
-//   }
-// }
-
-// combinedContent.forEach((element) => {
-//   homeContainer.appendChild(element);
-// });

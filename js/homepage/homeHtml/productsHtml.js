@@ -2,13 +2,12 @@ import { goToProduct } from "/js/script.js";
 import { fetchGames } from "/js/api/productsApi.js";
 import { loadError } from "/js/utils/auth/messages.js";
 
-// Creating the html:
-export async function createProductsHtml() {
+export async function createProductsHtml(selectedProductIndices) {
   try {
     const info = await fetchGames();
 
     if (info && Array.isArray(info.data)) {
-      return info.data.map((product) => {
+      const productElements = info.data.map((product) => {
         const productId = product.id;
         const productTitle = product.title;
         const prodDescription = product.description;
@@ -21,10 +20,6 @@ export async function createProductsHtml() {
         imgEl.src = product.image.url;
         imgEl.alt = product.image.alt;
         imgEl.setAttribute("data-title", productTitle);
-
-        imgEl.addEventListener("click", () => {
-          goToProduct(productId);
-        });
 
         const backgroundBox = document.createElement("div");
         backgroundBox.classList.add("color-box");
@@ -39,6 +34,9 @@ export async function createProductsHtml() {
         prodText.classList.add("prodText");
         prodText.innerHTML = prodDescription;
 
+        imgEl.addEventListener("click", () => goToProduct(productId));
+        backgroundBox.addEventListener("click", () => goToProduct(productId));
+
         captionContainer.appendChild(titleH2);
         captionContainer.appendChild(prodText);
         backgroundBox.appendChild(captionContainer);
@@ -47,11 +45,32 @@ export async function createProductsHtml() {
 
         return column;
       });
+
+      const productContainer = document.createElement("div");
+      productContainer.classList.add("featuredProductsContainer");
+
+      const containerTitle = document.createElement("h2");
+      containerTitle.classList.add("featuredTitle");
+      containerTitle.innerText = "Featured products";
+
+      productContainer.appendChild(containerTitle);
+
+      const featuredProductsWrapper = document.createElement("div");
+      featuredProductsWrapper.classList.add("featuredProductsWrapper");
+
+      selectedProductIndices.forEach((index) => {
+        if (productElements[index]) {
+          featuredProductsWrapper.appendChild(productElements[index]);
+        }
+      });
+      productContainer.appendChild(featuredProductsWrapper);
+      return productContainer;
     } else {
       throw new Error("Error fetching product data");
     }
   } catch (error) {
     loadError("Error occurred while loading content");
-    return [];
+    console.error("ERROR in createProductsHtml: ", error);
+    return null;
   }
 }

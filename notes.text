@@ -1,8 +1,10 @@
 // ------------------------ TO DO:
-// - Home page: Only display 4 products from the API (random selection per session?)
 // - Profile page: mimic user login, form validation and account page
 // - See Notions list
-// - BUGS:
-// - Get yours now button
-// - article modal display content
 // -----------------------------------------------------------------------------------------------------
+
+// TIPS:
+// Fetching multiple image urls from json:
+// const imageUrls = jsonObject.image.url;
+// console.log(imageUrls[0]);
+// console.log(imageUrls[1]);
