@@ -1,13 +1,4 @@
 :root {
-  /* --white: rgba(254, 254, 255, 1); */
-  /* --logo-dark-blue: rgba(27, 32, 61, 1); */
-  /* --light-blue: rgba(20, 47, 204, 0.6); */
-  /* --bright-blue-soft: rgba(20, 47, 204, 0.949); */
-  /* --bright-blue-strong: rgba(20, 47, 204, 1);
-  --orange-soft: rgba(249, 114, 38, 0.6);
-  --orange-strong: rgba(249, 114, 38, 0.8); */
-  /* --bright-hover-blue: rgba(57, 87, 255, 0.95); */
-
   /*- Base colours -*/
   --white: #fefeff;
   --logo-dark-blue: #1b203d; /* brand base color */
@@ -21,7 +12,7 @@
   --light-blue-box: rgba(248, 248, 255, 1); /* ------ CHANGE ??? */
 
   --faded-hover-white: rgba(254, 254, 255, 0.55);
-  --overlay-faded-black: rgba(0, 0, 0, 0.5);
+  --overlay-faded-black: rgba(0, 0, 0, 0.6);
   --overlay-article-black: rgba(0, 0, 0, 0.8);
 
   --nav-menu-white: rgb(249, 249, 255); /* ------ CHANGE ??? */

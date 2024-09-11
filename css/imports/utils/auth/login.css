@@ -1,10 +1,62 @@
 .logInForm {
   margin-top: 10%;
   width: 100vw;
+  height: auto;
   text-align: center;
+  display: grid;
+  justify-content: center;
 }
 
 #username,
 #password {
   width: 300px;
+}
+
+#loginBtn {
+  width: 300px;
+  text-align: center;
+}
+
+.createAccountBackArrow {
+  margin-top: 5% !important;
+  margin-bottom: 5% !important;
+  display: none;
+}
+
+.createAccount-container {
+  width: 100vw;
+  display: grid;
+  justify-content: center;
+}
+
+#createAccountBtn {
+  justify-self: center;
+  margin-top: 10%;
+  background-color: var(--light-blue-base);
+  color: var(--white);
+}
+
+#createAccountBtn:hover {
+  background-color: var(--white);
+  color: var(--blue-base);
+}
+
+.newUserFormContainer {
+  justify-self: center;
+  width: 220%;
+}
+
+.saveAccountBtn {
+  padding: 10px 15px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid var(--light-blue-base);
+  background-color: var(--light-blue-base);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.saveAccountBtn:hover {
+  background-color: var(--faded-hover-white);
+  color: var(--light-blue-base);
 }

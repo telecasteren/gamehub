@@ -1,4 +1,4 @@
-import { fetchGames } from "/js/api/productsApi.js";
+import { fetchGames } from "/js/utils/api/productsApi.js";
 import { loadError } from "/js/utils/auth/messages.js";
 import { continueShoppingEvent } from "/js/script.js";
 import { renderCartProducts } from "./cartHtml.js";

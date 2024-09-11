@@ -1,12 +1,12 @@
-function popupHelpText(helpText) {
-  const loggedInUser = false; // This should be dynamically determined based on login authentication logic
+import { loggedInUser } from "/js/utils/general/constants.js";
 
+function popupHelpText(helpText) {
   if (!loggedInUser) {
     localStorage.setItem("HelpText", helpText);
-    window.location.href = "/navigate/profile/";
+    window.location.href = "/navigate/profile/login/";
   } else {
     // Proceed as if user is logged in
-    window.location.href = "/400";
+    window.location.href = "/navigate/profile/";
   }
 }
 

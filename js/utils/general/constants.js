@@ -9,6 +9,10 @@ export const cartWindow = document.getElementById("cartWindow-box");
 export const imageContainer = document.querySelector(".prodImg-container");
 export const homeContainer = document.querySelector(".home-container");
 export const wrapper = document.querySelector(".product-wrapper");
+export const createAccountBtn = document.querySelector("#createAccountBtn");
+export const createAccountBackArrow = document.querySelector(
+  ".createAccountBackArrow"
+);
 
 // Search
 export const searchForm = document.getElementById("search-form");
@@ -46,6 +50,7 @@ export const DECREASE_ICON_IMG = `/images/remove-item.png`;
 
 // User
 export const UserEmail = "UserEmail";
+export const loggedInUser = false; // This should be dynamically determined based on login authentication logic
 
 // TO BE USED LATER:
 // export const USERS_KEY = "users";

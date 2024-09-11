@@ -1,10 +1,8 @@
 // ------------------------ TO DO:
-// - Profile page: mimic user login, form validation and account page
-// - See Notions list
+// Profile page:
+// - login authentication and field validation
+// - activating users upon first login
+// - profile page UX
+// - favourites
+// The rest: See Notions list
 // -----------------------------------------------------------------------------------------------------
-
-// TIPS:
-// Fetching multiple image urls from json:
-// const imageUrls = jsonObject.image.url;
-// console.log(imageUrls[0]);
-// console.log(imageUrls[1]);

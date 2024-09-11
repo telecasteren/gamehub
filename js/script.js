@@ -4,11 +4,16 @@ import { updateCartCounter } from "/js/cart/updateCart/updateCartCounter.js";
 import { saveCurrentPage } from "/js/utils/storage/saveCurrentPage.js";
 import { loadPreviousPage } from "/js/utils/storage/loadPreviousPage.js";
 import { displayLandingContent } from "/js/homepage/displayContent.js";
-import { homeContainer, carousel } from "/js/utils/general/constants.js";
+import {
+  homeContainer,
+  carousel,
+  createAccountBtn,
+} from "/js/utils/general/constants.js";
+import { createAccountEvents } from "/js/utils/components/profile/createAccount/createAccount.js";
 import {
   updateHelpTextEvents,
   displayHelpTextOnProfile,
-} from "/js/utils/components/profile/popUpText.js";
+} from "/js/utils/components/profile/login/popUpText.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   updateCartCounter();
@@ -22,11 +27,15 @@ document.addEventListener("DOMContentLoaded", function () {
     initCarouselSlider();
   }
 
-  // help text for certain actions when user is not logged in
+  // Help text for certain actions when user is not logged in
   if (window.location.pathname.includes("/contact/")) {
     updateHelpTextEvents();
-  } else if (window.location.pathname.includes("/profile/")) {
+  } else if (window.location.pathname.includes("/login/")) {
     displayHelpTextOnProfile();
+  }
+
+  if (createAccountBtn) {
+    createAccountEvents();
   }
 });
 

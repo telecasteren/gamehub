@@ -1,5 +1,5 @@
 import { goToProduct } from "/js/script.js";
-import { fetchGames } from "/js/api/productsApi.js";
+import { fetchGames } from "/js/utils/api/productsApi.js";
 import { loadError } from "/js/utils/auth/messages.js";
 
 export async function createProductsHtml(selectedProductIndices) {

@@ -42,7 +42,9 @@
             <li><a href="/navigate/products/product-list/">games</a></li>
             <li><a href="/navigate/about/">about</a></li>
             <li><a href="/navigate/contact/">contact</a></li>
-            <li><a href="/navigate/user-login/" id="current">profile</a></li>
+            <li>
+              <a href="/navigate/profile/" id="current">profile</a>
+            </li>
             <li>
               <a class="rightNavElement" href="/navigate/cart/your-cart/"
                 >your cart <span id="item-counter">0</span>
@@ -63,28 +65,12 @@
     </div>
 
     <main class="_main-section">
+      <div class="loadError-container"></div>
+      <div class="alert-container"></div>
       <section>
-        <div class="alert-container"></div>
-
         <div class="page-title"><h1>Profile page</h1></div>
 
-        <form class="logInForm">
-          <input
-            type="text"
-            id="username"
-            placeholder="username"
-            required
-            autocomplete="on"
-          />
-          <input
-            type="password"
-            id="password"
-            placeholder="password"
-            required
-          />
-          <input type="submit" value="login" />
-          <div class="locationHelpText"></div>
-        </form>
+        <div class="profile-container"></div>
       </section>
     </main>
 

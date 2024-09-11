@@ -11,24 +11,24 @@ IMPORT SHEETS ---------------------------*/
 @import "/css/imports/components/forms.css";
 @import "/css/imports/components/carousel.css";
 
-/* COMPONENTS --> STATIC UI */
+/* STATIC UI */
 @import "/css/imports/components/staticUI/navBar.css";
 @import "/css/imports/components/staticUI/footer.css";
 @import "/css/imports/components/staticUI/backArrow.css";
 @import "/css/imports/components/staticUI/pageTitles.css";
 @import "/css/imports/components/staticUI/getBTN.css";
 
-/* COMPONENTS --> PRODUCTS */
-@import "/css/imports/components/products/homeProd.css";
+/* PRODUCTS */
+@import "/css/imports/pages/products/homeProd.css";
+@import "/css/imports/pages/products/product-list.css";
+@import "/css/imports/pages/products/product.css";
 
-/* COMPONENTS --> TEXT */
+/* ARTICLES */
 @import "/css/imports/components/articles/articleModal.css";
 @import "/css/imports/components/articles/articles.css";
 
 /* PAGES */
 @import "/css/imports/pages/home-styles.css";
-@import "/css/imports/pages/products/product-list.css";
-@import "/css/imports/pages/products/product.css";
 @import "/css/imports/pages/about-styles.css";
 @import "/css/imports/pages/contact-styles.css";
 @import "/css/imports/pages/checkout/checkout-styles.css";

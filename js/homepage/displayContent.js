@@ -4,36 +4,8 @@ import { homeContainer } from "/js/utils/general/constants.js";
 import { loadError } from "/js/utils/auth/messages.js";
 import { handleGetButton } from "/js/homepage/getButton/handleButtonLogic.js";
 import { articlePopupModalEvents } from "/js/homepage/articles/articleModal.js";
-import { fetchGames } from "/js/api/productsApi.js";
-
-function getRandomSubset(array, size) {
-  const shuffled = [...array].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, size);
-}
-
-async function getSelectedProductIndices(productElements) {
-  const lastUpdate = localStorage.getItem("lastProductUpdate");
-  const presentTime = new Date().getTime();
-  const oneMonth = 30 * 24 * 60 * 60 * 1000;
-
-  if (lastUpdate && presentTime - lastUpdate < oneMonth) {
-    const storedIndices = sessionStorage.getItem("selectedProductIndices");
-    if (storedIndices) {
-      return JSON.parse(storedIndices);
-    }
-  }
-
-  const numProductsToSelect = 4;
-  const indices = getRandomSubset(
-    productElements.map((_, index) => index),
-    numProductsToSelect
-  ).sort((a, b) => a - b);
-
-  sessionStorage.setItem("selectedProductIndices", JSON.stringify(indices));
-  localStorage.setItem("lastProductUpdate", presentTime);
-
-  return indices;
-}
+import { fetchGames } from "/js/utils/api/productsApi.js";
+import { getSelectedProductIndices } from "/js/utils/storage/getSelectedProductIndices.js";
 
 export async function displayLandingContent() {
   try {

@@ -1,5 +1,5 @@
 import { loadError } from "/js/utils/auth/messages.js";
-import { fetchArticlesData } from "/js/api/fetchArticlesData.js";
+import { fetchArticlesData } from "/js/utils/api/fetchArticlesData.js";
 
 export async function createArticlesHtml() {
   try {

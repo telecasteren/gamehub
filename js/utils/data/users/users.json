@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "UserName": "Tele Caster Nilsen",
+      "UserEmail": "nilsen.tele@gmail.com",
+      "UserPassword": "pass666",
+      "BirthDate": "2024-09-04",
+      "Address": "Ensjøsvingen 8A",
+      "PostalCode": "0661",
+      "Country": "Norway",
+      "active": false,
+      "id": "57232030"
+    },
+    {
+      "UserName": "Daniel Reppert",
+      "UserEmail": "daniel@mail.com",
+      "UserPassword": "FUCKboi95",
+      "BirthDate": "1999-02-11",
+      "Address": "Nordtvetveien 8",
+      "PostalCode": "999",
+      "Country": "America",
+      "active": false,
+      "id": "45320746"
+    }
+  ]
+}

@@ -1,15 +1,25 @@
 /*- Error message component -*/
+.loadError-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .error {
-  padding: 1rem;
-  min-width: 300px;
-  height: 80px;
+  /*------------------------ FIX variables for coloring here --*/
   text-align: center;
+  align-items: center;
+  min-width: 300px;
+  max-width: 1000px;
+  height: 80px;
+  padding: 1rem;
   color: var(--error-red-front);
   border: 2px solid var(--error-red-front);
   background: var(--error-red-back);
 }
 
-/*- Search -*/
+/*- Search error component -*/
 .no-results {
   color: var(--white);
   background-color: var(--logo-dark-blue);

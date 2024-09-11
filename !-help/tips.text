@@ -1,0 +1,6 @@
+// GENERAL TIPS:
+
+// Fetching multiple image urls from json:
+ const imageUrls = jsonObject.image.url;
+ console.log(imageUrls[0]);
+ console.log(imageUrls[1]);

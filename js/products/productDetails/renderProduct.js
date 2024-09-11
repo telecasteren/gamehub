@@ -1,4 +1,4 @@
-import { fetchGames } from "/js/api/productsApi.js";
+import { fetchGames } from "/js/utils/api/productsApi.js";
 import { gameDetails } from "/js/products/productDetails/productHtml.js";
 import { imageContainer, cartWindow } from "/js/utils/general/constants.js";
 import { addToCartEvent } from "/js/products/productDetails/AddToCartFunctions.js";

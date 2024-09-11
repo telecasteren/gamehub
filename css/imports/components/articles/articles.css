@@ -22,6 +22,8 @@
   justify-self: center;
   cursor: pointer;
   width: 80%;
+  max-width: 1024px;
+  height: auto;
 }
 
 @media (max-width: 1000px) {

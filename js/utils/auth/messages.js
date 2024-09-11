@@ -1,9 +1,17 @@
-// Cart error message:
-export function loadError() {
-  const cartSection = document.querySelector(".cart-section");
+// This must be added to all html pages:  <div class="loadError-container"></div>
+export function loadError(message) {
+  const errorContainer = document.querySelector(".loadError-container");
+  errorContainer.display = "none";
 
-  if (cartSection) {
-    cartSection.innerHTML = `<div class="error">Couldn't load products in cart.</div>`;
+  const errorDiv = document.createElement("div");
+  errorDiv.className = "error";
+  errorDiv.textContent = message;
+
+  if (errorContainer) {
+    errorContainer.display = "block";
+    errorContainer.appendChild(errorDiv);
+  } else {
+    errorContainer.display = "none";
   }
 }
 

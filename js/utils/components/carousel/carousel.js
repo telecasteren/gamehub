@@ -1,4 +1,4 @@
-import { fetchGames } from "/js/api/productsApi.js";
+import { fetchGames } from "/js/utils/api/productsApi.js";
 import { carousel, carouselImages } from "/js/utils/general/constants.js";
 import { goToCarouselProduct } from "/js/utils/components/carousel/goToCarouselProduct.js";
 

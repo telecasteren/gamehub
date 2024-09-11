@@ -87,10 +87,9 @@ select#cardDetails {
 }
 
 input[type="submit"] {
-  width: 100px;
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 10px;
-  justify-content: center;
+  text-align: center;
   border: 1px solid var(--light-blue-base);
   background-color: var(--light-blue-base);
   color: var(--white);

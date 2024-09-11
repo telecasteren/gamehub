@@ -1,5 +1,5 @@
 import { goToProduct } from "/js/script.js";
-import { fetchGames } from "/js/api/productsApi.js";
+import { fetchGames } from "/js/utils/api/productsApi.js";
 
 export async function goToCarouselProduct(prodTitle, overlayDiv) {
   const info = await fetchGames();

@@ -1,0 +1,50 @@
+// GENERIC-SERVER STRUCTURE:
+index.json
+│
+projects/
+├── WebsiteA/
+│   ├── users.json
+│   ├── generalData.json
+│   └── someOther.json
+├── WebsiteB/
+│   └── data.json
+└── default/
+│   └── data.json
+│
+packages.json
+
+
+
+// SERVER REQUESTS:
+
+// Request to save data.
+// Specify folder and file
+// If folder/file doesn't exists, it is created:
+
+ async function saveUpdatedUserData() {
+   try {
+ fetch('http://localhost:3000/saveData?project=WebsiteA&file=users.json', {
+   method: 'POST',
+   headers: {
+     'Content-Type': 'application/json',
+   },
+   body: JSON.stringify({
+     UserName: 'john_doe',
+     UserEmail: 'john@example.com',
+     UserAddress: '5th Avenue, Kings Boss',
+   }),
+ })
+   .then((response) => response.json())
+   .then((data) => console.log(data));
+   } catch (error) {
+     console.log("Failed to save updated user data", error);
+   }
+ }
+
+
+// Retrieving data.
+// Specify folder and file:
+
+ fetch('http://localhost:3000/getData?project=WebsiteA&file=users.json')
+   .then((response) => response.json())
+   .then((data) => console.log(data));
