@@ -3,6 +3,7 @@
   position: absolute;
   margin-left: 5%;
   margin-top: 10%;
+  max-width: 80px;
 }
 
 #backArrow img {

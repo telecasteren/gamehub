@@ -48,6 +48,7 @@ export function renderCartProducts() {
 
         const cartItems = document.createElement("div");
         cartItems.setAttribute(`data-product-id`, prodId);
+        cartItems.classList.add("cartItems");
 
         const cartImgDiv = document.createElement("div");
         cartImgDiv.classList.add("cartIMG");
@@ -59,6 +60,9 @@ export function renderCartProducts() {
         cartImage.addEventListener("click", () => {
           goToProduct(prodId);
         });
+
+        const counterIconContainer = document.createElement("div");
+        counterIconContainer.classList.add("counterIconContainer");
 
         const counterIconDivIncrease = document.createElement("div");
         counterIconDivIncrease.classList.add("counter-icon-div");
@@ -87,24 +91,29 @@ export function renderCartProducts() {
           updateQuantity(prodId, -1);
         });
 
+        counterIconDivIncrease.appendChild(increaseIcon);
+        counterIconContainer.appendChild(counterIconDivIncrease);
+
+        counterIconContainer.appendChild(counter);
+
+        counterIconDivDecrease.appendChild(decreaseIcon);
+        counterIconContainer.appendChild(counterIconDivDecrease);
+
         const cartItemTitle = document.createElement("div");
         cartItemTitle.classList.add("cartInfo-title");
         cartItemTitle.innerHTML = `<p><b>${prodTitle}</b>
               - full game: <b><span class="${priceClass}">$${prodPrice}</span></b></p>`;
+
+        cartItemTitle.addEventListener("click", () => {
+          goToProduct(prodId);
+        });
 
         const separationLine = document.createElement("hr");
 
         cartImgDiv.appendChild(cartImage);
         cartItems.appendChild(cartImgDiv);
 
-        counterIconDivIncrease.appendChild(increaseIcon);
-        cartItems.appendChild(counterIconDivIncrease);
-
-        cartItems.appendChild(counter);
-
-        counterIconDivDecrease.appendChild(decreaseIcon);
-        cartItems.appendChild(counterIconDivDecrease);
-
+        cartItems.appendChild(counterIconContainer);
         cartItems.appendChild(cartItemTitle);
 
         cartContainer.appendChild(cartItems);

@@ -24,6 +24,19 @@ export function createAccountEvents() {
         createAccountBackArrow.style.display = "block";
       }
 
+      // fields.forEach((field) => {
+      //   const input = document.createElement("input");
+      //   input.id = field.id;
+      //   input.type = field.type;
+      //   input.placeholder = field.placeholder;
+
+      //   Object.keys(field.attributes).forEach((attr) => {
+      //     input.setAttribute(attr, field.attributes[attr]);
+      //   });
+
+      //   newUserForm.appendChild(input);
+      // });
+
       fields.forEach((field) => {
         const input = document.createElement("input");
         input.id = field.id;

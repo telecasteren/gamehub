@@ -52,6 +52,7 @@ IMPORT SHEETS ---------------------------*/
 html,
 body {
   overflow-x: hidden;
+  height: 100%;
 }
 
 hr {
@@ -62,7 +63,7 @@ hr {
   margin-left: 5%;
   width: 120px;
   cursor: pointer;
-  position: absolute;
+  position: relative;
   transition: transform 0.3s ease-in-out;
 }
 

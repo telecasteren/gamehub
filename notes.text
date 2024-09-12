@@ -2,6 +2,10 @@
 // Profile page:
 // - login authentication and field validation
 // - activating users upon first login
+//
+// General all over:
+// - Fix footer position
+//
 // - profile page UX
 // - favourites
 // The rest: See Notions list

@@ -1,39 +1,6 @@
-.loggedInUser-info {
-  margin-top: 10%;
-  margin-right: 15%;
-  display: none; /*------------------- WHAT DO WE DO WITH THE USER DETAILS? ---*/
-}
-
-.userInfoMember,
-.userInfoMail,
-.userInfoLogOut {
-  margin-top: 0.4%;
-  text-align: end;
-  font-size: 14px;
-  color: var(--light-blue-base);
-}
-
-.userInfoLogOut {
-  text-decoration: underline;
-}
-
-/*--------------------------------------*/
-
 #checkoutTitle {
   font-size: 200%;
   margin-bottom: 1%;
-}
-
-.cart-image {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  width: 25%;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.cart-image:hover {
-  opacity: 0.8;
 }
 
 .radioBTN {
@@ -91,43 +58,76 @@
   margin-top: 5%;
 }
 
+.cartItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
 .cartInfo-title {
   margin-top: 10px;
   margin-bottom: 50px;
 }
 
+.cartIMG {
+  display: grid;
+}
+
+.cartInfo-title {
+  cursor: pointer;
+}
+
+.cart-image {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 25%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cart-image:hover {
+  opacity: 0.8;
+}
+
+.counterIconContainer {
+  justify-self: end;
+  display: flex;
+}
+
 .quantity-number {
   width: 50px;
-  background-color: var(--light-blue-base);
-  color: var(--white);
   text-align: center;
-  margin-bottom: 1%;
-  padding: 12px;
-  border-radius: 12px;
+  margin: 1%;
+  padding: 10px;
   font-size: 20px;
   font-weight: 600;
+
+  border-radius: 26px;
+  color: var(--blue-base);
+  border: 2px solid var(--black-blue-base);
 }
 
 .increase-icon,
 .decrease-icon {
   width: 25px;
   height: auto;
-  margin-left: 14px;
   cursor: pointer;
+  justify-self: center;
+  transition: transform 0.3s ease;
 }
 
 .increase-icon:hover,
 .decrease-icon:hover {
-  width: 30px;
-  height: auto;
-  margin-left: 12px;
+  transform: scale(1.2);
 }
 
 .counter-icon-div {
   justify-content: center;
   width: 60px;
   height: 25px;
-  margin-bottom: 1%;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  display: flex;
 }
 
 .checkout-page {

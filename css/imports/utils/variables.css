@@ -2,20 +2,18 @@
   /*- Base colours -*/
   --white: #fefeff;
   --logo-dark-blue: #1b203d; /* brand base color */
-  --black-blue-base: #051923; /* ??? NOT USE ??? */
+  --black-blue-base: #051923; /* All "black" texts and borders */
   --dark-blue-base: #003554; /* text color */
   --blue-base: #006494; /* general base color for background */
   --light-blue-base: #0582ca; /* buttons, icons */
   --bright-hover-blue-base: #00a6fb; /* text and button hover */
 
   /*- Special operations -*/
-  --light-blue-box: rgba(248, 248, 255, 1); /* ------ CHANGE ??? */
+  --light-blue-box: rgba(248, 248, 255, 1); /* mobile menu background, footer */
 
   --faded-hover-white: rgba(254, 254, 255, 0.55);
   --overlay-faded-black: rgba(0, 0, 0, 0.6);
   --overlay-article-black: rgba(0, 0, 0, 0.8);
-
-  --nav-menu-white: rgb(249, 249, 255); /* ------ CHANGE ??? */
 
   --discount-red: rgb(209, 34, 31);
   --error-red-front: rgb(159, 16, 17);
