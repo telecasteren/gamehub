@@ -81,6 +81,7 @@
   margin-top: 20px;
   margin-bottom: 10px;
   width: 25%;
+  min-width: 100px;
   border-radius: 10px;
   cursor: pointer;
 }

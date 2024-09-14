@@ -59,6 +59,18 @@ hr {
   margin-bottom: 2%;
 }
 
+@media screen and (max-width: 768px) {
+  .checkoutPage {
+    margin-top: 15%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .checkoutPage {
+    margin-top: 20%;
+  }
+}
+
 .logo {
   margin-left: 5%;
   width: 120px;
