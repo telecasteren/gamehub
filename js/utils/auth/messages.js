@@ -1,7 +1,5 @@
-// This must be added to all html pages:  <div class="loadError-container"></div>
 export function loadError(message) {
   const errorContainer = document.querySelector(".loadError-container");
-  errorContainer.display = "none";
 
   const errorDiv = document.createElement("div");
   errorDiv.className = "error";
@@ -13,6 +11,14 @@ export function loadError(message) {
   } else {
     errorContainer.display = "none";
   }
+
+  function closeOnOutsideClick(event) {
+    if (errorContainer.contains(event.target)) {
+      errorContainer.style.display = "none";
+      window.removeEventListener("click", closeOnOutsideClick);
+    }
+  }
+  window.addEventListener("click", closeOnOutsideClick);
 }
 
 // No result in search for products:

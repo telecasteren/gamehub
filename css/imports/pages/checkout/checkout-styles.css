@@ -165,6 +165,7 @@
   border-color: var(--bright-hover-blue-base);
   background-color: var(--bright-hover-blue-base);
   transform: translate(0, 0) scale(1.04);
+  box-shadow: 0px 4px 20px var(--overlay-faded-black);
 }
 
 ._allGames {

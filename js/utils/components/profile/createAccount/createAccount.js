@@ -24,19 +24,6 @@ export function createAccountEvents() {
         createAccountBackArrow.style.display = "block";
       }
 
-      // fields.forEach((field) => {
-      //   const input = document.createElement("input");
-      //   input.id = field.id;
-      //   input.type = field.type;
-      //   input.placeholder = field.placeholder;
-
-      //   Object.keys(field.attributes).forEach((attr) => {
-      //     input.setAttribute(attr, field.attributes[attr]);
-      //   });
-
-      //   newUserForm.appendChild(input);
-      // });
-
       fields.forEach((field) => {
         const input = document.createElement("input");
         input.id = field.id;
@@ -51,7 +38,7 @@ export function createAccountEvents() {
       });
 
       const submitButton = document.createElement("button");
-      submitButton.type = "button";
+      submitButton.type = "submit";
       submitButton.classList.add("saveAccountBtn");
       submitButton.innerText = "Create account";
       newUserForm.appendChild(submitButton);
@@ -59,19 +46,16 @@ export function createAccountEvents() {
       const createAccountContainer = document.querySelector(
         ".createAccount-container"
       );
-
       newUserFormContainer.appendChild(newUserForm);
       createAccountContainer.appendChild(newUserFormContainer);
 
-      submitButton.addEventListener("click", () => {
+      // Gather the form input values
+      newUserForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
         const FirstName = document.querySelector("#FirstName").value;
         const LastName = document.querySelector("#LastName").value;
         const UserName = FirstName + " " + LastName;
-
-        // if (!validator.isEmail(userInfo.UserEmail)) {
-        //   loadError("Invalid email address");
-        //   return;
-        // }
 
         const userInfo = {
           UserName: UserName,
@@ -84,11 +68,16 @@ export function createAccountEvents() {
           active: false,
         };
 
-        createUserInfo(userInfo);
+        // If form input values are valid, create the new user
+        if (newUserForm.checkValidity()) {
+          createUserInfo(userInfo);
+        } else {
+          loadError("Please fill in all the required fields.");
+        }
       });
     });
   } catch (error) {
     loadError("Couldn't create account");
-    console.error("Error occurred when creating account:", error);
+    throw error;
   }
 }

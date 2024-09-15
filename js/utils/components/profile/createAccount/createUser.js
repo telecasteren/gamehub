@@ -11,7 +11,6 @@ export async function createUserInfo(userInfo) {
     !userInfo.PostalCode ||
     !userInfo.Country
   ) {
-    console.log("Incomplete user information");
     loadError("Incomplete user information");
     return;
   }
@@ -54,24 +53,6 @@ export async function createUserInfo(userInfo) {
 
     const message = await updateResponse.text();
     console.log(message);
-
-    const saveDataResponse = await fetch(
-      "http://127.0.0.1:3000/saveData?project=gamehub-website&file=UserData.json",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userInfo),
-      }
-    );
-
-    if (!saveDataResponse.ok) {
-      throw new Error("Failed to save additional user data.");
-    }
-
-    const saveMessage = await saveDataResponse.text();
-    console.log(saveMessage);
   } catch (error) {
     console.error("Error creating user:", error);
     loadError("Error creating user.");

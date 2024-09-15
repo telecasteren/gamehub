@@ -23,6 +23,11 @@
   display: none;
 }
 
+.newUserFormContainer {
+  justify-self: center;
+  width: 220%;
+}
+
 .createAccount-container {
   width: 100vw;
   display: grid;
@@ -39,11 +44,6 @@
 #createAccountBtn:hover {
   background-color: var(--white);
   color: var(--blue-base);
-}
-
-.newUserFormContainer {
-  justify-self: center;
-  width: 220%;
 }
 
 .saveAccountBtn {

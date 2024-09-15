@@ -24,6 +24,13 @@
   width: 80%;
   max-width: 1024px;
   height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.articleIMG:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 4px 20px var(--overlay-faded-black);
 }
 
 @media (max-width: 1000px) {

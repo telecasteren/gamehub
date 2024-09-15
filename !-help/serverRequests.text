@@ -1,5 +1,7 @@
 // GENERIC-SERVER STRUCTURE:
-index.json
+|
+toolscripts/
+├── server.js
 │
 projects/
 ├── WebsiteA/

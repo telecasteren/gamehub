@@ -22,6 +22,7 @@
   transform: translate(-50%, -50%) scale(1.04);
   border-color: var(--bright-hover-blue-base);
   background-color: var(--bright-hover-blue-base);
+  box-shadow: 0px 4px 20px var(--overlay-faded-black);
 }
 
 @media screen and (max-width: 800px) {
