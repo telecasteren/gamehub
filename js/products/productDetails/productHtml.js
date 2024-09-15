@@ -49,7 +49,7 @@ export function gameDetails(product) {
       if (product.onSale) {
         p.appendChild(document.createElement("br"));
 
-        const discountText = document.createTextNode("Now only: ");
+        const discountText = document.createTextNode("Limited offer: ");
         p.appendChild(discountText);
 
         const discountSpan = document.createElement("span");

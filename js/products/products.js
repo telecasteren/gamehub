@@ -56,7 +56,7 @@ export function renderProduct(game) {
     if (game.onSale) {
       textDiv.innerHTML = `
     ${gameTitle}<br>
-    Now only: ${discountPrice}`;
+    Limited offer: ${discountPrice}`;
     }
 
     overlayDiv.appendChild(textDiv);
