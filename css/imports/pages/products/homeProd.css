@@ -33,12 +33,14 @@
   transition: transform 0.3s ease;
 }
 
-.column:hover {
-  transform: scale(1.2);
-}
+@media screen and (min-width: 650px) {
+  .column:hover {
+    transform: scale(1.2);
+  }
 
-.product:hover {
-  box-shadow: 0px 4px 20px var(--overlay-faded-black);
+  .product:hover {
+    box-shadow: 0px 4px 20px var(--overlay-faded-black);
+  }
 }
 
 .product {

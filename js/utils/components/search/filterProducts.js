@@ -25,12 +25,14 @@ function approximateMatch(input, title, threshold = 2) {
 
 export async function gamesHTML(games) {
   wrapper.innerHTML = "";
+  const gamingNavElements = document.querySelector("#gamingNav");
 
   try {
     const searchTerm = localStorage.getItem(SEARCH_KEY) || "";
 
     if (searchTerm === "") {
       games.forEach((game) => renderProduct(game));
+      gamingNavElements.style.display = "block";
       return;
     }
 
@@ -39,6 +41,7 @@ export async function gamesHTML(games) {
     );
 
     if (filteredProducts.length) {
+      gamingNavElements.style.display = "none";
       filteredProducts.forEach((game) => renderProduct(game));
     } else {
       noResultMessage();

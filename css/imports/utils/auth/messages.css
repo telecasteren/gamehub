@@ -7,6 +7,7 @@
 }
 
 .error {
+  display: grid;
   text-align: center;
   align-items: center;
   min-width: 300px;
@@ -15,6 +16,7 @@
   padding: 1rem;
   color: var(--error-red-front);
   border: 2px solid var(--error-red-front);
+  border-radius: 12px;
   background: var(--error-red-back);
 }
 

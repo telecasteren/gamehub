@@ -55,16 +55,25 @@ input#searchGames:hover {
   width: 100%;
   position: relative;
   text-align: center;
-  margin-top: 8%;
+  margin-top: 4%;
   margin-bottom: 0;
 }
+
+/* .product-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 11%;
+  padding-bottom: 5%;
+} */
 
 .product-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-left: 11%;
-  margin-top: 5%;
+  margin: 0 auto;
   padding-bottom: 5%;
+  max-width: 90%;
+  width: 100%;
+  justify-items: center;
 }
 
 .product-container {

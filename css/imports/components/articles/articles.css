@@ -1,14 +1,14 @@
 .articleColumn {
   display: grid;
   grid-column: 1 / -1;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
 
 .articleTitle {
   margin: 1%;
   cursor: pointer;
   text-align: center;
-  font-size: 3.2rem;
+  font-size: 3.1rem;
   color: var(--dark-blue-base);
   font-family: "Thunder", sans-serif;
   font-weight: 400;
@@ -21,7 +21,7 @@
 .articleIMG {
   justify-self: center;
   cursor: pointer;
-  width: 80%;
+  width: 60%;
   max-width: 1024px;
   height: auto;
   border-radius: 10px;

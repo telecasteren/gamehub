@@ -1,3 +1,7 @@
+.contactPage-container {
+  display: grid;
+}
+
 .contact-section {
   margin-top: 50px;
   left: 220px;
