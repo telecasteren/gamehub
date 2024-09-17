@@ -1,33 +1,29 @@
-// Script to calculate the distance between letters. NOT IN USE
+// Script to calculate the distance between letters
 
-export function levenshtein(a = "", b = "") {
-  const alen = a.length;
-  const blen = b.length;
+export function levenshtein(a, b) {
+  const matrix = [];
 
-  // Handle edge cases
-  if (alen === 0) return blen;
-  if (blen === 0) return alen;
+  for (let i = 0; i <= b.length; i++) {
+    matrix[i] = [i];
+  }
 
-  // Initialize DP array
-  const dp = Array.from({ length: alen + 1 }, (_, i) =>
-    Array(blen + 1).fill(0)
-  );
+  for (let j = 0; j <= a.length; j++) {
+    matrix[0][j] = j;
+  }
 
-  // Fill base cases
-  for (let i = 0; i <= alen; i++) dp[i][0] = i;
-  for (let j = 0; j <= blen; j++) dp[0][j] = j;
-
-  // Compute Levenshtein distance
-  for (let i = 1; i <= alen; i++) {
-    for (let j = 1; j <= blen; j++) {
-      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-      dp[i][j] = Math.min(
-        dp[i - 1][j] + 1, // Deletion
-        dp[i][j - 1] + 1, // Insertion
-        dp[i - 1][j - 1] + cost // Substitution
-      );
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      if (b.charAt(i - 1) === a.charAt(j - 1)) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j - 1] + 1, // substitution
+          matrix[i][j - 1] + 1, // insertion
+          matrix[i - 1][j] + 1 // deletion
+        );
+      }
     }
   }
 
-  return dp[alen][blen];
+  return matrix[b.length][a.length];
 }
