@@ -2,6 +2,7 @@
 // Profile page:
 // - login authentication and field validation
 // - activating users upon first login
+// - alertMessage success color change
 //
 // General all over:
 // - Fix footer position

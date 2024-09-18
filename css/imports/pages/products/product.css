@@ -17,7 +17,7 @@
 
 .cartWindow {
   position: relative;
-  margin-top: 5%;
+  margin-top: -5%;
   margin-bottom: 2%;
   width: 100vw;
   height: auto;

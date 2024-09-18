@@ -4,9 +4,16 @@
   display: none;
 }
 
-.newUserFormContainer {
-  justify-self: center;
-  width: 220%;
+.newUserForm {
+  border-radius: 10px;
+  border: 1px solid var(--light-blue-base);
+  background-color: var(--light-blue-box);
+  padding: 20px;
+  margin: 0% auto;
+  display: grid;
+  max-width: 900px;
+  min-width: 280px;
+  width: 90vw;
 }
 
 .createAccount-container {

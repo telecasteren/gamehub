@@ -1,10 +1,8 @@
 import { createUserInfo } from "/js/utils/components/profile/createAccount/createUser.js";
 import { fields } from "/js/utils/components/profile/createAccount/fields.js";
 import { loadError, alertMessage } from "/js/utils/auth/messages.js";
-import {
-  disableFutureDates,
-  isUserOldEnough,
-} from "/js/utils/auth/ageChecker.js";
+import { isUserOldEnough } from "/js/utils/auth/ageChecker.js";
+import { disableFutureDates } from "/js/utils/auth/disableFutureDates.js";
 import {
   createAccountBtn,
   createAccountBackArrow,
@@ -96,6 +94,10 @@ export function createAccountEvents() {
         // If form input values are valid, create the new user
         if (newUserForm.checkValidity()) {
           createUserInfo(userInfo);
+          alertMessage(
+            "Welcome to GameHub! Login to activate your new user :)",
+            "success"
+          );
         } else {
           loadError("Please fill in all the required fields.");
         }
