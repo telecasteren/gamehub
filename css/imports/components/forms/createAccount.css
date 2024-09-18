@@ -1,22 +1,3 @@
-.logInForm {
-  margin-top: 10%;
-  width: 100vw;
-  height: auto;
-  text-align: center;
-  display: grid;
-  justify-content: center;
-}
-
-#username,
-#password {
-  width: 300px;
-}
-
-#loginBtn {
-  width: 300px;
-  text-align: center;
-}
-
 .createAccountBackArrow {
   margin-top: 5% !important;
   margin-bottom: 5% !important;

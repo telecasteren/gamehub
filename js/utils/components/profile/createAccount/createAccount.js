@@ -1,6 +1,10 @@
 import { createUserInfo } from "/js/utils/components/profile/createAccount/createUser.js";
 import { fields } from "/js/utils/components/profile/createAccount/fields.js";
-import { loadError } from "/js/utils/auth/messages.js";
+import { loadError, alertMessage } from "/js/utils/auth/messages.js";
+import {
+  disableFutureDates,
+  isUserOldEnough,
+} from "/js/utils/auth/ageChecker.js";
 import {
   createAccountBtn,
   createAccountBackArrow,
@@ -49,6 +53,14 @@ export function createAccountEvents() {
       newUserFormContainer.appendChild(newUserForm);
       createAccountContainer.appendChild(newUserFormContainer);
 
+      // Prevent user from picking dates in future
+      const birthDateInput = document.getElementById("BirthDate");
+      if (birthDateInput) {
+        birthDateInput.addEventListener("focus", disableFutureDates);
+      } else {
+        console.error("BirthDate input not found.");
+      }
+
       // Gather the form input values
       newUserForm.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -67,6 +79,19 @@ export function createAccountEvents() {
           Country: document.querySelector("#Country").value,
           active: false,
         };
+
+        // Check if the user is at least 14 years old
+        if (!isUserOldEnough(userInfo.BirthDate)) {
+          alertMessage(
+            `Hey there buddy..
+            
+          We're sorry but you can't create an account until you've turned 14.
+
+          Welcome back!`,
+            "warning"
+          );
+          return;
+        }
 
         // If form input values are valid, create the new user
         if (newUserForm.checkValidity()) {

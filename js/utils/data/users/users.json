@@ -1,3 +1,26 @@
 {
-  "users": []
+  "users": [
+    {
+      "UserName": "Tele Caster Nilsen",
+      "UserEmail": "nilsen.tele@gmail.com",
+      "UserPassword": "awer",
+      "BirthDate": "2024-09-27",
+      "Address": "Ensjøsvingen 8A",
+      "PostalCode": "0661",
+      "Country": "Norway",
+      "active": false,
+      "id": "35853743"
+    },
+    {
+      "UserName": "Tele Caster Nilsen",
+      "UserEmail": "nilsen.tele@gmail.com",
+      "UserPassword": "dg",
+      "BirthDate": "2010-07-18",
+      "Address": "Ensjøsvingen 8A",
+      "PostalCode": "0661",
+      "Country": "Norway",
+      "active": false,
+      "id": "85098172"
+    }
+  ]
 }

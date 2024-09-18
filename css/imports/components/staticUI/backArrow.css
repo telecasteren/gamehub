@@ -1,9 +1,10 @@
 #backArrow {
-  cursor: pointer;
-  position: absolute;
+  top: 0;
+  position: relative;
   margin-left: 5%;
   margin-top: 10%;
   max-width: 80px;
+  cursor: pointer;
 }
 
 #backArrow img {

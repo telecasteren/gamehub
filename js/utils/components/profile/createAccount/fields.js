@@ -33,7 +33,10 @@ export const fields = [
     id: "BirthDate",
     type: "date",
     placeholder: "Birth Date",
-    attributes: { autocomplete: "on", required: true },
+    attributes: {
+      autocomplete: "on",
+      required: true,
+    },
   },
   {
     id: "UserEmail",

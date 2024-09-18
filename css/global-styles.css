@@ -4,12 +4,14 @@ IMPORT SHEETS ---------------------------*/
 /* UTILS */
 @import "/css/imports/utils/variables.css";
 @import "/css/imports/utils//auth/messages.css";
-@import "/css/imports/utils/auth/login.css";
 
 /* COMPONENTS */
 @import "/css/imports/components/loader.css";
-@import "/css/imports/components/forms.css";
 @import "/css/imports/components/carousel.css";
+@import "/css/imports/components/forms/forms.css";
+@import "/css/imports/components/forms/loginForm.css";
+@import "/css/imports/components/forms/inputs.css";
+@import "/css/imports/components/forms/createAccount.css";
 
 /* STATIC UI */
 @import "/css/imports/components/staticUI/navBar.css";

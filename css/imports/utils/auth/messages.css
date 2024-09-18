@@ -23,7 +23,7 @@
 /*- Search error component -*/
 .no-results {
   color: var(--white);
-  background-color: var(--logo-dark-blue);
+  background-color: var(--blue-base);
   width: 300px;
   padding: 20px;
   border-radius: 8px;
@@ -76,11 +76,12 @@
 
 .messageContent {
   font-size: 145%;
-  font-weight: 600;
+  font-weight: 400;
+  color: var(--blue-base);
 }
 
 .close-alert {
-  color: var(--dark-blue-base);
+  color: var(--bright-hover-blue-base);
   margin-left: 1%;
   float: right;
   font-size: 42px;
@@ -89,5 +90,5 @@
 }
 
 .close-alert:hover {
-  color: var(--bright-hover-blue-base);
+  color: var(--dark-blue-base);
 }

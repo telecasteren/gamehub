@@ -26,7 +26,7 @@ export async function setUserIDs() {
     return { assignNewUserId };
   } catch (error) {
     loadError("Error fetching user data for ID generation.");
-    console.log("Error occurred when checking userID:", error);
+    throw error;
     return null;
   }
 }
