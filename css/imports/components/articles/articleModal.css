@@ -33,7 +33,7 @@
 }
 
 .close-modal {
-  color: var(--black-blue-base);
+  color: var(--bright-hover-blue-base);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -42,7 +42,7 @@
 
 .close-modal:hover,
 .close-modal:focus {
-  color: var(--bright-hover-blue-base);
+  color: var(--dark-blue-base);
   text-decoration: none;
 }
 

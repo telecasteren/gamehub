@@ -9,7 +9,7 @@
   --bright-hover-blue-base: #00a6fb; /* text and button hover */
 
   /*- Special operations -*/
-  --light-blue-box: rgba(248, 248, 255, 1); /* mobile menu background, footer */
+  --light-blue-box: #f8f8ff; /* mobile menu + footer background */
 
   --faded-hover-white: rgba(254, 254, 255, 0.55);
   --overlay-faded-black: rgba(0, 0, 0, 0.6);
@@ -19,10 +19,10 @@
   --error-red-front: rgb(159, 16, 17);
   --error-red-back: rgba(255, 0, 0, 0.1);
 
-  --alert-box-shadow: rgba(0, 0, 0, 0.3); /* ALL box shadows --- RENAME ??? */
+  /* --alert-box-shadow: rgba(0, 0, 0, 0.3); NOT IN USE ??? */
 
-  --alert-info: rgba(0, 0, 0, 0.5);
-  --alert-success: rgba(29, 135, 24, 0.546);
-  --alert-warning: rgba(131, 101, 0, 0.529);
-  --alert-error: rgba(139, 0, 0, 0.531);
+  --alert-info: #00000080;
+  --alert-success: #1b940093;
+  --alert-warning: #81830087;
+  --alert-error: #942f0097;
 }

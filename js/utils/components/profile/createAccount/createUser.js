@@ -1,4 +1,4 @@
-import { loadError } from "/js/utils/auth/messages.js";
+import { loadError, alertMessage } from "/js/utils/auth/messages.js";
 import { setUserIDs } from "/js/utils/components/profile/createAccount/setUserIDs.js";
 
 export async function createUserInfo(userInfo) {
@@ -53,6 +53,13 @@ export async function createUserInfo(userInfo) {
 
     const message = await updateResponse.text();
     console.log(message);
+
+    alertMessage(
+      `Welcome to GameHub!
+
+    Login to activate your new user :)`,
+      "success"
+    );
   } catch (error) {
     console.error("Error creating user:", error);
     loadError("Error creating user.");

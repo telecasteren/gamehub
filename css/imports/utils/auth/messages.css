@@ -67,7 +67,7 @@
   background-color: var(--white);
   padding: 50px;
   border-radius: 22px;
-  box-shadow: 0 5px 20px var(--alert-box-shadow);
+  box-shadow: 0 5px 20px var(--overlay-faded-black);
   width: 30%;
   min-width: 300px;
   height: auto;

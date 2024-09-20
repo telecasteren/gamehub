@@ -3,39 +3,6 @@
     {
       "UserName": "Tele Caster Nilsen",
       "UserEmail": "nilsen.tele@gmail.com",
-      "UserPassword": "awer",
-      "BirthDate": "2024-09-27",
-      "Address": "Ensjøsvingen 8A",
-      "PostalCode": "0661",
-      "Country": "Norway",
-      "active": false,
-      "id": "35853743"
-    },
-    {
-      "UserName": "Tele Caster Nilsen",
-      "UserEmail": "nilsen.tele@gmail.com",
-      "UserPassword": "dg",
-      "BirthDate": "2010-07-18",
-      "Address": "Ensjøsvingen 8A",
-      "PostalCode": "0661",
-      "Country": "Norway",
-      "active": false,
-      "id": "85098172"
-    },
-    {
-      "UserName": "Tele Caster Nilsen",
-      "UserEmail": "nilsen.tele@gmail.com",
-      "UserPassword": "øjkb",
-      "BirthDate": "2009-06-03",
-      "Address": "Ensjøsvingen 8A",
-      "PostalCode": "0661",
-      "Country": "Norway",
-      "active": false,
-      "id": "70651565"
-    },
-    {
-      "UserName": "Tele Caster Nilsen",
-      "UserEmail": "nilsen.tele@gmail.com",
       "UserPassword": "ThisMyPass34",
       "BirthDate": "2009-03-05",
       "Address": "Ensjøsvingen 8A",
@@ -43,6 +10,83 @@
       "Country": "Norway",
       "active": false,
       "id": "69245284"
+    },
+    {
+      "UserName": "Caster Arnesen",
+      "UserEmail": "nilsen.tele@gmail.com",
+      "UserPassword": "arnsten",
+      "BirthDate": "2002-03-01",
+      "Address": "Ensjøsvingen 8B",
+      "PostalCode": "0661",
+      "Country": "Norway",
+      "active": false,
+      "id": "66710850"
+    },
+    {
+      "UserName": "Johnny Snow",
+      "UserEmail": "john@email.com",
+      "UserPassword": "efregr",
+      "BirthDate": "2007-06-06",
+      "Address": "Johnston Road 666",
+      "PostalCode": "454",
+      "Country": "USA",
+      "active": false,
+      "id": "75495632"
+    },
+    {
+      "UserName": "Tele Caster Nilsen",
+      "UserEmail": "nilsen.tele@gmail.com",
+      "UserPassword": "erg",
+      "BirthDate": "2003-06-19",
+      "Address": "Ensjøsvingen 8A",
+      "PostalCode": "0661",
+      "Country": "Norway",
+      "active": false,
+      "id": "93138270"
+    },
+    {
+      "UserName": "Tele Caster Nilsen",
+      "UserEmail": "nilsen.tele@gmail.com",
+      "UserPassword": "ergthy",
+      "BirthDate": "1994-02-09",
+      "Address": "Ensjøsvingen 8A",
+      "PostalCode": "0661",
+      "Country": "Norway",
+      "active": false,
+      "id": "74043380"
+    },
+    {
+      "UserName": "Tele Caster Nilsen",
+      "UserEmail": "nilsen.tele@gmail.com",
+      "UserPassword": "ggrgrgg",
+      "BirthDate": "1995-06-21",
+      "Address": "Ensjøsvingen 8A",
+      "PostalCode": "0661",
+      "Country": "Norway",
+      "active": false,
+      "id": "28114047"
+    },
+    {
+      "UserName": "Tele Caster Nilsen",
+      "UserEmail": "nilsen.tele@gmail.com",
+      "UserPassword": "rgthrhyjtu",
+      "BirthDate": "2004-02-11",
+      "Address": "Ensjøsvingen 8A",
+      "PostalCode": "0661",
+      "Country": "Norway",
+      "active": false,
+      "id": "29446297"
+    },
+    {
+      "UserName": "Tele Caster Nilsen",
+      "UserEmail": "nilsen.tele@gmail.com",
+      "UserPassword": "ergtg",
+      "BirthDate": "2002-06-05",
+      "Address": "Ensjøsvingen 8A",
+      "PostalCode": "0661",
+      "Country": "Norway",
+      "active": false,
+      "id": "45294527"
     }
   ]
 }
