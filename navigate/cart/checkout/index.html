@@ -148,41 +148,65 @@
               </form>
             </div>
 
-            <div class="form-container">
-              <div class="paymentForm">
-                <form>
-                  <h2 class="formTitle">Payment details</h2>
-
-                  <label hidden for="payment">Card provider</label>
-                  <select name="payment" id="cardDetails">
-                    <option value="" disabled selected hidden>
-                      Choose card provider
-                    </option>
-                    <option value="option-one">Mastercard</option>
-                    <option value="option-two">Visa Debit</option>
-                    <option value="option-three">American Express</option>
-                  </select>
-
-                  <label hidden for="date">Expiration date</label>
-                  <input type="date" name="date" id="cardDetails" required />
-                  <br />
-                  <input
-                    type="number"
-                    name="number"
-                    placeholder="cardnumber *"
-                    required
-                  />
-                  <label hidden for="number">CVC code</label>
-                  <input
-                    type="number"
-                    name="number"
-                    placeholder="cvc number *"
-                    required
-                  />
-                </form>
+            <div class="paymentMethodImgs-container">
+              <div class="pMethod-img">
+                <img
+                  src="/images/payment-imgs/eyJwYXRoIjoiZnJvbnRpZnlcL2FjY291bnRzXC9jMlwvMTczMDkwXC9wcm9qZWN0c1wvMjkzMjE0XC9hc3NldHNcLzNlXC81MzA0MzU5XC9jNWYxZWUyYmNjNzFlYjNlMjlhZTU0YTU5YTcyM2FhOC0xNjE2NTA0ODgzLnBuZyJ9_fronti.avif"
+                  alt="Vipps"
+                />
+              </div>
+              <div class="pMethod-img">
+                <img
+                  src="/images/payment-imgs/Klarna-Logo.wine_.png"
+                  alt="Klarna"
+                />
+              </div>
+              <div class="pMethod-img">
+                <img
+                  src="/images/payment-imgs/visa-mastercard.jpg"
+                  alt="Visa/Mastercard"
+                />
               </div>
             </div>
+
+            <!-- <div class="form-container"> -->
+            <div class="paymentForm">
+              <form>
+                <h2 class="formTitle">Payment details</h2>
+
+                <label hidden for="payment">Card provider</label>
+                <select name="payment" id="cardDetails">
+                  <option value="" disabled selected hidden>
+                    Choose payment method
+                  </option>
+                  <option value="option-one">Mastercard</option>
+                  <option value="option-two">Visa Debit</option>
+                  <option value="option-three">American Express</option>
+                  <option value="option-three">Vipps</option>
+                  <option value="option-three">Klarna</option>
+                </select>
+
+                <label hidden for="date">Expiration date</label>
+                <input type="date" name="date" id="cardDetails" required />
+                <!-- <br /> -->
+                <input
+                  type="number"
+                  name="number"
+                  placeholder="cardnumber *"
+                  required
+                />
+                <label hidden for="number">CVC code</label>
+                <input
+                  type="number"
+                  name="number"
+                  placeholder="cvc number *"
+                  required
+                />
+              </form>
+            </div>
           </div>
+
+          <!-- </div> -->
 
           <div><hr /></div>
 
