@@ -5,6 +5,7 @@ export const gameUrl = proxy + url;
 
 // Containers
 export const cartContainer = document.querySelector(".cart-section");
+export const cardDetailsDiv = document.querySelector(".cardDetails");
 export const cartWindow = document.getElementById("cartWindow-box");
 export const imageContainer = document.querySelector(".prodImg-container");
 export const homeContainer = document.querySelector(".home-container");

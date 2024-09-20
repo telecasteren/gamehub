@@ -7,7 +7,12 @@ import { renderPurchase } from "/js/cart/checkout/success/renderPurchase.js";
 import { displaySubtotal } from "/js/cart/checkout/price/displaySubtotal.js";
 import { initItemCounter } from "/js/cart/updateCart/updateTotals.js";
 import { mimicEmptyCart } from "/js/cart/checkout/mimicEmptyCart.js";
-import { CART_KEY, ORDER_CONFIRMED_KEY } from "/js/utils/general/constants.js";
+import {
+  CART_KEY,
+  ORDER_CONFIRMED_KEY,
+  cardDetailsDiv,
+} from "/js/utils/general/constants.js";
+import { cardDetailsHtml } from "/js/cart/checkout/paymentMethods/cardHtml.js";
 import {
   storeItemsAfterOrderPlaced,
   checkoutSuccess,
@@ -21,6 +26,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   initItemCounter();
   displaySubtotal();
   continueShoppingEvent();
+
+  if (cardDetailsDiv) {
+    cardDetailsHtml();
+  }
 
   const orderConfirmed = localStorage.getItem(ORDER_CONFIRMED_KEY);
   if (orderConfirmed === "true") {

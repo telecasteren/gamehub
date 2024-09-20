@@ -29,6 +29,10 @@
 
     <script type="module" src="/js/script.js"></script>
     <script type="module" src="/js/cart/renderCart.js"></script>
+    <script type="module">
+      import { methodPicker } from "/js/cart/checkout/paymentMethods/methodPicker.js";
+      methodPicker();
+    </script>
   </head>
   <body>
     <div class="topMenu-mobileView">
@@ -175,33 +179,20 @@
                 <h2 class="formTitle">Payment details</h2>
 
                 <label hidden for="payment">Card provider</label>
-                <select name="payment" id="cardDetails">
+                <select name="payment" id="paymentMethod">
                   <option value="" disabled selected hidden>
                     Choose payment method
                   </option>
-                  <option value="option-one">Mastercard</option>
-                  <option value="option-two">Visa Debit</option>
+                  <option value="option-one">Visa Debit</option>
+                  <option value="option-two">Mastercard</option>
                   <option value="option-three">American Express</option>
-                  <option value="option-three">Vipps</option>
-                  <option value="option-three">Klarna</option>
+                  <option value="option-four">Vipps</option>
+                  <option value="option-five">Klarna</option>
                 </select>
 
-                <label hidden for="date">Expiration date</label>
-                <input type="date" name="date" id="cardDetails" required />
-                <!-- <br /> -->
-                <input
-                  type="number"
-                  name="number"
-                  placeholder="cardnumber *"
-                  required
-                />
-                <label hidden for="number">CVC code</label>
-                <input
-                  type="number"
-                  name="number"
-                  placeholder="cvc number *"
-                  required
-                />
+                <div class="cardDetails"></div>
+                <div class="vippsDetails"></div>
+                <div class="klarnaDetials"></div>
               </form>
             </div>
           </div>

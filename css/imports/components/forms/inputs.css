@@ -36,7 +36,8 @@ input[type="date"]#cardDetails {
 
 form ::placeholder,
 select:invalid,
-select#cardDetails {
+select#cardDetails,
+select#paymentMethod {
   color: var(--light-blue-base);
 }
 
