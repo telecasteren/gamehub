@@ -1,3 +1,13 @@
+.checkout-page {
+  position: relative;
+  /* margin: 15%;
+  margin-top: 10%; */
+  margin: 0 15% 15%;
+  justify-content: center;
+  font-size: 100%;
+  display: grid;
+}
+
 #checkoutTitle {
   font-size: 200%;
   margin-bottom: 1%;
@@ -157,15 +167,6 @@
   display: flex;
 }
 
-.checkout-page {
-  position: relative;
-  margin: 15%;
-  margin-top: 10%;
-  justify-content: center;
-  font-size: 100%;
-  display: grid;
-}
-
 .checkoutBTN {
   margin-top: 10px;
   margin-left: 45vw;
@@ -215,6 +216,12 @@
   #total-price {
     margin-left: 78%;
     margin-bottom: 2%;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .checkout-page {
+    margin-top: 25%;
   }
 }
 
