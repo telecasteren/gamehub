@@ -1,6 +1,6 @@
 import { alertMessage } from "/js/utils/auth/messages.js";
 import { UNKNOWN_KEY } from "/js/utils/general/constants.js";
-import { goToProduct } from "/js/script.js";
+import { goToProduct } from "/js/utils/components/eventListeners/goToProduct.js";
 
 export function handleGetButton(products) {
   const getBtn = document.querySelector(".getBTN");

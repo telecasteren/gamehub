@@ -104,7 +104,8 @@ export function createAccountEvents() {
             
             Login to activate your new user :)`
           );
-          // When user is directed back to login, renderSuccess.js will run with the message above
+          // When user is directed back to login,
+          // renderSuccess.js will run with the accountCreatedMessage
           window.location.href = "/navigate/profile/login/";
         } else {
           loadError("Please fill in all the required fields.");
@@ -116,7 +117,3 @@ export function createAccountEvents() {
     throw error;
   }
 }
-
-window.addEventListener("beforeunload", (event) => {
-  console.log("Page is reloading or unloading");
-});

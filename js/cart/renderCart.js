@@ -1,6 +1,6 @@
 import { fetchGames } from "/js/utils/api/productsApi.js";
 import { loadError } from "/js/utils/auth/messages.js";
-import { continueShoppingEvent } from "/js/script.js";
+import { continueShoppingEvent } from "/js/utils/components/eventListeners/continueShopping.js";
 import { renderCartProducts } from "./cartHtml.js";
 import { getItemsInLocalStorage } from "/js/utils/storage/getItemsInLocalStorage.js";
 import { renderPurchase } from "/js/cart/checkout/success/renderPurchase.js";

@@ -1,5 +1,5 @@
 import { fetchGames } from "/js/utils/api/productsApi.js";
-import { goToProduct } from "/js/script.js";
+import { goToProduct } from "/js/utils/components/eventListeners/goToProduct.js";
 import { gamesHTML } from "/js/utils/components/search/filterProducts.js";
 import { setSearchListeners } from "/js/utils/components/search/searchListeners.js";
 import { UNKNOWN_KEY, wrapper } from "/js/utils/general/constants.js";

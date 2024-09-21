@@ -1,4 +1,4 @@
-import { goToProduct } from "/js/script.js";
+import { goToProduct } from "/js/utils/components/eventListeners/goToProduct.js";
 import { fetchGames } from "/js/utils/api/productsApi.js";
 import { loadError } from "/js/utils/auth/messages.js";
 

@@ -2,7 +2,7 @@ import { displaySubtotal } from "/js/cart/checkout/price/displaySubtotal.js";
 import { getItemsInLocalStorage } from "/js/utils/storage/getItemsInLocalStorage.js";
 import { updateQuantity } from "/js/cart/updateCart/updateCartItems.js";
 import { loadError } from "/js/utils/auth/messages.js";
-import { goToProduct } from "/js/script.js";
+import { goToProduct } from "/js/utils/components/eventListeners/goToProduct.js";
 import {
   INCREASE_ICON_IMG,
   DECREASE_ICON_IMG,

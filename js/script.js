@@ -15,6 +15,7 @@ import {
   displayHelpTextOnProfile,
 } from "/js/utils/components/profile/login/popUpText.js";
 
+// Render everything from here
 document.addEventListener("DOMContentLoaded", function () {
   updateCartCounter();
   saveCurrentPage();
@@ -38,23 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
     createAccountEvents();
   }
 });
-
-// Redirect to specific products:
-export function goToProduct(productID) {
-  window.location.href = `/navigate/products/?gameId=${productID}`;
-}
-
-// Continue shopping button at cart/checkout:
-export function continueShoppingEvent() {
-  const allGames = document.querySelector("._allGames");
-
-  if (allGames) {
-    function goToGames() {
-      window.location.href = `/navigate/products/product-list/`;
-    }
-    allGames.addEventListener("click", goToGames);
-  }
-}
 
 // Mobile menu
 togglemenu();
