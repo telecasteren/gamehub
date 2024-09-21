@@ -16,18 +16,6 @@
       ]
     },
     {
-      "title": "In need of new gear? Get it here",
-      "image": {
-        "url": ["/images/article-imgs/istock-gamingController.jpg"],
-        "alt": "Person holding a gaming controller playing on the tv"
-      },
-      "link": "",
-      "content": [
-        "When deciding between new or used gaming gear, it's all about finding what suits your needs. New gear offers the latest features and a warranty, while used gear can save you money and still perform well if chosen carefully.",
-        "If you're unsure what to invest in, starting with used gear can be a cost-effective way to test the waters. GameHub offers a curated assortment of used gear, take a look!"
-      ]
-    },
-    {
       "title": "Game design - from idea to screen",
       "image": {
         "url": "/images/article-imgs/istock-designingGames.jpg",
@@ -41,16 +29,15 @@
       ]
     },
     {
-      "title": "Different Text Title",
+      "title": "In need of new gear? Get it here",
       "image": {
-        "url": "/images/article-imgs/istock-blackLined.jpg",
-        "alt": "article test"
+        "url": ["/images/article-imgs/istock-gamingController.jpg"],
+        "alt": "Person holding a gaming controller playing on the tv"
       },
       "link": "",
       "content": [
-        "This is the first paragraph of another text.",
-        "Here is the second paragraph.",
-        "And this is the third paragraph."
+        "When deciding between new or used gaming gear, it's all about finding what suits your needs. New gear offers the latest features and a warranty, while used gear can save you money and still perform well if chosen carefully.",
+        "If you're unsure what to invest in, starting with used gear can be a cost-effective way to test the waters. GameHub offers a curated assortment of used gear, take a look!"
       ]
     }
   ]
