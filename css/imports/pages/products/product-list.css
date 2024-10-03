@@ -51,21 +51,6 @@ input#searchGames:hover {
   border: 1px solid var(--bright-hover-blue-base);
 }
 
-#gamingNav {
-  width: 100%;
-  position: relative;
-  text-align: center;
-  margin-top: 4%;
-  margin-bottom: 0;
-}
-
-/* .product-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-left: 11%;
-  padding-bottom: 5%;
-} */
-
 .product-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -147,12 +132,5 @@ Media screens
 
   .product-wrapper {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 360px) {
-  #gamingNav img {
-    width: 260px;
-    height: auto;
   }
 }

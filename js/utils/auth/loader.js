@@ -1,5 +1,5 @@
-const loader = document.querySelector(".loader");
+// const loader = document.querySelector(".loader");
 
-setTimeout(function () {
-  loader.innerHTML += `<div class="${className}"></div>`;
-}, 2000);
+// setTimeout(function () {
+//   loader.innerHTML += `<div class="${loader}"></div>`;
+// }, 2000);

@@ -8,9 +8,10 @@ export function disableFutureDates() {
 
   const dateInput = document.getElementById("BirthDate");
   if (dateInput) {
-    console.log("Setting max date to today:", formattedToday); // Debugging
+    console.log("Max date is today:", formattedToday); // Debugging
     dateInput.setAttribute("max", formattedToday);
   } else {
     console.error("Date input field not found.");
+    throw error;
   }
 }

@@ -57,14 +57,12 @@ export function createAccountEvents() {
         birthDateInput.addEventListener("focus", disableFutureDates);
       } else {
         console.error("BirthDate input not found.");
+        throw error;
       }
 
       // Gather the form input values
       newUserForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        console.log(
-          "Form submission prevented, proceeding with user creation."
-        );
 
         const FirstName = document.querySelector("#FirstName").value;
         const LastName = document.querySelector("#LastName").value;
