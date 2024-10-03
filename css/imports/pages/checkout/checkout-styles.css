@@ -1,8 +1,6 @@
 .checkout-page {
   position: relative;
-  /* margin: 15%;
-  margin-top: 10%; */
-  margin: 0 15% 15%;
+  margin: 0 20% 20%;
   justify-content: center;
   font-size: 100%;
   display: grid;
@@ -16,6 +14,9 @@
 .cart-elements {
   display: grid;
   justify-content: center;
+
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 .paymentMethodImgs-container {
@@ -169,7 +170,7 @@
 
 .checkoutBTN {
   margin-top: 10px;
-  margin-left: 45vw;
+  margin-left: 41vw;
   width: 30%;
   min-width: 250px;
   padding: 10px;
@@ -201,15 +202,16 @@
   color: var(--light-blue-base);
 }
 
-@media screen and (max-width: 500px) {
-  .logoCheckout .logo {
-    margin-top: 10%;
-    margin-left: 15%;
+@media screen and (max-width: 480px) {
+  .checkoutPage {
+    margin-top: 20%;
   }
+}
 
-  .loggedInUser-info {
-    margin-top: 30%;
-    margin-right: 15%;
+@media screen and (max-width: 650px) {
+  .checkoutBTN {
+    margin-left: 0;
+    justify-self: center;
   }
 
   #subtotal-price,
@@ -219,14 +221,14 @@
   }
 }
 
-@media screen and (max-width: 1023px) {
-  .checkout-page {
-    margin-top: 25%;
+@media screen and (max-width: 768px) {
+  .checkoutPage {
+    margin-top: 15%;
   }
 }
 
-@media screen and (max-width: 650px) {
-  .checkoutBTN {
-    margin-left: 0;
+@media screen and (max-width: 1023px) {
+  .checkout-page {
+    margin-top: 25%;
   }
 }

@@ -5,6 +5,7 @@
   margin-top: 10%;
   max-width: 80px;
   cursor: pointer;
+  z-index: 500;
 }
 
 #backArrow img {
