@@ -8,10 +8,11 @@
   margin: 1%;
   cursor: pointer;
   text-align: center;
-  font-size: 3.1rem;
+  font-size: 4.5rem;
   color: var(--dark-blue-base);
-  font-family: "Thunder", sans-serif;
+  font-family: "Dorsa", sans-serif;
   font-weight: 400;
+  letter-spacing: 2px;
 }
 
 .articleTitle:hover {

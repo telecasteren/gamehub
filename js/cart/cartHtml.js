@@ -91,13 +91,13 @@ export function renderCartProducts() {
           updateQuantity(prodId, -1);
         });
 
-        counterIconDivIncrease.appendChild(increaseIcon);
-        counterIconContainer.appendChild(counterIconDivIncrease);
+        counterIconDivDecrease.appendChild(decreaseIcon);
+        counterIconContainer.appendChild(counterIconDivDecrease);
 
         counterIconContainer.appendChild(counter);
 
-        counterIconDivDecrease.appendChild(decreaseIcon);
-        counterIconContainer.appendChild(counterIconDivDecrease);
+        counterIconDivIncrease.appendChild(increaseIcon);
+        counterIconContainer.appendChild(counterIconDivIncrease);
 
         const cartItemTitle = document.createElement("div");
         cartItemTitle.classList.add("cartInfo-title");
