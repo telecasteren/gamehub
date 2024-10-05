@@ -23,34 +23,6 @@
   animation: scroll 30s linear infinite;
 }
 
-#search-form {
-  display: grid;
-  width: 100vw;
-  justify-content: center;
-}
-
-#searchGames {
-  font-size: 20px;
-  width: 245px;
-  height: 40px;
-  border-radius: 8px;
-  margin-top: 50px;
-  border: solid var(--light-blue-base);
-  background-color: var(--white);
-  cursor: pointer;
-}
-
-#searchGames::placeholder {
-  text-align: center;
-  font-size: 16px;
-}
-
-input#searchGames:hover {
-  transition: 0.5s;
-  width: 300px;
-  border: 1px solid var(--bright-hover-blue-base);
-}
-
 .product-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

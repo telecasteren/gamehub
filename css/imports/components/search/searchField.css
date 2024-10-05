@@ -1,0 +1,27 @@
+#search-form {
+  display: grid;
+  width: 100vw;
+  justify-content: center;
+}
+
+#searchGames {
+  font-size: 20px;
+  width: 245px;
+  height: 40px;
+  border-radius: 8px;
+  margin-top: 50px;
+  border: 2px solid var(--light-blue-base);
+  background-color: var(--white);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+#searchGames::placeholder {
+  text-align: center;
+  font-size: 16px;
+}
+
+#searchGames:hover {
+  transform: translate(-1%, -1%) scale(1.04);
+  border-color: var(--bright-hover-blue-base);
+}
