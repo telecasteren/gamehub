@@ -45,7 +45,7 @@ IMPORT SHEETS ---------------------------*/
   margin: 0;
   padding: 0;
   text-decoration: none;
-  color: var(--logo-dark-blue); /* var(--dark-blue-base); */
+  color: var(--dark-blue-base);
   font-weight: medium;
   font-family: sans-serif;
   scroll-behavior: smooth;

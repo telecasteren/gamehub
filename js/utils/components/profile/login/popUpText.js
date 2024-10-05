@@ -14,21 +14,19 @@ export function updateHelpTextEvents() {
   document
     .querySelector("#accountsText")
     .addEventListener("click", function () {
-      popupHelpText(
-        "You must be logged in to view your account and active subscriptions"
-      );
+      popupHelpText(`Log in to view your account`);
     });
 
   document
     .querySelector("#communityText")
     .addEventListener("click", function () {
-      popupHelpText("Log in to connect with our community!");
+      popupHelpText(`Log in to connect with the community`);
     });
 
   document
     .querySelector("#discountsText")
     .addEventListener("click", function () {
-      popupHelpText("You must be logged in to view your discount coupons");
+      popupHelpText(`Log in to view your discounts`);
     });
 }
 

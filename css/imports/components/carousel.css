@@ -13,17 +13,18 @@
 
 .carouselOverlayTitle {
   font-size: 2vw;
-  letter-spacing: 3px;
+  font-weight: 400;
+  letter-spacing: 4px;
   color: var(--white);
-  font-family: "Thunder", sans-serif;
+  font-family: "Dorsa", sans-serif;
 }
 
 .carouselOverlayTitle span {
   margin: 0;
   font-size: 10vw;
-  letter-spacing: 3px;
+  letter-spacing: 8px;
   color: var(--white);
-  font-family: "Thunder", sans-serif;
+  font-family: "Six Caps", sans-serif;
 }
 
 .carousel {

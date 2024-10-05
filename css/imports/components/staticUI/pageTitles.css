@@ -17,10 +17,9 @@ Profile
   text-align: center;
   justify-self: center;
 
-  font-size: 4.06rem;
-  letter-spacing: 3px;
-  font-weight: 600;
-  font-family: "Thunder", sans-serif;
+  font-size: 5rem;
+  letter-spacing: 4px;
+  font-family: "Dorsa", sans-serif;
 }
 
 @media screen and (max-width: 1023px) {
@@ -28,6 +27,6 @@ Profile
     margin-top: 50px;
   }
   .page-title h1 {
-    font-size: 3.06rem;
+    font-size: 4rem;
   }
 }
