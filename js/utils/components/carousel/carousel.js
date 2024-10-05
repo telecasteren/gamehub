@@ -25,8 +25,11 @@ export async function initCarouselSlider() {
     overlayText.classList.add("carouselOverlayTitle");
     overlayText.innerHTML = `NEW RELEASE<br><span>${prodTitle}</span>`;
 
-    overlayDiv.appendChild(overlayText);
-    slide.appendChild(overlayDiv);
+    setTimeout(function () {
+      overlayDiv.appendChild(overlayText);
+      slide.appendChild(overlayDiv);
+    }, 100);
+
     slide.appendChild(img);
     carouselWrapper.appendChild(slide);
 
