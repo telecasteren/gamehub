@@ -11,20 +11,22 @@ function popupHelpText(helpText) {
 }
 
 export function updateHelpTextEvents() {
-  document.querySelector(".accountsBox").addEventListener("click", function () {
-    popupHelpText(
-      "You must be logged in to view your account and active subscriptions"
-    );
-  });
+  document
+    .querySelector("#accountsText")
+    .addEventListener("click", function () {
+      popupHelpText(
+        "You must be logged in to view your account and active subscriptions"
+      );
+    });
 
   document
-    .querySelector(".communityBox")
+    .querySelector("#communityText")
     .addEventListener("click", function () {
       popupHelpText("Log in to connect with our community!");
     });
 
   document
-    .querySelector(".discountsBox")
+    .querySelector("#discountsText")
     .addEventListener("click", function () {
       popupHelpText("You must be logged in to view your discount coupons");
     });

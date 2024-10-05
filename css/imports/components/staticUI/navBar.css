@@ -72,7 +72,8 @@ nav ul li a:hover {
     top: 60px;
     width: 100vw;
     z-index: 1000;
-    background-color: var(--light-blue-box);
+
+    background-color: var(--white);
   }
 }
 
@@ -87,7 +88,8 @@ nav ul li a:hover {
     position: fixed;
     top: 60px;
     width: 100vw;
-    background-color: var(--light-blue-box);
+
+    background-color: var(--white);
     z-index: 1000;
     overflow: hidden;
   }
@@ -99,7 +101,8 @@ nav ul li a:hover {
     right: 0;
     top: 60px;
     width: 100vw;
-    background-color: var(--light-blue-box);
+
+    background-color: var(--white);
     z-index: 1000;
   }
 }
@@ -124,7 +127,7 @@ nav ul li a:hover {
   }
 
   nav ul {
-    background-color: var(--light-blue-box);
+    background-color: var(--white);
     position: fixed;
     width: 100%;
     height: auto;

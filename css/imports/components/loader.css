@@ -1,11 +1,9 @@
 .loader {
-  border: 16px solid var(--white);
-  border-top: 16px solid var(--light-blue-base);
+  border: 16px solid var(--light-blue-base);
+  border-top: 16px solid var(--loader-blue-base);
   border-radius: 100%;
   width: 100px;
   height: 100px;
-  /* width: 20%;
-  height: 20%; */
   animation: spin 2s linear infinite;
   margin-left: 5%;
   margin-top: 50%;

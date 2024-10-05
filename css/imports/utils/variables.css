@@ -10,6 +10,7 @@
 
   /*- Special operations -*/
   --light-blue-box: #f8f8ff; /* mobile menu + footer background */
+  --loader-blue-base: #a9e2ff; /* loader */
 
   --faded-hover-white: rgba(254, 254, 255, 0.55);
   --overlay-faded-black: rgba(0, 0, 0, 0.6);
