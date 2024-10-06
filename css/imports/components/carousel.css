@@ -12,7 +12,7 @@
 }
 
 .carouselOverlayTitle {
-  font-size: 2vw;
+  font-size: 3vw;
   font-weight: 400;
   letter-spacing: 4px;
   color: var(--white);
@@ -21,7 +21,7 @@
 
 .carouselOverlayTitle span {
   margin: 0;
-  font-size: 10vw;
+  font-size: 11vw;
   letter-spacing: 8px;
   color: var(--white);
   font-family: "Six Caps", sans-serif;
@@ -60,5 +60,15 @@
 @media screen and (max-width: 900px) {
   .carousel {
     margin-top: 70px;
+  }
+
+  .carouselOverlayTitle {
+    letter-spacing: 2px;
+    font-size: 4vw;
+  }
+
+  .carouselOverlayTitle span {
+    letter-spacing: 6px;
+    font-size: 12vw;
   }
 }

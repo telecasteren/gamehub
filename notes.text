@@ -1,13 +1,12 @@
 // ------------------------ TO DO:
 // Profile page:
 // - login authentication and field validation
-// - activating users upon first login
-//
-// Contact page:
-// - Button box design
+// - set user active on first login
 //
 // General all over:
 // - Fix footer position
+// - If product is already in cart,
+// notify user next time they click add to cart cta for that product
 //
 // - profile page UX
 // - favourites
