@@ -9,6 +9,7 @@
   display: grid;
 
   justify-self: center;
+  animation: 0.5s ease-in-out;
 }
 
 .paymentForm {

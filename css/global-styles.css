@@ -13,6 +13,7 @@ IMPORT SHEETS ---------------------------*/
 @import "/css/imports/components/forms/inputs.css";
 @import "/css/imports/components/forms/createAccount.css";
 @import "/css/imports/components/search/searchField.css";
+@import "/css/imports/components/faqToggle.css";
 
 /* STATIC UI */
 @import "/css/imports/components/staticUI/navBar.css";

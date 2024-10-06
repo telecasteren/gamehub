@@ -1,0 +1,22 @@
+{
+  "faqTexts": [
+    {
+      "title": "Subscriptions",
+      "content": [
+        "Subscriptions we offer: \nAnnual: $100 \nMonthly: $20 \nWeekly: $10"
+      ]
+    },
+    {
+      "title": "Online safety",
+      "content": [
+        "Online safety is crucial in today's digital world as it protects personal information and privacy from potential threats. By practicing safe browsing habits, using strong, unique passwords, and enabling two-factor authentication, individuals can significantly reduce the risk of cyberattacks. It's also essential to be cautious when sharing personal details on social media and to be aware of phishing scams that attempt to steal sensitive information. Regularly updating software and using reliable security tools further enhances online safety, ensuring a secure and enjoyable internet experience."
+      ]
+    },
+    {
+      "title": "Delivery & returns",
+      "content": [
+        "We offer fast and reliable shipping options to ensure your order arrives on time.  \nOrders are typically processed within 1-3 business days.  \nOnce your order has shipped, you will receive a tracking number via email to monitor its progress.  \nPlease note that delivery times may vary based on your location and the shipping method selected at checkout.  \n\nIf you are not completely satisfied with your purchase, we accept returns within 30 days of delivery.  \nItems must be unused, in their original packaging, and accompanied by a receipt.  \nTo initiate a return, please contact our customer service team for a return authorization number.  \nShipping costs for returns are the responsibility of the customer, unless the item is defective or incorrect.  \nRefunds will be processed to the original payment method once the returned item is received and inspected.  \n\nFor any questions or further assistance, please feel free to reach out to our customer service team.  \nWe appreciate your business and are here to help!"
+      ]
+    }
+  ]
+}

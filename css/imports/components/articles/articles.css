@@ -8,11 +8,10 @@
   margin: 1%;
   cursor: pointer;
   text-align: center;
-  font-size: 4.5rem;
   color: var(--dark-blue-base);
-  font-family: "Dorsa", sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
-  letter-spacing: 2px;
+  font-size: 2.5rem;
 }
 
 .articleTitle:hover {
@@ -46,6 +45,6 @@
   }
 
   .articleTitle {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }

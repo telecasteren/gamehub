@@ -4,6 +4,7 @@ import { updateCartCounter } from "/js/cart/updateCart/updateCartCounter.js";
 import { saveCurrentPage } from "/js/utils/storage/saveCurrentPage.js";
 import { loadPreviousPage } from "/js/utils/storage/loadPreviousPage.js";
 import { displayLandingContent } from "/js/homepage/displayContent.js";
+import { displayFAQtexts } from "/js/utils/components/FAQEvents/displayFAQtexts.js";
 import {
   homeContainer,
   carousel,
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Help text for certain actions when user is not logged in
   if (window.location.pathname.includes("/contact/")) {
     updateHelpTextEvents();
+    displayFAQtexts();
   } else if (window.location.pathname.includes("/login/")) {
     displayHelpTextOnProfile();
   }

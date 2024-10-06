@@ -23,13 +23,19 @@
 /*- Search error component -*/
 .no-results {
   color: var(--white);
-  background-color: var(--blue-base);
+  border: 2px solid var(--alert-warning);
+  box-shadow: 0 5px 20px var(--overlay-faded-black);
+  background-color: var(--alert-warning);
+  border-radius: 12px;
   width: 300px;
   padding: 20px;
-  border-radius: 12px;
+  margin: 5%;
   text-align: center;
   font-size: 28px;
   font-weight: 400;
+
+  grid-column: span 3;
+  justify-self: center;
 }
 
 /*- Alert message component-*/

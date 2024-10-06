@@ -1,0 +1,50 @@
+.faq-toggle-container {
+  display: none;
+  margin: 10%;
+  overflow: hidden;
+  max-width: 1000px;
+  min-width: 350px;
+  height: auto;
+}
+
+.faqToggle-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.faqContentText {
+  justify-self: center;
+  max-width: fit-content;
+  height: auto;
+}
+
+.faqContentText,
+.close-faq {
+  animation: scrollIn 0.5s ease-out forwards;
+}
+
+@keyframes scrollIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-faq {
+  color: var(--bright-hover-blue-base);
+  width: fit-content;
+  margin-left: 10%;
+  margin-top: -2%;
+  float: right;
+  font-size: 42px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.close-faq:hover {
+  color: var(--dark-blue-base);
+}
