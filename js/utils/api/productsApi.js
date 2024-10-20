@@ -1,10 +1,7 @@
 // This is the wordpress products API
 
 import { wrapper } from "/js/utils/general/constants.js";
-import {
-  wooComApiKey,
-  wooComApiSecret,
-} from "/js/utils/auth/secrets/apiKeys.js";
+import { wooComApiKey, wooComApiSecret } from "/js/utils/auth/keys/apiKeys.js";
 
 const baseUrl = "https://gamehub-shop.no/wp-json/wc/v3/products";
 

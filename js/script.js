@@ -1,20 +1,20 @@
-import { initCarouselSlider } from "/js/utils/components/carousel/carousel.js";
-import { togglemenu } from "/js/utils/components/navbar/menuList.js";
-import { updateCartCounter } from "/js/cart/updateCart/updateCartCounter.js";
+import { initCarouselSlider } from "/js/app/components/carousel/carousel.js";
+import { togglemenu } from "/js/app/components/navbar/menuList.js";
+import { updateCartCounter } from "/js/app/cart/updateCart/updateCartCounter.js";
 import { saveCurrentPage } from "/js/utils/storage/saveCurrentPage.js";
 import { loadPreviousPage } from "/js/utils/storage/loadPreviousPage.js";
-import { displayLandingContent } from "/js/homepage/displayContent.js";
-import { displayFAQtexts } from "/js/utils/components/FAQEvents/displayFAQtexts.js";
+import { displayLandingContent } from "/js/app/homepage/displayContent.js";
+import { displayFAQtexts } from "/js/app/components/FAQEvents/displayFAQtexts.js";
 import {
   homeContainer,
   carousel,
   createAccountBtn,
 } from "/js/utils/general/constants.js";
-import { createAccountEvents } from "/js/utils/components/profile/createAccount/createAccount.js";
+import { createAccountEvents } from "/js/app/components/profile/createAccount/createAccount.js";
 import {
   updateHelpTextEvents,
   displayHelpTextOnProfile,
-} from "/js/utils/components/profile/login/popUpText.js";
+} from "/js/app/components/profile/login/popUpText.js";
 
 // Render everything from here
 document.addEventListener("DOMContentLoaded", function () {
