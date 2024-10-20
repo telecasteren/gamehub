@@ -4,9 +4,8 @@
 // - set user active on first login
 //
 // General all over:
-// - Fix footer position
 // - If product is already in cart,
-// notify user next time they click add to cart cta for that product
+// - notify user next time they click add to cart cta for that product
 //
 // - profile page UX
 // - favourites

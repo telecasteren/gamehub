@@ -24,7 +24,7 @@ export function setSearchListeners(info) {
       searchTerm === "";
       localStorage.setItem(SEARCH_KEY, searchTerm);
 
-      gamesHTML(info.data);
+      gamesHTML(info);
       updateSearchIconVisibility(clearSearchIcon);
     });
 
@@ -32,7 +32,7 @@ export function setSearchListeners(info) {
       clearSearchIcon.addEventListener("click", function () {
         searchInput.value = "";
         localStorage.removeItem(SEARCH_KEY);
-        gamesHTML(info.data);
+        gamesHTML(info);
         updateSearchIconVisibility(clearSearchIcon);
       });
     }
@@ -45,7 +45,7 @@ export function setSearchListeners(info) {
       const searchTerm = localStorage.getItem(SEARCH_KEY) || "";
       searchInput.value = searchTerm;
       if (searchTerm !== "") {
-        gamesHTML(info.data);
+        gamesHTML(info);
       }
       updateSearchIconVisibility(clearSearchIcon);
     }

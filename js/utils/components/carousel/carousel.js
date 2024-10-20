@@ -7,8 +7,9 @@ export async function initCarouselSlider() {
   carouselWrapper.className = "carousel-wrapper";
 
   const apiInfo = await fetchGames();
-  const response = apiInfo.data;
-  const prodTitle = response[3].title;
+
+  const response = apiInfo;
+  const prodTitle = response[0].name;
 
   carouselImages.forEach((image) => {
     const slide = document.createElement("div");

@@ -15,7 +15,7 @@ export function handleGetButton(products) {
     let specificProductId;
 
     if (products.length > 2) {
-      specificProductId = products[3].id;
+      specificProductId = products[0].id;
 
       getBtn.addEventListener("click", () => {
         goToProduct(specificProductId);

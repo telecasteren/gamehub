@@ -1,5 +1,9 @@
 import { loadError } from "/js/utils/auth/messages.js";
-import { cartWindow, imageContainer } from "/js/utils/general/constants.js";
+import {
+  cartWindow,
+  imageContainer,
+  CURRENCY_KEY,
+} from "/js/utils/general/constants.js";
 import {
   UNKNOWN_KEY,
   PRICE_NOT_FOUND,
@@ -12,12 +16,12 @@ export function gameDetails(product) {
     if (product) {
       const prodId = product.id || PRODUCT_NOT_FOUND;
       const price = product.price || PRICE_NOT_FOUND;
-      const discountPrice = product.discountedPrice || `${price}`;
-      const genre = product.genre || UNKNOWN_KEY;
-      const gameTitle = product.title || `Product Id: ${prodId}`;
-      const ageRate = product.ageRating || UNKNOWN_KEY;
-      const releaseDate = product.released || UNKNOWN_KEY;
+      const discountPrice = product.sale_price || `${price}`;
+      const genre =
+        product.categories.map((cat) => cat.name).join(", ") || UNKNOWN_KEY;
+      const gameTitle = product.name || `Product Id: ${prodId}`;
       const gameText = product.description;
+
       const textContainer = document.querySelector(".productText");
 
       const pageTitle = document.querySelector("title");
@@ -35,10 +39,6 @@ export function gameDetails(product) {
       const p = document.createElement("p");
       p.classList.add("tagline");
 
-      const agesText = document.createTextNode(`Ages: ${ageRate}`);
-      p.appendChild(agesText);
-      p.appendChild(document.createElement("br"));
-
       const genreText = document.createTextNode(`Genre: ${genre}`);
       p.appendChild(genreText);
       p.appendChild(document.createElement("br"));
@@ -46,7 +46,7 @@ export function gameDetails(product) {
       const priceText = document.createTextNode(`Price: ${price}`);
       p.appendChild(priceText);
 
-      if (product.onSale) {
+      if (product.on_sale) {
         p.appendChild(document.createElement("br"));
 
         const discountText = document.createTextNode("Limited offer: ");
@@ -54,12 +54,12 @@ export function gameDetails(product) {
 
         const discountSpan = document.createElement("span");
         discountSpan.classList.add("discount-price");
-        discountSpan.textContent = `${discountPrice}`;
+        discountSpan.textContent = `${discountPrice} ${CURRENCY_KEY}`;
         p.appendChild(discountSpan);
       }
       gameTag.appendChild(p);
 
-      textContainer.innerHTML = `<p>About:</br>${gameText}</br></br>Release year: ${releaseDate}</p>`;
+      textContainer.innerHTML = `${gameText}`;
 
       cartWindow.appendChild(titleHead);
       cartWindow.appendChild(gameTag);
@@ -71,13 +71,13 @@ export function gameDetails(product) {
 
     function specificGameImg(product) {
       const gameImg =
-        product.image && product.image.url
-          ? product.image.url
+        product.images && product.images.length > 0
+          ? product.images[0].src
           : NO_IMAGE_FOUND_IMG;
       const gameAlt =
-        product.image && product.image.alt
-          ? product.image.alt
-          : `Game cover for ${product.title}`;
+        product.images && product.images.length > 0
+          ? product.images[0].alt
+          : `Game cover for ${product.name}`;
 
       const imgEl = document.createElement("img");
       imgEl.classList.add("productIMG");

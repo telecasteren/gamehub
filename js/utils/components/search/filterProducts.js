@@ -30,7 +30,7 @@ export async function gamesHTML(games) {
     const searchTerm = localStorage.getItem(SEARCH_KEY) || "";
 
     const filteredProducts = games.filter((game) =>
-      approximateMatch(searchTerm, game.title)
+      approximateMatch(searchTerm, game.name)
     );
 
     if (filteredProducts.length) {

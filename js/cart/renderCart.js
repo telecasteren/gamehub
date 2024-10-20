@@ -48,9 +48,7 @@ async function updateCartWithAPI() {
     const localData = getItemsInLocalStorage();
 
     const updatedCartData = localData.map((localItem) => {
-      const apiItem = apiData.data.find(
-        (apiItem) => apiItem.id === localItem.id
-      );
+      const apiItem = apiData.find((apiItem) => apiItem.id === localItem.id);
       return apiItem ? { ...localItem, ...apiItem } : localItem;
     });
 

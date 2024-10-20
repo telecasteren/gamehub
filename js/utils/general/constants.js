@@ -1,7 +1,7 @@
-// API call
-const url = "https://v2.api.noroff.dev/gamehub";
-const proxy = "https://noroffcors.onrender.com/";
-export const gameUrl = proxy + url;
+// NOROFF GameHub API endpoint
+// const url = "https://v2.api.noroff.dev/gamehub";
+// const proxy = "https://noroffcors.onrender.com/";
+// export const gameUrl = proxy + url;
 
 // Containers
 export const cartContainer = document.querySelector(".cart-section");
@@ -48,6 +48,10 @@ export const INCREASE_ICON_ALT = `Icon for adding items`;
 export const DECREASE_ICON_ALT = `Icon for removing items`;
 export const INCREASE_ICON_IMG = `/images/add-item.png`;
 export const DECREASE_ICON_IMG = `/images/remove-item.png`;
+
+// Currency
+export const CURRENCY_KEY = " kr"; // This should be dynamically determined based on country / user chosen currency
+export const CURRENCY_TYPE = "NOK "; // This should be dynamically determined based on country / user chosen currency
 
 // User
 export const UserEmail = "UserEmail";

@@ -35,8 +35,6 @@ export function checkoutSuccess() {
       sessionStorage.removeItem(ORDER_CONFIRMED_KEY);
       localStorage.removeItem(CART_KEY);
       updateCartCounter();
-
-      // sessionStorage.removeItem(PURCHASED_ITEMS_KEY); <--- This cannot happen here, because then the purchase does not display
     }
   });
 }

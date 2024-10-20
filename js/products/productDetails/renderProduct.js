@@ -11,7 +11,7 @@ async function specificGame() {
     }
 
     const specificProd = await fetchGames(gameId);
-    if (!specificProd || !specificProd.data) {
+    if (!specificProd || !specificProd.id) {
       throw new Error("No product found for the given game Id");
     }
 
@@ -19,10 +19,10 @@ async function specificGame() {
     imageContainer.innerHTML = "";
     cartWindow.innerHTML = "";
 
-    gameDetails(specificProd.data);
+    gameDetails(specificProd);
 
     cartWindow.insertAdjacentHTML("beforeend", cartButton);
-    addToCartEvent(specificProd.data);
+    addToCartEvent(specificProd);
   } catch (error) {
     console.log("Error occurred: ", error);
     cartWindow.innerHTML = `<div class="error">An error occurred when loading the product..</div>`;

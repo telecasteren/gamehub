@@ -96,16 +96,19 @@
 }
 
 .productText {
+  color: var(--white);
   margin-left: 12%;
   margin-right: 1%;
   margin-top: 2%;
   max-width: 59%;
 }
 
-.productText p {
+.productText div {
   color: var(--white);
   line-height: 1.5;
-  font-size: 20px;
+
+  font-size: 1.25rem;
+  margin-bottom: 4%;
 }
 
 .productTextIcons {

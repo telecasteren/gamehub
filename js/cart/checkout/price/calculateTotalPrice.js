@@ -1,4 +1,5 @@
 import { displaySubtotal } from "/js/cart/checkout/price/displaySubtotal.js";
+import { CURRENCY_TYPE } from "/js/utils/general/constants.js";
 
 // Calculate and display total price:
 export function calculateTotalPrice() {
@@ -15,7 +16,7 @@ export function calculateTotalPrice() {
       const total = subtotal + deliveryPrice;
 
       const totalPrice = document.querySelector("#total-price");
-      totalPrice.textContent = `$${total.toFixed(2)}`;
+      totalPrice.textContent = `${CURRENCY_TYPE}${total.toFixed(2)}`;
     }
 
     document.querySelectorAll(`input[name="delivery"]`).forEach((radio) => {

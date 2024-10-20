@@ -18,19 +18,16 @@ export function renderPurchase() {
 
       purchasedItems.forEach((product) => {
         const prodId = product.id || PRODUCT_NOT_FOUND;
-        const prodTitle = product.title || `Title ${UNKNOWN_KEY}`;
-        const prodQuantity = product.quantity;
-        const prodIMG =
-          product.image && product.image.url
-            ? product.image.url
-            : NO_IMAGE_FOUND_IMG;
+        const prodTitle = product.name || `Title ${UNKNOWN_KEY}`;
+
         const prodAlt =
-          product.image && product.image.alt
-            ? product.image.alt
-            : `Game cover for ${prodTitle}`;
-        let prodPrice = product.price || PRICE_NOT_FOUND;
-        const discountPrice = product.discountedPrice || `${prodPrice}`;
-        const priceClass = product.onSale ? "discount-price" : "";
+          product.images && product.images.length > 0
+            ? product.images[0].alt
+            : PRODUCT_NOT_FOUND;
+        const prodIMG =
+          product.images && product.images.length > 0
+            ? product.images[0].src
+            : NO_IMAGE_FOUND_IMG;
 
         const purchaseItem = document.createElement("div");
         purchaseItem.setAttribute("data-product-id", prodId);

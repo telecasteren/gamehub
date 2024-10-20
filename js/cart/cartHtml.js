@@ -12,6 +12,7 @@ import {
   PRODUCT_NOT_FOUND,
   NO_IMAGE_FOUND_IMG,
   cartContainer,
+  CURRENCY_KEY,
 } from "/js/utils/general/constants.js";
 
 // Creating the html:
@@ -24,27 +25,30 @@ export function renderCartProducts() {
 
       cart.forEach((product) => {
         const prodId = product.id || PRODUCT_NOT_FOUND;
-        const prodTitle = product.title || `ProductID: ${prodId}`;
+        const prodTitle = product.name || `ProductID: ${prodId}`;
         const prodQuantity = product.quantity;
-        const prodIMG =
-          product.image && product.image.url
-            ? product.image.url
-            : NO_IMAGE_FOUND_IMG;
+
         const prodAlt =
-          product.image && product.image.alt
-            ? product.image.alt
-            : `Game cover for ${prodTitle}`;
+          product.images && product.images.length > 0
+            ? product.images[0].alt
+            : PRODUCT_NOT_FOUND;
+        const prodIMG =
+          product.images && product.images.length > 0
+            ? product.images[0].src
+            : NO_IMAGE_FOUND_IMG;
+
         let prodPrice = product.price || PRICE_NOT_FOUND;
-        const discountPrice = product.discountedPrice || `${prodPrice}`;
-        const priceClass = product.onSale ? "discount-price" : "";
+        const discountPrice = product.sale_price || `${prodPrice}`;
+        const priceClass = product.on_sale ? "discount-price" : "";
+
+        if (product.on_sale) {
+          prodPrice = discountPrice;
+        }
+
         const addItem = INCREASE_ICON_IMG;
         const removeItem = DECREASE_ICON_IMG;
         const increaseIconAlt = INCREASE_ICON_ALT;
         const decreaseIconAlt = DECREASE_ICON_ALT;
-
-        if (product.onSale) {
-          prodPrice = discountPrice;
-        }
 
         const cartItems = document.createElement("div");
         cartItems.setAttribute(`data-product-id`, prodId);
@@ -101,8 +105,7 @@ export function renderCartProducts() {
 
         const cartItemTitle = document.createElement("div");
         cartItemTitle.classList.add("cartInfo-title");
-        cartItemTitle.innerHTML = `<p><b>${prodTitle}</b>
-              - full game: <b><span class="${priceClass}">$${prodPrice}</span></b></p>`;
+        cartItemTitle.innerHTML = `<p><b>${prodTitle}: <span class="${priceClass}">${prodPrice}${CURRENCY_KEY}</span></b></p>`;
 
         cartItemTitle.addEventListener("click", () => {
           goToProduct(prodId);

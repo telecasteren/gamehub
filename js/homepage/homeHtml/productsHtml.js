@@ -1,24 +1,34 @@
 import { goToProduct } from "/js/utils/components/eventListeners/goToProduct.js";
 import { fetchGames } from "/js/utils/api/productsApi.js";
 import { loadError } from "/js/utils/auth/messages.js";
+import {
+  NO_IMAGE_FOUND_IMG,
+  PRODUCT_NOT_FOUND,
+} from "/js/utils/general/constants.js";
 
 export async function createProductsHtml(selectedProductIndices) {
   try {
     const info = await fetchGames();
 
-    if (info && Array.isArray(info.data)) {
-      const productElements = info.data.map((product) => {
+    if (info && Array.isArray(info)) {
+      const productElements = info.map((product) => {
         const productId = product.id;
-        const productTitle = product.title;
-        const prodDescription = product.description;
+        const productTitle = product.name;
+        const prodDescription = product.short_description;
 
         const column = document.createElement("div");
         column.classList.add("column");
 
         const imgEl = document.createElement("img");
         imgEl.classList.add("product");
-        imgEl.src = product.image.url;
-        imgEl.alt = product.image.alt;
+        imgEl.src =
+          product.images && product.images.length > 0
+            ? product.images[0].src
+            : NO_IMAGE_FOUND_IMG;
+        imgEl.alt =
+          product.images && product.images.length > 0
+            ? product.images[0].alt
+            : PRODUCT_NOT_FOUND;
         imgEl.setAttribute("data-title", productTitle);
 
         const backgroundBox = document.createElement("div");

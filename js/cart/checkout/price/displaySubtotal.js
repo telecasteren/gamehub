@@ -1,4 +1,4 @@
-import { CART_KEY } from "/js/utils/general/constants.js";
+import { CART_KEY, CURRENCY_TYPE } from "/js/utils/general/constants.js";
 
 // Calculate and display subtotal price:
 export function displaySubtotal() {
@@ -17,7 +17,7 @@ export function displaySubtotal() {
 
   const subtotalElement = document.getElementById("subtotal-price");
   if (subtotalElement) {
-    subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+    subtotalElement.textContent = `${CURRENCY_TYPE} ${subtotal.toFixed(2)}`;
   }
 
   return subtotal;

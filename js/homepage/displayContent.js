@@ -11,7 +11,7 @@ export async function displayLandingContent() {
   try {
     const productData = await fetchGames();
 
-    if (!productData || !Array.isArray(productData.data)) {
+    if (!productData || !Array.isArray(productData)) {
       throw new Error("Failed to fetch product data");
     }
 
@@ -24,7 +24,7 @@ export async function displayLandingContent() {
       homeContainer.innerHTML = "";
 
       const selectedProductIndices = await getSelectedProductIndices(
-        productData.data
+        productData
       );
 
       articleElements.forEach((article) => {
@@ -42,7 +42,7 @@ export async function displayLandingContent() {
         console.warn("productsHtml is not a valid DOM node:", productsHtml);
       }
 
-      handleGetButton(productData.data);
+      handleGetButton(productData);
       await articlePopupModalEvents();
     } else {
       homeContainer.innerHTML = `<div class="error">An error occurred when loading the content.</div>`;

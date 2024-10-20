@@ -2,7 +2,13 @@ import { fetchGames } from "/js/utils/api/productsApi.js";
 import { goToProduct } from "/js/utils/components/eventListeners/goToProduct.js";
 import { gamesHTML } from "/js/utils/components/search/filterProducts.js";
 import { setSearchListeners } from "/js/utils/components/search/searchListeners.js";
-import { UNKNOWN_KEY, wrapper } from "/js/utils/general/constants.js";
+import {
+  UNKNOWN_KEY,
+  wrapper,
+  NO_IMAGE_FOUND_IMG,
+  PRODUCT_NOT_FOUND,
+  PRICE_NOT_FOUND,
+} from "/js/utils/general/constants.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   fetchGamesAPI();
@@ -11,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 export async function fetchGamesAPI() {
   try {
     const info = await fetchGames();
-    const allGames = info.data;
+    const allGames = info;
 
     setSearchListeners(info);
     gamesHTML(allGames);
@@ -25,16 +31,17 @@ export function renderProduct(game) {
   try {
     const gameID = game.id || UNKNOWN_KEY;
     const price = game.price || PRICE_NOT_FOUND;
-    const discountPrice = game.discountedPrice || `${price}`;
-    const gameTitle = game.title || `Product Id: ${gameID}`;
+    const discountPrice = game.sale_price || `${price}`;
+
+    const gameTitle = game.name || `Product Id: ${gameID}`;
     const gameAlt =
-      game.image && game.image.alt
-        ? game.image.alt
-        : `Game cover for ${gameTitle}`;
+      game.images && game.images.length > 0
+        ? game.images[0].alt
+        : PRODUCT_NOT_FOUND;
     const gameImg =
-      game.image && game.image.url
-        ? game.image.url
-        : `../images/no_image_found.jpg`;
+      game.images && game.images.length > 0
+        ? game.images[0].src
+        : NO_IMAGE_FOUND_IMG;
 
     const prodDiv = document.createElement("div");
     prodDiv.classList.add("product-container");
@@ -53,7 +60,7 @@ export function renderProduct(game) {
     ${gameTitle}<br>
     Price: ${price}`;
 
-    if (game.onSale) {
+    if (game.on_sale) {
       textDiv.innerHTML = `
     ${gameTitle}<br>
     Limited offer: ${discountPrice}`;

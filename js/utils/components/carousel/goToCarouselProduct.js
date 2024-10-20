@@ -3,11 +3,12 @@ import { fetchGames } from "/js/utils/api/productsApi.js";
 
 export async function goToCarouselProduct(prodTitle, overlayDiv) {
   const info = await fetchGames();
-  const response = info.data;
+
+  const response = info;
   let specificProductId;
 
   if (response.length > 2) {
-    specificProductId = response[3].id;
+    specificProductId = response[0].id;
 
     overlayDiv.addEventListener("click", () => {
       goToProduct(specificProductId);
