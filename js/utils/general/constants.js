@@ -1,8 +1,3 @@
-// NOROFF GameHub API endpoint
-// const url = "https://v2.api.noroff.dev/gamehub";
-// const proxy = "https://noroffcors.onrender.com/";
-// export const gameUrl = proxy + url;
-
 // Containers
 export const cartContainer = document.querySelector(".cart-section");
 export const cardDetailsDiv = document.querySelector(".cardDetails");

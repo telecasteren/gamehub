@@ -1,4 +1,4 @@
-import { fetchGames } from "/js/utils/api/productsApi.js";
+import { fetchGames } from "/js/utils/api/products/productsApi.js";
 import { goToProduct } from "/js/app/components/eventListeners/goToProduct.js";
 import { gamesHTML } from "/js/app/components/search/filterProducts.js";
 import { setSearchListeners } from "/js/app/components/search/searchListeners.js";

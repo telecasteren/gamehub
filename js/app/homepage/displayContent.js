@@ -4,7 +4,7 @@ import { homeContainer } from "/js/utils/general/constants.js";
 import { loadError } from "/js/utils/auth/messages.js";
 import { handleGetButton } from "/js/app/homepage/getButton/handleButtonLogic.js";
 import { articlePopupModalEvents } from "/js/app/homepage/articles/articleModal.js";
-import { fetchGames } from "/js/utils/api/productsApi.js";
+import { fetchGames } from "/js/utils/api/products/productsApi.js";
 import { getSelectedProductIndices } from "/js/utils/storage/getSelectedProductIndices.js";
 
 export async function displayLandingContent() {

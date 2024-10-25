@@ -1,5 +1,5 @@
 import { goToProduct } from "/js/app/components/eventListeners/goToProduct.js";
-import { fetchGames } from "/js/utils/api/productsApi.js";
+import { fetchGames } from "/js/utils/api/products/productsApi.js";
 import { loadError } from "/js/utils/auth/messages.js";
 import {
   NO_IMAGE_FOUND_IMG,

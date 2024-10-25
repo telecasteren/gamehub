@@ -1,4 +1,4 @@
-import { fetchFAQData } from "/js/utils/api/fetchFAQdata.js";
+import { fetchFAQData } from "/js/utils/api/text/fetchFAQdata.js";
 import { faqToggleMessage } from "/js/app/components/FAQEvents/faqToggleMessage.js";
 import { loadError } from "/js/utils/auth/messages.js";
 

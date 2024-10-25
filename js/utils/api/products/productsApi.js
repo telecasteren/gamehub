@@ -1,5 +1,3 @@
-// This is the wordpress products API
-
 import { wrapper } from "/js/utils/general/constants.js";
 import { wooComApiKey, wooComApiSecret } from "/js/utils/auth/keys/apiKeys.js";
 
@@ -22,9 +20,6 @@ export async function fetchGames(id) {
     const info = await response.json();
     return info;
   } catch (error) {
-    console.error("Error occurred: ", error.message);
-    console.log("Full error details: ", error);
-
     if (wrapper) {
       wrapper.innerHTML = `<div class="error">An error occurred when fetching the products..</div>`;
     }
@@ -53,30 +48,3 @@ export function extractProductData(product) {
       product.images.length > 0 ? product.images[0].alt : PRODUCT_NOT_FOUND,
   };
 }
-
-// This is the Noroff GameHub API
-
-// import { wrapper, gameUrl } from "/js/utils/general/constants.js";
-
-// export async function fetchGames(id) {
-//   try {
-//     const url = id ? `${gameUrl}/${id}` : `${gameUrl}`;
-
-//     const response = await fetch(url);
-//     if (!response.ok) {
-//       throw new Error(`HTTP error! status: ${response.status}`);
-//     }
-
-//     const info = await response.json();
-//     return info;
-//   } catch (error) {
-//     console.log("Error occurred: ", error);
-//     if (wrapper) {
-//       wrapper.innerHTML = `<div class="error">An error occurred when loading the products..</div>`;
-//     }
-
-//     throw error;
-//   }
-// }
-
-// -------------------------------------------------------------
