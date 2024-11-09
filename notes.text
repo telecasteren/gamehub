@@ -1,4 +1,8 @@
 // ------------------------ TO DO:
+//
+// PRIORITY:
+// - Align search field and filter field in the same container
+//
 // Profile page:
 // - login authentication and field validation
 // - set user active on first login
@@ -10,5 +14,4 @@
 // - profile page UX
 // - favourites
 // - order history
-// The rest: See Notions list
 // -----------------------------------------------------------------------------------------------------

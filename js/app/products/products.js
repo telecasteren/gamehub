@@ -1,21 +1,19 @@
 import { fetchGames } from "/js/utils/api/products/productsApi.js";
-import { goToProduct } from "/js/app/components/eventListeners/goToProduct.js";
+import { renderProduct } from "/js/app/products/productListHtml.js";
 import { gamesHTML } from "/js/app/components/search/filterProducts.js";
+import { setFilterOptions } from "/js/app/components/search/filters/filterOptions.js";
 import { setSearchListeners } from "/js/app/components/search/searchListeners.js";
-import {
-  UNKNOWN_KEY,
-  wrapper,
-  NO_IMAGE_FOUND_IMG,
-  PRODUCT_NOT_FOUND,
-  PRICE_NOT_FOUND,
-  CURRENCY_KEY,
-} from "/js/utils/general/constants.js";
+import { wrapper } from "/js/utils/general/constants.js";
+import { fetchSortedProducts } from "/js/utils/api/products/fetchSortedProducts.js";
+import { fetchProductsFilteredByPrice } from "/js/utils/api/products/filteredByPrice.js";
+import { fetchProductsFilteredByCategory } from "/js/utils/api/products/filteredByCategory.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   fetchGamesAPI();
+  setFilterOptions(onSortChange, onFilterChange);
 });
 
-export async function fetchGamesAPI() {
+async function fetchGamesAPI() {
   try {
     const info = await fetchGames();
     const allGames = info;
@@ -28,55 +26,37 @@ export async function fetchGamesAPI() {
   }
 }
 
-export function renderProduct(game) {
+async function onSortChange(sortOrder) {
   try {
-    const gameID = game.id || UNKNOWN_KEY;
-    const price = game.price || PRICE_NOT_FOUND;
-    const discountPrice = game.sale_price || `${price}`;
-
-    const gameTitle = game.name || `Product Id: ${gameID}`;
-    const gameAlt =
-      game.images && game.images.length > 0
-        ? game.images[0].alt
-        : PRODUCT_NOT_FOUND;
-    const gameImg =
-      game.images && game.images.length > 0
-        ? game.images[0].src
-        : NO_IMAGE_FOUND_IMG;
-
-    const prodDiv = document.createElement("div");
-    prodDiv.classList.add("product-container");
-
-    const imgElement = document.createElement("img");
-    imgElement.classList.add("products");
-    imgElement.src = gameImg;
-    imgElement.alt = gameAlt;
-
-    const overlayDiv = document.createElement("div");
-    overlayDiv.classList.add("overlay");
-
-    const textDiv = document.createElement("div");
-    textDiv.classList.add("overlayText");
-    textDiv.innerHTML = `
-    ${gameTitle}<br>
-    Price: ${price}${CURRENCY_KEY}`;
-
-    if (game.on_sale) {
-      textDiv.innerHTML = `
-    ${gameTitle}<br>
-    Limited offer: ${discountPrice}${CURRENCY_KEY}`;
-    }
-
-    overlayDiv.appendChild(textDiv);
-    prodDiv.appendChild(imgElement);
-    prodDiv.appendChild(overlayDiv);
-    wrapper.appendChild(prodDiv);
-
-    overlayDiv.addEventListener("click", () => {
-      goToProduct(gameID);
-    });
+    const sortedProducts = await fetchSortedProducts(sortOrder);
+    gamesHTML(sortedProducts);
   } catch (error) {
-    console.error("Error occurred: ", error);
-    wrapper.innerHTML = `<div class="error">An error occurred in displaying the products..</div>`;
+    console.error("Error occurred while sorting products");
+    wrapper.innerHTML = `<div class="error">An error occurred when sorting the products</div>`;
+  }
+}
+
+async function onFilterChange(filterType) {
+  try {
+    let filteredProducts;
+
+    if (filterType === "price") {
+      filteredProducts = await fetchProductsFilteredByPrice();
+
+      gamesHTML(filteredProducts);
+    } else if (filterType === "category") {
+      const productsByCategory = await fetchProductsFilteredByCategory();
+
+      wrapper.innerHTML = "";
+
+      Object.keys(productsByCategory).forEach((categoryId) => {
+        productsByCategory[categoryId].forEach((product) =>
+          renderProduct(product)
+        );
+      });
+    }
+  } catch (error) {
+    console.error(`Error occurred while filtering by ${filterType}`);
+    wrapper.innerHTML = `<div class="error">An error occurred when filtering by category</div>`;
   }
 }

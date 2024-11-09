@@ -29,7 +29,7 @@ export async function initCarouselSlider() {
     setTimeout(function () {
       overlayDiv.appendChild(overlayText);
       slide.appendChild(overlayDiv);
-    }, 100);
+    }, 50);
 
     slide.appendChild(img);
     carouselWrapper.appendChild(slide);

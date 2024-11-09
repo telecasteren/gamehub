@@ -13,6 +13,7 @@ IMPORT SHEETS ---------------------------*/
 @import "/css/imports/components/forms/inputs.css";
 @import "/css/imports/components/forms/createAccount.css";
 @import "/css/imports/components/search/searchField.css";
+@import "/css/imports/components/search/filterOptions.css";
 @import "/css/imports/components/faqToggle.css";
 
 /* STATIC UI */
@@ -46,7 +47,7 @@ IMPORT SHEETS ---------------------------*/
   margin: 0;
   padding: 0;
   text-decoration: none;
-  color: var(--dark-blue-base);
+  /* color: var(--dark-blue-base); */
   font-weight: medium;
   font-family: sans-serif;
   scroll-behavior: smooth;

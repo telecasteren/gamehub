@@ -1,0 +1,23 @@
+.options-container {
+  width: 100vw;
+  height: auto;
+  margin-top: 1%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.options {
+  text-align: center;
+  font-size: 1rem;
+  width: 245px;
+  height: 45px;
+  border-radius: 8px;
+
+  color: var(--light-blue-base);
+  border: 2px solid var(--light-blue-base);
+}
+
+.options:hover {
+  border: 2px solid var(--bright-hover-blue-base);
+}

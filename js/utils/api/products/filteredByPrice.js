@@ -1,9 +1,9 @@
 import { wrapper } from "/js/utils/general/constants.js";
 import { wooComApiKey, wooComApiSecret } from "/js/utils/auth/keys/apiKeys.js";
 
-export async function fetchSortedProducts(sortOrder = "asc") {
+export async function fetchProductsFilteredByPrice() {
   try {
-    const url = `https://gamehub-shop.no/wp-json/wc/v3/products?orderby=title&order=${sortOrder}`;
+    const url = `https://gamehub-shop.no/wp-json/wc/v3/products?orderby=price`;
 
     const response = await fetch(url, {
       headers: {
@@ -19,7 +19,7 @@ export async function fetchSortedProducts(sortOrder = "asc") {
     return info;
   } catch (error) {
     if (wrapper) {
-      wrapper.innerHTML = `<div class="error">An error occurred when sorting the products..</div>`;
+      wrapper.innerHTML = `<div class="error">An error occurred while filtering the products by price</div>`;
     }
 
     throw error;
