@@ -1,11 +1,14 @@
-## ABOUT GAMEHUB:
+_ABOUT GAMEHUB_
 
-This is a prototype e-commerce website made by me, Tele Caster Nilsen.
+This is a prototype e-commerce website made by Tele Caster Nilsen.
 Created during my first year at Noroff School of Technology and Media.
+
+Nothing you do here will have a real effect.
+That means that you can go through the events of purchase, without the purchase actually going through.
 
 ---
 
-## APPRECIATIONS FOLLOWS
+_APPRECIATIONS FOLLOWS_
 
 ---
 

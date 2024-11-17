@@ -5,8 +5,10 @@
   width: 100px;
   height: 100px;
   animation: spin 2s linear infinite;
-  margin-left: 5%;
-  margin-top: 50%;
+
+  justify-self: center;
+  grid-column: 1 / span 2;
+  grid-row: 1;
 }
 
 @keyframes spin {
