@@ -1,5 +1,9 @@
 import { wrapper } from "/js/utils/general/constants.js";
 import { wooComApiKey, wooComApiSecret } from "/js/utils/auth/keys/apiKeys.js";
+import {
+  NO_IMAGE_FOUND_IMG,
+  PRODUCT_NOT_FOUND,
+} from "/js/utils/general/constants.js";
 
 const baseUrl = "https://gamehub-shop.no/wp-json/wc/v3/products";
 
@@ -28,7 +32,7 @@ export async function fetchGames(id) {
   }
 }
 
-// Function to get product data parameters
+// Helper to get product data parameters
 export function extractProductData(product) {
   return {
     id: product.id,

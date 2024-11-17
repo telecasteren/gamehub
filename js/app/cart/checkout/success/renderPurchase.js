@@ -1,7 +1,6 @@
 import {
   UNKNOWN_KEY,
   PRODUCT_NOT_FOUND,
-  PRICE_NOT_FOUND,
   NO_IMAGE_FOUND_IMG,
   PURCHASED_ITEMS_KEY,
 } from "/js/utils/general/constants.js";

@@ -1,10 +1,9 @@
 import { goToProduct } from "/js/app/components/eventListeners/goToProduct.js";
-import { fetchGames } from "/js/utils/api/products/productsApi.js";
-import { loadError } from "/js/utils/auth/messages.js";
 import {
-  NO_IMAGE_FOUND_IMG,
-  PRODUCT_NOT_FOUND,
-} from "/js/utils/general/constants.js";
+  fetchGames,
+  extractProductData,
+} from "/js/utils/api/products/productsApi.js";
+import { loadError } from "/js/utils/auth/messages.js";
 
 export async function createProductsHtml(selectedProductIndices) {
   try {
@@ -12,24 +11,17 @@ export async function createProductsHtml(selectedProductIndices) {
 
     if (info && Array.isArray(info)) {
       const productElements = info.map((product) => {
-        const productId = product.id;
-        const productTitle = product.name;
-        const prodDescription = product.short_description;
+        const { id, title, shortDescription, imgSrc, imgAlt } =
+          extractProductData(product);
 
         const column = document.createElement("div");
         column.classList.add("column");
 
         const imgEl = document.createElement("img");
         imgEl.classList.add("product");
-        imgEl.src =
-          product.images && product.images.length > 0
-            ? product.images[0].src
-            : NO_IMAGE_FOUND_IMG;
-        imgEl.alt =
-          product.images && product.images.length > 0
-            ? product.images[0].alt
-            : PRODUCT_NOT_FOUND;
-        imgEl.setAttribute("data-title", productTitle);
+        imgEl.src = imgSrc;
+        imgEl.alt = imgAlt;
+        imgEl.setAttribute("data-title", title);
 
         const backgroundBox = document.createElement("div");
         backgroundBox.classList.add("color-box");
@@ -38,14 +30,14 @@ export async function createProductsHtml(selectedProductIndices) {
         captionContainer.classList.add("captionContainer-container");
         const titleH2 = document.createElement("h2");
         titleH2.classList.add("titleH2");
-        titleH2.innerHTML = productTitle;
+        titleH2.innerHTML = title;
 
         const prodText = document.createElement("p");
         prodText.classList.add("prodText");
-        prodText.innerHTML = prodDescription;
+        prodText.innerHTML = shortDescription;
 
-        imgEl.addEventListener("click", () => goToProduct(productId));
-        backgroundBox.addEventListener("click", () => goToProduct(productId));
+        imgEl.addEventListener("click", () => goToProduct(id));
+        backgroundBox.addEventListener("click", () => goToProduct(id));
 
         captionContainer.appendChild(titleH2);
         captionContainer.appendChild(prodText);

@@ -3,7 +3,7 @@ import { SEARCH_KEY, wrapper } from "/js/utils/general/constants.js";
 import { noResultMessage } from "/js/utils/auth/messages.js";
 import { renderProduct } from "/js/app/products/productListHtml.js";
 
-export async function gamesHTML(games) {
+export async function searchGames(games) {
   wrapper.innerHTML = "";
 
   try {

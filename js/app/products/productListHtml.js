@@ -1,36 +1,19 @@
 import { goToProduct } from "/js/app/components/eventListeners/goToProduct.js";
-import {
-  UNKNOWN_KEY,
-  wrapper,
-  NO_IMAGE_FOUND_IMG,
-  PRODUCT_NOT_FOUND,
-  PRICE_NOT_FOUND,
-  CURRENCY_KEY,
-} from "/js/utils/general/constants.js";
+import { wrapper, CURRENCY_KEY } from "/js/utils/general/constants.js";
+import { extractProductData } from "/js/utils/api/products/productsApi.js";
 
-export function renderProduct(game) {
+export async function renderProduct(product) {
   try {
-    const gameID = game.id || UNKNOWN_KEY;
-    const price = game.price || PRICE_NOT_FOUND;
-    const discountPrice = game.sale_price || `${price}`;
-
-    const gameTitle = game.name || `Product Id: ${gameID}`;
-    const gameAlt =
-      game.images && game.images.length > 0
-        ? game.images[0].alt
-        : PRODUCT_NOT_FOUND;
-    const gameImg =
-      game.images && game.images.length > 0
-        ? game.images[0].src
-        : NO_IMAGE_FOUND_IMG;
+    const { id, title, price, onSale, salePrice, imgSrc, imgAlt } =
+      extractProductData(product);
 
     const prodDiv = document.createElement("div");
     prodDiv.classList.add("product-container");
 
     const imgElement = document.createElement("img");
     imgElement.classList.add("products");
-    imgElement.src = gameImg;
-    imgElement.alt = gameAlt;
+    imgElement.src = imgSrc;
+    imgElement.alt = imgAlt;
 
     const overlayDiv = document.createElement("div");
     overlayDiv.classList.add("overlay");
@@ -38,13 +21,13 @@ export function renderProduct(game) {
     const textDiv = document.createElement("div");
     textDiv.classList.add("overlayText");
     textDiv.innerHTML = `
-    ${gameTitle}<br>
+    ${title}<br>
     Price: ${price}${CURRENCY_KEY}`;
 
-    if (game.on_sale) {
+    if (onSale) {
       textDiv.innerHTML = `
-    ${gameTitle}<br>
-    Limited offer: ${discountPrice}${CURRENCY_KEY}`;
+    ${title}<br>
+    Limited offer: ${salePrice}${CURRENCY_KEY}`;
     }
 
     overlayDiv.appendChild(textDiv);
@@ -53,10 +36,10 @@ export function renderProduct(game) {
     wrapper.appendChild(prodDiv);
 
     overlayDiv.addEventListener("click", () => {
-      goToProduct(gameID);
+      goToProduct(id);
     });
   } catch (error) {
     console.error("Error occurred: ", error);
-    wrapper.innerHTML = `<div class="error">An error occurred in displaying the products..</div>`;
+    wrapper.innerHTML = `<div class="error">An error occurred in displaying the products</div>`;
   }
 }

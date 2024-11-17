@@ -28,4 +28,4 @@ fs.readdir(imagesDir, (err, files) => {
   }
 });
 
-// Run like this: node findUnusedImages.js
+// Move to ROOT and run like this: node findUnusedImages.js

@@ -1,0 +1,14 @@
+// ------------------------ TO DO:
+//
+// Profile page:
+// - login authentication and field validation
+// - set user active on first login
+//
+// General all over:
+// - If product is already in cart,
+// - notify user next time they click add to cart cta for that product
+//
+// - profile page UX
+// - favourites
+// - order history
+// -----------------------------------------------------------------------------------------------------

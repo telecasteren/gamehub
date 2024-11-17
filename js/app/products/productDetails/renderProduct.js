@@ -3,7 +3,7 @@ import { gameDetails } from "/js/app/products/productDetails/productHtml.js";
 import { imageContainer, cartWindow } from "/js/utils/general/constants.js";
 import { addToCartEvent } from "/js/app/products/productDetails/AddToCartFunctions.js";
 
-async function specificGame() {
+export async function specificGame() {
   try {
     const gameId = new URLSearchParams(window.location.search).get("gameId");
     if (!gameId) {
@@ -28,4 +28,3 @@ async function specificGame() {
     cartWindow.innerHTML = `<div class="error">An error occurred when loading the product..</div>`;
   }
 }
-specificGame();
