@@ -1,73 +1,82 @@
 # GAMEHUB
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](images/gamehub-screenshot.png)
 
-This is a prototype e-commerce website made by Tele Caster Nilsen.
-Created during my first year at Noroff School of Technology and Media.
+**Deployed site:** [Gamehub](https://gamehub-tele.netlify.app/)<br/>
+This is a prototype e-commerce website.<br/>
+Designed and built during my first year at Noroff School of Technology and Media.
 
 ## Description
 
-Gamehub is an online community and store for games, where the audience can buy games, and create users and login to sell their own. _NOTE!_ At the moment, user creation is not up and running yet, so login will only be a simulation. Profile page remains to be created.
+Gamehub is an online community and store for gaming, where the audience can buy games, create users and login to sell their own.<br/>
+_NOTE!_ At the moment, user creation is not up and running yet, so login will only be a simulation. Profile page remains to be created.
 
-Nothing you do at the webpage will have a real-life effect. Meaning that you can go through the events of purchase, without the purchase actually going through.
+Nothing you do at this website will have a real-life effect. Meaning that you can go through the events of purchase, without the purchase actually going through.
 
 **Key features:**
 
-- List item 1
-- List item 2
-- List item 3
+- Products fetched from a Wordpress instance utilising the WP REST API
+- Simple and sharp search engine in products page
+- Article modal at landing page opening articles in it's own view
 
 ## Built With
 
-Programming languages and tech stack:
-
-- HTML, CSS and Javascript
+- Javascript
+- HTML and CSS
 - node.js
+- Wordpress REST API
+- **IDE:** Visual Studio Code
 
-## Getting Started
-
-### Installing
-
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
+## How to run it locally
 
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git clone git@github.com:telecasteren/gamehub.git
 ```
 
-2. Install the dependencies:
+2. Run the website locally with Live server
 
-```
-npm install
-```
-
-### Running
-
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
-
-To run the app, run the following commands:
-
-```bash
-npm run start
-```
+You can play around with it as you like at your machine, and if you want to make a contribution --> read more in the [Contributing](#contributing) section.
 
 ## Contributing
 
-Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
+Interesting in contributing?<br/>
+You are welcome to do so, find out about how here:
+[CONTRIBUTING](CONTRIBUTING.md)
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+You can find me and my other projects here:
 
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
-
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
+- [My portfolio page](https://tcn-portfolio.netlify.app/)
+- [My website - telecasternilsen](https://telecasternilsen.netlify.app/)
+- [GitHub profile](https://github.com/telecasteren)
+- [LinkedIn profile](https://www.linkedin.com/in/tele-caster-nilsen-7002b9249/)
 
 ## Acknowledgments
 
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
+### LANDING PAGE CAROUSEL PHOTOS
+
+Found at
+
+- tomsguide.com
+- slate.com
+
+Thank you kindly!
+
+### LANDING PAGE ARTICLE PHOTOS
+
+(under free licence on Unsplash)
+
+Special thanks to the artists
+Sean Whelan,
+Kelly Sikkema and
+Andre Hunter
+at Unsplash
+
+---
+
+### LANDING PAGE ARTICLE TEXT
+
+Ideas and subjects by me, text written by ChatGPT
