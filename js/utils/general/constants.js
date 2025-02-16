@@ -17,12 +17,12 @@ export const searchInput = document.getElementById("searchGames");
 // Carousel
 export const carousel = document.querySelector(".carousel");
 export const carouselImages = [
-  { src: "/images/carousel-img1.svg", alt: "Archer shooting at a dragon" },
+  { src: "/images/carousel-img1.webp", alt: "Archer shooting at a dragon" },
   {
-    src: "/images/carousel-img2.svg",
+    src: "/images/carousel-img2.webp",
     alt: "Warrior scouting over the lands",
   },
-  { src: "/images/carousel-img3.svg", alt: "Portrait of an elf warrior" },
+  { src: "/images/carousel-img3.webp", alt: "Portrait of an elf warrior" },
 ];
 
 // Storage
