@@ -1,6 +1,6 @@
 # GAMEHUB
 
-![image](images/gamehub-screenshot.png)
+![image](images/gamehub-screenshot.webp)
 
 **Deployed site:** [Gamehub](https://gamehub-tele.netlify.app/)<br/>
 This is a prototype e-commerce website.<br/>
