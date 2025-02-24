@@ -1,21 +1,26 @@
 .faq-toggle-container {
   display: none;
+  justify-self: center;
   margin: 10%;
   overflow: hidden;
   max-width: 1000px;
-  min-width: 350px;
+  min-width: 300px;
   height: auto;
 }
 
 .faqToggle-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  max-width: 1000px;
+  height: auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: antiquewhite;
 }
 
 .faqContentText {
   justify-self: center;
-  max-width: fit-content;
   height: auto;
+  width: 100%;
 }
 
 .faqContentText,

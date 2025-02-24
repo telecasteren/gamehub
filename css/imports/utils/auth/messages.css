@@ -22,10 +22,7 @@
 
 /*- Search error component -*/
 .no-results {
-  color: var(--white);
-  border: 2px solid var(--alert-warning);
-  box-shadow: 0 5px 20px var(--overlay-faded-black);
-  background-color: var(--alert-warning);
+  background-color: antiquewhite;
   border-radius: 12px;
   width: 300px;
   padding: 20px;
