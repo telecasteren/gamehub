@@ -13,7 +13,7 @@ textarea {
   resize: vertical;
   box-sizing: border-box;
   border-radius: 10px;
-  border: 1px solid var(--light-blue-base);
+  border: 1px solid #0582ca41;
   background-color: var(--faded-hover-white);
 }
 
@@ -27,6 +27,10 @@ select:hover,
 textarea:hover {
   border-color: var(--bright-hover-blue-base);
   cursor: pointer;
+}
+
+input[type="radio"] {
+  transform: scale(1.5);
 }
 
 label,

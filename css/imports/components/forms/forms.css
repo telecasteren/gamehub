@@ -1,6 +1,5 @@
 .form-container {
   border-radius: 10px;
-  border: 1px solid var(--light-blue-base);
   background-color: var(--light-blue-box);
   padding: 20px;
   max-width: 1000px;
@@ -14,7 +13,6 @@
 
 .paymentForm {
   border-radius: 10px;
-  border: 1px solid var(--light-blue-base);
   background-color: var(--light-blue-box);
   padding: 20px;
   width: 100%;
