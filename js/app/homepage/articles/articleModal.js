@@ -1,4 +1,8 @@
+import { createModal } from "/js/app/components/articleModal/modal.js";
+
 export function articlePopupModalEvents() {
+  createModal();
+
   function openModal(title, content) {
     const modal = document.querySelector(".modal");
     const modalTitle = document.getElementById("modal-title");

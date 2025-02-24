@@ -1,6 +1,5 @@
 import { initCarouselSlider } from "/js/app/components/carousel/carousel.js";
 import { menuBar } from "/js/app/components/navbar/menuBar.js";
-
 import { saveCurrentPage } from "/js/utils/storage/saveCurrentPage.js";
 import { loadPreviousPage } from "/js/utils/storage/loadPreviousPage.js";
 import { displayLandingContent } from "/js/app/homepage/displayContent.js";
