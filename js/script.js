@@ -1,5 +1,5 @@
 import { initCarouselSlider } from "/js/app/components/carousel/carousel.js";
-import { togglemenu } from "/js/app/components/navbar/menuList.js";
+import { menuBar } from "/js/app/components/navbar/menuBar.js";
 
 import { saveCurrentPage } from "/js/utils/storage/saveCurrentPage.js";
 import { loadPreviousPage } from "/js/utils/storage/loadPreviousPage.js";
@@ -125,4 +125,4 @@ storeItemsAfterOrderPlaced();
 checkoutSuccess();
 
 // Mobile menu
-togglemenu();
+menuBar();

@@ -9,7 +9,10 @@ export function updateTotals() {
   });
 
   const itemCounter = document.getElementById("item-counter");
-  itemCounter.textContent = totalQuantity;
+  if (itemCounter) {
+    itemCounter.textContent = totalQuantity;
+  }
+
   localStorage.setItem(ITEM_COUNT_KEY, totalQuantity);
 }
 
@@ -17,7 +20,7 @@ export function initItemCounter() {
   const itemCounter = document.getElementById("item-counter");
   const currentTotalCount = localStorage.getItem(ITEM_COUNT_KEY);
 
-  if (currentTotalCount) {
+  if (currentTotalCount && itemCounter) {
     itemCounter.textContent = currentTotalCount;
   } else {
     itemCounter.textContent = 0;

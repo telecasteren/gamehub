@@ -9,6 +9,8 @@ export function updateCartCounter() {
   );
   const itemCounter = document.getElementById("item-counter");
 
-  itemCounter.textContent = totalQuantity;
+  if (itemCounter) {
+    itemCounter.textContent = totalQuantity;
+  }
   localStorage.setItem(ITEM_COUNT_KEY, totalQuantity);
 }
