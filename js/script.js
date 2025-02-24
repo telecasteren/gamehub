@@ -1,9 +1,15 @@
-import { initCarouselSlider } from "/js/app/components/carousel/carousel.js";
+// TOP & BOTTOM
 import { menuBar } from "/js/app/components/navbar/menuBar.js";
 import { footerElement } from "/js/app/components/footer/footerHtml.js";
+
+// STORAGE
 import { saveCurrentPage } from "/js/utils/storage/saveCurrentPage.js";
 import { loadPreviousPage } from "/js/utils/storage/loadPreviousPage.js";
+
+// LANDING
+import { initCarouselSlider } from "/js/app/components/carousel/carousel.js";
 import { displayLandingContent } from "/js/app/homepage/displayContent.js";
+import { getBTN } from "/js/app/homepage/getButton/getBTN.js";
 
 // CONTAINERS
 import {
@@ -25,6 +31,12 @@ import {
 
 // SINGLE PRODUCT PAGE
 import { specificGame } from "/js/app/products/productDetails/renderProduct.js";
+
+// ABOUT
+import { aboutSection } from "/js/utils/general/constants.js";
+import { createAboutText } from "/js/app/about/createAboutText.js";
+import { createAboutButtons } from "/js/app/about/aboutButtons.js";
+import { createAboutBackgroundImage } from "/js/app/about/backgroundIMGs.js";
 
 // FILTER PRODUCTS
 import { setFilterOptions } from "/js/app/components/search/filters/filterOptions.js";
@@ -63,6 +75,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (homeContainer) {
     // Display landing page
+    getBTN();
     displayLandingContent();
   }
   if (carousel) {
@@ -80,6 +93,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     specificGame();
   }
 
+  if (aboutSection) {
+    createAboutText();
+    createAboutButtons();
+    createAboutBackgroundImage();
+  }
+
   // Display help text for certain actions when user is not logged in
   if (window.location.pathname.includes("/contact/")) {
     updateHelpTextEvents();
@@ -89,7 +108,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   if (createAccountBtn) {
-    // Display create account form
     createAccountEvents();
   }
 
@@ -124,6 +142,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 storeItemsAfterOrderPlaced();
 checkoutSuccess();
 
-// Top and bottom
+// Top and bottom elements
 menuBar();
 footerElement();

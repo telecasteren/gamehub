@@ -41,6 +41,10 @@ export function menuBar() {
   cartLink.className = "rightNavElement";
   cartLink.href = "/navigate/cart/your-cart/";
   cartLink.textContent = "your cart ";
+  if (currentPath.includes("/navigate/cart/your-cart/")) {
+    cartLink.id = "current";
+  }
+
   const itemCounter = document.createElement("span");
   itemCounter.id = "item-counter";
   itemCounter.textContent = "0";
