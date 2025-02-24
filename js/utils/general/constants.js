@@ -17,12 +17,18 @@ export const searchInput = document.getElementById("searchGames");
 // Carousel
 export const carousel = document.querySelector(".carousel");
 export const carouselImages = [
-  { src: "/images/carousel-img1.webp", alt: "Archer shooting at a dragon" },
   {
-    src: "/images/carousel-img2.webp",
+    src: "/images/carousel-imgs/carousel-img1.webp",
+    alt: "Archer shooting at a dragon",
+  },
+  {
+    src: "/images/carousel-imgs/carousel-img2.webp",
     alt: "Warrior scouting over the lands",
   },
-  { src: "/images/carousel-img3.webp", alt: "Portrait of an elf warrior" },
+  {
+    src: "/images/carousel-imgs/carousel-img3.webp",
+    alt: "Portrait of an elf warrior",
+  },
 ];
 
 // Storage
@@ -41,8 +47,8 @@ export const PRODUCT_NOT_FOUND = "Product not found";
 export const PRICE_NOT_FOUND = "Price not found";
 export const INCREASE_ICON_ALT = `Icon for adding items`;
 export const DECREASE_ICON_ALT = `Icon for removing items`;
-export const INCREASE_ICON_IMG = `/images/add-item.png`;
-export const DECREASE_ICON_IMG = `/images/remove-item.png`;
+export const INCREASE_ICON_IMG = `/images/icons-symbols/add-item.png`;
+export const DECREASE_ICON_IMG = `/images/icons-symbols/remove-item.png`;
 
 // Currency
 export const CURRENCY_KEY = " kr"; // This should be dynamically determined based on country / user chosen currency

@@ -15,6 +15,7 @@ NAVIGATION BAR
   cursor: pointer;
   display: none;
   padding-top: 2%;
+  transform: rotate(180deg);
 }
 
 nav {
@@ -123,7 +124,7 @@ nav ul li a:hover {
     display: block;
     position: absolute;
     right: 20px;
-    top: 10px;
+    top: 20px;
   }
 
   nav ul {
