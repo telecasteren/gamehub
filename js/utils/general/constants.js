@@ -5,6 +5,10 @@ export const cartWindow = document.getElementById("cartWindow-box");
 export const imageContainer = document.querySelector(".prodImg-container");
 export const homeContainer = document.querySelector(".home-container");
 export const aboutSection = document.querySelector(".about-text");
+export const contactFormContainer = document.querySelector(
+  ".contactForm-container"
+);
+export const contactSection = document.querySelector(".contact-section");
 export const wrapper = document.querySelector(".product-wrapper");
 export const createAccountBtn = document.querySelector("#createAccountBtn");
 export const createAccountBackArrow = document.querySelector(

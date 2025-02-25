@@ -22,7 +22,9 @@ import {
 // ACCOUNT AND LOGIN
 import { createAccountEvents } from "/js/app/components/profile/createAccount/createAccount.js";
 
-// HELP TEXT AND FAQ's
+// CONTACT FORM, HELP TEXT AND FAQ's
+import { createContactBoxes } from "/js/app/contact/contactSectionHtml.js";
+import { contactForm } from "/js/app/contact/contactForm.js";
 import { displayFAQtexts } from "/js/app/components/FAQEvents/displayFAQtexts.js";
 import {
   updateHelpTextEvents,
@@ -99,8 +101,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     createAboutBackgroundImage();
   }
 
-  // Display help text for certain actions when user is not logged in
+  // Render contact page and help text for certain actions when user is not logged in
   if (window.location.pathname.includes("/contact/")) {
+    createContactBoxes();
+    contactForm();
     updateHelpTextEvents();
     displayFAQtexts();
   } else if (window.location.pathname.includes("/login/")) {
