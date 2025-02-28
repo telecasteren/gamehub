@@ -1,14 +1,18 @@
-// ------------------------ TO DO:
+// ------------------------ Areas for improvement:
 //
-// Profile page:
-// - login authentication and field validation
-// - set user active on first login
-//
-// General all over:
 // - If product is already in cart,
-// - notify user next time they click add to cart cta for that product
+// notify user next time they click add to cart cta for that product
 //
-// - profile page UX
-// - favourites
-// - order history
 // -----------------------------------------------------------------------------------------------------
+
+TO DO:
+
+- Convert products, productlist, cart, checkout and profile pages to javascript
+- Set user active on first login
+
+CREATE:
+- profile page UX
+- favourites
+- order history
+- login authentication
+- field validation on contact form and login form

@@ -1,4 +1,3 @@
-// const contactFormContainer = document.querySelector(".contactForm-container");
 import { contactFormContainer } from "/js/utils/general/constants.js";
 
 export function contactForm() {

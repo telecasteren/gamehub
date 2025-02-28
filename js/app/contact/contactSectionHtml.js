@@ -1,4 +1,3 @@
-// const contactSection = document.querySelector(".contact-section");
 import { contactSection } from "/js/utils/general/constants.js";
 
 export function createContactBoxes(className, elements) {
