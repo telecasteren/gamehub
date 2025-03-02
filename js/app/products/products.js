@@ -1,11 +1,12 @@
 import { fetchGames } from "/js/utils/api/products/productsApi.js";
-import { renderProduct } from "/js/app/products/productListHtml.js";
+import { renderProduct } from "/js/app/products/renderProductsList.js";
 import { searchGames } from "/js/app/components/search/filterProducts.js";
 import { setSearchListeners } from "/js/app/components/search/searchListeners.js";
-import { wrapper } from "/js/utils/general/constants.js";
 import { fetchSortedProducts } from "/js/utils/api/products/fetchSortedProducts.js";
 import { fetchProductsFilteredByPrice } from "/js/utils/api/products/filteredByPrice.js";
 import { fetchProductsFilteredByCategory } from "/js/utils/api/products/filteredByCategory.js";
+
+const wrapper = document.querySelector(".product-wrapper");
 
 export async function fetchGamesAPI() {
   try {
@@ -15,7 +16,9 @@ export async function fetchGamesAPI() {
     searchGames(info);
   } catch (error) {
     console.error("Error occurred: ", error);
-    wrapper.innerHTML = `<div class="error">An error occurred when loading the products</div>`;
+    if (wrapper) {
+      wrapper.innerHTML = `<div class="error">An error occurred when loading the products</div>`;
+    }
   }
 }
 
@@ -25,7 +28,9 @@ export async function onSortChange(sortOrder) {
     searchGames(sortedProducts);
   } catch (error) {
     console.error("Error occurred while sorting products");
-    wrapper.innerHTML = `<div class="error">An error occurred when sorting the products</div>`;
+    if (wrapper) {
+      wrapper.innerHTML = `<div class="error">An error occurred when sorting the products</div>`;
+    }
   }
 }
 
@@ -50,6 +55,9 @@ export async function onFilterChange(filterType) {
     }
   } catch (error) {
     console.error(`Error occurred while filtering by ${filterType}`);
-    wrapper.innerHTML = `<div class="error">An error occurred when filtering by category</div>`;
+
+    if (wrapper) {
+      wrapper.innerHTML = `<div class="error">An error occurred when filtering by category</div>`;
+    }
   }
 }

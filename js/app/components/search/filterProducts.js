@@ -1,10 +1,16 @@
 import { levenshtein } from "/js/utils/general/tool-scripts/levenshtein.js";
-import { SEARCH_KEY, wrapper } from "/js/utils/general/constants.js";
+import { SEARCH_KEY } from "/js/utils/general/constants.js";
 import { noResultMessage } from "/js/utils/auth/messages.js";
-import { renderProduct } from "/js/app/products/productListHtml.js";
+import { renderProduct } from "/js/app/products/renderProductsList.js";
 
 export async function searchGames(games) {
-  wrapper.innerHTML = "";
+  const wrapper = document.querySelector(".product-wrapper");
+  if (wrapper) {
+    wrapper.innerHTML = "";
+  } else {
+    console.warn("OHno..!! wrapper is null inside searchGames");
+    return;
+  }
 
   try {
     const searchTerm = localStorage.getItem(SEARCH_KEY) || "";

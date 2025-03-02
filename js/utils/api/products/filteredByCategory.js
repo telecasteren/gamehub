@@ -1,7 +1,7 @@
-import { wrapper } from "/js/utils/general/constants.js";
 import { wooComApiKey, wooComApiSecret } from "/js/utils/auth/keys/apiKeys.js";
 
 export async function fetchProductsFilteredByCategory() {
+  const wrapper = document.querySelector(".product-wrapper");
   try {
     const url = `https://gamehub-shop.no/wp-json/wc/v3/products`;
 

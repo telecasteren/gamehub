@@ -1,9 +1,4 @@
-import {
-  SEARCH_KEY,
-  searchForm,
-  searchInput,
-  navigateAway,
-} from "/js/utils/general/constants.js";
+import { SEARCH_KEY, navigateAway } from "/js/utils/general/constants.js";
 import { searchGames } from "/js/app/components/search/filterProducts.js";
 import {
   clearSearchIconInit,
@@ -12,6 +7,8 @@ import {
 import { loadError } from "/js/utils/auth/messages.js";
 
 export function setSearchListeners(info) {
+  const searchForm = document.getElementById("search-form");
+  const searchInput = document.getElementById("searchGames");
   try {
     const clearSearchIcon = clearSearchIconInit();
 
@@ -32,6 +29,7 @@ export function setSearchListeners(info) {
       clearSearchIcon.addEventListener("click", function () {
         searchInput.value = "";
         localStorage.removeItem(SEARCH_KEY);
+
         searchGames(info);
         updateSearchIconVisibility(clearSearchIcon);
       });
@@ -54,6 +52,6 @@ export function setSearchListeners(info) {
       sessionStorage.setItem(navigateAway, "true");
     });
   } catch (error) {
-    loadError();
+    loadError("Couldn't attach searchListeners");
   }
 }

@@ -9,15 +9,10 @@ export const contactFormContainer = document.querySelector(
   ".contactForm-container"
 );
 export const contactSection = document.querySelector(".contact-section");
-export const wrapper = document.querySelector(".product-wrapper");
 export const createAccountBtn = document.querySelector("#createAccountBtn");
 export const createAccountBackArrow = document.querySelector(
   ".createAccountBackArrow"
 );
-
-// Search
-export const searchForm = document.getElementById("search-form");
-export const searchInput = document.getElementById("searchGames");
 
 // Carousel
 export const carousel = document.querySelector(".carousel");

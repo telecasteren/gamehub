@@ -1,6 +1,6 @@
-import { searchInput } from "/js/utils/general/constants.js";
-
 export function clearSearchIconInit() {
+  const searchInput = document.getElementById("searchGames");
+
   const existingClearSearchIcon = document.querySelector(".clearSearch");
   if (existingClearSearchIcon) return;
 
@@ -14,6 +14,8 @@ export function clearSearchIconInit() {
 }
 
 export function updateSearchIconVisibility(clearSearchIcon) {
+  const searchInput = document.getElementById("searchGames");
+
   const searchTerm = searchInput.value.trim();
   clearSearchIcon.style.display = searchTerm === "" ? "none" : "inline";
 }

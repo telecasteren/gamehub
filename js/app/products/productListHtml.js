@@ -1,45 +1,50 @@
-import { goToProduct } from "/js/app/components/eventListeners/goToProduct.js";
-import { wrapper, CURRENCY_KEY } from "/js/utils/general/constants.js";
-import { extractProductData } from "/js/utils/api/products/productsApi.js";
+export function createProductsHtml() {
+  const productsSection = document.querySelector(".products-section");
 
-export async function renderProduct(product) {
-  try {
-    const { id, title, price, onSale, salePrice, imgSrc, imgAlt } =
-      extractProductData(product);
+  if (productsSection) {
+    const form = document.createElement("form");
+    form.id = "search-form";
 
-    const prodDiv = document.createElement("div");
-    prodDiv.classList.add("product-container");
+    const searchWrapper = document.createElement("div");
+    searchWrapper.className = "search-wrapper";
 
-    const imgElement = document.createElement("img");
-    imgElement.classList.add("products");
-    imgElement.src = imgSrc;
-    imgElement.alt = imgAlt;
+    const searchInput = document.createElement("input");
+    searchInput.id = "searchGames";
+    searchInput.type = "text";
+    searchInput.name = "search-games";
+    searchInput.placeholder = "Search games..";
 
-    const overlayDiv = document.createElement("div");
-    overlayDiv.classList.add("overlay");
+    searchWrapper.appendChild(searchInput);
+    form.appendChild(searchWrapper);
 
-    const textDiv = document.createElement("div");
-    textDiv.classList.add("overlayText");
-    textDiv.innerHTML = `
-    ${title}<br>
-    Price: ${price}${CURRENCY_KEY}`;
+    const optionsContainer = document.createElement("div");
+    optionsContainer.className = "options-container";
 
-    if (onSale) {
-      textDiv.innerHTML = `
-    ${title}<br>
-    Limited offer: ${salePrice}${CURRENCY_KEY}`;
-    }
+    const productWrapper = document.createElement("div");
+    productWrapper.className = "product-wrapper";
 
-    overlayDiv.appendChild(textDiv);
-    prodDiv.appendChild(imgElement);
-    prodDiv.appendChild(overlayDiv);
-    wrapper.appendChild(prodDiv);
+    const loader = document.createElement("div");
+    loader.className = "loader";
+    productWrapper.appendChild(loader);
 
-    overlayDiv.addEventListener("click", () => {
-      goToProduct(id);
-    });
-  } catch (error) {
-    console.error("Error occurred: ", error);
-    wrapper.innerHTML = `<div class="error">An error occurred in displaying the products</div>`;
+    const expandBtn = document.createElement("button");
+    expandBtn.id = "expandBTN";
+
+    const expandLink = document.createElement("a");
+    expandLink.href = "/navigate/products/product-list/more/";
+
+    const expandImg = document.createElement("img");
+    expandImg.src = "/images/icons-symbols/expand-products.svg";
+    expandImg.alt = "expand-arrow";
+
+    expandLink.appendChild(expandImg);
+    expandBtn.appendChild(expandLink);
+
+    productsSection.appendChild(form);
+    productsSection.appendChild(optionsContainer);
+    productsSection.appendChild(productWrapper);
+    productsSection.appendChild(expandBtn);
+  } else {
+    console.log("Not found productsSection");
   }
 }
