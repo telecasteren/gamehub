@@ -11,12 +11,11 @@ import {
   PRICE_NOT_FOUND,
   PRODUCT_NOT_FOUND,
   NO_IMAGE_FOUND_IMG,
-  cartContainer,
   CURRENCY_KEY,
 } from "/js/utils/general/constants.js";
 
-// Creating the html:
 export function renderCartProducts() {
+  const cartContainer = document.querySelector(".cart-section");
   const cart = getItemsInLocalStorage();
 
   try {

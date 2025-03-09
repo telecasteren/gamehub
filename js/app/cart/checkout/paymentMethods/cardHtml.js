@@ -1,6 +1,6 @@
-import { cardDetailsDiv } from "/js/utils/general/constants.js";
-
 export function cardDetailsHtml() {
+  const cardDetailsDiv = document.querySelector(".cardDetails");
+
   const dateLabel = document.createElement("label");
   dateLabel.setAttribute("for", "date");
   dateLabel.hidden = true;
@@ -9,7 +9,7 @@ export function cardDetailsHtml() {
   const dateInput = document.createElement("input");
   dateInput.setAttribute("type", "date");
   dateInput.setAttribute("name", "date");
-  dateInput.setAttribute("id", "cardDetails"); // Note: `id` should be unique
+  dateInput.setAttribute("id", "cardDetails");
   dateInput.required = true;
 
   const cardNumberInput = document.createElement("input");

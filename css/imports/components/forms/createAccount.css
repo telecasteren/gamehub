@@ -10,7 +10,6 @@
 
 .newUserForm {
   border-radius: 10px;
-  border: 1px solid var(--light-blue-base);
   background-color: var(--light-blue-box);
   padding: 20px;
   margin: 0% auto;

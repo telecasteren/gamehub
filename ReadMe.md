@@ -23,9 +23,9 @@ Nothing you do at this website will have a real-life effect. Meaning that you ca
 
 - Javascript
 - HTML and CSS
-- node.js
 - Wordpress REST API
-- **IDE:** Visual Studio Code
+- Managing wordpress instance with **_One.com_**
+- Deployed with **_Netlify_**
 
 ## How to run it locally
 
@@ -50,7 +50,6 @@ You are welcome to do so, find out about how here:
 You can find me and my other projects here:
 
 - [My portfolio - telecasteren](https://telecasteren.github.io/)
-- [My website - telecasternilsen](https://telecasternilsen.netlify.app/)
 - [GitHub profile](https://github.com/telecasteren)
 - [LinkedIn profile](https://www.linkedin.com/in/tele-caster-nilsen-7002b9249/)
 

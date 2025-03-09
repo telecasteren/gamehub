@@ -1,6 +1,5 @@
 import { CART_KEY, CURRENCY_TYPE } from "/js/utils/general/constants.js";
 
-// Calculate and display subtotal price:
 export function displaySubtotal() {
   const cartItems = JSON.parse(localStorage.getItem(CART_KEY)) || [];
   let subtotal = 0;

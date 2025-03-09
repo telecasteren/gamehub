@@ -55,12 +55,12 @@ import { createAboutBackgroundImage } from "/js/app/about/backgroundIMGs.js";
 import { updateCartCounter } from "/js/app/cart/updateCart/updateCartCounter.js";
 import { updateCartWithAPI } from "/js/app/cart/updateCart/updateCartWithAPI.js";
 import { continueShoppingEvent } from "/js/app/components/eventListeners/continueShopping.js";
+import { generateCheckoutContent } from "/js/app/cart/checkout/checkoutHtml.js";
 import { renderCartProducts } from "/js/app/cart/cartHtml.js";
 import { renderPurchase } from "/js/app/cart/checkout/success/renderPurchase.js";
 import { displaySubtotal } from "/js/app/cart/checkout/price/displaySubtotal.js";
 import { initItemCounter } from "/js/app/cart/updateCart/updateTotals.js";
 import { mimicEmptyCart } from "/js/app/cart/checkout/mimicEmptyCart.js";
-import { cardDetailsHtml } from "/js/app/cart/checkout/paymentMethods/cardHtml.js";
 import {
   storeItemsAfterOrderPlaced,
   checkoutSuccess,
@@ -126,7 +126,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     createAccountEvents();
   }
 
-  // Render cart and checkout events
+  // Render checkout page
+  if (window.location.pathname.includes("/navigate/cart/checkout/")) {
+    generateCheckoutContent();
+    methodPicker();
+
+    setTimeout(() => {
+      const placeOrderBtn = document.querySelector("._placeOrder");
+      if (placeOrderBtn) {
+        storeItemsAfterOrderPlaced();
+      } else {
+        console.warn("Place Order button not found.");
+      }
+    }, 500);
+  }
+
+  // Cart events
   if (window.location.pathname.includes("/cart/")) {
     await updateCartWithAPI();
     mimicEmptyCart();
@@ -135,27 +150,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     displaySubtotal();
     continueShoppingEvent();
 
-    if (cardDetailsDiv) {
-      cardDetailsHtml();
-    }
-
     const orderConfirmed = localStorage.getItem(ORDER_CONFIRMED_KEY);
     if (orderConfirmed === "true") {
       localStorage.removeItem(CART_KEY);
       localStorage.removeItem(ORDER_CONFIRMED_KEY);
     }
 
-    if (window.location.pathname.includes("/navigate/cart/checkout/")) {
-      methodPicker();
-    }
-
     renderPurchase();
   }
 });
 
-// Checkout success events
-storeItemsAfterOrderPlaced();
-checkoutSuccess();
+// Render checkout success page
+if (window.location.pathname.includes("/cart/checkout-success/")) {
+  checkoutSuccess();
+}
 
 // Top and bottom elements
 menuBar();

@@ -1,9 +1,11 @@
 import { displaySubtotal } from "/js/app/cart/checkout/price/displaySubtotal.js";
 import { CURRENCY_TYPE } from "/js/utils/general/constants.js";
 
-// Calculate and display total price:
 export function calculateTotalPrice() {
   const totalSum = document.querySelector(".totalSum");
+  const totalPrice = document.querySelector("#total-price");
+
+  if (!totalPrice) return;
 
   if (totalSum) {
     function displayTotal(subtotal) {
@@ -15,7 +17,6 @@ export function calculateTotalPrice() {
         : 0;
       const total = subtotal + deliveryPrice;
 
-      const totalPrice = document.querySelector("#total-price");
       totalPrice.textContent = `${CURRENCY_TYPE}${total.toFixed(2)}`;
     }
 

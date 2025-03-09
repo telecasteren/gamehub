@@ -2,6 +2,9 @@ export function methodPicker() {
   const cardDetails = document.querySelector(".cardDetails");
   const paymentSelect = document.querySelector("#paymentMethod");
 
+  if (!cardDetails) return;
+  if (!paymentSelect) return;
+
   cardDetails.style.display = "none";
 
   paymentSelect.addEventListener("change", function () {
