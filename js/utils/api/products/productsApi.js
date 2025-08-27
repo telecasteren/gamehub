@@ -1,11 +1,11 @@
 import { wooComApiKey, wooComApiSecret } from "/js/utils/auth/keys/apiKeys.js";
+import { baseUrl } from "/js/utils/auth/keys/base.js";
 import {
   NO_IMAGE_FOUND_IMG,
   PRODUCT_NOT_FOUND,
 } from "/js/utils/general/constants.js";
 
 const wrapper = document.querySelector(".product-wrapper");
-const baseUrl = "https://gamehub-shop.no/wp-json/wc/v3/products";
 
 export async function fetchGames(id) {
   try {
@@ -18,6 +18,7 @@ export async function fetchGames(id) {
     });
 
     if (!response.ok) {
+      const errorText = await response.text();
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 

@@ -1,5 +1,7 @@
 import { goToProduct } from "/js/app/components/eventListeners/goToProduct.js";
 import { fetchGames } from "/js/utils/api/products/productsApi.js";
+import { UNKNOWN_KEY } from "/js/utils/general/constants.js";
+import { alertMessage } from "/js/utils/auth/messages.js";
 
 export async function goToCarouselProduct(prodTitle, overlayDiv) {
   const info = await fetchGames();
