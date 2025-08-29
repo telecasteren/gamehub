@@ -49,7 +49,7 @@ You are welcome to do so, find out about how here:
 
 You can find me and my other projects here:
 
-- [My portfolio - telecasteren](https://telecasteren.github.io/)
+- [telecasteren](https://telecasternilsen.com)
 - [GitHub profile](https://github.com/telecasteren)
 - [LinkedIn profile](https://www.linkedin.com/in/tele-caster-nilsen-7002b9249/)
 
